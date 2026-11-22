@@ -1580,9 +1580,9 @@
    "headline_publisher": "Autonocion",
    "key": "k13",
    "maker": "Tesla",
-   "needs_coding": false,
-   "source_summary": "The Tesla Cybercab has recently entered service, most notably in Austin, Texas. It has been around two months since the robotaxi entered public service, but according to the NHTSA, it hasn’t gone ...",
-   "source_summary_publisher": "YAHOO!",
+   "needs_coding": true,
+   "source_summary": "The Tesla Cybercab has recently entered service, most notably in Austin, Texas. It has been around two months since the robotaxi entered public service, but according to the NHTSA, it hasn’t gone entirely smoothly for ... Read more…",
+   "source_summary_publisher": "AOL.com",
    "sources": [
     {
      "published": "2026-11-16T13:41:00Z",
@@ -1660,10 +1660,19 @@
      "summary": "Tesla Cybercab has eight federal crash reports after two months of service, but missing exposure data makes safety comparisons unreliable.",
      "title": "Tesla’s Cybercab Has Eight Federal Crash Reports Already",
      "url": "https://www.gadgetreview.com/teslas-cybercab-has-eight-federal-crash-reports-already"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE81SFN0aHNhaWdXMHZpZ0VBbHAzcXdGbUVzTkxtbEdSTHY2UzFUWVp0WlNRQzhVZGdHdWVMNDg1ZFFaWFREZEJZOV9vMThaNDRpRzkwc2ZjM1prd1cwbFpoTURfM21hUzNDVldfMmhuMmxUS2k0QmtyamcxZ2N2Zw?oc=5",
+     "published": "2026-11-18T17:49:50Z",
+     "publisher": "AOL.com",
+     "resolved": true,
+     "summary": "The Tesla Cybercab has recently entered service, most notably in Austin, Texas. It has been around two months since the robotaxi entered public service, but according to the NHTSA, it hasn’t gone entirely smoothly for ... Read more…",
+     "title": "The NHTSA Says the Tesla Cybercab Has Now Crashed Eight Times",
+     "url": "https://www.aol.com/articles/nhtsa-says-tesla-cybercab-now-174950000.html"
     }
    ],
    "status": "excluded",
-   "updated": "2026-11-22T17:26:50Z"
+   "updated": "2026-11-22T17:27:43Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
@@ -2491,7 +2500,7 @@
    "headline_publisher": "The Cool Down on MSN",
    "key": "k28",
    "maker": "Tesla",
-   "needs_coding": false,
+   "needs_coding": true,
    "source_summary": "Tesla withheld all four test-crash narratives under a confidential business information designation.",
    "source_summary_publisher": "The Cool Down on MSN",
    "sources": [
@@ -2502,10 +2511,19 @@
      "summary": "Tesla withheld all four test-crash narratives under a confidential business information designation.",
      "title": "Tesla withholds details of 4 Cybercab test crashes, including a 53 mph collision",
      "url": "https://www.msn.com/en-us/autos/general/tesla-withholds-details-of-4-cybercab-test-crashes-including-a-53-mph-collision/ar-AA2hPhLo"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPVmdfWkRZakNIeUdhMi01VTBCTFdfSWxVZEt5U3p2b3dSS01hcUFMSnVVd29BNTZlaWMzdnZzeFNSUEJNUGRhZXR5V0hWN3VXdVdJblN2bnUxNFZZeVE1c19xU0pfNFdIZy1zdG5RMkFpZ2ZJQ1AxSkdmbUNmdzQwTjhEX0M5ZFN3eGpoRHZfUmlGdw?oc=5",
+     "published": "2026-11-20T06:05:00Z",
+     "publisher": "Yahoo",
+     "resolved": true,
+     "summary": "Tesla withheld all four test-crash narratives under a confidential business information designation.",
+     "title": "Tesla withholds details of 4 Cybercab test crashes, including a 53 mph collision",
+     "url": "https://www.yahoo.com/news/us/articles/tesla-withholds-details-4-cybercab-060500868.html"
     }
    ],
    "status": "excluded",
-   "updated": "2026-11-22T17:26:50Z"
+   "updated": "2026-11-22T17:27:43Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
@@ -3591,9 +3609,83 @@
    ],
    "status": "excluded",
    "updated": "2026-11-22T17:26:50Z"
+  },
+  {
+   "added": "2026-11-22T17:27:43Z",
+   "auto": {
+    "location": "Austin",
+    "model": "Tesla Cybercab",
+    "tags": [
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 0,
+   "coding": null,
+   "exclusion_reason": null,
+   "headline": "Tesla's Cybercab has eight crashes on file with NHTSA two months into Austin rides",
+   "headline_publisher": "MLQ.ai",
+   "key": "k44",
+   "maker": "Tesla",
+   "needs_coding": true,
+   "source_summary": null,
+   "source_summary_publisher": null,
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcjdZMXQzVXZfbkpiZkFjVlprOFkweVE3d19HQTNyRTREZzBiRXJ0RnFQcVBIUHpyUFQ2SmN5R1lhNlR0TFhqVXZoS3Y3OHljRFAzVm9pNzRiZlkxVzhZZTlHU1VzRk9wRXZGbml0U1I2elh6WDNaM1BKVjU4d2tMOENBYmRiSFdXcGZhbF9KWHRzTjVSR2RSV3ZlS2lERjRNSU16OA?oc=5",
+     "published": "2026-11-17T05:05:47Z",
+     "publisher": "MLQ.ai",
+     "resolved": true,
+     "summary": "",
+     "title": "Tesla's Cybercab has eight crashes on file with NHTSA two months into Austin rides",
+     "url": "https://mlq.ai/news/teslas-cybercab-has-eight-crashes-on-file-with-nhtsa-two-months-into-austin-rides/"
+    }
+   ],
+   "status": "pending",
+   "updated": "2026-11-22T17:27:43Z"
+  },
+  {
+   "added": "2026-11-22T17:27:43Z",
+   "auto": {
+    "location": null,
+    "model": "Tesla Cybercab",
+    "tags": [
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 0,
+   "coding": null,
+   "exclusion_reason": null,
+   "headline": "Tesla Cybercab crashes: 8 reports, ADS and ADAS",
+   "headline_publisher": "NeoTeo",
+   "key": "k45",
+   "maker": "Tesla",
+   "needs_coding": true,
+   "source_summary": "Electrek reported eight Cybercab crash records from August–September 2026: four ADS cases and four supervised ADAS cases…",
+   "source_summary_publisher": "NeoTeo",
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQeVoyNU1WUkJWNUpXeU0teFFvZjhxQWJrdnR2bnRRUzMxVkF0clB5cVJCOC1yOU1UWi00U0tka0xLSDVWUzF4YXVaRGhtVFhmeFJ6TWtnSmk2eFlQNjV5a2FJVl9oSWpoejRieU1jUXZoVTZFNU92VGZkQ0hTWlM3YkI4QQ?oc=5",
+     "published": "2026-11-18T01:27:08Z",
+     "publisher": "NeoTeo",
+     "resolved": true,
+     "summary": "Electrek reported eight Cybercab crash records from August–September 2026: four ADS cases and four supervised ADAS cases…",
+     "title": "Tesla Cybercab crashes: 8 reports, ADS and ADAS",
+     "url": "https://www.neoteo.com/en/tesla-cybercab-crashes-eight-reports-two-categories"
+    }
+   ],
+   "status": "pending",
+   "updated": "2026-11-22T17:27:43Z"
   }
  ],
  "next_id": 15,
- "next_key": 44,
+ "next_key": 46,
  "schema": 1
 }

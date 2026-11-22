@@ -72,16 +72,28 @@
     "coverage_stage": "initial_report"
    },
    "evidence": {
+    "coverage_stage": {
+     "quote": "The incident was shared in Reddit's r/TeslaFSD community",
+     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
+    },
+    "driver_seat_occupied": {
+     "quote": "the vehicle would have remained stationary if they had not pressed the accelerator to continue through the turn",
+     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
+    },
+    "engagement_claimed_by": {
+     "quote": "According to the owner, the Model Y was running FSD version 14.3 on Tesla's Hardware 4 platform when the unexpected stop occurred.",
+     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
+    },
+    "engagement_status": {
+     "quote": "According to the owner, the Model Y was running FSD version 14.3 on Tesla's Hardware 4 platform when the unexpected stop occurred.",
+     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
+    },
     "incident_type": {
      "quote": "came to a complete stop while navigating the intersection",
      "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
     },
-    "vehicle_make": {
-     "quote": "A Tesla Model Y owner is raising concerns about the company's Full Self-Driving software",
-     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
-    },
-    "vehicle_model": {
-     "quote": "A Tesla Model Y owner is raising concerns about the company's Full Self-Driving software",
+    "responsibility_attributed_to": {
+     "quote": "abruptly halted after detecting a truck equipped with yellow warning lights",
      "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
     },
     "road_type": {
@@ -92,55 +104,43 @@
      "quote": "According to the owner, the Model Y was running FSD version 14.3 on Tesla's Hardware 4 platform when the unexpected stop occurred.",
      "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
     },
-    "engagement_status": {
-     "quote": "According to the owner, the Model Y was running FSD version 14.3 on Tesla's Hardware 4 platform when the unexpected stop occurred.",
+    "vehicle_make": {
+     "quote": "A Tesla Model Y owner is raising concerns about the company's Full Self-Driving software",
      "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
     },
-    "engagement_claimed_by": {
-     "quote": "According to the owner, the Model Y was running FSD version 14.3 on Tesla's Hardware 4 platform when the unexpected stop occurred.",
-     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
-    },
-    "driver_seat_occupied": {
-     "quote": "the vehicle would have remained stationary if they had not pressed the accelerator to continue through the turn",
-     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
-    },
-    "responsibility_attributed_to": {
-     "quote": "abruptly halted after detecting a truck equipped with yellow warning lights",
-     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
-    },
-    "coverage_stage": {
-     "quote": "The incident was shared in Reddit's r/TeslaFSD community",
+    "vehicle_model": {
+     "quote": "A Tesla Model Y owner is raising concerns about the company's Full Self-Driving software",
      "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
     }
    },
    "claims": [
     {
      "claimant": "driver",
-     "topic": "automation_performance",
      "paraphrase": "The owner said the car had a green left-turn signal but stopped in the intersection after detecting a truck with yellow warning lights, and stayed still until the owner pressed the accelerator.",
      "quote": "The driver says the vehicle had a green left-turn signal but abruptly halted after detecting a truck equipped with yellow warning lights.",
-     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
+     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html",
+     "topic": "automation_performance"
     },
     {
      "claimant": "driver",
-     "topic": "other",
      "paraphrase": "The owner said no vehicles were directly behind when the car stopped.",
      "quote": "the owner says no vehicles were directly behind them when the Model Y came to a halt",
-     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
+     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html",
+     "topic": "other"
     },
     {
      "claimant": "news_outlet",
-     "topic": "automation_performance",
      "paraphrase": "The report notes that the owner's account does not establish why the software stopped.",
      "quote": "The owner's account does not establish precisely why the software stopped",
-     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
+     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html",
+     "topic": "automation_performance"
     },
     {
      "claimant": "other",
-     "topic": "automation_performance",
      "paraphrase": "A commenter on the post suggested the emergency-vehicle detection does not take the colour of the lights into account.",
      "quote": "Idk why the emergency vehicle detection doesn’t seem to account for light color.",
-     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
+     "source_url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html",
+     "topic": "automation_performance"
     }
    ],
    "sources": [
@@ -215,15 +215,19 @@
     "coverage_stage": "initial_report"
    },
    "evidence": {
+    "coverage_stage": {
+     "quote": "A video circulating on X this weekend",
+     "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+    },
+    "engagement_claimed_by": {
+     "quote": "As a collision develops nearby, the Cybercab reacts and clears the danger zone.",
+     "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+    },
+    "engagement_status": {
+     "quote": "As a collision develops nearby, the Cybercab reacts and clears the danger zone.",
+     "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+    },
     "incident_type": {
-     "quote": "A Tesla Cybercab detects an incoming collision and maneuvers clear.",
-     "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
-    },
-    "vehicle_make": {
-     "quote": "A Tesla Cybercab detects an incoming collision and maneuvers clear.",
-     "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
-    },
-    "vehicle_model": {
      "quote": "A Tesla Cybercab detects an incoming collision and maneuvers clear.",
      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
     },
@@ -235,33 +239,29 @@
      "quote": "As a collision develops nearby, the Cybercab reacts and clears the danger zone.",
      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
     },
-    "engagement_status": {
-     "quote": "As a collision develops nearby, the Cybercab reacts and clears the danger zone.",
+    "vehicle_make": {
+     "quote": "A Tesla Cybercab detects an incoming collision and maneuvers clear.",
      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
     },
-    "engagement_claimed_by": {
-     "quote": "As a collision develops nearby, the Cybercab reacts and clears the danger zone.",
-     "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
-    },
-    "coverage_stage": {
-     "quote": "A video circulating on X this weekend",
+    "vehicle_model": {
+     "quote": "A Tesla Cybercab detects an incoming collision and maneuvers clear.",
      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
     }
    },
    "claims": [
     {
      "claimant": "other",
-     "topic": "automation_performance",
      "paraphrase": "A Tesla commentator who shared the clip said the car's cameras give it all-round awareness that a distracted human driver cannot match.",
      "quote": "Tesla's camera suite gives the car 360-degree situational awareness at all times",
-     "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+     "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt",
+     "topic": "automation_performance"
     },
     {
      "claimant": "news_outlet",
-     "topic": "other",
      "paraphrase": "The report cautions that the clip comes from a social media post, not an official safety report, and should be treated as illustrative.",
      "quote": "the clip originates from a social media post rather than an official Tesla safety report, so it should be treated as illustrative rather than statistically definitive",
-     "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+     "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt",
+     "topic": "other"
     }
    ],
    "sources": [
@@ -341,6 +341,42 @@
     "coverage_stage": "initial_report"
    },
    "evidence": {
+    "collision_with": {
+     "quote": "struck arrow signs in an Interstate 70 construction zone",
+     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+    },
+    "coverage_stage": {
+     "quote": "According to an ISP news release",
+     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+    },
+    "criminal_case_stage": {
+     "quote": "Court records show she was charged with unlawful operation of a vehicle in a worksite, operating a vehicle with a blood alcohol content of more than 0.08 and operating a vehicle while intoxicated endangering a person.",
+     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+    },
+    "criminal_charges": {
+     "quote": "Court records show she was charged with unlawful operation of a vehicle in a worksite, operating a vehicle with a blood alcohol content of more than 0.08 and operating a vehicle while intoxicated endangering a person.",
+     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+    },
+    "driver_condition_mentioned": {
+     "quote": "indicated a blood alcohol content of .14%, almost twice the legal limit",
+     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+    },
+    "driver_seat_occupied": {
+     "quote": "the began a DUI investigation on the Tesla’s lone occupant",
+     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+    },
+    "engagement_claimed_by": {
+     "quote": "During the investigation, it was learned that the Tesla was in self-driving mode during the crash.",
+     "source_url": "https://wibc.com/902576/isp-woman-was-intoxicated-in-self-driving-tesla-during-i-70-crash/"
+    },
+    "engagement_status": {
+     "quote": "An investigation found that the 2016 Tesla was activated in self-driving mode.",
+     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+    },
+    "fatalities": {
+     "quote": "According to the documents, no one was hurt.",
+     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+    },
     "incident_date": {
      "quote": "Troopers were called around 10:30 p.m. to eastbound I-70 near the 13-mile marker on Thursday, November 19.",
      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
@@ -349,8 +385,40 @@
      "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
      "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
     },
-    "collision_with": {
-     "quote": "struck arrow signs in an Interstate 70 construction zone",
+    "injuries": {
+     "quote": "According to the documents, no one was hurt.",
+     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+    },
+    "location_city": {
+     "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
+     "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
+    },
+    "location_country": {
+     "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
+     "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
+    },
+    "location_state_region": {
+     "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
+     "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
+    },
+    "police_action": {
+     "quote": "was arrested and turned over to the Vigo County Sheriff’s Department jail staff without incident",
+     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+    },
+    "responsibility_attributed_to": {
+     "quote": "Ames emphasized drivers remain responsible for their vehicles, even when using self-driving technology.",
+     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+    },
+    "road_type": {
+     "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
+     "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
+    },
+    "system_named": {
+     "quote": "An investigation found that the 2016 Tesla was activated in self-driving mode.",
+     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+    },
+    "time_of_day": {
+     "quote": "Troopers were called around 10:30 p.m. to eastbound I-70 near the 13-mile marker on Thursday, November 19.",
      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
     },
     "vehicle_make": {
@@ -360,111 +428,43 @@
     "vehicle_model_year": {
      "quote": "An investigation found that the 2016 Tesla was activated in self-driving mode.",
      "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
-    },
-    "location_city": {
-     "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
-     "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
-    },
-    "location_state_region": {
-     "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
-     "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
-    },
-    "location_country": {
-     "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
-     "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
-    },
-    "road_type": {
-     "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
-     "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
-    },
-    "time_of_day": {
-     "quote": "Troopers were called around 10:30 p.m. to eastbound I-70 near the 13-mile marker on Thursday, November 19.",
-     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
-    },
-    "system_named": {
-     "quote": "An investigation found that the 2016 Tesla was activated in self-driving mode.",
-     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
-    },
-    "engagement_status": {
-     "quote": "An investigation found that the 2016 Tesla was activated in self-driving mode.",
-     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
-    },
-    "engagement_claimed_by": {
-     "quote": "During the investigation, it was learned that the Tesla was in self-driving mode during the crash.",
-     "source_url": "https://wibc.com/902576/isp-woman-was-intoxicated-in-self-driving-tesla-during-i-70-crash/"
-    },
-    "driver_seat_occupied": {
-     "quote": "the began a DUI investigation on the Tesla’s lone occupant",
-     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
-    },
-    "driver_condition_mentioned": {
-     "quote": "indicated a blood alcohol content of .14%, almost twice the legal limit",
-     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
-    },
-    "fatalities": {
-     "quote": "According to the documents, no one was hurt.",
-     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
-    },
-    "injuries": {
-     "quote": "According to the documents, no one was hurt.",
-     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
-    },
-    "police_action": {
-     "quote": "was arrested and turned over to the Vigo County Sheriff’s Department jail staff without incident",
-     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
-    },
-    "criminal_charges": {
-     "quote": "Court records show she was charged with unlawful operation of a vehicle in a worksite, operating a vehicle with a blood alcohol content of more than 0.08 and operating a vehicle while intoxicated endangering a person.",
-     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
-    },
-    "criminal_case_stage": {
-     "quote": "Court records show she was charged with unlawful operation of a vehicle in a worksite, operating a vehicle with a blood alcohol content of more than 0.08 and operating a vehicle while intoxicated endangering a person.",
-     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
-    },
-    "responsibility_attributed_to": {
-     "quote": "Ames emphasized drivers remain responsible for their vehicles, even when using self-driving technology.",
-     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
-    },
-    "coverage_stage": {
-     "quote": "According to an ISP news release",
-     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
     }
    },
    "claims": [
     {
      "claimant": "police",
-     "topic": "automation_engaged",
      "paraphrase": "Indiana State Police said their investigation found the car was in self-driving mode during the crash; one outlet reports this as alleged.",
      "quote": "During the investigation, it was learned that the Tesla was in self-driving mode during the crash.",
-     "source_url": "https://wibc.com/902576/isp-woman-was-intoxicated-in-self-driving-tesla-during-i-70-crash/"
+     "source_url": "https://wibc.com/902576/isp-woman-was-intoxicated-in-self-driving-tesla-during-i-70-crash/",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "police",
-     "topic": "driver_behavior",
      "paraphrase": "State police said the driver failed field sobriety tests and a certified test showed a blood alcohol content of 0.14%.",
      "quote": "indicated a blood alcohol content of .14%, almost twice the legal limit",
-     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+     "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/",
+     "topic": "driver_behavior"
     },
     {
      "claimant": "police",
-     "topic": "cause_or_responsibility",
      "paraphrase": "A state police spokesman said drivers remain responsible for their vehicles even when using self-driving technology.",
      "quote": "Ames emphasized drivers remain responsible for their vehicles, even when using self-driving technology.",
-     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/",
+     "topic": "cause_or_responsibility"
     },
     {
      "claimant": "police",
-     "topic": "other",
      "paraphrase": "According to the probable cause affidavit, several construction workers were nearby at the time.",
      "quote": "Several construction workers were actively in the vicinity during the crash, according to the affidavit.",
-     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/",
+     "topic": "other"
     },
     {
      "claimant": "news_outlet",
-     "topic": "automation_engaged",
      "paraphrase": "One local outlet describes the self-driving mode as alleged.",
      "quote": "her Tesla, allegedly in “self-driving” mode, struck arrow signs in an Interstate 70 construction zone",
-     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+     "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/",
+     "topic": "automation_engaged"
     }
    ],
    "sources": [
@@ -653,6 +653,38 @@
     "coverage_stage": "initial_report"
    },
    "evidence": {
+    "collision_with": {
+     "quote": "crashed into a garbage truck and tractor trailer",
+     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
+    },
+    "coverage_stage": {
+     "quote": "according to a statement from the department",
+     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
+    },
+    "criminal_case_stage": {
+     "quote": "is charged with failure to maintain her lane, careless driving and reckless driving",
+     "source_url": "https://nj1015.com/tesla-driver-makeup-autopilot-crash/"
+    },
+    "criminal_charges": {
+     "quote": "Police issued the Tesla driver summonses for careless driving, reckless driving and failure to maintain a lane.",
+     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
+    },
+    "driver_condition_mentioned": {
+     "quote": "the driver was applying makeup",
+     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
+    },
+    "driver_seat_occupied": {
+     "quote": "the driver was applying makeup",
+     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
+    },
+    "engagement_claimed_by": {
+     "quote": "The investigation found that the Tesla was being operated in autopilot mode and that the driver was applying makeup when the crash happened",
+     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
+    },
+    "engagement_status": {
+     "quote": "The investigation found that the Tesla was being operated in autopilot mode and that the driver was applying makeup when the crash happened",
+     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
+    },
     "incident_date": {
      "quote": "at around 11:28 a.m. on Nov. 2",
      "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
@@ -661,8 +693,40 @@
      "quote": "crashed into a garbage truck and tractor trailer",
      "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
     },
-    "collision_with": {
-     "quote": "crashed into a garbage truck and tractor trailer",
+    "injuries": {
+     "quote": "suffered minor injuries and were treated at local hospitals",
+     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
+    },
+    "location_city": {
+     "quote": "Montgomery Township police responded to the motor vehicle crash on Rt. 206 near Wood Thrush Lane",
+     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
+    },
+    "location_country": {
+     "quote": "MONTGOMERY, NJ — A Tesla in autopilot mode reportedly crossed into oncoming traffic",
+     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
+    },
+    "location_state_region": {
+     "quote": "MONTGOMERY, NJ — A Tesla in autopilot mode reportedly crossed into oncoming traffic",
+     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
+    },
+    "persons_harmed": {
+     "quote": "suffered minor injuries and were treated at local hospitals",
+     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
+    },
+    "police_action": {
+     "quote": "Police issued the Tesla driver summonses for careless driving, reckless driving and failure to maintain a lane.",
+     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
+    },
+    "responsibility_attributed_to": {
+     "quote": "Police issued the Tesla driver summonses for careless driving, reckless driving and failure to maintain a lane.",
+     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
+    },
+    "system_named": {
+     "quote": "The investigation found that the Tesla was being operated in autopilot mode and that the driver was applying makeup when the crash happened",
+     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
+    },
+    "time_of_day": {
+     "quote": "at around 11:28 a.m. on Nov. 2",
      "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
     },
     "vehicle_make": {
@@ -676,100 +740,36 @@
     "vehicle_model_year": {
      "quote": "a 2022 Tesla driven by a 37-year-old Millstone Township woman",
      "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
-    },
-    "location_city": {
-     "quote": "Montgomery Township police responded to the motor vehicle crash on Rt. 206 near Wood Thrush Lane",
-     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
-    },
-    "location_state_region": {
-     "quote": "MONTGOMERY, NJ — A Tesla in autopilot mode reportedly crossed into oncoming traffic",
-     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
-    },
-    "location_country": {
-     "quote": "MONTGOMERY, NJ — A Tesla in autopilot mode reportedly crossed into oncoming traffic",
-     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
-    },
-    "time_of_day": {
-     "quote": "at around 11:28 a.m. on Nov. 2",
-     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
-    },
-    "system_named": {
-     "quote": "The investigation found that the Tesla was being operated in autopilot mode and that the driver was applying makeup when the crash happened",
-     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
-    },
-    "engagement_status": {
-     "quote": "The investigation found that the Tesla was being operated in autopilot mode and that the driver was applying makeup when the crash happened",
-     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
-    },
-    "engagement_claimed_by": {
-     "quote": "The investigation found that the Tesla was being operated in autopilot mode and that the driver was applying makeup when the crash happened",
-     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
-    },
-    "driver_seat_occupied": {
-     "quote": "the driver was applying makeup",
-     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
-    },
-    "driver_condition_mentioned": {
-     "quote": "the driver was applying makeup",
-     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
-    },
-    "injuries": {
-     "quote": "suffered minor injuries and were treated at local hospitals",
-     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
-    },
-    "persons_harmed": {
-     "quote": "suffered minor injuries and were treated at local hospitals",
-     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
-    },
-    "police_action": {
-     "quote": "Police issued the Tesla driver summonses for careless driving, reckless driving and failure to maintain a lane.",
-     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
-    },
-    "criminal_charges": {
-     "quote": "Police issued the Tesla driver summonses for careless driving, reckless driving and failure to maintain a lane.",
-     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
-    },
-    "criminal_case_stage": {
-     "quote": "is charged with failure to maintain her lane, careless driving and reckless driving",
-     "source_url": "https://nj1015.com/tesla-driver-makeup-autopilot-crash/"
-    },
-    "responsibility_attributed_to": {
-     "quote": "Police issued the Tesla driver summonses for careless driving, reckless driving and failure to maintain a lane.",
-     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
-    },
-    "coverage_stage": {
-     "quote": "according to a statement from the department",
-     "source_url": "https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html"
     }
    },
    "claims": [
     {
      "claimant": "police",
-     "topic": "automation_engaged",
      "paraphrase": "Montgomery Township police said their investigation found the car was being operated in Autopilot mode and the driver was applying makeup.",
      "quote": "The investigation found that the Tesla was being operated in autopilot mode and that the driver was applying makeup when the crash happened",
-     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery"
+     "source_url": "https://patch.com/new-jersey/hillsborough/tesla-autopilot-mode-hits-tractor-trailer-garbage-truck-route-206-montgomery",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "driver",
-     "topic": "automation_engaged",
      "paraphrase": "According to a police report, the driver said she had been driving for about 20 minutes at about 45 mph with Autopilot engaged.",
      "quote": "told police she had been driving for about 20 minutes at approximately 45 mph with Autopilot engaged",
-     "source_url": "https://nj1015.com/tesla-driver-makeup-autopilot-crash/"
+     "source_url": "https://nj1015.com/tesla-driver-makeup-autopilot-crash/",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "driver",
-     "topic": "automation_performance",
      "paraphrase": "The driver said she expected the car to sense if she closed her eyes for too long and fell asleep.",
      "quote": "said she expected the Tesla to sense if she closed her eyes for too long and fell asleep",
-     "source_url": "https://nj1015.com/tesla-driver-makeup-autopilot-crash/"
+     "source_url": "https://nj1015.com/tesla-driver-makeup-autopilot-crash/",
+     "topic": "automation_performance"
     },
     {
      "claimant": "police",
-     "topic": "cause_or_responsibility",
      "paraphrase": "Investigators concluded the driver probably grabbed the steering wheel while shifting in her seat, which stopped Autopilot and made the car veer.",
      "quote": "likely grabbed the steering wheel to move, causing Autopilot feature to stop working and the car to suddenly veer off",
-     "source_url": "https://nj1015.com/tesla-driver-makeup-autopilot-crash/"
+     "source_url": "https://nj1015.com/tesla-driver-makeup-autopilot-crash/",
+     "topic": "cause_or_responsibility"
     }
    ],
    "sources": [
@@ -873,6 +873,18 @@
     "coverage_stage": "initial_report"
    },
    "evidence": {
+    "coverage_stage": {
+     "quote": "A series of videos circulating on X appears to show a Tesla moving out of the path of a speeding vehicle",
+     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
+    },
+    "engagement_claimed_by": {
+     "quote": "claiming the Tesla detected a rapidly approaching vehicle from behind and moved out of its path while operating in self-driving mode",
+     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
+    },
+    "engagement_status": {
+     "quote": "claiming the Tesla detected a rapidly approaching vehicle from behind and moved out of its path while operating in self-driving mode",
+     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
+    },
     "incident_date": {
      "quote": "the incident occurred in Pleasant Grove, Utah, around November 4 or 5",
      "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
@@ -881,15 +893,11 @@
      "quote": "appears to show a Tesla moving out of the path of a speeding vehicle",
      "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
     },
-    "vehicle_make": {
-     "quote": "appears to show a Tesla moving out of the path of a speeding vehicle",
+    "injuries": {
+     "quote": "the individual was airlifted to a hospital in extremely critical condition",
      "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
     },
     "location_city": {
-     "quote": "the incident occurred in Pleasant Grove, Utah, around November 4 or 5",
-     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
-    },
-    "location_state_region": {
      "quote": "the incident occurred in Pleasant Grove, Utah, around November 4 or 5",
      "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
     },
@@ -897,52 +905,44 @@
      "quote": "the incident occurred in Pleasant Grove, Utah, around November 4 or 5",
      "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
     },
-    "system_named": {
-     "quote": "claiming the Tesla detected a rapidly approaching vehicle from behind and moved out of its path while operating in self-driving mode",
-     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
-    },
-    "engagement_status": {
-     "quote": "claiming the Tesla detected a rapidly approaching vehicle from behind and moved out of its path while operating in self-driving mode",
-     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
-    },
-    "engagement_claimed_by": {
-     "quote": "claiming the Tesla detected a rapidly approaching vehicle from behind and moved out of its path while operating in self-driving mode",
-     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
-    },
-    "injuries": {
-     "quote": "the individual was airlifted to a hospital in extremely critical condition",
+    "location_state_region": {
+     "quote": "the incident occurred in Pleasant Grove, Utah, around November 4 or 5",
      "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
     },
     "persons_harmed": {
      "quote": "the individual was airlifted to a hospital in extremely critical condition",
      "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
     },
-    "coverage_stage": {
-     "quote": "A series of videos circulating on X appears to show a Tesla moving out of the path of a speeding vehicle",
+    "system_named": {
+     "quote": "claiming the Tesla detected a rapidly approaching vehicle from behind and moved out of its path while operating in self-driving mode",
+     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
+    },
+    "vehicle_make": {
+     "quote": "appears to show a Tesla moving out of the path of a speeding vehicle",
      "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
     }
    },
    "claims": [
     {
      "claimant": "other",
-     "topic": "automation_engaged",
      "paraphrase": "The person who posted the videos, who was not in the car, wrote that the Tesla was on self-driving, saw the car approaching from behind at excessive speed and moved out of the way.",
      "quote": "The Tesla, on self-driving, sees the approaching car coming from behind at excessive speed and moves out of the way",
-     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
+     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "news_outlet",
-     "topic": "automation_engaged",
      "paraphrase": "The report says the available information does not establish whether the self-driving system or the human driver made the manoeuvre.",
      "quote": "the available information does not independently establish whether Tesla's self-driving system initiated the maneuver or whether the vehicle's human driver intervened",
-     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
+     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "news_outlet",
-     "topic": "other",
      "paraphrase": "The report says police information on the collision does not identify a Tesla as involved or confirm an evasive manoeuvre.",
      "quote": "the available police information does not identify a Tesla as one of the vehicles involved or confirm that its autonomous driving system performed an emergency evasive maneuver",
-     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
+     "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html",
+     "topic": "other"
     }
    ],
    "sources": [
@@ -1024,6 +1024,30 @@
     "coverage_stage": "initial_report"
    },
    "evidence": {
+    "collision_with": {
+     "quote": "Video shows Tesla hit CHP car on I-80 in Fairfield",
+     "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
+    },
+    "coverage_stage": {
+     "quote": "the department said in a social media",
+     "source_url": "https://www.msn.com/en-in/news/other/tesla-driver-allegedly-asleep-with-full-self-driving-on-video-shows-car-crashing-into-police-vehicle-in-california/ar-AA2erZAC"
+    },
+    "driver_condition_mentioned": {
+     "quote": "CHP said the Sacramento driver claimed he was asleep while the Tesla was operating in Full Self-Driving mode.",
+     "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
+    },
+    "driver_seat_occupied": {
+     "quote": "CHP said the Sacramento driver claimed he was asleep while the Tesla was operating in Full Self-Driving mode.",
+     "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
+    },
+    "engagement_claimed_by": {
+     "quote": "CHP said the Sacramento driver claimed he was asleep while the Tesla was operating in Full Self-Driving mode.",
+     "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
+    },
+    "engagement_status": {
+     "quote": "CHP said the Sacramento driver claimed he was asleep while the Tesla was operating in Full Self-Driving mode.",
+     "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
+    },
     "incident_date": {
      "quote": "The incident occurred on October 13, 2026, on eastbound I-80, west of Air Base Parkway",
      "source_url": "https://www.msn.com/en-in/news/other/tesla-driver-allegedly-asleep-with-full-self-driving-on-video-shows-car-crashing-into-police-vehicle-in-california/ar-AA2erZAC"
@@ -1032,25 +1056,21 @@
      "quote": "Video shows Tesla hit CHP car on I-80 in Fairfield",
      "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
     },
-    "collision_with": {
-     "quote": "Video shows Tesla hit CHP car on I-80 in Fairfield",
-     "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
-    },
-    "vehicle_make": {
-     "quote": "Video shows Tesla hit CHP car on I-80 in Fairfield",
-     "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
-    },
     "location_city": {
      "quote": "Video shows Tesla hit CHP car on I-80 in Fairfield",
      "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
+    },
+    "location_country": {
+     "quote": "Video shows car crashing into police vehicle in California",
+     "source_url": "https://www.msn.com/en-in/news/other/tesla-driver-allegedly-asleep-with-full-self-driving-on-video-shows-car-crashing-into-police-vehicle-in-california/ar-AA2erZAC"
     },
     "location_state_region": {
      "quote": "Video shows car crashing into police vehicle in California",
      "source_url": "https://www.msn.com/en-in/news/other/tesla-driver-allegedly-asleep-with-full-self-driving-on-video-shows-car-crashing-into-police-vehicle-in-california/ar-AA2erZAC"
     },
-    "location_country": {
-     "quote": "Video shows car crashing into police vehicle in California",
-     "source_url": "https://www.msn.com/en-in/news/other/tesla-driver-allegedly-asleep-with-full-self-driving-on-video-shows-car-crashing-into-police-vehicle-in-california/ar-AA2erZAC"
+    "police_action": {
+     "quote": "Investigators said he told officers that he had been asleep while using the vehicle's Full Self-Driving feature.",
+     "source_url": "https://www.msn.com/en-in/news/other/video-sleeping-driver-using-tesla-s-self-driving-mode-crashes-into-police-car/ar-AA2epBb8"
     },
     "road_type": {
      "quote": "The incident occurred on October 13, 2026, on eastbound I-80, west of Air Base Parkway",
@@ -1060,45 +1080,25 @@
      "quote": "CHP said the Sacramento driver claimed he was asleep while the Tesla was operating in Full Self-Driving mode.",
      "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
     },
-    "engagement_status": {
-     "quote": "CHP said the Sacramento driver claimed he was asleep while the Tesla was operating in Full Self-Driving mode.",
+    "vehicle_make": {
+     "quote": "Video shows Tesla hit CHP car on I-80 in Fairfield",
      "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
-    },
-    "engagement_claimed_by": {
-     "quote": "CHP said the Sacramento driver claimed he was asleep while the Tesla was operating in Full Self-Driving mode.",
-     "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
-    },
-    "driver_seat_occupied": {
-     "quote": "CHP said the Sacramento driver claimed he was asleep while the Tesla was operating in Full Self-Driving mode.",
-     "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
-    },
-    "driver_condition_mentioned": {
-     "quote": "CHP said the Sacramento driver claimed he was asleep while the Tesla was operating in Full Self-Driving mode.",
-     "source_url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx"
-    },
-    "police_action": {
-     "quote": "Investigators said he told officers that he had been asleep while using the vehicle's Full Self-Driving feature.",
-     "source_url": "https://www.msn.com/en-in/news/other/video-sleeping-driver-using-tesla-s-self-driving-mode-crashes-into-police-car/ar-AA2epBb8"
-    },
-    "coverage_stage": {
-     "quote": "the department said in a social media",
-     "source_url": "https://www.msn.com/en-in/news/other/tesla-driver-allegedly-asleep-with-full-self-driving-on-video-shows-car-crashing-into-police-vehicle-in-california/ar-AA2erZAC"
     }
    },
    "claims": [
     {
      "claimant": "driver",
-     "topic": "automation_engaged",
      "paraphrase": "According to the California Highway Patrol, the driver told officers he had been asleep while the car was in Full Self-Driving mode.",
      "quote": "Investigators said he told officers that he had been asleep while using the vehicle's Full Self-Driving feature.",
-     "source_url": "https://www.msn.com/en-in/news/other/video-sleeping-driver-using-tesla-s-self-driving-mode-crashes-into-police-car/ar-AA2epBb8"
+     "source_url": "https://www.msn.com/en-in/news/other/video-sleeping-driver-using-tesla-s-self-driving-mode-crashes-into-police-car/ar-AA2epBb8",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "police",
-     "topic": "other",
      "paraphrase": "The highway patrol said its officers were investigating an earlier fatal crash at the scene when the Tesla struck the patrol car.",
      "quote": "while CHP officers from Solano County were investigating a fatal crash",
-     "source_url": "https://www.msn.com/en-in/news/other/tesla-driver-allegedly-asleep-with-full-self-driving-on-video-shows-car-crashing-into-police-vehicle-in-california/ar-AA2erZAC"
+     "source_url": "https://www.msn.com/en-in/news/other/tesla-driver-allegedly-asleep-with-full-self-driving-on-video-shows-car-crashing-into-police-vehicle-in-california/ar-AA2erZAC",
+     "topic": "other"
     }
    ],
    "sources": [
@@ -1202,6 +1202,30 @@
     "coverage_stage": "follow_up_investigation"
    },
    "evidence": {
+    "collision_with": {
+     "quote": "hit a traffic signal pole on the corner of the intersection, and rolled over",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+    },
+    "coverage_stage": {
+     "quote": "It’s the latest case in our ongoing investigation into fatal crashes hidden in Tesla’s NHTSA data.",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+    },
+    "driver_seat_occupied": {
+     "quote": "The 48-year-old driver, also from Fort Myers, went to the hospital with non-life-threatening injuries.",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+    },
+    "engagement_claimed_by": {
+     "quote": "meaning Tesla confirmed through its own telematics that Autopilot or FSD was on",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+    },
+    "engagement_status": {
+     "quote": "meaning Tesla confirmed through its own telematics that Autopilot or FSD was on",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+    },
+    "fatalities": {
+     "quote": "Its passenger, a 50-year-old woman from Fort Myers, was pronounced dead at the scene.",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+    },
     "incident_date": {
      "quote": "At 11:43 p.m. on Wednesday, September 30, 2026, a 2025 Tesla Model X was heading east on Golden Gate Parkway in Collier County",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
@@ -1210,27 +1234,11 @@
      "quote": "A Tesla Model X veered off Golden Gate Parkway in Naples, Florida, hit a traffic signal pole and overturned in September",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
     },
-    "collision_with": {
-     "quote": "hit a traffic signal pole on the corner of the intersection, and rolled over",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
-    },
-    "vehicle_make": {
-     "quote": "At 11:43 p.m. on Wednesday, September 30, 2026, a 2025 Tesla Model X was heading east on Golden Gate Parkway in Collier County",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
-    },
-    "vehicle_model": {
-     "quote": "At 11:43 p.m. on Wednesday, September 30, 2026, a 2025 Tesla Model X was heading east on Golden Gate Parkway in Collier County",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
-    },
-    "vehicle_model_year": {
-     "quote": "At 11:43 p.m. on Wednesday, September 30, 2026, a 2025 Tesla Model X was heading east on Golden Gate Parkway in Collier County",
+    "injuries": {
+     "quote": "The 48-year-old driver, also from Fort Myers, went to the hospital with non-life-threatening injuries.",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
     },
     "location_city": {
-     "quote": "A Tesla Model X veered off Golden Gate Parkway in Naples, Florida, hit a traffic signal pole and overturned in September",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
-    },
-    "location_state_region": {
      "quote": "A Tesla Model X veered off Golden Gate Parkway in Naples, Florida, hit a traffic signal pole and overturned in September",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
     },
@@ -1238,36 +1246,8 @@
      "quote": "A Tesla Model X veered off Golden Gate Parkway in Naples, Florida, hit a traffic signal pole and overturned in September",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
     },
-    "road_type": {
-     "quote": "approaching the Estuary Boulevard intersection",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
-    },
-    "time_of_day": {
-     "quote": "At 11:43 p.m. on Wednesday, September 30, 2026, a 2025 Tesla Model X was heading east on Golden Gate Parkway in Collier County",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
-    },
-    "system_named": {
-     "quote": "Tesla’s own report to federal regulators says Autopilot or “Full Self-Driving” was engaged",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
-    },
-    "engagement_status": {
-     "quote": "meaning Tesla confirmed through its own telematics that Autopilot or FSD was on",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
-    },
-    "engagement_claimed_by": {
-     "quote": "meaning Tesla confirmed through its own telematics that Autopilot or FSD was on",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
-    },
-    "driver_seat_occupied": {
-     "quote": "The 48-year-old driver, also from Fort Myers, went to the hospital with non-life-threatening injuries.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
-    },
-    "fatalities": {
-     "quote": "Its passenger, a 50-year-old woman from Fort Myers, was pronounced dead at the scene.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
-    },
-    "injuries": {
-     "quote": "The 48-year-old driver, also from Fort Myers, went to the hospital with non-life-threatening injuries.",
+    "location_state_region": {
+     "quote": "A Tesla Model X veered off Golden Gate Parkway in Naples, Florida, hit a traffic signal pole and overturned in September",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
     },
     "persons_harmed": {
@@ -1282,46 +1262,66 @@
      "quote": "Under NHTSA’s Standing General Order, automakers have to report crashes where a Level 2 driver-assist system was engaged within 30 seconds of impact",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
     },
-    "coverage_stage": {
-     "quote": "It’s the latest case in our ongoing investigation into fatal crashes hidden in Tesla’s NHTSA data.",
+    "road_type": {
+     "quote": "approaching the Estuary Boulevard intersection",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+    },
+    "system_named": {
+     "quote": "Tesla’s own report to federal regulators says Autopilot or “Full Self-Driving” was engaged",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+    },
+    "time_of_day": {
+     "quote": "At 11:43 p.m. on Wednesday, September 30, 2026, a 2025 Tesla Model X was heading east on Golden Gate Parkway in Collier County",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+    },
+    "vehicle_make": {
+     "quote": "At 11:43 p.m. on Wednesday, September 30, 2026, a 2025 Tesla Model X was heading east on Golden Gate Parkway in Collier County",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+    },
+    "vehicle_model": {
+     "quote": "At 11:43 p.m. on Wednesday, September 30, 2026, a 2025 Tesla Model X was heading east on Golden Gate Parkway in Collier County",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+    },
+    "vehicle_model_year": {
+     "quote": "At 11:43 p.m. on Wednesday, September 30, 2026, a 2025 Tesla Model X was heading east on Golden Gate Parkway in Collier County",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
     }
    },
    "claims": [
     {
      "claimant": "manufacturer",
-     "topic": "automation_engaged",
      "paraphrase": "Tesla's crash report to NHTSA marks the feature as verified engaged and logs a pre-crash speed of 39 mph.",
      "quote": "It logs a pre-crash speed of 39 mph, a collision with a pole or tree, airbag deployment, and damage to the front and the top of the car",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "police",
-     "topic": "other",
      "paraphrase": "The Florida Highway Patrol said the crash remains under investigation and has not released a cause.",
      "quote": "FHP said the crash remains under investigation.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/",
+     "topic": "other"
     },
     {
      "claimant": "news_outlet",
-     "topic": "cause_or_responsibility",
      "paraphrase": "The outlet that found the report says the feature might not have caused the crash but was active within 30 seconds of it.",
      "quote": "Autopilot/FSD might not have caused the crash, but it was active within 30 seconds of the crash",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/",
+     "topic": "cause_or_responsibility"
     },
     {
      "claimant": "news_outlet",
-     "topic": "automation_engaged",
      "paraphrase": "A second outlet notes that the designation confirms recent system activity and is not a finding of fault or cause, and that the filing does not show which product was in use.",
      "quote": "The designation confirms recent system activity; it is not a finding of fault or cause.",
-     "source_url": "https://www.yahoo.com/news/us/articles/tesla-model-x-autopilot-fsd-150846578.html"
+     "source_url": "https://www.yahoo.com/news/us/articles/tesla-model-x-autopilot-fsd-150846578.html",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "news_outlet",
-     "topic": "other",
      "paraphrase": "Coverage reports that Tesla holds video, event-data-recorder and telematics data for the crash and redacted the narrative as confidential business information.",
      "quote": "Tesla has the video, the EDR, and the telematics, and it knew about the crash on its own.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-model-x-pole-rollover-naples/",
+     "topic": "other"
     }
    ],
    "sources": [
@@ -1439,6 +1439,30 @@
     "coverage_stage": "follow_up_investigation"
    },
    "evidence": {
+    "collision_with": {
+     "quote": "hit a tree on the north side of the parkway, and caught fire",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+    },
+    "coverage_stage": {
+     "quote": "It’s the latest case in our ongoing investigation into fatal crashes hidden in Tesla’s NHTSA data.",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+    },
+    "driver_seat_occupied": {
+     "quote": "One of the two women was driving",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+    },
+    "engagement_claimed_by": {
+     "quote": "Tesla’s own report to federal regulators says Autopilot or “Full Self-Driving” was engaged",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+    },
+    "engagement_status": {
+     "quote": "marks the “Engagement Status” as “Verified Engaged.",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+    },
+    "fatalities": {
+     "quote": "killing three of the four people inside",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+    },
     "incident_date": {
      "quote": "Late on Saturday, September 12, 2026, a 2024 Tesla Model Y with four people inside was heading west on Serrano Parkway",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
@@ -1447,27 +1471,11 @@
      "quote": "A Tesla Model Y left a parkway in El Dorado Hills, California, hit a tree and burst into flames in September",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
     },
-    "collision_with": {
-     "quote": "hit a tree on the north side of the parkway, and caught fire",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
-    },
-    "vehicle_make": {
-     "quote": "Late on Saturday, September 12, 2026, a 2024 Tesla Model Y with four people inside was heading west on Serrano Parkway",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
-    },
-    "vehicle_model": {
-     "quote": "Late on Saturday, September 12, 2026, a 2024 Tesla Model Y with four people inside was heading west on Serrano Parkway",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
-    },
-    "vehicle_model_year": {
-     "quote": "Late on Saturday, September 12, 2026, a 2024 Tesla Model Y with four people inside was heading west on Serrano Parkway",
+    "injuries": {
+     "quote": "survived with major injuries",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
     },
     "location_city": {
-     "quote": "A Tesla Model Y left a parkway in El Dorado Hills, California, hit a tree and burst into flames in September",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
-    },
-    "location_state_region": {
      "quote": "A Tesla Model Y left a parkway in El Dorado Hills, California, hit a tree and burst into flames in September",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
     },
@@ -1475,36 +1483,8 @@
      "quote": "A Tesla Model Y left a parkway in El Dorado Hills, California, hit a tree and burst into flames in September",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
     },
-    "road_type": {
-     "quote": "That’s a residential part of the Serrano community in El Dorado Hills",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
-    },
-    "time_of_day": {
-     "quote": "Officers got the call around 10:38 p.m.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
-    },
-    "system_named": {
-     "quote": "Tesla’s own report to federal regulators says Autopilot or “Full Self-Driving” was engaged",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
-    },
-    "engagement_status": {
-     "quote": "marks the “Engagement Status” as “Verified Engaged.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
-    },
-    "engagement_claimed_by": {
-     "quote": "Tesla’s own report to federal regulators says Autopilot or “Full Self-Driving” was engaged",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
-    },
-    "driver_seat_occupied": {
-     "quote": "One of the two women was driving",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
-    },
-    "fatalities": {
-     "quote": "killing three of the four people inside",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
-    },
-    "injuries": {
-     "quote": "survived with major injuries",
+    "location_state_region": {
+     "quote": "A Tesla Model Y left a parkway in El Dorado Hills, California, hit a tree and burst into flames in September",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
     },
     "persons_harmed": {
@@ -1519,39 +1499,59 @@
      "quote": "Under NHTSA’s Standing General Order, automakers have to report crashes where a Level 2 driver-assist system was engaged within 30 seconds of impact",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
     },
-    "coverage_stage": {
-     "quote": "It’s the latest case in our ongoing investigation into fatal crashes hidden in Tesla’s NHTSA data.",
+    "road_type": {
+     "quote": "That’s a residential part of the Serrano community in El Dorado Hills",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+    },
+    "system_named": {
+     "quote": "Tesla’s own report to federal regulators says Autopilot or “Full Self-Driving” was engaged",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+    },
+    "time_of_day": {
+     "quote": "Officers got the call around 10:38 p.m.",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+    },
+    "vehicle_make": {
+     "quote": "Late on Saturday, September 12, 2026, a 2024 Tesla Model Y with four people inside was heading west on Serrano Parkway",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+    },
+    "vehicle_model": {
+     "quote": "Late on Saturday, September 12, 2026, a 2024 Tesla Model Y with four people inside was heading west on Serrano Parkway",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+    },
+    "vehicle_model_year": {
+     "quote": "Late on Saturday, September 12, 2026, a 2024 Tesla Model Y with four people inside was heading west on Serrano Parkway",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
     }
    },
    "claims": [
     {
      "claimant": "manufacturer",
-     "topic": "automation_engaged",
      "paraphrase": "Tesla's crash report to NHTSA marks the feature as verified engaged and logs a pre-crash speed of 74 mph; it does not say whether Autopilot or Full Self-Driving was the feature.",
      "quote": "It logs a pre-crash speed of 74 mph, a fatality, and the California Highway Patrol as the investigating agency.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "police",
-     "topic": "cause_or_responsibility",
      "paraphrase": "The California Highway Patrol said the car left the road for unknown reasons and that the cause is still under investigation.",
      "quote": "CHP says the cause is still under investigation.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/",
+     "topic": "cause_or_responsibility"
     },
     {
      "claimant": "news_outlet",
-     "topic": "other",
      "paraphrase": "The outlet reports that Tesla redacted the narrative, software version and operating-domain fields of the report as confidential business information.",
      "quote": "Then it redacts the narrative, the software version, and whether the road was inside the system’s operating domain",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/",
+     "topic": "other"
     },
     {
      "claimant": "news_outlet",
-     "topic": "automation_engaged",
      "paraphrase": "The outlet notes that the reporting rule covers crashes where a driver-assist system was engaged within 30 seconds of impact.",
      "quote": "automakers have to report crashes where a Level 2 driver-assist system was engaged within 30 seconds of impact and someone is killed or hurt",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-fiery-crash-el-dorado-hills/",
+     "topic": "automation_engaged"
     }
    ],
    "sources": [
@@ -1632,6 +1632,22 @@
     "coverage_stage": "follow_up_investigation"
    },
    "evidence": {
+    "collision_with": {
+     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
+     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
+    },
+    "coverage_stage": {
+     "quote": "Then Tesla Redacted What Happened",
+     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
+    },
+    "driver_seat_occupied": {
+     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
+     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
+    },
+    "engagement_status": {
+     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
+     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
+    },
     "incident_date": {
      "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
      "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
@@ -1640,7 +1656,27 @@
      "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
      "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
     },
-    "collision_with": {
+    "location_city": {
+     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
+     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
+    },
+    "location_country": {
+     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
+     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
+    },
+    "location_state_region": {
+     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
+     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
+    },
+    "road_type": {
+     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
+     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
+    },
+    "system_named": {
+     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
+     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
+    },
+    "time_of_day": {
      "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
      "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
     },
@@ -1651,51 +1687,15 @@
     "vehicle_model": {
      "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
      "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-    },
-    "location_city": {
-     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-    },
-    "location_state_region": {
-     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-    },
-    "location_country": {
-     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-    },
-    "road_type": {
-     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-    },
-    "time_of_day": {
-     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-    },
-    "system_named": {
-     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-    },
-    "engagement_status": {
-     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-    },
-    "driver_seat_occupied": {
-     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-    },
-    "coverage_stage": {
-     "quote": "Then Tesla Redacted What Happened",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
     }
    },
    "claims": [
     {
      "claimant": "news_outlet",
-     "topic": "other",
      "paraphrase": "The headline says Tesla redacted the account of what happened.",
      "quote": "Then Tesla Redacted What Happened",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
+     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/",
+     "topic": "other"
     }
    ],
    "sources": [
@@ -1788,6 +1788,30 @@
     "coverage_stage": "follow_up_investigation"
    },
    "evidence": {
+    "collision_with": {
+     "quote": "a Tesla plowed through a brick home in Katy, Texas",
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+    },
+    "coverage_stage": {
+     "quote": "The NTSB said in its preliminary findings",
+     "source_url": "https://thehill.com/policy/technology/5972631-tesla-fsd-crash-texas/"
+    },
+    "driver_seat_occupied": {
+     "quote": "told Harris County sheriff’s deputies that the vehicle was on Autopilot at the time",
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+    },
+    "engagement_claimed_by": {
+     "quote": "told Harris County sheriff’s deputies that the vehicle was on Autopilot at the time",
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+    },
+    "engagement_status": {
+     "quote": "Whether the Autopilot system was truly active, overridden, or malfunctioning likely won’t be resolved until investigators finish combing through the vehicle’s data logs.",
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+    },
+    "fatalities": {
+     "quote": "killing a 76-year-old woman",
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+    },
     "incident_date": {
      "quote": "The crash occurred Friday night when a Tesla Model 3",
      "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
@@ -1796,23 +1820,7 @@
      "quote": "a Tesla plowed through a brick home in Katy, Texas",
      "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
     },
-    "collision_with": {
-     "quote": "a Tesla plowed through a brick home in Katy, Texas",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
-    },
-    "vehicle_make": {
-     "quote": "The crash occurred Friday night when a Tesla Model 3",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
-    },
-    "vehicle_model": {
-     "quote": "The crash occurred Friday night when a Tesla Model 3",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
-    },
     "location_city": {
-     "quote": "a Tesla plowed through a brick home in Katy, Texas",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
-    },
-    "location_state_region": {
      "quote": "a Tesla plowed through a brick home in Katy, Texas",
      "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
     },
@@ -1820,32 +1828,8 @@
      "quote": "a Tesla plowed through a brick home in Katy, Texas",
      "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
     },
-    "road_type": {
-     "quote": "pressing the accelerator all the way to 100% of the accel pedal in this residential area",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
-    },
-    "time_of_day": {
-     "quote": "The crash occurred Friday night when a Tesla Model 3",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
-    },
-    "system_named": {
-     "quote": "long-running debate over Tesla’s Autopilot and Full Self-Driving (Supervised) driver-assistance systems",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
-    },
-    "engagement_status": {
-     "quote": "Whether the Autopilot system was truly active, overridden, or malfunctioning likely won’t be resolved until investigators finish combing through the vehicle’s data logs.",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
-    },
-    "engagement_claimed_by": {
-     "quote": "told Harris County sheriff’s deputies that the vehicle was on Autopilot at the time",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
-    },
-    "driver_seat_occupied": {
-     "quote": "told Harris County sheriff’s deputies that the vehicle was on Autopilot at the time",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
-    },
-    "fatalities": {
-     "quote": "killing a 76-year-old woman",
+    "location_state_region": {
+     "quote": "a Tesla plowed through a brick home in Katy, Texas",
      "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
     },
     "police_action": {
@@ -1860,53 +1844,69 @@
      "quote": "the driver manually overrode self-driving by pressing the accelerator all the way to 100% of the accel pedal in this residential area",
      "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
     },
-    "coverage_stage": {
-     "quote": "The NTSB said in its preliminary findings",
-     "source_url": "https://thehill.com/policy/technology/5972631-tesla-fsd-crash-texas/"
+    "road_type": {
+     "quote": "pressing the accelerator all the way to 100% of the accel pedal in this residential area",
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+    },
+    "system_named": {
+     "quote": "long-running debate over Tesla’s Autopilot and Full Self-Driving (Supervised) driver-assistance systems",
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+    },
+    "time_of_day": {
+     "quote": "The crash occurred Friday night when a Tesla Model 3",
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+    },
+    "vehicle_make": {
+     "quote": "The crash occurred Friday night when a Tesla Model 3",
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+    },
+    "vehicle_model": {
+     "quote": "The crash occurred Friday night when a Tesla Model 3",
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
     }
    },
    "claims": [
     {
      "claimant": "driver",
-     "topic": "automation_engaged",
      "paraphrase": "The driver told Harris County sheriff's deputies that the car was on Autopilot at the time.",
      "quote": "told Harris County sheriff’s deputies that the vehicle was on Autopilot at the time",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "manufacturer",
-     "topic": "driver_behavior",
      "paraphrase": "Tesla's vice president of AI software wrote that the driver overrode self-driving by pressing the accelerator fully, reaching 73 mph.",
      "quote": "the driver manually overrode self-driving by pressing the accelerator all the way to 100% of the accel pedal in this residential area",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/",
+     "topic": "driver_behavior"
     },
     {
      "claimant": "manufacturer",
-     "topic": "automation_performance",
      "paraphrase": "Tesla's chief executive wrote that the allegation made no sense because FSD drives slowly on neighbourhood streets and this was a high-speed crash.",
      "quote": "FSD drives slowly through neighborhood streets and this was a high speed crash!",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/",
+     "topic": "automation_performance"
     },
     {
      "claimant": "ntsb",
-     "topic": "driver_behavior",
      "paraphrase": "The NTSB said in preliminary findings that the driver overrode the car's driver-assistance system.",
      "quote": "A Tesla driver in a fatal Texas crash overrode the car’s driver assistance system, the National Transportation Safety Board (NTSB) said Wednesday.",
-     "source_url": "https://thehill.com/policy/technology/5972631-tesla-fsd-crash-texas/"
+     "source_url": "https://thehill.com/policy/technology/5972631-tesla-fsd-crash-texas/",
+     "topic": "driver_behavior"
     },
     {
      "claimant": "regulator",
-     "topic": "other",
      "paraphrase": "NHTSA confirmed it was opening a special investigation into the crash.",
      "quote": "The National Highway Traffic Safety Administration confirmed to TechCrunch on Monday it was opening a special investigation into the crash.",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/",
+     "topic": "other"
     },
     {
      "claimant": "police",
-     "topic": "other",
      "paraphrase": "The sheriff's office said it would present its findings to the district attorney to decide whether criminal charges are warranted.",
      "quote": "The Harris County Sheriff’s Office said it would present its findings to the local district attorney to determine whether criminal charges are warranted.",
-     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/"
+     "source_url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/",
+     "topic": "other"
     }
    ],
    "sources": [
@@ -2003,6 +2003,30 @@
     "coverage_stage": "follow_up_investigation"
    },
    "evidence": {
+    "collision_with": {
+     "quote": "killing two of its passengers and a man who had stopped to help",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
+    "coverage_stage": {
+     "quote": "It’s the latest case in our ongoing investigation into fatal crashes hidden in Tesla’s NHTSA data",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
+    "driver_seat_occupied": {
+     "quote": "The 20-year-old driver and two more passengers were seriously hurt.",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
+    "engagement_claimed_by": {
+     "quote": "That means Tesla confirmed through its own telematics that Autopilot or FSD was on.",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
+    "engagement_status": {
+     "quote": "That means Tesla confirmed through its own telematics that Autopilot or FSD was on.",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
+    "fatalities": {
+     "quote": "killing two of its passengers and a man who had stopped to help",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
     "incident_date": {
      "quote": "Just before 4 a.m. on Sunday, May 31, 2026",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
@@ -2011,27 +2035,11 @@
      "quote": "A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
     },
-    "collision_with": {
-     "quote": "killing two of its passengers and a man who had stopped to help",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-    },
-    "vehicle_make": {
-     "quote": "A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-    },
-    "vehicle_model": {
-     "quote": "It identifies the car as a 2023 Model 3 on a highway",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-    },
-    "vehicle_model_year": {
-     "quote": "It identifies the car as a 2023 Model 3 on a highway",
+    "injuries": {
+     "quote": "The 20-year-old driver and two more passengers were seriously hurt.",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
     },
     "location_city": {
-     "quote": "A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-    },
-    "location_state_region": {
      "quote": "A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
     },
@@ -2039,36 +2047,8 @@
      "quote": "A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
     },
-    "road_type": {
-     "quote": "It identifies the car as a 2023 Model 3 on a highway",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-    },
-    "time_of_day": {
-     "quote": "Just before 4 a.m. on Sunday, May 31, 2026",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-    },
-    "system_named": {
-     "quote": "Tesla’s own report to federal regulators says Autopilot or “Full Self-Driving” was engaged, at 71 mph.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-    },
-    "engagement_status": {
-     "quote": "That means Tesla confirmed through its own telematics that Autopilot or FSD was on.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-    },
-    "engagement_claimed_by": {
-     "quote": "That means Tesla confirmed through its own telematics that Autopilot or FSD was on.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-    },
-    "driver_seat_occupied": {
-     "quote": "The 20-year-old driver and two more passengers were seriously hurt.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-    },
-    "fatalities": {
-     "quote": "killing two of its passengers and a man who had stopped to help",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-    },
-    "injuries": {
-     "quote": "The 20-year-old driver and two more passengers were seriously hurt.",
+    "location_state_region": {
+     "quote": "A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
     },
     "persons_harmed": {
@@ -2087,46 +2067,66 @@
      "quote": "said the Tesla driver would have seen only the truck’s underside",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
     },
-    "coverage_stage": {
-     "quote": "It’s the latest case in our ongoing investigation into fatal crashes hidden in Tesla’s NHTSA data",
+    "road_type": {
+     "quote": "It identifies the car as a 2023 Model 3 on a highway",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
+    "system_named": {
+     "quote": "Tesla’s own report to federal regulators says Autopilot or “Full Self-Driving” was engaged, at 71 mph.",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
+    "time_of_day": {
+     "quote": "Just before 4 a.m. on Sunday, May 31, 2026",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
+    "vehicle_make": {
+     "quote": "A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
+    "vehicle_model": {
+     "quote": "It identifies the car as a 2023 Model 3 on a highway",
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
+    "vehicle_model_year": {
+     "quote": "It identifies the car as a 2023 Model 3 on a highway",
      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
     }
    },
    "claims": [
     {
      "claimant": "manufacturer",
-     "topic": "automation_engaged",
      "paraphrase": "Tesla's crash report to NHTSA marks the feature as verified engaged and logs a pre-crash speed of 71 mph.",
      "quote": "It logs a pre-crash speed of 71 mph and a fatality, lists the Florida Highway Patrol as the investigating agency",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "police",
-     "topic": "cause_or_responsibility",
      "paraphrase": "A Florida Highway Patrol trooper said the driver would have seen only the underside of the overturned truck, with no lights or reflectors.",
      "quote": "said the Tesla driver would have seen only the truck’s underside",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/",
+     "topic": "cause_or_responsibility"
     },
     {
      "claimant": "police",
-     "topic": "other",
      "paraphrase": "According to the highway patrol, the truck's driver left the road near the Pine Ridge Road exit, steered back onto I-75 and overturned, blocking two lanes.",
      "quote": "The overturned truck ended up blocking the center and outside lanes.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/",
+     "topic": "other"
     },
     {
      "claimant": "news_outlet",
-     "topic": "automation_engaged",
      "paraphrase": "The outlet cautions that the reporting trigger is engagement within 30 seconds, that the speed may be a snapshot, and that it cannot tell whether Autopilot or FSD was in use.",
      "quote": "And with the software version redacted, we can’t say whether this was Autopilot or FSD.",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "news_outlet",
-     "topic": "automation_performance",
      "paraphrase": "The outlet argues that a large unlit obstacle across two lanes at night is the kind of thing a driver-assistance system is supposed to detect.",
      "quote": "a big, unlit obstacle sitting across two lanes at night is exactly the kind of thing a driver-assist system is supposed to catch",
-     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+     "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/",
+     "topic": "automation_performance"
     }
    ],
    "sources": [
@@ -2211,6 +2211,30 @@
     "coverage_stage": "legal_proceeding"
    },
    "evidence": {
+    "civil_litigation": {
+     "quote": "Tesla has settled a lawsuit tied to a fatal 2023 crash involving its Full Self-Driving (Supervised) system",
+     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
+    },
+    "collision_with": {
+     "quote": "A Tesla Model Y then struck and killed her at speed.",
+     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
+    },
+    "coverage_stage": {
+     "quote": "Tesla has settled a lawsuit tied to a fatal 2023 crash involving its Full Self-Driving (Supervised) system",
+     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
+    },
+    "engagement_claimed_by": {
+     "quote": "Tesla has settled a lawsuit tied to a fatal 2023 crash involving its Full Self-Driving (Supervised) system",
+     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
+    },
+    "engagement_status": {
+     "quote": "Tesla has settled a lawsuit tied to a fatal 2023 crash involving its Full Self-Driving (Supervised) system",
+     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
+    },
+    "fatalities": {
+     "quote": "A Tesla Model Y then struck and killed her at speed.",
+     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
+    },
     "incident_date": {
      "quote": "Tesla has settled a lawsuit tied to a fatal 2023 crash involving its Full Self-Driving (Supervised) system",
      "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
@@ -2219,24 +2243,20 @@
      "quote": "A Tesla Model Y then struck and killed her at speed.",
      "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
     },
-    "collision_with": {
-     "quote": "A Tesla Model Y then struck and killed her at speed.",
-     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
-    },
-    "vehicle_make": {
-     "quote": "A Tesla Model Y then struck and killed her at speed.",
-     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
-    },
-    "vehicle_model": {
-     "quote": "A Tesla Model Y then struck and killed her at speed.",
+    "location_country": {
+     "quote": "had stepped out of her car on an Arizona highway",
      "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
     },
     "location_state_region": {
      "quote": "had stepped out of her car on an Arizona highway",
      "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
     },
-    "location_country": {
-     "quote": "had stepped out of her car on an Arizona highway",
+    "persons_harmed": {
+     "quote": "She was waving traffic around an earlier crash caused by blinding sun glare.",
+     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
+    },
+    "regulator_involved": {
+     "quote": "The National Highway Traffic Safety Administration opened the case in 2024. Four reported crashes in low-visibility conditions prompted it",
      "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
     },
     "road_type": {
@@ -2247,63 +2267,43 @@
      "quote": "Tesla has settled a lawsuit tied to a fatal 2023 crash involving its Full Self-Driving (Supervised) system",
      "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
     },
-    "engagement_status": {
-     "quote": "Tesla has settled a lawsuit tied to a fatal 2023 crash involving its Full Self-Driving (Supervised) system",
-     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
-    },
-    "engagement_claimed_by": {
-     "quote": "Tesla has settled a lawsuit tied to a fatal 2023 crash involving its Full Self-Driving (Supervised) system",
-     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
-    },
-    "fatalities": {
+    "vehicle_make": {
      "quote": "A Tesla Model Y then struck and killed her at speed.",
      "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
     },
-    "persons_harmed": {
-     "quote": "She was waving traffic around an earlier crash caused by blinding sun glare.",
-     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
-    },
-    "civil_litigation": {
-     "quote": "Tesla has settled a lawsuit tied to a fatal 2023 crash involving its Full Self-Driving (Supervised) system",
-     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
-    },
-    "regulator_involved": {
-     "quote": "The National Highway Traffic Safety Administration opened the case in 2024. Four reported crashes in low-visibility conditions prompted it",
-     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
-    },
-    "coverage_stage": {
-     "quote": "Tesla has settled a lawsuit tied to a fatal 2023 crash involving its Full Self-Driving (Supervised) system",
+    "vehicle_model": {
+     "quote": "A Tesla Model Y then struck and killed her at speed.",
      "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
     }
    },
    "claims": [
     {
      "claimant": "regulator",
-     "topic": "automation_performance",
      "paraphrase": "In escalating its investigation in March 2026, NHTSA wrote that the system fails to detect or warn the driver appropriately in degraded visibility such as glare.",
      "quote": "fails to detect and/or warn the driver appropriately under degraded visibility conditions such as glare and airborne obscurants",
-     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
+     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa",
+     "topic": "automation_performance"
     },
     {
      "claimant": "manufacturer",
-     "topic": "automation_performance",
      "paraphrase": "On an earnings call, Tesla executives said they had changed the cameras on older vehicles to fix the visibility issues.",
      "quote": "executives said they had changed the cameras on older vehicles to fix the visibility issues",
-     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
+     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa",
+     "topic": "automation_performance"
     },
     {
      "claimant": "plaintiff_or_plaintiff_lawyer",
-     "topic": "other",
      "paraphrase": "The family's lawyer said his client was happy to put the case behind her; settlement terms were not disclosed.",
      "quote": "My client is happy to put this behind her",
-     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
+     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa",
+     "topic": "other"
     },
     {
      "claimant": "news_outlet",
-     "topic": "other",
      "paraphrase": "The report describes the death as the first known pedestrian fatality tied to Tesla's automation.",
      "quote": "Her death marked the first known pedestrian fatality tied to Tesla’s automation.",
-     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa"
+     "source_url": "https://thenextweb.com/news/tesla-fsd-fatal-crash-settlement-nhtsa",
+     "topic": "other"
     }
    ],
    "sources": [
@@ -2382,6 +2382,34 @@
     "coverage_stage": "initial_report"
    },
    "evidence": {
+    "collision_with": {
+     "quote": "a Ford Explorer patrol vehicle belonging to the Snohomish County Sheriff's Department",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "coverage_stage": {
+     "quote": "Authorities in Washington state are investigating a crash involving a Tesla vehicle",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "driver_condition_mentioned": {
+     "quote": "assumed the vehicle would slow and move over on its own",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "driver_seat_occupied": {
+     "quote": "the driver of the Tesla claimed that he had the vehicle in 'Auto-Pilot mode' and assumed the vehicle would slow and move over on its own",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "engagement_claimed_by": {
+     "quote": "the driver of the Tesla claimed that he had the vehicle in 'Auto-Pilot mode' and assumed the vehicle would slow and move over on its own",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "engagement_status": {
+     "quote": "the driver of the Tesla claimed that he had the vehicle in 'Auto-Pilot mode' and assumed the vehicle would slow and move over on its own",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "fatalities": {
+     "quote": "There were no injuries in the crash",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
     "incident_date": {
      "quote": "The crash occurred at 6:40 p.m. local time in Arlington, a suburb north of Seattle, on Saturday.",
      "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
@@ -2390,8 +2418,32 @@
      "quote": "collided with a parked police car",
      "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
     },
-    "collision_with": {
-     "quote": "a Ford Explorer patrol vehicle belonging to the Snohomish County Sheriff's Department",
+    "injuries": {
+     "quote": "There were no injuries in the crash",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "location_city": {
+     "quote": "The crash occurred at 6:40 p.m. local time in Arlington, a suburb north of Seattle, on Saturday.",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "location_country": {
+     "quote": "Authorities in Washington state are investigating a crash involving a Tesla vehicle",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "location_state_region": {
+     "quote": "Authorities in Washington state are investigating a crash involving a Tesla vehicle",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "police_action": {
+     "quote": "Washington State Patrol, the agency leading the investigation",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "system_named": {
+     "quote": "the driver of the Tesla claimed that he had the vehicle in 'Auto-Pilot mode' and assumed the vehicle would slow and move over on its own",
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+    },
+    "time_of_day": {
+     "quote": "The crash occurred at 6:40 p.m. local time",
      "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
     },
     "vehicle_make": {
@@ -2405,81 +2457,29 @@
     "vehicle_model_year": {
      "quote": "a collision involving a 2015 Tesla Model S car",
      "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "location_city": {
-     "quote": "The crash occurred at 6:40 p.m. local time in Arlington, a suburb north of Seattle, on Saturday.",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "location_state_region": {
-     "quote": "Authorities in Washington state are investigating a crash involving a Tesla vehicle",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "location_country": {
-     "quote": "Authorities in Washington state are investigating a crash involving a Tesla vehicle",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "time_of_day": {
-     "quote": "The crash occurred at 6:40 p.m. local time",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "system_named": {
-     "quote": "the driver of the Tesla claimed that he had the vehicle in 'Auto-Pilot mode' and assumed the vehicle would slow and move over on its own",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "engagement_status": {
-     "quote": "the driver of the Tesla claimed that he had the vehicle in 'Auto-Pilot mode' and assumed the vehicle would slow and move over on its own",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "engagement_claimed_by": {
-     "quote": "the driver of the Tesla claimed that he had the vehicle in 'Auto-Pilot mode' and assumed the vehicle would slow and move over on its own",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "driver_seat_occupied": {
-     "quote": "the driver of the Tesla claimed that he had the vehicle in 'Auto-Pilot mode' and assumed the vehicle would slow and move over on its own",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "driver_condition_mentioned": {
-     "quote": "assumed the vehicle would slow and move over on its own",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "fatalities": {
-     "quote": "There were no injuries in the crash",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "injuries": {
-     "quote": "There were no injuries in the crash",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "police_action": {
-     "quote": "Washington State Patrol, the agency leading the investigation",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
-    },
-    "coverage_stage": {
-     "quote": "Authorities in Washington state are investigating a crash involving a Tesla vehicle",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
     }
    },
    "claims": [
     {
      "claimant": "driver",
-     "topic": "automation_engaged",
      "paraphrase": "According to Washington State Patrol, the driver told troopers the car was in Autopilot mode and that he assumed it would slow down and move over by itself.",
      "quote": "the driver of the Tesla claimed that he had the vehicle in 'Auto-Pilot mode' and assumed the vehicle would slow and move over on its own",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html",
+     "topic": "automation_engaged"
     },
     {
      "claimant": "police",
-     "topic": "other",
      "paraphrase": "The state patrol said the deputy's emergency lights were on and the patrol car was partly blocking the road to protect an earlier collision scene.",
      "quote": "The deputy had his overhead emergency lights activated at the time and was partially blocking the roadway to protect the collision scene",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html",
+     "topic": "other"
     },
     {
      "claimant": "police",
-     "topic": "automation_performance",
      "paraphrase": "The sheriff's department called the crash a reminder that Autopilot can assist but cannot be relied on to get a driver safely to a destination.",
      "quote": "great reminder that vehicles may have Autopilot to assist, but it cannot be relied upon to get you safely from one destination to the next",
-     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html"
+     "source_url": "https://finance.yahoo.com/news/tesla-autopilot-mode-crashes-parked-164900047.html",
+     "topic": "automation_performance"
     }
    ],
    "sources": [
@@ -2569,6 +2569,38 @@
     "coverage_stage": "legal_proceeding"
    },
    "evidence": {
+    "civil_litigation": {
+     "quote": "A federal jury found Tesla 33% responsible for the crash in August 2025, assigning the remaining 67% to driver",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "collision_with": {
+     "quote": "struck the parked Tahoe. ... who were standing nearby",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "coverage_stage": {
+     "quote": "The company filed its latest brief with the U.S. Court of Appeals for the Eleventh Circuit on November 6, 2026.",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "driver_condition_mentioned": {
+     "quote": "he dropped his cellphone and looked down to retrieve it",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "driver_seat_occupied": {
+     "quote": "he dropped his cellphone and looked down to retrieve it",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "engagement_claimed_by": {
+     "quote": "would not have taken his eyes off the road if he had been driving without the system engaged",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "engagement_status": {
+     "quote": "With Autopilot engaged, the vehicle continued toward a T-intersection, passed through a stop sign, and struck the parked Tahoe.",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "fatalities": {
+     "quote": "The collision killed 22-year-old [name] and seriously injured her boyfriend",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
     "incident_date": {
      "quote": "The case dates to April 25, 2019, when a Tesla Model S ran through a stop sign at approximately 62 mph and struck a parked Chevrolet Tahoe.",
      "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
@@ -2577,8 +2609,44 @@
      "quote": "The case dates to April 25, 2019, when a Tesla Model S ran through a stop sign at approximately 62 mph and struck a parked Chevrolet Tahoe.",
      "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
     },
-    "collision_with": {
-     "quote": "struck the parked Tahoe. ... who were standing nearby",
+    "injuries": {
+     "quote": "The collision killed 22-year-old [name] and seriously injured her boyfriend",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "location_city": {
+     "quote": "driving his 2019 Tesla Model S on Card Sound Road near Key Largo shortly after 9 p.m.",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "location_country": {
+     "quote": "a $243 million judgment stemming from a fatal Florida Keys crash",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "location_state_region": {
+     "quote": "a $243 million judgment stemming from a fatal Florida Keys crash",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "persons_harmed": {
+     "quote": "who were standing nearby",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "police_action": {
+     "quote": "was cited for careless driving following the fatal crash",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "responsibility_attributed_to": {
+     "quote": "A federal jury found Tesla 33% responsible for the crash in August 2025, assigning the remaining 67% to driver",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "road_type": {
+     "quote": "With Autopilot engaged, the vehicle continued toward a T-intersection, passed through a stop sign, and struck the parked Tahoe.",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "system_named": {
+     "quote": "With Autopilot engaged, the vehicle continued toward a T-intersection, passed through a stop sign, and struck the parked Tahoe.",
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+    },
+    "time_of_day": {
+     "quote": "driving his 2019 Tesla Model S on Card Sound Road near Key Largo shortly after 9 p.m.",
      "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
     },
     "vehicle_make": {
@@ -2592,118 +2660,50 @@
     "vehicle_model_year": {
      "quote": "driving his 2019 Tesla Model S on Card Sound Road near Key Largo shortly after 9 p.m.",
      "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "location_city": {
-     "quote": "driving his 2019 Tesla Model S on Card Sound Road near Key Largo shortly after 9 p.m.",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "location_state_region": {
-     "quote": "a $243 million judgment stemming from a fatal Florida Keys crash",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "location_country": {
-     "quote": "a $243 million judgment stemming from a fatal Florida Keys crash",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "road_type": {
-     "quote": "With Autopilot engaged, the vehicle continued toward a T-intersection, passed through a stop sign, and struck the parked Tahoe.",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "time_of_day": {
-     "quote": "driving his 2019 Tesla Model S on Card Sound Road near Key Largo shortly after 9 p.m.",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "system_named": {
-     "quote": "With Autopilot engaged, the vehicle continued toward a T-intersection, passed through a stop sign, and struck the parked Tahoe.",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "engagement_status": {
-     "quote": "With Autopilot engaged, the vehicle continued toward a T-intersection, passed through a stop sign, and struck the parked Tahoe.",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "engagement_claimed_by": {
-     "quote": "would not have taken his eyes off the road if he had been driving without the system engaged",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "driver_seat_occupied": {
-     "quote": "he dropped his cellphone and looked down to retrieve it",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "driver_condition_mentioned": {
-     "quote": "he dropped his cellphone and looked down to retrieve it",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "fatalities": {
-     "quote": "The collision killed 22-year-old [name] and seriously injured her boyfriend",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "injuries": {
-     "quote": "The collision killed 22-year-old [name] and seriously injured her boyfriend",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "persons_harmed": {
-     "quote": "who were standing nearby",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "police_action": {
-     "quote": "was cited for careless driving following the fatal crash",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "civil_litigation": {
-     "quote": "A federal jury found Tesla 33% responsible for the crash in August 2025, assigning the remaining 67% to driver",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "responsibility_attributed_to": {
-     "quote": "A federal jury found Tesla 33% responsible for the crash in August 2025, assigning the remaining 67% to driver",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
-    },
-    "coverage_stage": {
-     "quote": "The company filed its latest brief with the U.S. Court of Appeals for the Eleventh Circuit on November 6, 2026.",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
     }
    },
    "claims": [
     {
      "claimant": "court_or_jury",
-     "topic": "cause_or_responsibility",
      "paraphrase": "In August 2025 a federal jury found Tesla 33% responsible and the driver 67% responsible, and added $200 million in punitive damages against Tesla.",
      "quote": "A federal jury found Tesla 33% responsible for the crash in August 2025, assigning the remaining 67% to driver",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html",
+     "topic": "cause_or_responsibility"
     },
     {
      "claimant": "manufacturer",
-     "topic": "cause_or_responsibility",
      "paraphrase": "In its appeal, Tesla argues that a distracted driver, not a defect in Autopilot, caused the collision.",
      "quote": "arguing that a distracted driver, rather than defects in its Autopilot system, caused the collision",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html",
+     "topic": "cause_or_responsibility"
     },
     {
      "claimant": "manufacturer",
-     "topic": "driver_behavior",
      "paraphrase": "Tesla says the driver was pressing the accelerator and that the car displayed a message that cruise control would not brake while the accelerator was pressed.",
      "quote": "Tesla says the car displayed a message explaining that cruise control would not brake while the accelerator was pressed",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html",
+     "topic": "driver_behavior"
     },
     {
      "claimant": "plaintiff_or_plaintiff_lawyer",
-     "topic": "automation_performance",
      "paraphrase": "The plaintiffs' lawyers say crash data showed the car detected the parked SUV and a pedestrian but did not warn the driver or brake.",
      "quote": "crash data showed the Tesla detected the parked SUV and a pedestrian but failed to warn",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html",
+     "topic": "automation_performance"
     },
     {
      "claimant": "plaintiff_or_plaintiff_lawyer",
-     "topic": "cause_or_responsibility",
      "paraphrase": "The plaintiffs argue Tesla encouraged excessive trust in Autopilot without adequate safeguards.",
      "quote": "The plaintiffs argue that the company encouraged excessive trust in Autopilot while failing to implement adequate safeguards.",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html",
+     "topic": "cause_or_responsibility"
     },
     {
      "claimant": "driver",
-     "topic": "driver_behavior",
      "paraphrase": "The driver accepted he was responsible for controlling the car, and testified that he trusted Autopilot too much and would not have looked away without it engaged.",
      "quote": "he also testified that he trusted Autopilot too much and would not have taken his eyes off the road if he had been driving without the system engaged",
-     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html"
+     "source_url": "https://finance.yahoo.com/technology/ai/articles/tesla-challenges-243-million-florida-121351394.html",
+     "topic": "driver_behavior"
     }
    ],
    "sources": [
