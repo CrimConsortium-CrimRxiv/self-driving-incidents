@@ -29,7 +29,7 @@ def shell(cfg: dict, *, path: str, title: str, description: str, body: str, root
           og_type: str = "website") -> str:
     site = cfg["site"]
     url = site["url"] + path
-    image = site["url"] + "og-image.png"
+    image = site["url"] + "og-image.png?v=2"
     ld = ""
     if jsonld:
         ld = ('\n    <script type="application/ld+json">'
@@ -62,7 +62,7 @@ def shell(cfg: dict, *, path: str, title: str, description: str, body: str, root
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="{esc(site['name'])}: incidents where self-driving is in question" />
+    <meta property="og:image:alt" content="{esc(site['name'])}: self-driving incidents, claimed, questioned, confirmed" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@CrimConsortium" />
     <meta name="twitter:title" content="{esc(title)}" />
@@ -195,7 +195,7 @@ def home(pairs, cfg, updated, n_reports) -> str:
         items = '          <li class="incident"><p class="incident-summary">The first cases are being coded and will appear here shortly.</p></li>'
     body = f"""        <section class="hero">
           <div class="hero-eyebrow">A dataset provided by <a href="https://crimconsortium.com" target="_blank" rel="noopener">CrimConsortium</a> · Last updated {ex.nice_date(updated)}</div>
-          <h1 class="hero-title">Incidents where self-driving is <em>in question</em>.</h1>
+          <h1 class="hero-title">Self-driving incidents: <span class="hero-line"><em>claimed, questioned, confirmed</em>.</span></h1>
           <p class="hero-lead">
             An open dataset of crashes, near misses, police stops and court cases in which a vehicle's
             automated-driving feature is claimed, questioned or confirmed to be involved. Each incident is one
@@ -257,7 +257,7 @@ def home(pairs, cfg, updated, n_reports) -> str:
     return shell(cfg, path="", current="home", jsonld=ld, body=body,
                  title=f"{site['name']}: Open Data on Tesla Autopilot and FSD incidents",
                  description=("Open dataset of crashes, near misses, police stops and court cases in which Tesla "
-                              "Autopilot, Full Self-Driving or another automated-driving feature is in question. "
+                              "Autopilot, Full Self-Driving or another automated-driving feature is claimed, questioned or confirmed. "
                               "Coded from published reports. Free download. From CrimConsortium."))
 
 

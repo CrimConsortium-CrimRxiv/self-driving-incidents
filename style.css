@@ -285,6 +285,7 @@ a:hover { border-bottom-color: var(--color-primary); }
   margin-bottom: var(--space-3);
   line-height: 1.1;
 }
+.hero-title .hero-line { display: block; }
 .hero-title em {
   font-style: italic;
   color: var(--color-primary);
