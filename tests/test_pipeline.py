@@ -214,6 +214,17 @@ def published_store():
     return {"schema": 1, "next_id": 2, "next_key": 2, "cases": [c]}
 
 
+class Request(unittest.TestCase):
+    def test_message_names_the_answer_format(self):
+        # The service refuses a JSON-format request unless the message itself says "JSON".
+        reports = [{"n": 1, "publisher": "Example News", "published": "2026-11-01T12:00:00+00:00",
+                    "title": "Tesla on Autopilot hits parked truck", "summary": "", "text": "x" * 500}]
+        messages = coder.build_messages({}, reports, [], CFG)
+        user = next(m["content"] for m in messages if m["role"] == "user")
+        self.assertIn("json", user.lower())
+        self.assertTrue(user.rstrip().endswith(coder.ANSWER_REMINDER))
+
+
 class Export(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()

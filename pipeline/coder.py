@@ -64,6 +64,10 @@ If is_specific_incident or automation_in_question is false, or multiple_incident
 empty "variables" and "claims" and an empty "narrative". Give at most 6 claims."""
 
 
+# The service only accepts a JSON-format request when the word "JSON" appears in the
+# message itself (the instructions do not count), so the reports end with this line.
+ANSWER_REMINDER = "Answer with one JSON object in the format described in the instructions."
+
 # --------------------------------------------------------------------------- prompt
 
 def _weekday(iso: str) -> str:
@@ -97,7 +101,7 @@ def build_messages(case: dict, reports: list[dict], earlier: list[dict], cfg: di
         text = (r.get("text") or "")[:share]
         r["given"] = " \n ".join(x for x in (r["title"], r.get("summary") or "", text) if x)
         body.append(b + (f"Text: {text}\n" if text else ""))
-    user = "\n".join(head) + "REPORTS\n\n" + "\n".join(body)
+    user = "\n".join(head) + "REPORTS\n\n" + "\n".join(body) + "\n" + ANSWER_REMINDER
     return [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]
 
 
