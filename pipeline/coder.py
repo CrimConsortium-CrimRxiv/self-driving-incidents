@@ -11,8 +11,6 @@ import re
 import time
 from datetime import date, datetime, timedelta
 
-import requests
-
 from . import codebook as cb
 from .common import log, norm_for_match, word_pattern
 from .store import last_reported, now_iso
@@ -106,37 +104,41 @@ def build_messages(case: dict, reports: list[dict], earlier: list[dict], cfg: di
 # --------------------------------------------------------------------------- model call
 
 def call_model(messages: list[dict], cfg: dict) -> tuple[dict, str]:
+    """Send one case to the language model. Returns (its answer, the name recorded as the coder)."""
     opts = cfg["coder"]
-    token = os.environ.get("SDI_MODELS_TOKEN") or os.environ.get("GITHUB_TOKEN")
-    if not token:
-        raise CoderUnavailable("no token for GitHub Models (GITHUB_TOKEN)")
+    key = os.environ.get(opts.get("key_env", "OPENAI_API_KEY"), "").strip()
+    if not key:
+        raise CoderUnavailable(f"no API key ({opts.get('key_env', 'OPENAI_API_KEY')} is not set)")
+    import openai  # imported here so collecting and rebuilding work without it
+
+    client = openai.OpenAI(api_key=key, base_url=opts.get("base_url") or None, timeout=300, max_retries=2)
+    system = next(m["content"] for m in messages if m["role"] == "system")
+    user = next(m["content"] for m in messages if m["role"] == "user")
     last = "no model configured"
     for model in opts["models"]:
+        request = {"model": model, "instructions": system, "input": user,
+                   "max_output_tokens": int(opts.get("max_output_tokens", 12000)),
+                   "text": {"format": {"type": "json_object"}}}
+        if opts.get("effort"):
+            request["reasoning"] = {"effort": opts["effort"]}
         for attempt in (1, 2):
-            resp = requests.post(
-                opts["endpoint"],
-                headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json",
-                         "Accept": "application/json"},
-                json={"model": model, "messages": messages, "temperature": 0, "max_tokens": 3500,
-                      "response_format": {"type": "json_object"}},
-                timeout=120)
-            if resp.status_code == 429:
-                wait = int(resp.headers.get("retry-after") or 0)
-                if attempt == 1 and 0 < wait <= 70:
-                    time.sleep(wait + 1)
-                    continue
-                raise RateLimited(f"{model}: {resp.text[:200]}")
-            if resp.status_code >= 400:
-                last = f"{model}: HTTP {resp.status_code} {resp.text[:200]}"
+            try:
+                resp = client.responses.create(**request)
+            except openai.RateLimitError as exc:
+                raise RateLimited(f"{model}: {str(exc)[:200]}") from exc
+            except openai.AuthenticationError as exc:
+                raise CoderUnavailable(f"the API key was refused ({str(exc)[:120]})") from exc
+            except openai.APIError as exc:
+                last = f"{model}: {str(exc)[:200]}"
                 log.warning("Coder refused: %s", last)
                 break  # try the next model
             try:
-                content = resp.json()["choices"][0]["message"]["content"]
-                return json.loads(_strip_fence(content)), model
-            except (ValueError, KeyError, IndexError, TypeError) as exc:
+                if resp.status != "completed":
+                    raise ValueError(f"reply {resp.status}")
+                return json.loads(_strip_fence(resp.output_text)), f"{opts.get('provider', 'OpenAI')} {model}"
+            except (ValueError, TypeError) as exc:
                 last = f"{model}: unreadable answer ({exc})"
-                log.warning("Coder answer unreadable (attempt %d): %s | HTTP %s, %s, starts: %r", attempt, exc,
-                            resp.status_code, resp.headers.get("content-type"), resp.text[:300])
+                log.warning("Coder answer unreadable (attempt %d): %s", attempt, exc)
     raise CoderUnavailable(last)
 
 
@@ -164,24 +166,46 @@ def find_quote(quote: str, reports: list[dict], source, max_chars: int = 300) ->
     return None
 
 
-_NAME_AGE = re.compile(r"\b([A-Z][a-z]+(?: [A-Z]\.)?(?: [A-Z][a-zA-Z'\-]+){1,2}),? (?:age |aged )?\d{1,2}\b")
-_IDENTIFIED = re.compile(r"\bidentified (?:as|the \w+ as|by \w+ as) ([A-Z][a-z]+(?: [A-Z]\.)?(?: [A-Z][a-zA-Z'\-]+){1,2})")
-_NOT_NAMES = word_pattern(["tesla", "model", "police", "county", "state", "highway", "patrol", "interstate",
-                           "route", "sheriff", "department", "autopilot", "cybertruck", "cybercab"])
+_NAME = r"[A-Z][a-z]+(?: [A-Z]\.)?(?: [A-Z][a-zA-Z'\-]+){1,2}"
+_NAME_PATTERNS = [re.compile(p) for p in (
+    rf"\b({_NAME}),? (?:age |aged )?\d{{1,2}}\b",                      # Jane Doe, 37
+    rf"\b({_NAME}),? (?:a|an) \d{{1,2}}-year-old\b",                   # Jane Doe, a 25-year-old
+    rf"\b({_NAME}), who (?:was|is) \d{{1,2}}\b",                       # Jane Doe, who was 71
+    rf"\b\d{{1,2}}-year-old ({_NAME})",                                 # 57-year-old Jane Doe
+    rf"\bidentified (?:as|by \w+ as|the (?:driver|operator|owner|victim|man|woman|passenger|pedestrian"
+    rf"|motorist|suspect|deceased|occupant) as) ({_NAME})",
+    rf"\b(?:driven by|operated by|owned by|home of|named|driver|motorist|passenger|pedestrian|victim"
+    rf"|(?:daughter|son|wife|husband|mother|father|brother|sister|widow|family|estate) of"
+    rf"|(?:boyfriend|girlfriend|fianc\u00e9|fianc\u00e9e|wife|husband|daughter|son|friend),) ({_NAME})",
+)]
+_NOT_NAMES = word_pattern([
+    "tesla", "model", "police", "county", "state", "highway", "patrol", "interstate", "route", "sheriff",
+    "department", "autopilot", "cybertruck", "cybercab", "full", "self-driving", "robotaxi", "waymo", "zoox",
+    "nhtsa", "ntsb", "january", "february", "march", "april", "may", "june", "july", "august", "september",
+    "october", "november", "december", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday",
+    "sunday", "the", "a", "an", "on", "in", "at", "of", "by", "for", "from", "to", "and", "after", "before",
+    "has", "have", "had", "was", "is", "are", "were", "already", "about", "around", "near", "over", "under",
+    "township", "city", "town", "village", "borough", "parkway", "road", "street", "avenue", "boulevard",
+    "drive", "lane", "bridge", "hills", "heights", "beach", "springs", "lake", "park", "valley", "grove",
+    "north", "south", "east", "west", "new", "company", "number", "fire", "court", "district", "office",
+    "university", "hospital", "school", "news", "times", "post"])
 
 
 def private_names(reports: list[dict]) -> list[str]:
-    """Names of people that reports introduce with an age or as 'identified as'. Best effort."""
+    """Names of people that reports introduce with an age, a family tie or a role such as
+    'driven by'. Officials quoted with a title are not matched. Best effort."""
     found = set()
     for r in reports:
         text = r.get("given", "")
-        for rx in (_NAME_AGE, _IDENTIFIED):
+        for rx in _NAME_PATTERNS:
             for m in rx.finditer(text):
                 name = m.group(1).strip()
                 if not _NOT_NAMES.search(name):
                     found.add(name)
                     found.add(name.split()[-1])  # later mentions use the surname alone
-    return sorted((n for n in found if len(n) > 2), key=len, reverse=True)
+                    if len(name.split()) == 3:   # "Benavides Leon" after "Naibel Benavides Leon"
+                        found.add(" ".join(name.split()[1:]))
+    return sorted((n for n in found if len(n) >= 2), key=len, reverse=True)
 
 
 def scrub(text: str, names: list[str], mark: str) -> str:
@@ -287,7 +311,7 @@ def check(raw: dict, case: dict, reports: list[dict], earlier: list[dict], cfg: 
     basis = "full_text" if any(r.get("text") for r in reports) else (
         "summary" if any(r.get("summary") for r in reports) else "headline")
     coding = {
-        "review_status": cb.REVIEW_STATUS, "coder": f"{model} via GitHub Models", "coded_at": now_iso(),
+        "review_status": cb.REVIEW_STATUS, "coder": model, "coded_at": now_iso(),
         "codebook_version": cb.VERSION, "text_basis": basis,
         "sources_read": [{"url": r["url"], "basis": "full_text" if r.get("text") else
                           ("summary" if r.get("summary") else "headline")} for r in reports],

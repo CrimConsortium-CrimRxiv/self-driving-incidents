@@ -19,7 +19,7 @@ A scheduled job (`.github/workflows/refresh.yml`) runs once a day and does four 
    automated-driving feature and describe something that happened.
 2. **Builds cases.** Reports about the same event are grouped into one case. A later report about
    an earlier event (an arrest, a lawsuit, a verdict) is attached to that case.
-3. **Codes each case.** A language model (through GitHub Models, at no cost) reads the reports
+3. **Codes each case.** A language model reads the reports
    and drafts the coded variables, a short neutral narrative, and a list of who said what.
 4. **Rebuilds the site and the download files**, and saves them here only if something changed.
 
@@ -62,7 +62,10 @@ python -m pipeline.run --no-code          # collect and rebuild, no coding
 python -m pipeline.run --export-only      # rebuild pages and downloads from the store
 ```
 
-Coding needs a GitHub token with access to GitHub Models in the `GITHUB_TOKEN` environment variable.
+Coding needs an API key in the `OPENAI_API_KEY` environment variable (on GitHub: a repository secret
+with that name, under Settings, Secrets and variables, Actions). Without it the job still collects
+reports and rebuilds the site; cases wait in the store until they can be coded. The model and the
+per-run limit are set under `coder` in `config.yaml`.
 
 ## Limits
 

@@ -70,14 +70,19 @@ tags:
     key: "fatality"
     words: ["killed", "kills", "dead", "deadly", "died", "dies", "death", "fatal", "fatally", "fatality"]
 
-# Machine coding (GitHub Models, free tier, called from GitHub Actions).
+# Machine coding. A language model drafts each record; the program then checks every value
+# against the report text. The key is read from a repository secret, never from this file.
 coder:
-  endpoint: "https://models.github.ai/inference/chat/completions"
-  models: ["openai/gpt-4.1-mini", "openai/gpt-4o-mini"]   # tried in this order
-  max_cases_per_run: 90        # free tier allows about 150 requests a day
-  seconds_between_requests: 4.5
+  provider: "OpenAI"
+  key_env: "OPENAI_API_KEY"    # name of the repository secret holding the API key
+  base_url: ""                 # leave empty for OpenAI; set for another OpenAI-compatible service
+  models: ["gpt-6-luna"]       # tried in this order
+  effort: "medium"
+  max_output_tokens: 12000
+  max_cases_per_run: 90        # spending guard: most cases coded in one run
+  seconds_between_requests: 0.5
   max_sources_per_case: 5
-  max_prompt_chars: 25000      # keeps each request under the 8,000-token input limit
+  max_prompt_chars: 60000      # about 15,000 tokens of reports per case
   max_quote_chars: 300
 
 license:

@@ -135,6 +135,35 @@ def reports_for(case: dict, cfg: dict) -> list[dict]:
             for i, (s, t) in enumerate(chosen)]
 
 
+def settle(store: dict, case: dict, raw: dict, reports: list[dict], earlier: list[dict], cfg: dict,
+           model: str, tally: dict) -> str:
+    """Check one drafted answer and act on it: publish, screen out, or join an earlier case."""
+    case["code_attempts"] = case.get("code_attempts", 0) + 1
+    result = coder.check(raw, case, reports, earlier, cfg, model)
+    was = case["status"]
+    if result["decision"] == "merge" and was != "published":
+        target = next(e["case"] for e in earlier if e["ref"] == result["target"])
+        log.info("Same incident as %s: %s", target["case_id"], case["headline"][:80])
+        absorb(target, case, store, cfg)
+        tally["merged"] += 1
+        return "merged"
+    if result["decision"] in ("exclude", "merge"):
+        if was == "published":
+            # A published case is never withdrawn automatically; keep the earlier coding.
+            log.info("Recode suggested exclusion, kept as is: %s", case["case_id"])
+        else:
+            case["status"], case["exclusion_reason"] = "excluded", result["reason"].strip()
+            tally["excluded"] += 1
+        case["needs_coding"] = False
+    else:
+        case["coding"], case["needs_coding"], case["exclusion_reason"] = result["coding"], False, None
+        case["status"] = "published"
+        st.assign_id(store, case)
+        tally["recoded" if was == "published" else "published"] += 1
+    case["updated"] = st.now_iso()
+    return result["decision"]
+
+
 def code_cases(store: dict, cfg: dict, limit: int | None = None) -> dict:
     tally = {"published": 0, "recoded": 0, "excluded": 0, "merged": 0, "stopped": ""}
     limit = int(cfg["coder"]["max_cases_per_run"]) if limit is None else limit
@@ -163,32 +192,11 @@ def code_cases(store: dict, cfg: dict, limit: int | None = None) -> dict:
             log.warning("Coding paused: %s", exc)
             break
         except coder.CoderUnavailable as exc:
-            tally["stopped"] = f"coder unavailable ({str(exc)[:120]})"
-            log.warning("Coding unavailable: %s", exc)
+            tally["stopped"] = str(exc)[:120]
+            log.warning("Coding did not run: %s", exc)
             break
         done += 1
-        case["code_attempts"] = case.get("code_attempts", 0) + 1
-        result = coder.check(raw, case, reports, earlier, cfg, model)
-        was = case["status"]
-        if result["decision"] == "merge" and was != "published":
-            target = next(e["case"] for e in earlier if e["ref"] == result["target"])
-            log.info("Same incident as %s: %s", target["case_id"], case["headline"][:80])
-            absorb(target, case, store, cfg)
-            tally["merged"] += 1
-        elif result["decision"] == "exclude" or result["decision"] == "merge":
-            if was == "published":
-                # A published case is never withdrawn automatically; keep the earlier coding.
-                log.info("Recode suggested exclusion, kept as is: %s", case["case_id"])
-            else:
-                case["status"], case["exclusion_reason"] = "excluded", result["reason"].strip()
-                tally["excluded"] += 1
-            case["needs_coding"] = False
-        else:
-            case["coding"], case["needs_coding"], case["exclusion_reason"] = result["coding"], False, None
-            case["status"] = "published"
-            st.assign_id(store, case)
-            tally["recoded" if was == "published" else "published"] += 1
-        case["updated"] = st.now_iso()
+        settle(store, case, raw, reports, earlier, cfg, model, tally)
         st.save(store)  # keep progress even if a later request fails
         time.sleep(pause)
     return tally
@@ -227,7 +235,7 @@ def main() -> None:
         notes.append(f"{tally['published']} new cases, {tally['recoded']} recoded, "
                      f"{tally['excluded']} screened out, {tally['merged']} merged")
         if tally["stopped"]:
-            notes.append(f"coding stopped: {tally['stopped']}")
+            notes.append(f"coding paused: {tally['stopped']}")
         st.save(store)
 
     stats = export.export_all(store, cfg)

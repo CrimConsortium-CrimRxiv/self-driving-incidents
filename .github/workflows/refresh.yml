@@ -16,7 +16,6 @@ on:
 
 permissions:
   contents: write   # save the refreshed data to the repository
-  models: read      # use GitHub Models to draft the coded variables
   pages: write      # ask GitHub Pages to rebuild the site
 
 concurrency:
@@ -42,9 +41,8 @@ jobs:
 
       - name: Collect, code and rebuild
         env:
-          GITHUB_TOKEN: ${{ github.token }}
-          # Optional: a personal token with "Models: read" raises the free daily allowance.
-          SDI_MODELS_TOKEN: ${{ secrets.SDI_MODELS_TOKEN }}
+          # API key for the language model that drafts the coded variables.
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           BACKFILL: ${{ inputs.backfill }}
           MAX_CODE: ${{ inputs.max_code }}
         run: |

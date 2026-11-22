@@ -126,6 +126,20 @@ class Checking(unittest.TestCase):
         self.assertNotIn("Example", coding["narrative"])
         self.assertNotIn("Example", json.dumps(coding["evidence"]))
 
+    def test_private_names_found_by_role_family_tie_and_age(self):
+        text = ("A Tesla Model 3, driven by Alex Sample, hit the home of Robin Placeholder. "
+                "The suit was brought by the daughter of Jo Story. Story, who was 71, had stopped. "
+                "It killed 22-year-old Sam Middle Name. Pat Doe Roe, a 25-year-old Naples man, stopped to help. "
+                "Lee Gu, 37, of Millstone was heading north. Fire Company Number 1 helped on November 12. "
+                "A 37-year-old Millstone Township woman was driving. The Tesla Cybercab Has Already Crashed 8 Times.")
+        names = coder.private_names([{"given": text}])
+        for expected in ("Alex Sample", "Sample", "Robin Placeholder", "Jo Story", "Story", "Sam Middle Name",
+                         "Middle Name", "Pat Doe Roe", "Roe", "Lee Gu", "Gu"):
+            self.assertIn(expected, names)
+        for wrong in ("Township", "Number", "November", "Crashed", "Millstone Township", "Tesla Model"):
+            self.assertNotIn(wrong, names)
+        self.assertEqual(coder.scrub("Gu told police on November 2", names, "[name]"), "[name] told police on November 2")
+
     def test_incident_date_after_coverage_is_removed(self):
         out = self.run_check(answer(
             vehicle_make={"value": "Tesla", "quote": "a Tesla Model Y struck construction equipment", "source": 1},
