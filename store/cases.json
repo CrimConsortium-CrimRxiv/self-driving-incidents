@@ -1669,10 +1669,18 @@
      "summary": "The Tesla Cybercab has recently entered service, most notably in Austin, Texas. It has been around two months since the robotaxi entered public service, but according to the NHTSA, it hasn’t gone entirely smoothly for…",
      "title": "The NHTSA Says the Tesla Cybercab Has Now Crashed Eight Times",
      "url": "https://www.aol.com/articles/nhtsa-says-tesla-cybercab-now-174950000.html"
+    },
+    {
+     "published": "2026-11-19T11:34:00Z",
+     "publisher": "Yahoo",
+     "resolved": true,
+     "summary": "Tesla Cybercab has eight federal crash reports after two months of service, but missing exposure data makes safety comparisons unreliable.",
+     "title": "Tesla’s Cybercab Has Eight Federal Crash Reports Already",
+     "url": "https://www.yahoo.com/news/science/articles/tesla-cybercab-eight-federal-crash-193424655.html"
     }
    ],
    "status": "excluded",
-   "updated": "2026-11-22T17:27:43Z"
+   "updated": "2026-11-22T17:36:09Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
@@ -3325,7 +3333,7 @@
    "headline_publisher": "AOL.com",
    "key": "k39",
    "maker": "Tesla",
-   "needs_coding": false,
+   "needs_coding": true,
    "source_summary": "A Tesla Model Y owner is raising concerns about the company’s Full Self-Driving software after their brand-new SUV suddenly stopped in the middle of an intersection. The driver says the vehicle had a green left-turn…",
    "source_summary_publisher": "AOL.com",
    "sources": [
@@ -3337,10 +3345,18 @@
      "summary": "A Tesla Model Y owner is raising concerns about the company’s Full Self-Driving software after their brand-new SUV suddenly stopped in the middle of an intersection. The driver says the vehicle had a green left-turn…",
      "title": "Tesla Model Y's Full Self-Driving Stops Dead at Green Light, Owner Forced To Accelerate Through Intersection",
      "url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
+    },
+    {
+     "published": "2026-11-22T07:19:00Z",
+     "publisher": "YAHOO!",
+     "resolved": true,
+     "summary": "A Tesla Model Y owner is raising concerns about the company’s Full Self-Driving software after their brand-new SUV suddenly stopped in the middle of an intersection. The driver says the vehicle had a ...",
+     "title": "Tesla Model Y's Full Self-Driving Stops Dead at Green Light, Owner Forced To Accelerate Through Intersection",
+     "url": "https://autos.yahoo.com/ev-and-future-tech/articles/tesla-model-ys-full-self-151848502.html"
     }
    ],
    "status": "published",
-   "updated": "2026-11-22T17:26:50Z"
+   "updated": "2026-11-22T17:36:10Z"
   },
   {
    "added": "2026-11-22T17:13:40Z",
@@ -3671,9 +3687,49 @@
    ],
    "status": "pending",
    "updated": "2026-11-22T17:27:43Z"
+  },
+  {
+   "added": "2026-11-22T17:36:09Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "autopilot",
+      "label": "Autopilot mentioned in coverage"
+     },
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 0,
+   "coding": null,
+   "exclusion_reason": null,
+   "headline": "I led the first jury win against Tesla’s Autopilot. I get too many inquiries on potential cases to review them all.",
+   "headline_publisher": "Insider on MSN",
+   "key": "k46",
+   "maker": "Tesla",
+   "needs_coding": true,
+   "source_summary": "Brett Schreiber, an attorney who won a jury verdict against Tesla, said he gets dozens of calls a month about potential Autopilot and FSD cases.",
+   "source_summary_publisher": "Insider on MSN",
+   "sources": [
+    {
+     "published": "2026-09-01T02:11:00Z",
+     "publisher": "Insider on MSN",
+     "resolved": true,
+     "summary": "Brett Schreiber, an attorney who won a jury verdict against Tesla, said he gets dozens of calls a month about potential Autopilot and FSD cases.",
+     "title": "I led the first jury win against Tesla’s Autopilot. I get too many inquiries on potential cases to review them all.",
+     "url": "https://www.msn.com/en-us/news/other/i-led-the-first-jury-win-against-tesla-s-autopilot-i-get-too-many-inquiries-on-potential-cases-to-review-them-all/ar-AA2bkFJz"
+    }
+   ],
+   "status": "pending",
+   "updated": "2026-11-22T17:36:09Z"
   }
  ],
  "next_id": 15,
- "next_key": 46,
+ "next_key": 47,
  "schema": 1
 }
