@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from unittest import mock
 
-from pipeline import cluster, codebook as cb, coder, collect, export, pages, store as st
+from pipeline import cluster, codebook as cb, coder, collect, export, pages, run, store as st
 from pipeline.common import load_config
 
 CFG = load_config()
@@ -177,6 +177,14 @@ class Checking(unittest.TestCase):
             incident_date={"value": "2027-01-05", "quote": "early Thursday", "source": 1}))
         self.assertNotIn("incident_date", out["coding"]["values"])
 
+    def test_unstated_year_far_in_the_past_is_removed(self):
+        # "early Thursday" names no year; a 2021 date would be a guess (often a misread model year).
+        old = self.run_check(answer(incident_date={"value": "2021-11-19", "quote": "early Thursday", "source": 1}))
+        self.assertNotIn("incident_date", old["coding"]["values"])
+        self.assertEqual(old["coding"]["unsupported_values_removed"], 1)
+        recent = self.run_check(answer(incident_date={"value": "2026-11-19", "quote": "early Thursday", "source": 1}))
+        self.assertEqual(recent["coding"]["values"]["incident_date"], "2026-11-19")
+
     def test_round_up_is_screened_out(self):
         raw = answer()
         raw["screen"]["multiple_incidents"] = True
@@ -212,6 +220,39 @@ def published_store():
     c["coding"] = coder.check(raw, c, reports(), [], CFG, "test-model")["coding"]
     c["coding"]["coded_at"] = "2026-11-20T00:00:00Z"
     return {"schema": 1, "next_id": 2, "next_key": 2, "cases": [c]}
+
+
+class EarlierCases(unittest.TestCase):
+    def published(self, cid, title, day, city=None):
+        c = case([title], day=day, status="published")
+        c["case_id"] = cid
+        c["coding"] = {"values": {"location_city": city} if city else {}, "narrative": "What was reported."}
+        return c
+
+    def read(self, text):
+        return [{"n": 1, "publisher": "Example News", "published": "2026-11-20T12:00:00Z",
+                 "title": "Lawsuit says driver-assist feature failed before fatal crash", "summary": "", "text": text}]
+
+    def test_coded_city_in_the_text_makes_an_earlier_case_a_candidate(self):
+        new = case(["Lawsuit says driver-assist feature failed before fatal crash"], day=20)
+        old = self.published("SDI-00003", "Man killed on interstate; police cite self-driving mode", 2, city="Vallejo")
+        far = self.published("SDI-00004", "Robotaxi blocks tram line for an hour", 2, city="Phoenix")
+        got = run.earlier_cases(new, self.read("The crash happened on Interstate 80 in Vallejo last month."), [old, far])
+        self.assertEqual([e["ref"] for e in got], ["SDI-00003"])
+        self.assertIn("Vallejo", got[0]["facts"])
+
+    def test_coverage_within_days_makes_an_earlier_case_a_candidate(self):
+        new = case(["Tesla in self-driving mode kills pedestrian"], day=20)
+        close = self.published("SDI-00005", "Man, 71, dies crossing interstate at night", 19)
+        got = run.earlier_cases(new, self.read(""), [close])
+        self.assertEqual([e["ref"] for e in got], ["SDI-00005"])
+
+    def test_message_lists_the_coded_facts(self):
+        old = self.published("SDI-00003", "Man killed on interstate", 2, city="Vallejo")
+        old["coding"]["values"]["incident_date"] = "2026-10-22"
+        got = run.earlier_cases(case(["Different words entirely"], day=20), self.read("in Vallejo"), [old])
+        user = coder.build_messages({}, self.read("in Vallejo"), got, CFG)[1]["content"]
+        self.assertIn("ref SDI-00003: incident date 2026-10-22; Vallejo", user)
 
 
 class Request(unittest.TestCase):

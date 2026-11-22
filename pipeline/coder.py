@@ -51,7 +51,14 @@ clearly the main subject.
 - automation_in_question: true when any report says, alleges, denies or asks whether an \
 automated-driving feature was in use or involved in the event.
 - same_incident_as: if this is the same real-world event as one of the EARLIER CASES listed, give that \
-case's ref; otherwise null. Same event means same place, same date and same circumstances.
+case's ref; otherwise null. Same event means same place, same date and same circumstances. Compare the \
+event itself, not the wording or the publication dates: a lawsuit, data filing or investigation \
+reported months later can concern an event already listed. A date listed for an earlier case may be \
+wrong; if place and circumstances clearly match, treat it as the same event. If the reports here say \
+too little to tell, answer null.
+
+Dates: when a report gives a day without a year, or only a weekday, use the latest such day on or \
+before that report's publication date. A vehicle's model year ("a 2021 Model Y") is not an incident year.
 
 Answer with one JSON object and nothing else:
 {"screen": {"is_specific_incident": true|false, "multiple_incidents": true|false, \
@@ -86,8 +93,9 @@ def build_messages(case: dict, reports: list[dict], earlier: list[dict], cfg: di
     if earlier:
         head.append("EARLIER CASES")
         for e in earlier:
-            head.append(f"- ref {e['ref']}: first reported {e['first_reported']}; {e['headline'][:140]}"
-                        + (f" | {e['summary'][:160]}" if e.get("summary") else ""))
+            head.append(f"- ref {e['ref']}: " + (f"{e['facts']}; " if e.get("facts") else "")
+                        + f"first reported {e['first_reported']}; {e['headline'][:140]}"
+                        + (f" | {e['summary'][:300]}" if e.get("summary") else ""))
         head.append("")
     fixed = len(SYSTEM) + sum(len(x) + 1 for x in head)
     basics = [f"REPORT {r['n']}: {r['publisher']}, published {r['published'][:10]} "
@@ -280,6 +288,16 @@ def check(raw: dict, case: dict, reports: list[dict], earlier: list[dict], cfg: 
                 continue
         values[name] = value
         evidence[name] = {"quote": scrub(hit[0], names, "[name]"), "source_url": url_of[hit[1]]}
+
+    # A year the quotation does not state is an inference. Keep it only when it falls within about
+    # a year before the reports read; an older unstated year is usually a misread model year.
+    d = values.get("incident_date")
+    read_from = min((r["published"][:10] for r in reports if r.get("published")), default="")
+    if d and read_from and d[:4] not in evidence["incident_date"]["quote"]:
+        floor = (date.fromisoformat(read_from) - timedelta(days=366)).isoformat()
+        if d < floor[: len(d)]:
+            values.pop("incident_date"), evidence.pop("incident_date")
+            removed += 1
 
     # Dates cannot be later than the coverage itself.
     d = values.get("incident_date")

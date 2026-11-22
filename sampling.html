@@ -71,12 +71,12 @@
           <p>Where reports come from, which are kept, how they become cases, and what that means for what the data can support.</p>
         </header>
         <div class="prose">
-          <p class="notice" style="margin-top: 0"><strong>In brief.</strong> This is not a complete list or a random sample of incidents. It is every case found by a fixed set of news searches, in news published since January 1, 2026, that has been coded and has passed the screening rules below. <strong>222 candidate cases are still waiting to be coded</strong>, so the published list is a small part of what has been found. It can show what kinds of incidents are reported and how they are handled. It cannot show how often they happen.</p>
+          <p class="notice" style="margin-top: 0"><strong>In brief.</strong> This is not a complete list or a random sample of incidents. It is every case found by a fixed set of news searches, in news published since January 1, 2026, that has been coded and has passed the screening rules below. <strong>254 candidate cases are still waiting to be coded</strong>, so the published list is a small part of what has been found. It can show what kinds of incidents are reported and how they are handled. It cannot show how often they happen.</p>
 
           <h2 id="why-few">Why there are few cases, and why some are old</h2>
           <p>Collection began on November 22, 2026. Each daily run looks back 7 days. On the first day the Google News searches were also repeated one week at a time back to January 1, 2026, so the dataset draws on news published since then. Nothing earlier has been searched.</p>
           <p>The weeks before November 15, 2026 were searched after the fact, on Google News only, and return whatever it still lists for those weeks. Expect them to be thinner than the period collected live.</p>
-          <p>Finding a report is only the first step. A case appears on the site after it has been coded and screened, and 89 of the 136 cases coded so far were set aside (see <a href="#numbers">the numbers</a>). Until the waiting cases are coded, the published list will stay much shorter than the list of what has been found.</p>
+          <p>Finding a report is only the first step. A case appears on the site after it has been coded and screened, and 89 of the 104 cases coded so far were set aside (see <a href="#numbers">the numbers</a>). Until the waiting cases are coded, the published list will stay much shorter than the list of what has been found.</p>
           <p>Cases are dated by when the incident happened, not when it was reported, so an old incident appears whenever it is in current news. That happens in two ways:</p>
           <ul>
             <li><strong>New coverage of an old event.</strong> A verdict, an appeal, a settlement or a regulator's report brings an earlier crash back into the news. A crash from 2019 can enter the dataset because of a court filing this month.</li>
@@ -88,9 +88,9 @@
           <table class="var-table">
             <tr><th>Reports kept</th><td>630, published between May 18, 2021 and November 22, 2026</td></tr>
             <tr><th>Candidate cases</th><td>358, after grouping reports about the same event</td></tr>
-            <tr><th>Published</th><td>47</td></tr>
+            <tr><th>Published</th><td>15</td></tr>
             <tr><th>Screened out</th><td>89, each listed with its reason in <a href="data/screened_out.csv" download>screened_out.csv</a></td></tr>
-            <tr><th>Waiting to be coded</th><td>222. These are not shown on the site until they have been coded and screened.</td></tr>
+            <tr><th>Waiting to be coded</th><td>254. These are not shown on the site until they have been coded and screened.</td></tr>
           </table>
           <p style="margin-top: var(--space-3)">These figures are recalculated every time the site is rebuilt.</p>
           <details class="month-counts">
@@ -123,7 +123,7 @@
             <li>They are treated as the same event when their headlines are nearly identical (90% alike), or at least 75% alike and share two distinctive words, or share three distinctive words with one headline largely contained in the other. Similar wording alone is not enough: &ldquo;Tesla in self-driving mode involved in crash&rdquo; fits many events.</li>
             <li>Reports within 5 days of each other are also treated as the same event when their headlines and summary lines share at least 4 specific words (places, road numbers, charges).</li>
             <li>A report joins a case when it matches any report already in that case. Dates are compared report to report, so a case with months of coverage does not pull in unrelated later news.</li>
-            <li>At coding time the model is shown similar earlier cases and may say a new one is the same incident, in which case the reports are joined.</li>
+            <li>At coding time the model is shown earlier published cases and may say a new one is the same incident, in which case the reports are joined. The cases shown are those that share specific headline words, those whose coded city appears in the reports being read, and those with coverage published within three days of the new reports.</li>
           </ul>
 
           <h2 id="screening">Which cases are published</h2>
@@ -144,7 +144,7 @@
             <li><strong>Time coverage is uneven.</strong> Fullest for news published from November 15, 2026 onward, which was collected live from both search services. News from January 1, 2026 to then was searched afterwards on Google News only and is thinner. Anything earlier is accidental.</li>
             <li><strong>Headline wording matters.</strong> Incidents reported without a feature term in the headline are missed; incidents where the feature is the story are favoured.</li>
             <li><strong>Round-ups are lost.</strong> An incident reported only inside a round-up does not become a case.</li>
-            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two. The joining rules were tightened on November 22, 2026 after a test showed that the earlier rules let a long-running case absorb unrelated reports; nothing from that test was published.</li>
+            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two. The joining rules were tightened on November 22, 2026 after a test showed that the earlier rules let a long-running case absorb unrelated reports; nothing from that test was published. On the same day the first automated coding batch published 32 cases, several of which duplicated one another because the model was shown too few earlier cases to compare against; those 32 were returned to the waiting list within the hour, the comparison list was widened, and they were coded again.</li>
             <li><strong>Coding has changed hands.</strong> Each record names its coder in the <code>coder</code> column; the first cases were drafted by a different model from the one the daily job is set to use. None has been reviewed by a person yet.</li>
             <li><strong>No denominator.</strong> Nothing here measures how much these features are used, so counts cannot be turned into rates or risks.</li>
           </ul>

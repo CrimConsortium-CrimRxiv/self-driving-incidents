@@ -9,9 +9,10 @@
 from __future__ import annotations
 
 import argparse
+import re
 import time
 from concurrent.futures import ThreadPoolExecutor
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 
 from . import cluster, coder, collect, enrich, export, store as st
 from .common import load_config, log, setup_logging
@@ -140,6 +141,47 @@ def reports_for(case: dict, cfg: dict) -> list[dict]:
             for i, (s, t) in enumerate(chosen)]
 
 
+def _gap_days(a: dict, b: dict) -> int:
+    """Fewest days between any report of one case and any report of the other."""
+    xs = [datetime.fromisoformat(s["published"][:10]) for s in a["sources"] if s.get("published")]
+    ys = [datetime.fromisoformat(s["published"][:10]) for s in b["sources"] if s.get("published")]
+    return min((abs((x - y).days) for x in xs for y in ys), default=9999)
+
+
+def earlier_cases(case: dict, reports: list[dict], published: list[dict]) -> list[dict]:
+    """Published cases the coder should compare this one against. Wording alone misses the same
+    event told differently, so three routes are used: shared specific words in the headlines,
+    a published case's coded city appearing in what the coder is about to read, and coverage
+    that appeared within a few days of this case's coverage."""
+    read = " ".join(f"{r['title']} {r.get('summary') or ''} {r.get('text') or ''}" for r in reports).lower()
+    picked = list(cluster.candidates(case, published))
+    place, near = [], []
+    for c in published:
+        if any(c is p for p in picked):
+            continue
+        gap = _gap_days(case, c)
+        city = (((c.get("coding") or {}).get("values") or {}).get("location_city") or "").strip().lower()
+        if len(city) >= 4 and re.search(r"\b" + re.escape(city) + r"\b", read):
+            place.append((gap, c))
+        elif gap <= 3:
+            near.append((gap, c))
+    place.sort(key=lambda p: p[0])
+    near.sort(key=lambda p: p[0])
+    picked += [c for _, c in place[:8]] + [c for _, c in near[:6]]
+    out = []
+    for c in picked:
+        coding = c.get("coding") or {}
+        v = coding.get("values") or {}
+        facts = [f"incident date {v['incident_date']}" if v.get("incident_date") else "incident date not coded",
+                 ", ".join(x for x in (v.get("location_city"), v.get("location_state_region")) if x) or "place not coded"]
+        if v.get("vehicle_model"):
+            facts.append(str(v["vehicle_model"]))
+        out.append({"ref": c["case_id"], "first_reported": st.first_reported(c), "headline": c["headline"],
+                    "facts": "; ".join(facts),
+                    "summary": coding.get("narrative") or c.get("source_summary") or "", "case": c})
+    return out
+
+
 def settle(store: dict, case: dict, raw: dict, reports: list[dict], earlier: list[dict], cfg: dict,
            model: str, tally: dict) -> str:
     """Check one drafted answer and act on it: publish, screen out, or join an earlier case."""
@@ -185,10 +227,8 @@ def code_cases(store: dict, cfg: dict, limit: int | None = None) -> dict:
         if case not in store["cases"]:
             continue  # merged away earlier in this loop
         others = [c for c in store["cases"] if c["status"] == "published" and c is not case]
-        earlier = [{"ref": c["case_id"], "first_reported": st.first_reported(c), "headline": c["headline"],
-                    "summary": (c.get("coding") or {}).get("narrative") or c.get("source_summary") or "",
-                    "case": c} for c in cluster.candidates(case, others)]
         reports = reports_for(case, cfg)
+        earlier = earlier_cases(case, reports, others)
         messages = coder.build_messages(case, reports, earlier, cfg)
         try:
             raw, model = coder.call_model(messages, cfg)

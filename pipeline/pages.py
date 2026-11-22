@@ -633,7 +633,7 @@ def sampling_page(cfg, stats, updated) -> str:
             <li>They are treated as the same event when their headlines are nearly identical (90% alike), or at least {sim}% alike and share two distinctive words, or share three distinctive words with one headline largely contained in the other. Similar wording alone is not enough: &ldquo;Tesla in self-driving mode involved in crash&rdquo; fits many events.</li>
             <li>Reports within {cluster.CLOSE_DAYS} days of each other are also treated as the same event when their headlines and summary lines share at least {need} specific words (places, road numbers, charges).</li>
             <li>A report joins a case when it matches any report already in that case. Dates are compared report to report, so a case with months of coverage does not pull in unrelated later news.</li>
-            <li>At coding time the model is shown similar earlier cases and may say a new one is the same incident, in which case the reports are joined.</li>
+            <li>At coding time the model is shown earlier published cases and may say a new one is the same incident, in which case the reports are joined. The cases shown are those that share specific headline words, those whose coded city appears in the reports being read, and those with coverage published within three days of the new reports.</li>
           </ul>
 
           <h2 id="screening">Which cases are published</h2>
@@ -654,7 +654,7 @@ def sampling_page(cfg, stats, updated) -> str:
             <li><strong>Time coverage is uneven.</strong> Fullest for news published from {ex.nice_date(live_from)} onward, which was collected live from both search services. {("News from " + ex.nice_date(back) + " to then was searched afterwards on Google News only and is thinner. Anything earlier is accidental.") if back else "Sparse and accidental before."}</li>
             <li><strong>Headline wording matters.</strong> Incidents reported without a feature term in the headline are missed; incidents where the feature is the story are favoured.</li>
             <li><strong>Round-ups are lost.</strong> An incident reported only inside a round-up does not become a case.</li>
-            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two. The joining rules were tightened on November 22, 2026 after a test showed that the earlier rules let a long-running case absorb unrelated reports; nothing from that test was published.</li>
+            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two. The joining rules were tightened on November 22, 2026 after a test showed that the earlier rules let a long-running case absorb unrelated reports; nothing from that test was published. On the same day the first automated coding batch published 32 cases, several of which duplicated one another because the model was shown too few earlier cases to compare against; those 32 were returned to the waiting list within the hour, the comparison list was widened, and they were coded again.</li>
             <li><strong>Coding has changed hands.</strong> Each record names its coder in the <code>coder</code> column; the first cases were drafted by a different model from the one the daily job is set to use. None has been reviewed by a person yet.</li>
             <li><strong>No denominator.</strong> Nothing here measures how much these features are used, so counts cannot be turned into rates or risks.</li>
           </ul>
