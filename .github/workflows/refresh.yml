@@ -72,4 +72,16 @@ jobs:
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
+        run: |
+          # A push normally starts a Pages build by itself. Ask for one only if none
+          # has started for this commit, so two builds do not collide.
+          sha="$(git rev-parse HEAD)"
+          for _ in 1 2 3 4 5 6; do
+            latest="$(gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" -q .commit 2>/dev/null || true)"
+            if [ "$latest" = "$sha" ]; then
+              echo "GitHub Pages is already building this commit."
+              exit 0
+            fi
+            sleep 5
+          done
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
