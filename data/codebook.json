@@ -22,6 +22,7 @@
   "codebook_version": "Version of this codebook used.",
   "text_basis": "Fullest text the coder could read for the case: full_text, summary or headline.",
   "unsupported_values_removed": "How many values the coder proposed that were removed because their supporting quotation could not be found in the report.",
+  "merged_ids": "Retired case IDs whose reports were joined into this case because they described the same event (see `retired_ids.csv`). Blank for most cases.",
   "url": "Address of the case's page on the website."
  },
  "variables": [

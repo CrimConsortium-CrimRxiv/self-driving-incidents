@@ -6,6 +6,10 @@ folder you name, never to the repository.
 
     python -m pipeline.handcode list
     python -m pipeline.handcode merge k3 k12            join pending case k12 into k3
+    python -m pipeline.handcode join SDI-00003 SDI-00054 --reason "Both report ..."
+                                                        join published cases that are one event: the lowest
+                                                        ID survives, the others are retired and listed in
+                                                        data/retired_ids.csv with the reason given
     python -m pipeline.handcode prepare /tmp/scratch [k3 k7 ...]
     python -m pipeline.handcode apply /tmp/scratch answers.json "Name of the coder"
 """
@@ -17,7 +21,7 @@ from pathlib import Path
 
 from . import coder, export, store as st
 from .common import load_config, setup_logging
-from .run import absorb, reports_for, settle
+from .run import absorb, join_published, reports_for, settle
 
 
 def _by_key(store, key):
@@ -36,6 +40,14 @@ def main(argv: list[str]) -> None:
         for k in argv[2:]:
             absorb(target, _by_key(store, k), store, cfg)
         st.save(store)
+    elif cmd == "join":
+        if "--reason" not in argv or argv.index("--reason") + 1 >= len(argv):
+            raise SystemExit('Give the evidence: join SDI-00003 SDI-00054 --reason "Both report ..."')
+        at = argv.index("--reason")
+        target = join_published(store, cfg, argv[1:at], argv[at + 1])
+        st.save(store)
+        print(f"Joined into {target['case_id']} ({len(target['sources'])} reports); it will be coded again "
+              f"at the next refresh.", export.export_all(store, cfg))
     elif cmd == "prepare":
         out = Path(argv[1])
         out.mkdir(parents=True, exist_ok=True)

@@ -180,6 +180,8 @@ CASE_FIELDS = [
     ("text_basis", "Fullest text the coder could read for the case: full_text, summary or headline."),
     ("unsupported_values_removed", "How many values the coder proposed that were removed because their "
                                    "supporting quotation could not be found in the report."),
+    ("merged_ids", "Retired case IDs whose reports were joined into this case because they described the "
+                   "same event (see `retired_ids.csv`). Blank for most cases."),
     ("url", "Address of the case's page on the website."),
 ]
 
@@ -214,6 +216,7 @@ def markdown() -> str:
            "| `claims.csv` | claim | Who said what about the incident, with quotation and report |",
            "| `sources.csv` | report | Publisher, headline, link, date, and how much of it the coder could read |",
            "| `screened_out.csv` | report group | Items collected but not treated as a case, and why |",
+           "| `retired_ids.csv` | retired case ID | Case IDs no longer in use, the case each was joined into, when and why |",
            "| `cases.json` | case | Everything above, nested |", "",
            "Variables that allow several values are joined with `; ` in `cases.csv`.", "",
            "## Case fields", "", "| Field | Meaning |", "|---|---|"]
@@ -237,6 +240,19 @@ def markdown() -> str:
             "| `paraphrase` | The claim in neutral words, without private individuals' names |",
             "| `quote` | Words from the report that carry the claim |",
             "| `source_url` | The report the quotation comes from |", "",
+            "## Retired case IDs (`retired_ids.csv`)", "",
+            "A case ID is permanent. When two published cases are found to describe the same event, a "
+            "person who has checked the reports joins them: the lower ID is kept, every report moves to "
+            "it, and it is coded again from all the reports together. The other ID is retired. It is "
+            "never given to another case, and its web address stays in place and points to the case "
+            "that holds its reports. Cases are joined only when the reports themselves show one event "
+            "(for example the same date, place and people); cases that merely look alike stay separate.", "",
+            "| Field | Meaning |", "|---|---|",
+            "| `retired_id` | The case ID that is no longer in use |",
+            "| `merged_into` | The case that now holds its reports |",
+            "| `retired_on` | Date the two were joined (YYYY-MM-DD) |",
+            "| `n_reports_moved` | Number of reports the retired case held when it was joined |",
+            "| `reason` | What in the reports shows the two were one event |", "",
             "## Screening", "",
             "A group of reports becomes a case only when the coder judges that it is mainly about one "
             "identifiable incident and that an automated-driving feature is said, or asked, to be "

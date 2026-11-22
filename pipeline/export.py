@@ -11,7 +11,7 @@ from urllib.parse import quote
 
 from . import codebook as cb, pages
 from .common import ROOT
-from .store import first_reported, last_reported
+from .store import first_reported, last_reported, merged_ids
 
 DATA = ROOT / "data"
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
@@ -86,7 +86,7 @@ def sort_date(case: dict) -> str:
     return first_reported(case)
 
 
-def view(case: dict, cfg: dict) -> dict:
+def view(case: dict, cfg: dict, merged: list[str] | None = None) -> dict:
     """Everything the pages need to show one case, worked out once."""
     vals = (case.get("coding") or {}).get("values") or {}
     make = vals.get("vehicle_make") or case["maker"]
@@ -131,7 +131,7 @@ def view(case: dict, cfg: dict) -> dict:
             "vehicle": vehicle, "place": place, "date_label": date_label, "sort": sort_date(case),
             "title": case["headline"], "publisher": case["headline_publisher"],
             "summary": summary, "summary_by": by, "summary_kind": kind, "tags": tags,
-            "sources": srcs, "narrative": narrative, "vals": vals,
+            "sources": srcs, "narrative": narrative, "vals": vals, "merged": list(merged or []),
             "first": first_reported(case), "last": last_reported(case)}
 
 
@@ -165,6 +165,7 @@ def public_record(case: dict, v: dict, site_url: str) -> dict:
         "coded_at": coding.get("coded_at"), "codebook_version": coding.get("codebook_version"),
         "text_basis": coding.get("text_basis"),
         "unsupported_values_removed": coding.get("unsupported_values_removed"),
+        "merged_ids": v["merged"],
         "variables": {var["name"]: coding.get("values", {}).get(var["name"]) for var in cb.VARIABLES},
         # Fixed key order, so the file reads the same whether the case was coded in this run or loaded from disk.
         "evidence": {n: e for n, e in sorted(coding.get("evidence", {}).items(), key=lambda p: _var_order(p[0]))},
@@ -177,7 +178,15 @@ def public_record(case: dict, v: dict, site_url: str) -> dict:
     }
 
 
-def write_downloads(published: list[tuple[dict, dict]], excluded: list[dict], cfg: dict, updated: str) -> None:
+def retired_rows(retired: list[dict]) -> list[dict]:
+    return [{"retired_id": r["case_id"], "merged_into": r["merged_into"], "retired_on": r["retired_on"],
+             "n_reports_moved": r.get("n_reports", ""), "reason": r["reason"]}
+            for r in sorted(retired, key=lambda r: r["case_id"])]
+
+
+def write_downloads(published: list[tuple[dict, dict]], excluded: list[dict], cfg: dict, updated: str,
+                    retired: list[dict] | None = None) -> None:
+    gone = retired_rows(retired or [])
     site_url = cfg["site"]["url"]
     recs = [public_record(c, v, site_url) for c, v in published]
     names = [v["name"] for v in cb.VARIABLES]
@@ -205,9 +214,11 @@ def write_downloads(published: list[tuple[dict, dict]], excluded: list[dict], cf
                                    c.get("exclusion_reason") or ""]
                                   for c in sorted(excluded, key=first_reported, reverse=True)],
                                  ["first_reported", "headline", "publisher", "url", "n_reports", "reason"]),
+        "retired_ids.csv": _csv([list(g.values()) for g in gone],
+                                ["retired_id", "merged_into", "retired_on", "n_reports_moved", "reason"]),
         "cases.json": json.dumps({"dataset": cfg["site"]["name"], "url": site_url, "updated": updated,
                                   "codebook_version": cb.VERSION, "license": cfg["license"]["data"],
-                                  "cases": recs}, ensure_ascii=False, indent=1) + "\n",
+                                  "cases": recs, "retired_ids": gone}, ensure_ascii=False, indent=1) + "\n",
         "codebook.json": json.dumps({"version": cb.VERSION, "review_status": cb.REVIEW_STATUS,
                                      "case_fields": dict(cb.CASE_FIELDS), "variables": cb.VARIABLES,
                                      "claimants": cb.CLAIMANTS, "claim_topics": cb.CLAIM_TOPICS},
@@ -236,7 +247,7 @@ def write_site_data(published: list[tuple[dict, dict]], updated: str) -> None:
     rows = []
     for c, v in published:
         vals = v["vals"]
-        blob = " ".join([v["id"], v["lead"], v["title"], v["summary"] or "", v["narrative"],
+        blob = " ".join([v["id"], " ".join(v["merged"]), v["lead"], v["title"], v["summary"] or "", v["narrative"],
                          " ".join(s["publisher"] for s in v["sources"]),
                          " ".join(human(x) for x in vals.values())]).lower()
         rows.append({
@@ -261,12 +272,14 @@ def write_site_data(published: list[tuple[dict, dict]], updated: str) -> None:
 def export_all(store: dict, cfg: dict) -> dict:
     published = [c for c in store["cases"] if c["status"] == "published"]
     excluded = [c for c in store["cases"] if c["status"] == "excluded"]
-    pairs = [(c, view(c, cfg)) for c in published]
+    retired = store.get("retired", [])
+    merged = merged_ids(store)
+    pairs = [(c, view(c, cfg, merged.get(c["case_id"]))) for c in published]
     pairs.sort(key=lambda p: (p[1]["sort"], p[1]["first"], p[1]["id"]), reverse=True)
     updated = max((c["updated"][:10] for c in published), default=date.today().isoformat())
-    write_downloads(pairs, excluded, cfg, updated)
+    write_downloads(pairs, excluded, cfg, updated, retired)
     write_site_data(pairs, updated)
     pages.write_pages(pairs, cfg, updated, n_reports=sum(len(c["sources"]) for c in published),
-                      stats=pages.sampling_stats(store, cfg))
+                      stats=pages.sampling_stats(store, cfg), retired=retired)
     return {"cases": len(published), "sources": sum(len(c["sources"]) for c in published),
-            "excluded": len(excluded)}
+            "excluded": len(excluded), "retired_ids": len(retired)}

@@ -27,9 +27,12 @@ ORG = {"@type": "Organization", "@id": "https://crimconsortium.com/#org", "name"
 
 def shell(cfg: dict, *, path: str, title: str, description: str, body: str, root: str = "",
           narrow: bool = True, current: str = "", jsonld: list | None = None, scripts: str = "",
-          og_type: str = "website") -> str:
+          og_type: str = "website", canonical: str | None = None) -> str:
     site = cfg["site"]
     url = site["url"] + path
+    # A page that only points elsewhere (a retired case ID) is kept out of search engines.
+    robots = "noindex, follow" if canonical else "index, follow, max-image-preview:large"
+    link = canonical or url
     image = site["url"] + "og-image.png?v=2"
     ld = ""
     if jsonld:
@@ -49,9 +52,9 @@ def shell(cfg: dict, *, path: str, title: str, description: str, body: str, root
     <title>{esc(title)}</title>
     <meta name="description" content="{esc(description)}" />
     <meta name="author" content="CrimConsortium" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="robots" content="{robots}" />
     <meta name="theme-color" content="#0e0e0e" />
-    <link rel="canonical" href="{esc(url)}" />
+    <link rel="canonical" href="{esc(link)}" />
 
     <meta property="og:title" content="{esc(title)}" />
     <meta property="og:description" content="{esc(description)}" />
@@ -75,7 +78,7 @@ def shell(cfg: dict, *, path: str, title: str, description: str, body: str, root
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="{FONTS}" rel="stylesheet" />
-    <link rel="stylesheet" href="{root}style.css" />
+    <link rel="stylesheet" href="{root}style.css?v=4" />
     <script>
       (function () {{
         var t = null;
@@ -100,8 +103,8 @@ def shell(cfg: dict, *, path: str, title: str, description: str, body: str, root
         <div class="header-actions">
           <nav class="site-nav" aria-label="Site">
             {nav("search.html", "Search", "search")}
-            {nav("about.html", 'About<span class="nav-extra">&nbsp;the data</span>', "about")}
-            {nav("sampling.html", "Sampling", "sampling", ' class="nav-wide"')}
+            {nav("about.html", "About the data", "about")}
+            {nav("sampling.html", "Sampling", "sampling")}
           </nav>
           <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle color scheme" title="Toggle light or dark"></button>
         </div>
@@ -125,7 +128,7 @@ def shell(cfg: dict, *, path: str, title: str, description: str, body: str, root
           source code on <a href="{esc(site['repo'])}" target="_blank" rel="noopener">GitHub</a>.
           Corrections and suggestions: <a href="mailto:{esc(site['contact_email'])}">{esc(site['contact_email'])}</a>.
         </div>
-        <p class="footer-credit">A project of Scott Jacques and Miranda Baumann. Miranda drives a Tesla. Dedicated to Bob.</p>
+        <p class="footer-credit">A project of Scott Jacques and Miranda Baumann. Miranda drives a Tesla.</p>
       </footer>
     </div>
     <script src="{root}site.js" defer></script>{scripts}
@@ -324,11 +327,19 @@ def case_page(case, v, cfg) -> str:
     n = len(v["sources"])
     removed = coding.get("unsupported_values_removed", 0)
     url = site["url"] + v["url"]
+    joined = ""
+    if v.get("merged"):
+        ids = v["merged"]
+        ids = [f'<span class="nowrap">{i}</span>' for i in ids]
+        names = ", ".join(ids[:-1]) + (" and " if len(ids) > 1 else "") + ids[-1]
+        joined = (f'\n          <p class="case-meta case-joined">Includes the reports formerly filed as {names}, which '
+                  f'described the same event. {"Those IDs are" if len(ids) > 1 else "That ID is"} retired; see '
+                  f'<a class="text-link" href="{root}data/retired_ids.csv" download>retired_ids.csv</a>.</p>')
     body = f"""        <nav class="crumbs" aria-label="Breadcrumb"><a href="{root}index.html">Latest incidents</a> / <span class="case-id">{v["id"]}</span></nav>
         <header class="case-head">
           <div class="incident-eyebrow"><span class="incident-lead">{esc(v["lead"])}</span><span class="incident-date">{esc(v["date_label"])}</span></div>
           <h1>{esc(v["title"])}</h1>
-          <p class="case-meta">Headline from {esc(v["publisher"])} · {n} report{"s" if n != 1 else ""} · first reported {ex.nice_date(v["first"])} · record updated {ex.nice_date(case["updated"][:10])}</p>
+          <p class="case-meta">Headline from {esc(v["publisher"])} · {n} report{"s" if n != 1 else ""} · first reported {ex.nice_date(v["first"])} · record updated {ex.nice_date(case["updated"][:10])}</p>{joined}
           <div class="incident-tags" style="margin-top: var(--space-4)">{tags}</div>
           <p class="review-flag"><span><strong>Machine-coded, not yet reviewed.</strong> Spot a mistake? <a class="text-link" href="mailto:{esc(mail)}?subject={subject}">Email a correction</a>.</span></p>
         </header>
@@ -492,6 +503,7 @@ def about_page(cfg, total, updated) -> str:
             <li><strong>Counts are not rates.</strong> Nothing here says how often these features are used without incident, so the data cannot show whether they are safer or less safe than a human driver.</li>
             <li><strong>It does not establish fault or cause.</strong> It records what coverage reports and who says so.</li>
             <li><strong>Machine coding makes mistakes.</strong> Dates, places and counts can be wrong, and two cases may turn out to be the same event. Check the linked sources before relying on a record.</li>
+            <li><strong>Case IDs are permanent, and a few are retired.</strong> When the reports show that two cases are one event, a person joins them under the lower ID and that case is coded again from all its reports. The other ID is retired: it is never reused, its page stays in place and points to the case that holds its reports, and it is listed with the reason in <a href="data/retired_ids.csv" download>retired_ids.csv</a>. Cases that only look alike are left separate.</li>
             <li><strong>Coverage changes.</strong> Early reports are often revised. A case reflects the reports attached to it on the date shown.</li>
           </ul>
 
@@ -499,7 +511,7 @@ def about_page(cfg, total, updated) -> str:
           <p>Coded fields, narratives and claims describe people by role (&ldquo;the driver&rdquo;, &ldquo;a passenger&rdquo;) and do not name private individuals. Names may still appear in publishers' headlines and in the linked reports. This site and the download hold links and short quotations, not copies of articles. So that the coding can be checked, we keep the text of the reports we were able to read in a private archive; it is not part of the dataset and is not redistributed. To ask for a change, email <a href="mailto:{mail}">{mail}</a>.</p>
 
           <h2>Download, licence and citation</h2>
-          <p><a href="data/self-driving-incidents.zip" download>Download everything as one .zip</a>, or take single files: <a href="data/cases.csv" download>cases.csv</a>, <a href="data/evidence.csv" download>evidence.csv</a>, <a href="data/claims.csv" download>claims.csv</a>, <a href="data/sources.csv" download>sources.csv</a>, <a href="data/screened_out.csv" download>screened_out.csv</a>, <a href="data/cases.json" download>cases.json</a>, <a href="data/codebook.json" download>codebook.json</a>.</p>
+          <p><a href="data/self-driving-incidents.zip" download>Download everything as one .zip</a>, or take single files: <a href="data/cases.csv" download>cases.csv</a>, <a href="data/evidence.csv" download>evidence.csv</a>, <a href="data/claims.csv" download>claims.csv</a>, <a href="data/sources.csv" download>sources.csv</a>, <a href="data/screened_out.csv" download>screened_out.csv</a>, <a href="data/retired_ids.csv" download>retired_ids.csv</a>, <a href="data/cases.json" download>cases.json</a>, <a href="data/codebook.json" download>codebook.json</a>.</p>
           <p>The data are free to reuse under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. The code that builds them is on <a href="{esc(site['repo'])}" target="_blank" rel="noopener">GitHub</a>, where every change to the data is recorded.</p>
           <p>Cite as: CrimConsortium. <em>{esc(site['name'])}</em> [dataset]. {esc(site['url'])} (data as of {ex.nice_date(updated)}; codebook version {cb.VERSION}).</p>
 
@@ -528,6 +540,7 @@ def sampling_stats(store: dict, cfg: dict) -> dict:
         "published": sum(c["status"] == "published" for c in cases),
         "excluded": sum(c["status"] == "excluded" for c in cases),
         "pending": sum(c["status"] == "pending" for c in cases),
+        "retired": len(store.get("retired", [])),
         "first_report": days[0] if days else "", "last_report": days[-1] if days else "",
         "started": started, "backfill": str(cfg.get("backfill_from") or ""),
         "live_from": _days_before(started, int(cfg.get("lookback_days", 7))) if started else "",
@@ -555,6 +568,10 @@ def sampling_page(cfg, stats, updated) -> str:
     terms = lambda words: ", ".join(esc(w) for w in words)
     plural = lambda n, one, many: f"{n:,} {one if n == 1 else many}"
     live_from, back = stats["live_from"], stats["backfill"]
+    n_gone = stats.get("retired", 0)
+    joined_note = (f" Published cases that the reports show to be one event are joined by hand under the lower ID; "
+                   f"{n_gone} case ID{'s have' if n_gone != 1 else ' has'} been retired this way so far, each listed with "
+                   f"the reason in <a href=\"data/retired_ids.csv\" download>retired_ids.csv</a>." if n_gone else "")
     searched_from = back or live_from
     days_all = stats["by_month"]
     older = sum(n for m, n in days_all if m < searched_from[:7])
@@ -654,7 +671,7 @@ def sampling_page(cfg, stats, updated) -> str:
             <li><strong>Time coverage is uneven.</strong> Fullest for news published from {ex.nice_date(live_from)} onward, which was collected live from both search services. {("News from " + ex.nice_date(back) + " to then was searched afterwards on Google News only and is thinner. Anything earlier is accidental.") if back else "Sparse and accidental before."}</li>
             <li><strong>Headline wording matters.</strong> Incidents reported without a feature term in the headline are missed; incidents where the feature is the story are favoured.</li>
             <li><strong>Round-ups are lost.</strong> An incident reported only inside a round-up does not become a case.</li>
-            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two. The joining rules were tightened on November 22, 2026 after a test showed that the earlier rules let a long-running case absorb unrelated reports; nothing from that test was published. On the same day the first automated coding batch published 32 cases, several of which duplicated one another because the model was shown too few earlier cases to compare against; those 32 were returned to the waiting list within the hour, the comparison list was widened, and they were coded again.</li>
+            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two. The joining rules were tightened on November 22, 2026 after a test showed that the earlier rules let a long-running case absorb unrelated reports; nothing from that test was published. On the same day the first automated coding batch published 32 cases, several of which duplicated one another because the model was shown too few earlier cases to compare against; those 32 were returned to the waiting list within the hour, the comparison list was widened, and they were coded again.{joined_note}</li>
             <li><strong>Coding has changed hands.</strong> Each record names its coder in the <code>coder</code> column; the first cases were drafted by a different model from the one the daily job is set to use. None has been reviewed by a person yet.</li>
             <li><strong>No denominator.</strong> Nothing here measures how much these features are used, so counts cannot be turned into rates or risks.</li>
           </ul>
@@ -680,9 +697,41 @@ def sampling_page(cfg, stats, updated) -> str:
                              "which reports are kept, how cases are screened, time coverage, and known gaps.")
 
 
+# --------------------------------------------------------------------------- retired case IDs
+
+def retired_page(r: dict, cfg: dict) -> str:
+    """What a retired case ID's address shows: where its reports went, when, and why."""
+    site = cfg["site"]
+    root = "../"
+    old, new = r["case_id"], r["merged_into"]
+    n = r.get("n_reports")
+    moved = f" Its {n} report{'s' if n != 1 else ''} moved with it." if n else ""
+    body = f"""        <nav class="crumbs" aria-label="Breadcrumb"><a href="{root}index.html">Latest incidents</a> / <span class="case-id">{old}</span></nav>
+        <header class="case-head">
+          <div class="incident-eyebrow"><span class="incident-lead">Retired case ID</span><span class="incident-date">Retired {ex.nice_date(r["retired_on"])}</span></div>
+          <h1><span class="nowrap">{old}</span> is now part of <span class="nowrap">{new}</span></h1>
+          <p class="case-meta">Formerly: {esc(r["headline"])} ({esc(r["headline_publisher"])})</p>
+        </header>
+        <section class="case-section">
+          <div class="prose">
+            <p>This case described the same event as <a class="nowrap" href="{new}.html">{new}</a>, so the two were joined on {ex.nice_date(r["retired_on"])}.{moved} The ID <span class="nowrap">{old}</span> is retired and will not be given to another case.</p>
+            <p><strong>Why they were joined:</strong> {esc(r["reason"])}</p>
+            <p>If you cited <span class="nowrap">{old}</span>, cite <span class="nowrap">{new}</span> instead. Every retired ID is listed in <a href="{root}data/retired_ids.csv" download>retired_ids.csv</a>.</p>
+          </div>
+        </section>
+        <div class="case-actions">
+          <a class="btn-primary" href="{new}.html">Go to {new}</a>
+          <a class="btn-secondary" href="{root}search.html">Search all cases</a>
+        </div>"""
+    return shell(cfg, path=f"cases/{old}.html", root=root, body=body, canonical=site["url"] + f"cases/{new}.html",
+                 title=f"{old} is now part of {new} | {site['name']}",
+                 description=f"Case {old} described the same event as {new} and was joined to it on "
+                             f"{ex.nice_date(r['retired_on'])}. {old} is a retired case ID.")
+
+
 # --------------------------------------------------------------------------- write
 
-def write_pages(pairs, cfg, updated, n_reports, stats=None) -> None:
+def write_pages(pairs, cfg, updated, n_reports, stats=None, retired=None) -> None:
     site = cfg["site"]
     total = len(pairs)
     ex.write_if_changed(ROOT / "index.html", home(pairs, cfg, updated, n_reports, (stats or {}).get("pending", 0)))
@@ -692,6 +741,8 @@ def write_pages(pairs, cfg, updated, n_reports, stats=None) -> None:
         ex.write_if_changed(ROOT / "sampling.html", sampling_page(cfg, stats, updated))
     for case, v in pairs:
         ex.write_if_changed(ROOT / v["url"], case_page(case, v, cfg))
+    for r in retired or []:   # a retired ID keeps its address and points to the surviving case
+        ex.write_if_changed(ROOT / "cases" / f"{r['case_id']}.html", retired_page(r, cfg))
     urls = [(site["url"], updated, "daily", "1.0"), (site["url"] + "search.html", updated, "daily", "0.8"),
             (site["url"] + "about.html", updated, "monthly", "0.7")]
     if stats:

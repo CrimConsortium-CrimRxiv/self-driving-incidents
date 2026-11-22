@@ -755,7 +755,7 @@ a:hover { border-bottom-color: var(--color-primary); }
 .incident-date { color: var(--color-text-muted); font-weight: 500; letter-spacing: 0.04em; white-space: nowrap; }
 .incident-title {
   font-size: var(--text-lg); font-weight: 600; line-height: 1.3; letter-spacing: -0.01em;
-  margin-bottom: var(--space-2); text-wrap: balance;
+  margin-bottom: var(--space-2);
 }
 .incident-title a { color: var(--color-text); border: 0; }
 .incident-title a:hover { color: var(--color-link); }
@@ -803,8 +803,10 @@ a:hover { border-bottom-color: var(--color-primary); }
 .crumbs { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-5); }
 .crumbs a { color: var(--color-link); }
 .case-head { margin-bottom: var(--space-8); }
-.case-head h1 { font-size: var(--text-xl); font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; margin-bottom: var(--space-3); text-wrap: balance; }
+.case-head h1 { font-size: var(--text-xl); font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; margin-bottom: var(--space-3); }
 .case-meta { font-size: var(--text-sm); color: var(--color-text-muted); }
+.case-joined { margin-top: var(--space-2); }
+.nowrap { white-space: nowrap; }
 .review-flag {
   display: inline-flex; align-items: center; gap: var(--space-2);
   margin-top: var(--space-4); padding: var(--space-2) var(--space-3);
@@ -884,23 +886,25 @@ blockquote.source-quote footer { margin-top: var(--space-1); font-size: var(--te
   .stats { padding: var(--space-4); }
   .hero-title { font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem); }
 }
+/* Phones and narrow windows: logo, title and theme button on the first row; every menu link on a
+   second row, so nothing in the header is shortened or hidden. */
+@media (max-width: 780px) {
+  .site-header { flex-wrap: wrap; gap: var(--space-1) var(--space-3); padding-bottom: var(--space-3); }
+  .brand { flex: 1 1 0; min-width: 0; }
+  .header-actions { display: contents; }
+  .header-actions .icon-btn { order: 2; flex-shrink: 0; }
+  .site-nav { order: 3; flex: 1 0 100%; flex-wrap: wrap; gap: 0 var(--space-1); margin-left: calc(var(--space-2) * -1); }
+  .site-nav a { padding: var(--space-2); min-height: 44px; }
+}
 @media (max-width: 600px) {
   .results-header { flex-direction: column; align-items: stretch; gap: var(--space-3); }
   .brand-mark { width: 32px; height: 32px; }
   .brand-title { font-size: var(--text-base); }
-  .header-actions { gap: 0; }
-  .site-nav a { padding: var(--space-2); }
-  .nav-extra { display: none; }
-  .site-nav .nav-wide { display: none; }
   .page { padding: var(--space-4) var(--space-4) var(--space-12); }
-  .site-header { gap: var(--space-3); }
   .var-table th, .var-table td { display: block; width: 100%; }
   .var-table td { border-top: 0; padding-top: 0; }
   .codebook dl { grid-template-columns: 1fr; gap: 0 0; }
   .codebook dd { margin-bottom: var(--space-2); }
   .search-form .btn-primary { width: 100%; justify-content: center; }
   .incident-eyebrow { flex-direction: column; }
-}
-@media (max-width: 440px) {
-  .nav-optional { display: none; }
 }

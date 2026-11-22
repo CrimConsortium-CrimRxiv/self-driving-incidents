@@ -63,6 +63,27 @@ def assign_id(store: dict, case: dict) -> None:
         store["next_id"] += 1
 
 
+def retire(store: dict, case: dict, target: dict, reason: str) -> None:
+    """Record that a published case's ID is retired because the case was joined to another one.
+    A retired ID is never used again, and always points at the case that now holds its reports."""
+    retired = store.setdefault("retired", [])
+    for r in retired:  # IDs retired into this case earlier now point at the surviving case
+        if r["merged_into"] == case["case_id"]:
+            r["merged_into"] = target["case_id"]
+    retired.append({"case_id": case["case_id"], "merged_into": target["case_id"],
+                    "retired_on": now_iso()[:10], "reason": reason.strip(),
+                    "headline": case["headline"], "headline_publisher": case["headline_publisher"],
+                    "n_reports": len(case["sources"])})
+
+
+def merged_ids(store: dict) -> dict[str, list[str]]:
+    """Surviving case ID -> the retired IDs joined into it."""
+    out: dict[str, list[str]] = {}
+    for r in sorted(store.get("retired", []), key=lambda r: r["case_id"]):
+        out.setdefault(r["merged_into"], []).append(r["case_id"])
+    return out
+
+
 def first_reported(case: dict) -> str:
     return min((s["published"] for s in case["sources"] if s.get("published")), default="")[:10]
 

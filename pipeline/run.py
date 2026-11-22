@@ -106,6 +106,24 @@ def absorb(target: dict, other: dict, store: dict, cfg: dict) -> None:
     refresh_auto(target, cfg)
 
 
+def join_published(store: dict, cfg: dict, case_ids: list[str], reason: str) -> dict:
+    """Join published cases that describe one event. The lowest ID survives and is coded again from
+    all the reports together; the other IDs are retired, recorded with the reason, and never reused.
+    This is done by a person who has checked the reports, never by the scheduled job."""
+    if not reason.strip():
+        raise ValueError("A reason is required: say what shows these are the same event.")
+    by_id = {c["case_id"]: c for c in store["cases"] if c["status"] == "published" and c.get("case_id")}
+    missing = [i for i in case_ids if i not in by_id]
+    if missing or len(set(case_ids)) < 2:
+        raise ValueError(f"Need two or more published case IDs; not found: {', '.join(missing) or 'none'}")
+    ids = sorted(set(case_ids))
+    target = by_id[ids[0]]
+    for other_id in ids[1:]:
+        st.retire(store, by_id[other_id], target, reason)
+        absorb(target, by_id[other_id], store, cfg)
+    return target
+
+
 def merge_pending(store: dict, cfg: dict) -> None:
     """Once summaries are known, pending cases about the same event can be recognised and joined."""
     changed = True

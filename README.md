@@ -72,6 +72,28 @@ repository, reads `store/cases.json`, and runs `python -m pipeline.archive`. No 
 repository is kept here, and no article text passes through this repository's job or its logs.
 The code refuses to write inside this repository.
 
+## Duplicate cases and retired IDs
+
+A case ID is permanent. Sometimes two published cases turn out to be the same event told by
+different outlets. When the reports themselves show that (the same date, place and people), a
+person joins them:
+
+```
+python -m pipeline.handcode join SDI-00003 SDI-00054 --reason "What in the reports shows one event"
+```
+
+- The lowest ID is kept and every report moves to it. No report is dropped.
+- The surviving case is coded again from all its reports at the next daily refresh. Until then it
+  stays published with its earlier coding.
+- The other ID is retired. It is never given to another case. Its page stays at the same address
+  and points to the surviving case, so an old citation still leads somewhere.
+- Every retired ID is listed in `data/retired_ids.csv` with the date and the reason, and the
+  surviving case lists them in its `merged_ids` column.
+
+The daily job never joins published cases on its own, and cases that only look alike are left
+separate. Wrongly joining two events loses information that is hard to get back; leaving a
+possible duplicate in place does not.
+
 ## Files
 
 | Path | What it is |
@@ -80,7 +102,7 @@ The code refuses to write inside this repository.
 | `pipeline/` | The program (collect, group, code, check, export) |
 | `store/cases.json` | The working record of every case, including those waiting to be coded |
 | `data/` | Public download files, rebuilt from the store |
-| `cases/` | One web page per case |
+| `cases/` | One web page per case, plus a short pointer page for each retired ID |
 | `index.html`, `search.html`, `about.html`, `sampling.html` | The site, rebuilt on every run |
 | `tests/` | Checks that the rules above hold; they run before every refresh |
 
@@ -111,7 +133,7 @@ cause. Machine coding makes mistakes; check the linked sources before relying on
 ## Who is behind it
 
 A project of Scott Jacques and Miranda Baumann, provided by [CrimConsortium](https://crimconsortium.com).
-Miranda drives a Tesla. Dedicated to Bob.
+Miranda drives a Tesla.
 
 ## Licence and citation
 

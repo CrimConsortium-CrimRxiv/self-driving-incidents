@@ -137,14 +137,6 @@ SDI-00021,system_named,robotaxi_or_driverless_service,crash into a robotaxi,http
 SDI-00021,engagement_status,mentioned_only,It remains unclear what kind of robotaxi was involved or how the collision occurred.,https://hoodline.com/2026/10/austin-stabbing-at-the-buzz-mill-ends-with-suspect-crashing-into-robotaxi/
 SDI-00021,police_action,investigating,KXAN indicated further updates were expected as the investigation continues.,https://hoodline.com/2026/10/austin-stabbing-at-the-buzz-mill-ends-with-suspect-crashing-into-robotaxi/
 SDI-00021,coverage_stage,initial_report,KXAN described its report as a developing story,https://hoodline.com/2026/10/austin-stabbing-at-the-buzz-mill-ends-with-suspect-crashing-into-robotaxi/
-SDI-00023,incident_type,collision,Tesla in ‘self-driving’ mode kills pedestrian,https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420
-SDI-00023,collision_with,pedestrian,Tesla in ‘self-driving’ mode kills pedestrian,https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420
-SDI-00023,vehicle_make,Tesla,Tesla in ‘self-driving’ mode kills pedestrian,https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420
-SDI-00023,system_named,unspecified,‘self-driving’ mode,https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420
-SDI-00023,engagement_status,claimed,Tesla in ‘self-driving’ mode,https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420
-SDI-00023,engagement_claimed_by,news_outlet,Tesla in ‘self-driving’ mode,https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420
-SDI-00023,fatalities,1,kills pedestrian,https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420
-SDI-00023,persons_harmed,pedestrian,kills pedestrian,https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420
 SDI-00019,incident_date,2026-10-22,"The agency put the collision at around 2:34 a.m. on Thursday, October 22, 2026",https://shattered.io/vallejo-tesla-fsd-crash-dashcam-open-questions-2026/
 SDI-00019,incident_type,collision,after a Tesla struck him on westbound Interstate 80,https://shattered.io/vallejo-tesla-fsd-crash-dashcam-open-questions-2026/
 SDI-00019,collision_with,pedestrian,after a Tesla struck him on westbound Interstate 80,https://shattered.io/vallejo-tesla-fsd-crash-dashcam-open-questions-2026/
@@ -292,13 +284,6 @@ SDI-00035,persons_harmed,subject_vehicle_driver; subject_vehicle_passenger,[name
 SDI-00035,police_action,arrest_made,she has been arrested by law enforcement,https://www.yahoo.com/news/us/articles/elon-musk-says-autopilot-wasn-183034805.html
 SDI-00035,criminal_charges,Vehicular manslaughter; leaving the scene of an accident resulting in death; driving while impaired,"charges of vehicular manslaughter, leaving the scene of an accident resulting in death and driving while impaired",https://www.yahoo.com/news/us/articles/elon-musk-says-autopilot-wasn-183034805.html
 SDI-00035,criminal_case_stage,charged,has been arrested by law enforcement on charges of vehicular manslaughter,https://www.yahoo.com/news/us/articles/elon-musk-says-autopilot-wasn-183034805.html
-SDI-00033,incident_type,collision,Mesa crash,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
-SDI-00033,vehicle_make,Tesla,Tesla in self-driving mode,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
-SDI-00033,location_city,Mesa,Mesa crash,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
-SDI-00033,system_named,unspecified,self-driving mode,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
-SDI-00033,engagement_status,claimed,Tesla in self-driving mode involved in Mesa crash,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
-SDI-00033,engagement_claimed_by,news_outlet,Tesla in self-driving mode involved in Mesa crash,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
-SDI-00033,coverage_stage,follow_up_investigation,investigation finds,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
 SDI-00010,incident_date,2026-09,"At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/
 SDI-00010,incident_type,collision,"At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/
 SDI-00010,collision_with,passenger_vehicle,"At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/
@@ -311,6 +296,13 @@ SDI-00010,road_type,highway_or_freeway,"At 2:19 a.m. on a September night, a Tes
 SDI-00010,time_of_day,night,"At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/
 SDI-00010,driver_seat_occupied,yes,"At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/
 SDI-00010,coverage_stage,follow_up_investigation,Then Tesla Redacted What Happened,https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/
+SDI-00033,incident_type,collision,Mesa crash,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
+SDI-00033,vehicle_make,Tesla,Tesla in self-driving mode,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
+SDI-00033,location_city,Mesa,Mesa crash,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
+SDI-00033,system_named,unspecified,self-driving mode,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
+SDI-00033,engagement_status,claimed,Tesla in self-driving mode involved in Mesa crash,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
+SDI-00033,engagement_claimed_by,news_outlet,Tesla in self-driving mode involved in Mesa crash,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
+SDI-00033,coverage_stage,follow_up_investigation,investigation finds,https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/
 SDI-00025,incident_date,2026-08-22,"Around 8:31 a.m. on Saturday, August 22, 2026",https://electrek.co/2026/10/15/tesla-driver-assist-median-crossing-vineland/
 SDI-00025,incident_type,collision,the car hit a northbound Chevrolet SUV,https://electrek.co/2026/10/15/tesla-driver-assist-median-crossing-vineland/
 SDI-00025,vehicle_make,Tesla,Tesla identifies the car as a 2021 Model Y,https://electrek.co/2026/10/15/tesla-driver-assist-median-crossing-vineland/
@@ -465,15 +457,6 @@ SDI-00055,driver_condition_mentioned,asleep_or_drowsy,she was definitely asleep 
 SDI-00055,police_action,investigating,the Revelstoke RCMP has its license plate and is following up with the owner,https://www.jalopnik.com/2210142/tesla-fsd-foiled-by-sunglasses-on-driver-asleep/
 SDI-00055,responsibility_attributed_to,driver; automation_or_manufacturer,it is the driver’s responsibility to be aware when they are driving,https://globalnews.ca/news/11955585/video-reportedly-shows-driver-asleep-self-driving-tesla-bc-highway/
 SDI-00055,coverage_stage,initial_report,A shocking sight was captured on a busy Interior B.C. highway over the weekend,https://globalnews.ca/news/11955585/video-reportedly-shows-driver-asleep-self-driving-tesla-bc-highway/
-SDI-00056,system_named,unspecified,driver-assistance,https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php
-SDI-00056,engagement_status,mentioned_only,Tesla driver-assistance,https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php
-SDI-00056,criminal_charges,manslaughter,Manslaughter charge,https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php
-SDI-00056,criminal_case_stage,charged,Manslaughter charge,https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php
-SDI-00056,coverage_stage,legal_proceeding,Manslaughter charge,https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php
-SDI-00057,incident_type,collision,fatal crash,https://www.statesman.com/news/article/tesla-crash-harris-county-autopilot-22313442.php
-SDI-00057,system_named,unspecified,driver-assistance systems,https://www.statesman.com/news/article/tesla-crash-harris-county-autopilot-22313442.php
-SDI-00057,engagement_status,mentioned_only,driver-assistance systems,https://www.statesman.com/news/article/tesla-crash-harris-county-autopilot-22313442.php
-SDI-00057,coverage_stage,follow_up_investigation,draws new federal scrutiny,https://www.statesman.com/news/article/tesla-crash-harris-county-autopilot-22313442.php
 SDI-00002,incident_date,2026-06-19,the June 19 fatal crash,https://www.houstonpublicmedia.org/articles/news/transportation/2026/07/15/557180/tesla-fatal-crash-houston-ntsb-investigation/
 SDI-00002,collision_with,fixed_object,crashed into a residence,https://www.nbcnews.com/news/us-news/tesla-driver-whose-car-slammed-texas-home-overrode-driver-assistance-rcna587823
 SDI-00002,vehicle_make,Tesla,a Tesla Model 3,https://www.houstonpublicmedia.org/articles/news/transportation/2026/07/15/557180/tesla-fatal-crash-houston-ntsb-investigation/
@@ -545,24 +528,6 @@ SDI-00008,police_action,investigating,lists the Florida Highway Patrol as the in
 SDI-00008,regulator_involved,nhtsa,"Under NHTSA’s Standing General Order, automakers have to report crashes where a Level 2 driver-assist system was engaged within 30 seconds of impact",https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/
 SDI-00008,responsibility_attributed_to,road_or_weather_conditions,said the Tesla driver would have seen only the truck’s underside,https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/
 SDI-00008,coverage_stage,follow_up_investigation,It’s the latest case in our ongoing investigation into fatal crashes hidden in Tesla’s NHTSA data,https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/
-SDI-00064,incident_type,collision,deadly wreck,https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54
-SDI-00064,vehicle_make,Tesla,involving a Tesla,https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54
-SDI-00064,system_named,autopilot,while on autopilot,https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54
-SDI-00064,engagement_status,claimed,while on autopilot,https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54
-SDI-00064,engagement_claimed_by,news_outlet,while on autopilot,https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54
-SDI-00064,police_action,investigating,The Florida Highway Patrol is investigating,https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54
-SDI-00063,incident_type,collision,deadly Pasco County crash,https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31
-SDI-00063,location_city,Pasco County,Pasco County crash,https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31
-SDI-00063,system_named,autopilot,Tesla Autopilot,https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31
-SDI-00063,engagement_status,claimed,Autopilot leads to deadly Pasco County crash,https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31
-SDI-00063,engagement_claimed_by,news_outlet,Autopilot leads to deadly Pasco County crash,https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31
-SDI-00063,responsibility_attributed_to,automation_or_manufacturer,Autopilot leads to deadly Pasco County crash,https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31
-SDI-00061,system_named,autopilot,Autopilot,https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582
-SDI-00061,engagement_status,claimed,Reportedly Driving Tesla in Autopilot,https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582
-SDI-00061,engagement_claimed_by,news_outlet,Reportedly Driving Tesla in Autopilot,https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582
-SDI-00061,driver_seat_occupied,yes,Driving Tesla,https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582
-SDI-00061,fatalities,1,"Man, 87, Killed",https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582
-SDI-00061,coverage_stage,initial_report,"Man, 87, Killed in Crash",https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582
 SDI-00062,incident_date,2026-05-23,on Saturday evening,https://www.wisn.com/article/milwaukee-police-tesla-cybertruck-autopilot-when-it-hit-shuttle/71434882
 SDI-00062,incident_type,collision,a messy crash with a ballpark shuttle,https://www.wisn.com/article/milwaukee-police-tesla-cybertruck-autopilot-when-it-hit-shuttle/71434882
 SDI-00062,collision_with,truck_or_bus,crash with a ballpark shuttle,https://www.wisn.com/article/milwaukee-police-tesla-cybertruck-autopilot-when-it-hit-shuttle/71434882
@@ -708,14 +673,6 @@ SDI-00073,driver_seat_occupied,yes,The driver did not intervene in time,https://
 SDI-00073,driver_condition_mentioned,not_supervising,The driver did not intervene in time,https://electrek.co/2026/03/09/tesla-fsd-drives-through-railroad-crossing-barriers-viral-video/
 SDI-00073,responsibility_attributed_to,driver,"Yes, the driver should have been paying attention and intervened.",https://electrek.co/2026/03/09/tesla-fsd-drives-through-railroad-crossing-barriers-viral-video/
 SDI-00073,coverage_stage,initial_report,A viral video shows a Tesla Model 3,https://electrek.co/2026/03/09/tesla-fsd-drives-through-railroad-crossing-barriers-viral-video/
-SDI-00074,incident_type,collision,Tesla Cybertruck crashed,https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php
-SDI-00074,vehicle_make,Tesla,Tesla Cybertruck,https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php
-SDI-00074,vehicle_model,Cybertruck,Tesla Cybertruck,https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php
-SDI-00074,system_named,autopilot,Autopilot was engaged,https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php
-SDI-00074,engagement_status,alleged_in_legal_filing,suit alleges,https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php
-SDI-00074,engagement_claimed_by,plaintiff_or_plaintiff_lawyer,suit alleges,https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php
-SDI-00074,civil_litigation,lawsuit_filed,suit alleges,https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php
-SDI-00074,coverage_stage,legal_proceeding,suit alleges,https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php
 SDI-00075,incident_type,near_miss_or_erratic_driving,"The two vehicles ahead managed to narrowly avoid each other at the absolute last second, meaning no actual collision occurred.",https://www.notateslaapp.com/news/3707/fsd-predicts-70mph-highway-crash-before-it-happens-steers-clear
 SDI-00075,vehicle_make,Tesla,"The Model Y, running FSD v14.2.2.5, was travelling behind another vehicle in the left lane",https://www.notateslaapp.com/news/3707/fsd-predicts-70mph-highway-crash-before-it-happens-steers-clear
 SDI-00075,vehicle_model,Model Y,"The Model Y, running FSD v14.2.2.5, was travelling behind another vehicle in the left lane",https://www.notateslaapp.com/news/3707/fsd-predicts-70mph-highway-crash-before-it-happens-steers-clear
@@ -740,22 +697,6 @@ SDI-00038,fatalities,1,"killing its driver, 29-year-old [name]",https://electrek
 SDI-00038,injuries,1,"Her infant daughter, a passenger, was hurt but survived",https://electrek.co/2026/09/09/tesla-driver-assist-road-departure-vinemont/
 SDI-00038,persons_harmed,subject_vehicle_driver; subject_vehicle_passenger,"Her infant daughter, a passenger, was hurt but survived",https://electrek.co/2026/09/09/tesla-driver-assist-road-departure-vinemont/
 SDI-00038,coverage_stage,follow_up_investigation,This is part of an ongoing Electrek investigation matching reported crashes to Tesla’s redacted NHTSA data.,https://electrek.co/2026/09/09/tesla-driver-assist-road-departure-vinemont/
-SDI-00042,incident_date,2025-10-31,"Just after 3 a.m. on October 31, 2025",https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,incident_type,collision,was struck from behind,https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,collision_with,passenger_vehicle,a Ford F-350 pickup,https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,vehicle_make,Tesla,a Tesla sedan,https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,vehicle_model,Model 3,a 2020 Model 3,https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,vehicle_model_year,2020,a 2020 Model 3,https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,location_city,Mesa,"in Mesa, Arizona",https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,location_state_region,Arizona,"in Mesa, Arizona",https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,road_type,highway_or_freeway,the eastbound Loop 202 (Red Mountain) freeway,https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,time_of_day,night,Just after 3 a.m.,https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,system_named,autopilot; full_self_driving,whether it was Autopilot or “Full Self-Driving,https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,engagement_status,confirmed_by_official_source,"marks the automation “Engagement Status” as “Verified Engaged,",https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,engagement_claimed_by,manufacturer,"Tesla identifies the vehicle as a 2020 Model 3, marks the automation “Engagement Status” as “Verified Engaged,",https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,fatalities,1,The Tesla’s driver died at the scene,https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,police_action,investigating,the investigating agency is left without.,https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
-SDI-00042,coverage_stage,follow_up_investigation,This article is part of an ongoing Electrek investigation,https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/
 SDI-00036,incident_date,2025-10-06,"Around 9:25 p.m. on October 6, 2025",https://electrek.co/2026/08/31/tesla-driver-assist-model-3-stopped-i4-fatal/
 SDI-00036,incident_type,collision,was rear-ended by a semi,https://electrek.co/2026/08/31/tesla-driver-assist-model-3-stopped-i4-fatal/
 SDI-00036,collision_with,truck_or_bus,"A semi bearing down in that lane tried to avoid it, clipped the back of the Tesla",https://electrek.co/2026/08/31/tesla-driver-assist-model-3-stopped-i4-fatal/
@@ -989,18 +930,6 @@ SDI-00031,persons_harmed,subject_vehicle_driver; subject_vehicle_passenger,his b
 SDI-00031,civil_litigation,settled,Tesla has settled a wrongful death lawsuit,https://electrek.co/2026/09/02/tesla-settles-autopilot-fire-truck-death-lawsuit/
 SDI-00031,responsibility_attributed_to,automation_or_manufacturer,the gap between the marketing and the machine is what put [name] behind the wheel with more confidence than the technology deserved.,https://finance.yahoo.com/technology/ai/articles/tesla-keeps-settling-fatal-autopilot-161200032.html
 SDI-00031,coverage_stage,legal_proceeding,Tesla has settled a wrongful death lawsuit over a 2023 crash,https://electrek.co/2026/09/02/tesla-settles-autopilot-fire-truck-death-lawsuit/
-SDI-00054,incident_date,2023,The lawsuit centered on a tragic 2023 accident,https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
-SDI-00054,incident_type,collision,a Tesla Model Y struck 71-year-old [name],https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
-SDI-00054,collision_with,pedestrian,after she exited her vehicle to direct traffic,https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
-SDI-00054,vehicle_make,Tesla,a Tesla Model Y,https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
-SDI-00054,vehicle_model,Model Y,a Tesla Model Y,https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
-SDI-00054,system_named,full_self_driving,Full Self-Driving (FSD) technology,https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
-SDI-00054,engagement_status,claimed,one of its vehicles operating with Full Self-Driving (FSD) technology,https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
-SDI-00054,engagement_claimed_by,news_outlet,one of its vehicles operating with Full Self-Driving (FSD) technology,https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
-SDI-00054,fatalities,1,a fatal crash involving one of its vehicles,https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
-SDI-00054,civil_litigation,settled,"Tesla has now settled the civil lawsuit, with the terms remaining confidential.",https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
-SDI-00054,regulator_involved,nhtsa,the ongoing investigation by the U.S. National Highway Traffic Safety Administration (NHTSA),https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
-SDI-00054,coverage_stage,legal_proceeding,Tesla has now settled the civil lawsuit,https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars
 SDI-00070,incident_date,2022-05,fatal crash in May 2022,https://www.notateslaapp.com/news/3838/tesla-asks-colorado-court-to-dismiss-autopilot-lawsuit-citing-drunk-driving-and-inactive-fsd
 SDI-00070,incident_type,collision,struck a tree,https://www.notateslaapp.com/news/3838/tesla-asks-colorado-court-to-dismiss-autopilot-lawsuit-citing-drunk-driving-and-inactive-fsd
 SDI-00070,collision_with,fixed_object,struck a tree,https://www.notateslaapp.com/news/3838/tesla-asks-colorado-court-to-dismiss-autopilot-lawsuit-citing-drunk-driving-and-inactive-fsd

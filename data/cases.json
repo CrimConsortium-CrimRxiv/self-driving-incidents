@@ -37,6 +37,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 1,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "near_miss_or_erratic_driving",
@@ -148,6 +149,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "near_miss_or_erratic_driving",
@@ -269,6 +271,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-11-19",
     "incident_type": "collision",
@@ -577,6 +580,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-11-19",
     "incident_type": "collision",
@@ -720,6 +724,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 2,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "collision",
@@ -852,6 +857,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-11-10",
     "incident_type": "driver_asleep_or_absent",
@@ -1031,6 +1037,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 2,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-11-04",
     "incident_type": "collision",
@@ -1167,6 +1174,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-11-03",
     "incident_type": "collision",
@@ -1327,6 +1335,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-11-02",
     "incident_type": "collision",
@@ -1555,6 +1564,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-10-30",
     "incident_type": "collision",
@@ -1672,6 +1682,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-10-28",
     "incident_type": "collision",
@@ -1760,127 +1771,6 @@
    ]
   },
   {
-   "case_id": "SDI-00023",
-   "maker": "Tesla",
-   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00023.html",
-   "first_reported": "2026-10-23",
-   "last_reported": "2026-10-23",
-   "sort_date": "2026-10-23",
-   "headline": "Tesla in ‘self-driving’ mode kills pedestrian",
-   "headline_publisher": "News.com.au",
-   "source_summary": null,
-   "source_summary_publisher": null,
-   "auto": {
-    "location": null,
-    "model": null,
-    "tags": [
-     {
-      "key": "fsd",
-      "label": "Full Self-Driving mentioned in coverage"
-     },
-     {
-      "key": "fatality",
-      "label": "Fatality mentioned in coverage"
-     }
-    ]
-   },
-   "narrative": "News.com.au's headline says a Tesla in “self-driving” mode killed a pedestrian. It provides no location, incident date, or further details.",
-   "review_status": "machine-coded, not yet reviewed",
-   "coder": "OpenAI gpt-6-luna",
-   "coded_at": "2026-11-22T20:17:43Z",
-   "codebook_version": "0.1",
-   "text_basis": "headline",
-   "unsupported_values_removed": 0,
-   "variables": {
-    "incident_date": null,
-    "incident_type": "collision",
-    "collision_with": [
-     "pedestrian"
-    ],
-    "vehicle_make": "Tesla",
-    "vehicle_model": null,
-    "vehicle_model_year": null,
-    "location_city": null,
-    "location_state_region": null,
-    "location_country": null,
-    "road_type": null,
-    "time_of_day": null,
-    "system_named": [
-     "unspecified"
-    ],
-    "engagement_status": "claimed",
-    "engagement_claimed_by": [
-     "news_outlet"
-    ],
-    "driver_seat_occupied": null,
-    "driver_condition_mentioned": null,
-    "fatalities": 1,
-    "injuries": null,
-    "persons_harmed": [
-     "pedestrian"
-    ],
-    "police_action": null,
-    "criminal_charges": null,
-    "criminal_case_stage": null,
-    "civil_litigation": null,
-    "regulator_involved": null,
-    "responsibility_attributed_to": null,
-    "coverage_stage": null
-   },
-   "evidence": {
-    "incident_type": {
-     "quote": "Tesla in ‘self-driving’ mode kills pedestrian",
-     "source_url": "https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420"
-    },
-    "collision_with": {
-     "quote": "Tesla in ‘self-driving’ mode kills pedestrian",
-     "source_url": "https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420"
-    },
-    "vehicle_make": {
-     "quote": "Tesla in ‘self-driving’ mode kills pedestrian",
-     "source_url": "https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420"
-    },
-    "system_named": {
-     "quote": "‘self-driving’ mode",
-     "source_url": "https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420"
-    },
-    "engagement_status": {
-     "quote": "Tesla in ‘self-driving’ mode",
-     "source_url": "https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420"
-    },
-    "engagement_claimed_by": {
-     "quote": "Tesla in ‘self-driving’ mode",
-     "source_url": "https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420"
-    },
-    "fatalities": {
-     "quote": "kills pedestrian",
-     "source_url": "https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420"
-    },
-    "persons_harmed": {
-     "quote": "kills pedestrian",
-     "source_url": "https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420"
-    }
-   },
-   "claims": [
-    {
-     "claimant": "news_outlet",
-     "paraphrase": "The headline says the Tesla was in self-driving mode.",
-     "quote": "Tesla in ‘self-driving’ mode",
-     "source_url": "https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420",
-     "topic": "automation_engaged"
-    }
-   ],
-   "sources": [
-    {
-     "publisher": "News.com.au",
-     "title": "Tesla in ‘self-driving’ mode kills pedestrian",
-     "url": "https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420",
-     "published": "2026-10-23",
-     "read_by_coder": "headline"
-    }
-   ]
-  },
-  {
    "case_id": "SDI-00019",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00019.html",
@@ -1912,6 +1802,9 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [
+    "SDI-00023"
+   ],
    "variables": {
     "incident_date": "2026-10-22",
     "incident_type": "collision",
@@ -2158,6 +2051,13 @@
      "read_by_coder": "not_read"
     },
     {
+     "publisher": "News.com.au",
+     "title": "Tesla in ‘self-driving’ mode kills pedestrian",
+     "url": "https://www.news.com.au/technology/motoring/motoring-news/tesla-in-selfdriving-mode-kills-pedestrian/news-story/5e33f50e797f6c367cde3c703e5b5420",
+     "published": "2026-10-23",
+     "read_by_coder": "not_read"
+    },
+    {
      "publisher": "People.com",
      "title": "Man Operating Self-Driving Tesla Hits and Kills Pedestrian on California Freeway",
      "url": "https://people.com/self-driving-tesla-kills-pedestrian-on-interstate-80-in-california-12191866",
@@ -2229,6 +2129,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-10-21",
     "incident_type": "collision",
@@ -2375,6 +2276,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-10-13",
     "incident_type": "collision",
@@ -2724,6 +2626,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "collision",
@@ -2846,6 +2749,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-10-05",
     "incident_type": "near_miss_or_erratic_driving",
@@ -2974,6 +2878,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-09-30",
     "incident_type": "collision",
@@ -3199,6 +3104,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 1,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-09-19",
     "incident_type": "driver_asleep_or_absent",
@@ -3344,6 +3250,7 @@
    "codebook_version": "0.1",
    "text_basis": "summary",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "driver_asleep_or_absent",
@@ -3490,6 +3397,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-09-12",
     "incident_type": "collision",
@@ -3695,6 +3603,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-09-09",
     "incident_type": "collision",
@@ -3836,144 +3745,6 @@
    ]
   },
   {
-   "case_id": "SDI-00033",
-   "maker": "Tesla",
-   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00033.html",
-   "first_reported": "2026-09-03",
-   "last_reported": "2026-09-14",
-   "sort_date": "2026-09-03",
-   "headline": "Tesla in self-driving mode involved in Mesa crash, investigation finds",
-   "headline_publisher": "KOLD",
-   "source_summary": "The National Highway Traffic Safety Administration launched a formal investigation into \"phantom braking\" in 2022 after receiving more than 350 complaints about Tesla vehicles experiencing unexpected braking while in Autopilot.",
-   "source_summary_publisher": "KOLD",
-   "auto": {
-    "location": "Mesa",
-    "model": null,
-    "tags": [
-     {
-      "key": "autopilot",
-      "label": "Autopilot mentioned in coverage"
-     },
-     {
-      "key": "fsd",
-      "label": "Full Self-Driving mentioned in coverage"
-     },
-     {
-      "key": "fatality",
-      "label": "Fatality mentioned in coverage"
-     }
-    ]
-   },
-   "narrative": "KOLD reports that a Tesla in self-driving mode was involved in a Mesa crash and says an investigation found this. The summary says NHTSA launched a formal investigation in 2022 after receiving more than 350 complaints about unexpected braking while Tesla vehicles were in Autopilot.",
-   "review_status": "machine-coded, not yet reviewed",
-   "coder": "OpenAI gpt-6-luna",
-   "coded_at": "2026-11-22T20:22:03Z",
-   "codebook_version": "0.1",
-   "text_basis": "summary",
-   "unsupported_values_removed": 0,
-   "variables": {
-    "incident_date": null,
-    "incident_type": "collision",
-    "collision_with": null,
-    "vehicle_make": "Tesla",
-    "vehicle_model": null,
-    "vehicle_model_year": null,
-    "location_city": "Mesa",
-    "location_state_region": null,
-    "location_country": null,
-    "road_type": null,
-    "time_of_day": null,
-    "system_named": [
-     "unspecified"
-    ],
-    "engagement_status": "claimed",
-    "engagement_claimed_by": [
-     "news_outlet"
-    ],
-    "driver_seat_occupied": null,
-    "driver_condition_mentioned": null,
-    "fatalities": null,
-    "injuries": null,
-    "persons_harmed": null,
-    "police_action": null,
-    "criminal_charges": null,
-    "criminal_case_stage": null,
-    "civil_litigation": null,
-    "regulator_involved": null,
-    "responsibility_attributed_to": null,
-    "coverage_stage": "follow_up_investigation"
-   },
-   "evidence": {
-    "incident_type": {
-     "quote": "Mesa crash",
-     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
-    },
-    "vehicle_make": {
-     "quote": "Tesla in self-driving mode",
-     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
-    },
-    "location_city": {
-     "quote": "Mesa crash",
-     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
-    },
-    "system_named": {
-     "quote": "self-driving mode",
-     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
-    },
-    "engagement_status": {
-     "quote": "Tesla in self-driving mode involved in Mesa crash",
-     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
-    },
-    "engagement_claimed_by": {
-     "quote": "Tesla in self-driving mode involved in Mesa crash",
-     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
-    },
-    "coverage_stage": {
-     "quote": "investigation finds",
-     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
-    }
-   },
-   "claims": [
-    {
-     "claimant": "news_outlet",
-     "paraphrase": "KOLD reports that the Tesla was in self-driving mode during the Mesa crash.",
-     "quote": "Tesla in self-driving mode involved in Mesa crash",
-     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/",
-     "topic": "automation_engaged"
-    }
-   ],
-   "sources": [
-    {
-     "publisher": "Futurism",
-     "title": "Tesla Driver Killed After Self-Driving Mode Stops in the Middle of a Highway",
-     "url": "https://futurism.com/advanced-transport/tesla-driver-killed-after-self-driving-mode-stops-in-the-middle-of-a-highway",
-     "published": "2026-09-03",
-     "read_by_coder": "not_read"
-    },
-    {
-     "publisher": "New York Post",
-     "title": "Tesla on autopilot halts on busy highway before giant F-350 truck rear-ends and kills driver",
-     "url": "https://nypost.com/2026/09/03/us-news/tesla-driver-killed-by-truck-after-car-stopped-on-arizona-highway/",
-     "published": "2026-09-03",
-     "read_by_coder": "not_read"
-    },
-    {
-     "publisher": "KOLD",
-     "title": "Tesla in self-driving mode involved in Mesa crash, investigation finds",
-     "url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/",
-     "published": "2026-09-14",
-     "read_by_coder": "summary"
-    },
-    {
-     "publisher": "AZ Family",
-     "title": "Tesla on Autopilot stopped before deadly Mesa crash: Here’s what filing says",
-     "url": "https://www.azfamily.com/2026/09/15/tesla-autopilot-stopped-before-deadly-mesa-crash-heres-what-filing-says/",
-     "published": "2026-09-14",
-     "read_by_coder": "not_read"
-    }
-   ]
-  },
-  {
    "case_id": "SDI-00010",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00010.html",
@@ -4001,6 +3772,7 @@
    "codebook_version": "0.1",
    "text_basis": "summary",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-09",
     "incident_type": "collision",
@@ -4108,6 +3880,161 @@
    ]
   },
   {
+   "case_id": "SDI-00033",
+   "maker": "Tesla",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00033.html",
+   "first_reported": "2026-08-31",
+   "last_reported": "2026-09-14",
+   "sort_date": "2026-08-31",
+   "headline": "Tesla in self-driving mode involved in Mesa crash, investigation finds",
+   "headline_publisher": "KOLD",
+   "source_summary": "The National Highway Traffic Safety Administration launched a formal investigation into \"phantom braking\" in 2022 after receiving more than 350 complaints about Tesla vehicles experiencing unexpected braking while in Autopilot.",
+   "source_summary_publisher": "KOLD",
+   "auto": {
+    "location": "Mesa",
+    "model": null,
+    "tags": [
+     {
+      "key": "autopilot",
+      "label": "Autopilot mentioned in coverage"
+     },
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     },
+     {
+      "key": "fatality",
+      "label": "Fatality mentioned in coverage"
+     }
+    ]
+   },
+   "narrative": "KOLD reports that a Tesla in self-driving mode was involved in a Mesa crash and says an investigation found this. The summary says NHTSA launched a formal investigation in 2022 after receiving more than 350 complaints about unexpected braking while Tesla vehicles were in Autopilot.",
+   "review_status": "machine-coded, not yet reviewed",
+   "coder": "OpenAI gpt-6-luna",
+   "coded_at": "2026-11-22T20:22:03Z",
+   "codebook_version": "0.1",
+   "text_basis": "summary",
+   "unsupported_values_removed": 0,
+   "merged_ids": [
+    "SDI-00042"
+   ],
+   "variables": {
+    "incident_date": null,
+    "incident_type": "collision",
+    "collision_with": null,
+    "vehicle_make": "Tesla",
+    "vehicle_model": null,
+    "vehicle_model_year": null,
+    "location_city": "Mesa",
+    "location_state_region": null,
+    "location_country": null,
+    "road_type": null,
+    "time_of_day": null,
+    "system_named": [
+     "unspecified"
+    ],
+    "engagement_status": "claimed",
+    "engagement_claimed_by": [
+     "news_outlet"
+    ],
+    "driver_seat_occupied": null,
+    "driver_condition_mentioned": null,
+    "fatalities": null,
+    "injuries": null,
+    "persons_harmed": null,
+    "police_action": null,
+    "criminal_charges": null,
+    "criminal_case_stage": null,
+    "civil_litigation": null,
+    "regulator_involved": null,
+    "responsibility_attributed_to": null,
+    "coverage_stage": "follow_up_investigation"
+   },
+   "evidence": {
+    "incident_type": {
+     "quote": "Mesa crash",
+     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
+    },
+    "vehicle_make": {
+     "quote": "Tesla in self-driving mode",
+     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
+    },
+    "location_city": {
+     "quote": "Mesa crash",
+     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
+    },
+    "system_named": {
+     "quote": "self-driving mode",
+     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
+    },
+    "engagement_status": {
+     "quote": "Tesla in self-driving mode involved in Mesa crash",
+     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
+    },
+    "engagement_claimed_by": {
+     "quote": "Tesla in self-driving mode involved in Mesa crash",
+     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
+    },
+    "coverage_stage": {
+     "quote": "investigation finds",
+     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/"
+    }
+   },
+   "claims": [
+    {
+     "claimant": "news_outlet",
+     "paraphrase": "KOLD reports that the Tesla was in self-driving mode during the Mesa crash.",
+     "quote": "Tesla in self-driving mode involved in Mesa crash",
+     "source_url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/",
+     "topic": "automation_engaged"
+    }
+   ],
+   "sources": [
+    {
+     "publisher": "Electrek",
+     "title": "A second Tesla driver died stopped on a freeway with Autopilot/Self-Driving on",
+     "url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/",
+     "published": "2026-08-31",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Gizmodo",
+     "title": "Another Tesla on Autopilot Stopped on Freeway, Driver Died: Report",
+     "url": "https://gizmodo.com/another-telsa-on-autopilot-stopped-on-freeway-driver-died-report-2000805742",
+     "published": "2026-09-01",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Futurism",
+     "title": "Tesla Driver Killed After Self-Driving Mode Stops in the Middle of a Highway",
+     "url": "https://futurism.com/advanced-transport/tesla-driver-killed-after-self-driving-mode-stops-in-the-middle-of-a-highway",
+     "published": "2026-09-03",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "New York Post",
+     "title": "Tesla on autopilot halts on busy highway before giant F-350 truck rear-ends and kills driver",
+     "url": "https://nypost.com/2026/09/03/us-news/tesla-driver-killed-by-truck-after-car-stopped-on-arizona-highway/",
+     "published": "2026-09-03",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "KOLD",
+     "title": "Tesla in self-driving mode involved in Mesa crash, investigation finds",
+     "url": "https://www.kold.com/video/2026/09/15/tesla-self-driving-mode-involved-mesa-crash-investigation-finds/",
+     "published": "2026-09-14",
+     "read_by_coder": "summary"
+    },
+    {
+     "publisher": "AZ Family",
+     "title": "Tesla on Autopilot stopped before deadly Mesa crash: Here’s what filing says",
+     "url": "https://www.azfamily.com/2026/09/15/tesla-autopilot-stopped-before-deadly-mesa-crash-heres-what-filing-says/",
+     "published": "2026-09-14",
+     "read_by_coder": "not_read"
+    }
+   ]
+  },
+  {
    "case_id": "SDI-00025",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00025.html",
@@ -4143,6 +4070,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 2,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-08-22",
     "incident_type": "collision",
@@ -4337,6 +4265,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 1,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "traffic_stop_or_violation",
@@ -4496,6 +4425,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "collision",
@@ -4629,6 +4559,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-08-16",
     "incident_type": "near_miss_or_erratic_driving",
@@ -4768,6 +4699,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-08-16",
     "incident_type": "near_miss_or_erratic_driving",
@@ -4919,6 +4851,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 2,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": null,
@@ -5068,6 +5001,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 1,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-08",
     "incident_type": null,
@@ -5255,6 +5189,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-08",
     "incident_type": "near_miss_or_erratic_driving",
@@ -5386,6 +5321,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-07-29",
     "incident_type": "collision",
@@ -5549,6 +5485,7 @@
    "codebook_version": "0.1",
    "text_basis": "headline",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "near_miss_or_erratic_driving",
@@ -5670,6 +5607,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "traffic_stop_or_violation",
@@ -5793,6 +5731,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-07-14",
     "incident_type": "collision",
@@ -6055,6 +5994,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 1,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-07-05",
     "incident_type": "driver_asleep_or_absent",
@@ -6205,179 +6145,6 @@
    ]
   },
   {
-   "case_id": "SDI-00056",
-   "maker": "Tesla",
-   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00056.html",
-   "first_reported": "2026-07-04",
-   "last_reported": "2026-07-04",
-   "sort_date": "2026-07-04",
-   "headline": "Manslaughter charge after crash involving Tesla driver-assistance",
-   "headline_publisher": "Austin American-Statesman",
-   "source_summary": null,
-   "source_summary_publisher": null,
-   "auto": {
-    "location": null,
-    "model": null,
-    "tags": []
-   },
-   "narrative": "The headline reports a manslaughter charge after a crash involving Tesla driver-assistance. It provides no date, location or further details about the crash.",
-   "review_status": "machine-coded, not yet reviewed",
-   "coder": "OpenAI gpt-6-luna",
-   "coded_at": "2026-11-22T20:33:34Z",
-   "codebook_version": "0.1",
-   "text_basis": "headline",
-   "unsupported_values_removed": 2,
-   "variables": {
-    "incident_date": null,
-    "incident_type": null,
-    "collision_with": null,
-    "vehicle_make": null,
-    "vehicle_model": null,
-    "vehicle_model_year": null,
-    "location_city": null,
-    "location_state_region": null,
-    "location_country": null,
-    "road_type": null,
-    "time_of_day": null,
-    "system_named": [
-     "unspecified"
-    ],
-    "engagement_status": "mentioned_only",
-    "engagement_claimed_by": null,
-    "driver_seat_occupied": null,
-    "driver_condition_mentioned": null,
-    "fatalities": null,
-    "injuries": null,
-    "persons_harmed": null,
-    "police_action": null,
-    "criminal_charges": "manslaughter",
-    "criminal_case_stage": "charged",
-    "civil_litigation": null,
-    "regulator_involved": null,
-    "responsibility_attributed_to": null,
-    "coverage_stage": "legal_proceeding"
-   },
-   "evidence": {
-    "system_named": {
-     "quote": "driver-assistance",
-     "source_url": "https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php"
-    },
-    "engagement_status": {
-     "quote": "Tesla driver-assistance",
-     "source_url": "https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php"
-    },
-    "criminal_charges": {
-     "quote": "Manslaughter charge",
-     "source_url": "https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php"
-    },
-    "criminal_case_stage": {
-     "quote": "Manslaughter charge",
-     "source_url": "https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php"
-    },
-    "coverage_stage": {
-     "quote": "Manslaughter charge",
-     "source_url": "https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php"
-    }
-   },
-   "claims": [],
-   "sources": [
-    {
-     "publisher": "Austin American-Statesman",
-     "title": "Manslaughter charge after crash involving Tesla driver-assistance",
-     "url": "https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php",
-     "published": "2026-07-04",
-     "read_by_coder": "headline"
-    }
-   ]
-  },
-  {
-   "case_id": "SDI-00057",
-   "maker": "Tesla",
-   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00057.html",
-   "first_reported": "2026-06-22",
-   "last_reported": "2026-06-22",
-   "sort_date": "2026-06-22",
-   "headline": "Latest Tesla fatal crash draws new federal scrutiny of driver-assistance systems",
-   "headline_publisher": "Austin American-Statesman",
-   "source_summary": null,
-   "source_summary_publisher": null,
-   "auto": {
-    "location": null,
-    "model": null,
-    "tags": [
-     {
-      "key": "fatality",
-      "label": "Fatality mentioned in coverage"
-     }
-    ]
-   },
-   "narrative": "The headline reports a fatal Tesla crash and says it drew new federal scrutiny of driver-assistance systems. It does not give the crash's date or location, or say whether a system was in use.",
-   "review_status": "machine-coded, not yet reviewed",
-   "coder": "OpenAI gpt-6-luna",
-   "coded_at": "2026-11-22T20:42:43Z",
-   "codebook_version": "0.1",
-   "text_basis": "headline",
-   "unsupported_values_removed": 1,
-   "variables": {
-    "incident_date": null,
-    "incident_type": "collision",
-    "collision_with": null,
-    "vehicle_make": null,
-    "vehicle_model": null,
-    "vehicle_model_year": null,
-    "location_city": null,
-    "location_state_region": null,
-    "location_country": null,
-    "road_type": null,
-    "time_of_day": null,
-    "system_named": [
-     "unspecified"
-    ],
-    "engagement_status": "mentioned_only",
-    "engagement_claimed_by": null,
-    "driver_seat_occupied": null,
-    "driver_condition_mentioned": null,
-    "fatalities": null,
-    "injuries": null,
-    "persons_harmed": null,
-    "police_action": null,
-    "criminal_charges": null,
-    "criminal_case_stage": null,
-    "civil_litigation": null,
-    "regulator_involved": null,
-    "responsibility_attributed_to": null,
-    "coverage_stage": "follow_up_investigation"
-   },
-   "evidence": {
-    "incident_type": {
-     "quote": "fatal crash",
-     "source_url": "https://www.statesman.com/news/article/tesla-crash-harris-county-autopilot-22313442.php"
-    },
-    "system_named": {
-     "quote": "driver-assistance systems",
-     "source_url": "https://www.statesman.com/news/article/tesla-crash-harris-county-autopilot-22313442.php"
-    },
-    "engagement_status": {
-     "quote": "driver-assistance systems",
-     "source_url": "https://www.statesman.com/news/article/tesla-crash-harris-county-autopilot-22313442.php"
-    },
-    "coverage_stage": {
-     "quote": "draws new federal scrutiny",
-     "source_url": "https://www.statesman.com/news/article/tesla-crash-harris-county-autopilot-22313442.php"
-    }
-   },
-   "claims": [],
-   "sources": [
-    {
-     "publisher": "Austin American-Statesman",
-     "title": "Latest Tesla fatal crash draws new federal scrutiny of driver-assistance systems",
-     "url": "https://www.statesman.com/news/article/tesla-crash-harris-county-autopilot-22313442.php",
-     "published": "2026-06-22",
-     "read_by_coder": "headline"
-    }
-   ]
-  },
-  {
    "case_id": "SDI-00002",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00002.html",
@@ -6417,6 +6184,10 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 1,
+   "merged_ids": [
+    "SDI-00056",
+    "SDI-00057"
+   ],
    "variables": {
     "incident_date": "2026-06-19",
     "incident_type": null,
@@ -6692,6 +6463,13 @@
      "read_by_coder": "not_read"
     },
     {
+     "publisher": "Austin American-Statesman",
+     "title": "Latest Tesla fatal crash draws new federal scrutiny of driver-assistance systems",
+     "url": "https://www.statesman.com/news/article/tesla-crash-harris-county-autopilot-22313442.php",
+     "published": "2026-06-22",
+     "read_by_coder": "not_read"
+    },
+    {
      "publisher": "TechCrunch",
      "title": "Tesla pushes back on Autopilot narrative after fatal Texas crash",
      "url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/",
@@ -6937,6 +6715,13 @@
      "read_by_coder": "not_read"
     },
     {
+     "publisher": "Austin American-Statesman",
+     "title": "Manslaughter charge after crash involving Tesla driver-assistance",
+     "url": "https://www.statesman.com/news/article/tesla-driver-manslaughter-charge-22332409.php",
+     "published": "2026-07-04",
+     "read_by_coder": "not_read"
+    },
+    {
      "publisher": "KHOU",
      "title": "New evidence disputes self-driving claim in fatal Katy crash, DA says",
      "url": "https://www.khou.com/article/news/local/new-evidence-disputes-self-driving-claim-in-fatal-katy-crash-da-says/285-80f1a92e-bef9-46cd-b2f9-20d3bfb2aab6",
@@ -7043,6 +6828,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "traffic_stop_or_violation",
@@ -7178,6 +6964,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-06-08",
     "incident_type": "collision",
@@ -7356,6 +7143,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-05-31",
     "incident_type": "collision",
@@ -7538,398 +7326,6 @@
    ]
   },
   {
-   "case_id": "SDI-00064",
-   "maker": "Tesla",
-   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00064.html",
-   "first_reported": "2026-05-28",
-   "last_reported": "2026-05-28",
-   "sort_date": "2026-05-28",
-   "headline": "The Florida Highway Patrol is investigating a deadly wreck involving a Tesla while on autopilot",
-   "headline_publisher": "wtsp.com",
-   "source_summary": null,
-   "source_summary_publisher": null,
-   "auto": {
-    "location": "Florida",
-    "model": null,
-    "tags": [
-     {
-      "key": "autopilot",
-      "label": "Autopilot mentioned in coverage"
-     },
-     {
-      "key": "fatality",
-      "label": "Fatality mentioned in coverage"
-     }
-    ]
-   },
-   "narrative": "The report says the Florida Highway Patrol is investigating a deadly wreck involving a Tesla described as being on Autopilot. It gives no further details about the wreck or an official finding on whether Autopilot was engaged.",
-   "review_status": "machine-coded, not yet reviewed",
-   "coder": "OpenAI gpt-6-luna",
-   "coded_at": "2026-11-22T20:45:49Z",
-   "codebook_version": "0.1",
-   "text_basis": "headline",
-   "unsupported_values_removed": 0,
-   "variables": {
-    "incident_date": null,
-    "incident_type": "collision",
-    "collision_with": null,
-    "vehicle_make": "Tesla",
-    "vehicle_model": null,
-    "vehicle_model_year": null,
-    "location_city": null,
-    "location_state_region": null,
-    "location_country": null,
-    "road_type": null,
-    "time_of_day": null,
-    "system_named": [
-     "autopilot"
-    ],
-    "engagement_status": "claimed",
-    "engagement_claimed_by": [
-     "news_outlet"
-    ],
-    "driver_seat_occupied": null,
-    "driver_condition_mentioned": null,
-    "fatalities": null,
-    "injuries": null,
-    "persons_harmed": null,
-    "police_action": "investigating",
-    "criminal_charges": null,
-    "criminal_case_stage": null,
-    "civil_litigation": null,
-    "regulator_involved": null,
-    "responsibility_attributed_to": null,
-    "coverage_stage": null
-   },
-   "evidence": {
-    "incident_type": {
-     "quote": "deadly wreck",
-     "source_url": "https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54"
-    },
-    "vehicle_make": {
-     "quote": "involving a Tesla",
-     "source_url": "https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54"
-    },
-    "system_named": {
-     "quote": "while on autopilot",
-     "source_url": "https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54"
-    },
-    "engagement_status": {
-     "quote": "while on autopilot",
-     "source_url": "https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54"
-    },
-    "engagement_claimed_by": {
-     "quote": "while on autopilot",
-     "source_url": "https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54"
-    },
-    "police_action": {
-     "quote": "The Florida Highway Patrol is investigating",
-     "source_url": "https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54"
-    }
-   },
-   "claims": [
-    {
-     "claimant": "news_outlet",
-     "paraphrase": "The report says the Tesla was on Autopilot during the wreck.",
-     "quote": "involving a Tesla while on autopilot",
-     "source_url": "https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54",
-     "topic": "automation_engaged"
-    }
-   ],
-   "sources": [
-    {
-     "publisher": "wtsp.com",
-     "title": "The Florida Highway Patrol is investigating a deadly wreck involving a Tesla while on autopilot",
-     "url": "https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54",
-     "published": "2026-05-28",
-     "read_by_coder": "headline"
-    }
-   ]
-  },
-  {
-   "case_id": "SDI-00063",
-   "maker": "Tesla",
-   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00063.html",
-   "first_reported": "2026-05-28",
-   "last_reported": "2026-05-28",
-   "sort_date": "2026-05-28",
-   "headline": "Tesla Autopilot leads to deadly Pasco County crash: Has this happened before?",
-   "headline_publisher": "wtsp.com",
-   "source_summary": null,
-   "source_summary_publisher": null,
-   "auto": {
-    "location": "Pasco County",
-    "model": null,
-    "tags": [
-     {
-      "key": "autopilot",
-      "label": "Autopilot mentioned in coverage"
-     },
-     {
-      "key": "fatality",
-      "label": "Fatality mentioned in coverage"
-     }
-    ]
-   },
-   "narrative": "The headline describes a deadly crash in Pasco County. It attributes the crash to Tesla Autopilot.",
-   "review_status": "machine-coded, not yet reviewed",
-   "coder": "OpenAI gpt-6-luna",
-   "coded_at": "2026-11-22T20:45:37Z",
-   "codebook_version": "0.1",
-   "text_basis": "headline",
-   "unsupported_values_removed": 0,
-   "variables": {
-    "incident_date": null,
-    "incident_type": "collision",
-    "collision_with": null,
-    "vehicle_make": null,
-    "vehicle_model": null,
-    "vehicle_model_year": null,
-    "location_city": "Pasco County",
-    "location_state_region": null,
-    "location_country": null,
-    "road_type": null,
-    "time_of_day": null,
-    "system_named": [
-     "autopilot"
-    ],
-    "engagement_status": "claimed",
-    "engagement_claimed_by": [
-     "news_outlet"
-    ],
-    "driver_seat_occupied": null,
-    "driver_condition_mentioned": null,
-    "fatalities": null,
-    "injuries": null,
-    "persons_harmed": null,
-    "police_action": null,
-    "criminal_charges": null,
-    "criminal_case_stage": null,
-    "civil_litigation": null,
-    "regulator_involved": null,
-    "responsibility_attributed_to": [
-     "automation_or_manufacturer"
-    ],
-    "coverage_stage": null
-   },
-   "evidence": {
-    "incident_type": {
-     "quote": "deadly Pasco County crash",
-     "source_url": "https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31"
-    },
-    "location_city": {
-     "quote": "Pasco County crash",
-     "source_url": "https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31"
-    },
-    "system_named": {
-     "quote": "Tesla Autopilot",
-     "source_url": "https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31"
-    },
-    "engagement_status": {
-     "quote": "Autopilot leads to deadly Pasco County crash",
-     "source_url": "https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31"
-    },
-    "engagement_claimed_by": {
-     "quote": "Autopilot leads to deadly Pasco County crash",
-     "source_url": "https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31"
-    },
-    "responsibility_attributed_to": {
-     "quote": "Autopilot leads to deadly Pasco County crash",
-     "source_url": "https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31"
-    }
-   },
-   "claims": [
-    {
-     "claimant": "news_outlet",
-     "paraphrase": "The headline attributes the crash to Autopilot.",
-     "quote": "Autopilot leads to deadly Pasco County crash",
-     "source_url": "https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31",
-     "topic": "automation_engaged"
-    },
-    {
-     "claimant": "news_outlet",
-     "paraphrase": "The headline places responsibility for the crash on Autopilot.",
-     "quote": "Autopilot leads to deadly Pasco County crash",
-     "source_url": "https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31",
-     "topic": "cause_or_responsibility"
-    }
-   ],
-   "sources": [
-    {
-     "publisher": "wtsp.com",
-     "title": "Tesla Autopilot leads to deadly Pasco County crash: Has this happened before?",
-     "url": "https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31",
-     "published": "2026-05-28",
-     "read_by_coder": "headline"
-    }
-   ]
-  },
-  {
-   "case_id": "SDI-00061",
-   "maker": "Tesla",
-   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00061.html",
-   "first_reported": "2026-05-27",
-   "last_reported": "2026-06-01",
-   "sort_date": "2026-05-27",
-   "headline": "Tesla in autopilot mode crashes into pond, killing 87-year-old driver: Florida Highway Patrol",
-   "headline_publisher": "ABC10",
-   "source_summary": "The driver of the Model Y died when the SUV veered off a Wesley Chapel road Tuesday and became submerged in the pond, according to the Florida Highway Patrol.",
-   "source_summary_publisher": "Tampa Bay Times",
-   "auto": {
-    "location": "Florida",
-    "model": null,
-    "tags": [
-     {
-      "key": "autopilot",
-      "label": "Autopilot mentioned in coverage"
-     },
-     {
-      "key": "fatality",
-      "label": "Fatality mentioned in coverage"
-     }
-    ]
-   },
-   "narrative": "The headline reports that a man was killed in a crash while reportedly driving a Tesla with Autopilot. It gives no location, incident date, or further crash details.",
-   "review_status": "machine-coded, not yet reviewed",
-   "coder": "OpenAI gpt-6-luna",
-   "coded_at": "2026-11-22T20:44:32Z",
-   "codebook_version": "0.1",
-   "text_basis": "headline",
-   "unsupported_values_removed": 2,
-   "variables": {
-    "incident_date": null,
-    "incident_type": null,
-    "collision_with": null,
-    "vehicle_make": null,
-    "vehicle_model": null,
-    "vehicle_model_year": null,
-    "location_city": null,
-    "location_state_region": null,
-    "location_country": null,
-    "road_type": null,
-    "time_of_day": null,
-    "system_named": [
-     "autopilot"
-    ],
-    "engagement_status": "claimed",
-    "engagement_claimed_by": [
-     "news_outlet"
-    ],
-    "driver_seat_occupied": "yes",
-    "driver_condition_mentioned": null,
-    "fatalities": 1,
-    "injuries": null,
-    "persons_harmed": null,
-    "police_action": null,
-    "criminal_charges": null,
-    "criminal_case_stage": null,
-    "civil_litigation": null,
-    "regulator_involved": null,
-    "responsibility_attributed_to": null,
-    "coverage_stage": "initial_report"
-   },
-   "evidence": {
-    "system_named": {
-     "quote": "Autopilot",
-     "source_url": "https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582"
-    },
-    "engagement_status": {
-     "quote": "Reportedly Driving Tesla in Autopilot",
-     "source_url": "https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582"
-    },
-    "engagement_claimed_by": {
-     "quote": "Reportedly Driving Tesla in Autopilot",
-     "source_url": "https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582"
-    },
-    "driver_seat_occupied": {
-     "quote": "Driving Tesla",
-     "source_url": "https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582"
-    },
-    "fatalities": {
-     "quote": "Man, 87, Killed",
-     "source_url": "https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582"
-    },
-    "coverage_stage": {
-     "quote": "Man, 87, Killed in Crash",
-     "source_url": "https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582"
-    }
-   },
-   "claims": [
-    {
-     "claimant": "news_outlet",
-     "paraphrase": "The headline reports that the driver was reportedly using Autopilot.",
-     "quote": "Reportedly Driving Tesla in Autopilot",
-     "source_url": "https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582",
-     "topic": "automation_engaged"
-    }
-   ],
-   "sources": [
-    {
-     "publisher": "FOX 13 Tampa Bay",
-     "title": "Tesla in autopilot mode sinks in pond after striking electrical box killing Wesley Chapel man: FHP",
-     "url": "https://www.fox13news.com/news/tesla-autopilot-sinks-pond-after-striking-electrical-box-killing-wesley-chapel-man-fhp",
-     "published": "2026-05-27",
-     "read_by_coder": "not_read"
-    },
-    {
-     "publisher": "IONTB",
-     "title": "Wesley Chapel Man Dies After Tesla in Autopilot Mode Crashes Into Pond",
-     "url": "https://iontb.com/wesley-chapel-man-dies-after-tesla-in-autopilot-mode-crashes-into-pond/",
-     "published": "2026-05-27",
-     "read_by_coder": "not_read"
-    },
-    {
-     "publisher": "CarScoops",
-     "title": "Police Say Autopilot Was Engaged When This Tesla Drove Into A Florida Pond",
-     "url": "https://www.carscoops.com/2026/05/tesla-autopilot-florida-pond-crash/",
-     "published": "2026-05-27",
-     "read_by_coder": "not_read"
-    },
-    {
-     "publisher": "ABC10",
-     "title": "Tesla in autopilot mode crashes into pond, killing 87-year-old driver: Florida Highway Patrol",
-     "url": "https://www.abc10.com/article/news/nation-world/tesla-autopilot-mode-crashes-pond-driver-killed-florida-highway-patrol/507-97f291ed-98a4-4d09-9cc0-494deab85a6c",
-     "published": "2026-05-27",
-     "read_by_coder": "not_read"
-    },
-    {
-     "publisher": "wtsp.com",
-     "title": "Tesla on autopilot drives into pond, killing 87-year-old driver: FHP",
-     "url": "https://www.wtsp.com/video/news/local/pascocounty/tesla-on-autopilot-drives-into-pond-killing-87-year-old-driver-fhp/67-f9a0c969-2851-4db7-9e90-5601e0a30c18",
-     "published": "2026-05-27",
-     "read_by_coder": "not_read"
-    },
-    {
-     "publisher": "WFLA",
-     "title": "87-year-old dies when Tesla in autopilot mode crashes in Pasco County",
-     "url": "https://www.wfla.com/news/pasco-county/87-year-old-dead-after-tesla-in-autopilot-mode-crashes-in-pasco-county/",
-     "published": "2026-05-27",
-     "read_by_coder": "not_read"
-    },
-    {
-     "publisher": "Tampa Bay Times",
-     "title": "Tesla SUV was in Autopilot mode before fatal crash into Pasco pond, troopers say",
-     "url": "https://www.tampabay.com/news/pasco/2026/05/29/tesla-autopilot-self-driving-crash-wesley-chapel/",
-     "published": "2026-05-29",
-     "read_by_coder": "not_read"
-    },
-    {
-     "publisher": "USA Today",
-     "title": "Driver, 87, dies after Tesla on Autopilot mode crashes into pond",
-     "url": "https://www.usatoday.com/story/news/nation/2026/05/29/tesla-on-autopilot-mode-crashes-into-pond-87-year-old-driver-dies/90319482007/",
-     "published": "2026-05-29",
-     "read_by_coder": "not_read"
-    },
-    {
-     "publisher": "People.com",
-     "title": "Man, 87, Killed in Crash While Reportedly Driving Tesla in Autopilot",
-     "url": "https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582",
-     "published": "2026-06-01",
-     "read_by_coder": "headline"
-    }
-   ]
-  },
-  {
    "case_id": "SDI-00062",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00062.html",
@@ -7957,6 +7353,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-05-23",
     "incident_type": "collision",
@@ -8109,6 +7506,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-05-20",
     "incident_type": "collision",
@@ -8283,6 +7681,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 3,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-05",
     "incident_type": "collision",
@@ -8386,15 +7785,15 @@
    "case_id": "SDI-00060",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00060.html",
-   "first_reported": "2026-06-03",
+   "first_reported": "2026-05-27",
    "last_reported": "2026-06-03",
    "sort_date": "2026-05-01",
-   "headline": "Driver Killed When Tesla Using 'Autopilot' Crashes Into Pond",
-   "headline_publisher": "Jalopnik",
-   "source_summary": "Bear in mind, it is a bit murky as to exactly what ADAS system the driver was using at the time of the crash.",
-   "source_summary_publisher": "Jalopnik",
+   "headline": "The Florida Highway Patrol is investigating a deadly wreck involving a Tesla while on autopilot",
+   "headline_publisher": "wtsp.com",
+   "source_summary": "The driver of the Model Y died when the SUV veered off a Wesley Chapel road Tuesday and became submerged in the pond, according to the Florida Highway Patrol.",
+   "source_summary_publisher": "Tampa Bay Times",
    "auto": {
-    "location": null,
+    "location": "Florida",
     "model": null,
     "tags": [
      {
@@ -8414,6 +7813,11 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [
+    "SDI-00061",
+    "SDI-00063",
+    "SDI-00064"
+   ],
    "variables": {
     "incident_date": "2026-05",
     "incident_type": "collision",
@@ -8525,6 +7929,83 @@
    ],
    "sources": [
     {
+     "publisher": "FOX 13 Tampa Bay",
+     "title": "Tesla in autopilot mode sinks in pond after striking electrical box killing Wesley Chapel man: FHP",
+     "url": "https://www.fox13news.com/news/tesla-autopilot-sinks-pond-after-striking-electrical-box-killing-wesley-chapel-man-fhp",
+     "published": "2026-05-27",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "IONTB",
+     "title": "Wesley Chapel Man Dies After Tesla in Autopilot Mode Crashes Into Pond",
+     "url": "https://iontb.com/wesley-chapel-man-dies-after-tesla-in-autopilot-mode-crashes-into-pond/",
+     "published": "2026-05-27",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "CarScoops",
+     "title": "Police Say Autopilot Was Engaged When This Tesla Drove Into A Florida Pond",
+     "url": "https://www.carscoops.com/2026/05/tesla-autopilot-florida-pond-crash/",
+     "published": "2026-05-27",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "ABC10",
+     "title": "Tesla in autopilot mode crashes into pond, killing 87-year-old driver: Florida Highway Patrol",
+     "url": "https://www.abc10.com/article/news/nation-world/tesla-autopilot-mode-crashes-pond-driver-killed-florida-highway-patrol/507-97f291ed-98a4-4d09-9cc0-494deab85a6c",
+     "published": "2026-05-27",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "wtsp.com",
+     "title": "Tesla on autopilot drives into pond, killing 87-year-old driver: FHP",
+     "url": "https://www.wtsp.com/video/news/local/pascocounty/tesla-on-autopilot-drives-into-pond-killing-87-year-old-driver-fhp/67-f9a0c969-2851-4db7-9e90-5601e0a30c18",
+     "published": "2026-05-27",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "WFLA",
+     "title": "87-year-old dies when Tesla in autopilot mode crashes in Pasco County",
+     "url": "https://www.wfla.com/news/pasco-county/87-year-old-dead-after-tesla-in-autopilot-mode-crashes-in-pasco-county/",
+     "published": "2026-05-27",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "wtsp.com",
+     "title": "Tesla Autopilot leads to deadly Pasco County crash: Has this happened before?",
+     "url": "https://www.wtsp.com/article/news/local/pascocounty/tesla-autopilot-crash-florida-california-lawsuits/67-f4f7ab80-aca2-49ad-b785-323edd4d4d31",
+     "published": "2026-05-28",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "wtsp.com",
+     "title": "The Florida Highway Patrol is investigating a deadly wreck involving a Tesla while on autopilot",
+     "url": "https://www.wtsp.com/video/news/the-florida-highway-patrol-is-investigating-a-deadly-wreck-involving-a-tesla-while-on-autopilot/67-b5b46897-4695-44f0-b630-fb0d3bbe9b54",
+     "published": "2026-05-28",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Tampa Bay Times",
+     "title": "Tesla SUV was in Autopilot mode before fatal crash into Pasco pond, troopers say",
+     "url": "https://www.tampabay.com/news/pasco/2026/05/29/tesla-autopilot-self-driving-crash-wesley-chapel/",
+     "published": "2026-05-29",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "USA Today",
+     "title": "Driver, 87, dies after Tesla on Autopilot mode crashes into pond",
+     "url": "https://www.usatoday.com/story/news/nation/2026/05/29/tesla-on-autopilot-mode-crashes-into-pond-87-year-old-driver-dies/90319482007/",
+     "published": "2026-05-29",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "People.com",
+     "title": "Man, 87, Killed in Crash While Reportedly Driving Tesla in Autopilot",
+     "url": "https://people.com/man-87-killed-in-crash-while-reportedly-driving-tesla-in-autopilot-11988582",
+     "published": "2026-06-01",
+     "read_by_coder": "not_read"
+    },
+    {
      "publisher": "Jalopnik",
      "title": "Driver Killed When Tesla Using 'Autopilot' Crashes Into Pond",
      "url": "https://www.jalopnik.com/2186565/driver-killed-tesla-autopilot-crash/",
@@ -8561,6 +8042,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 3,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-04-24",
     "incident_type": "driver_asleep_or_absent",
@@ -8745,6 +8227,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-04-07",
     "incident_type": "collision",
@@ -8936,6 +8419,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-03-25",
     "incident_type": "collision",
@@ -9138,6 +8622,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 3,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-03-25",
     "incident_type": "driver_asleep_or_absent",
@@ -9305,6 +8790,7 @@
    "codebook_version": "0.1",
    "text_basis": "summary",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "traffic_stop_or_violation",
@@ -9435,6 +8921,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2026-03-08",
     "incident_type": "collision",
@@ -9573,119 +9060,6 @@
    ]
   },
   {
-   "case_id": "SDI-00074",
-   "maker": "Tesla",
-   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00074.html",
-   "first_reported": "2026-03-06",
-   "last_reported": "2026-03-06",
-   "sort_date": "2026-03-06",
-   "headline": "Tesla Cybertruck crashed after Autopilot was engaged, suit alleges",
-   "headline_publisher": "Austin American-Statesman",
-   "source_summary": null,
-   "source_summary_publisher": null,
-   "auto": {
-    "location": null,
-    "model": "Tesla Cybertruck",
-    "tags": [
-     {
-      "key": "autopilot",
-      "label": "Autopilot mentioned in coverage"
-     }
-    ]
-   },
-   "narrative": "The headline reports that a lawsuit alleges a Tesla Cybertruck crashed after Autopilot was engaged. It provides no date or location for the crash.",
-   "review_status": "machine-coded, not yet reviewed",
-   "coder": "OpenAI gpt-6-luna",
-   "coded_at": "2026-11-22T20:56:24Z",
-   "codebook_version": "0.1",
-   "text_basis": "headline",
-   "unsupported_values_removed": 0,
-   "variables": {
-    "incident_date": null,
-    "incident_type": "collision",
-    "collision_with": null,
-    "vehicle_make": "Tesla",
-    "vehicle_model": "Cybertruck",
-    "vehicle_model_year": null,
-    "location_city": null,
-    "location_state_region": null,
-    "location_country": null,
-    "road_type": null,
-    "time_of_day": null,
-    "system_named": [
-     "autopilot"
-    ],
-    "engagement_status": "alleged_in_legal_filing",
-    "engagement_claimed_by": [
-     "plaintiff_or_plaintiff_lawyer"
-    ],
-    "driver_seat_occupied": null,
-    "driver_condition_mentioned": null,
-    "fatalities": null,
-    "injuries": null,
-    "persons_harmed": null,
-    "police_action": null,
-    "criminal_charges": null,
-    "criminal_case_stage": null,
-    "civil_litigation": "lawsuit_filed",
-    "regulator_involved": null,
-    "responsibility_attributed_to": null,
-    "coverage_stage": "legal_proceeding"
-   },
-   "evidence": {
-    "incident_type": {
-     "quote": "Tesla Cybertruck crashed",
-     "source_url": "https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php"
-    },
-    "vehicle_make": {
-     "quote": "Tesla Cybertruck",
-     "source_url": "https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php"
-    },
-    "vehicle_model": {
-     "quote": "Tesla Cybertruck",
-     "source_url": "https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php"
-    },
-    "system_named": {
-     "quote": "Autopilot was engaged",
-     "source_url": "https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php"
-    },
-    "engagement_status": {
-     "quote": "suit alleges",
-     "source_url": "https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php"
-    },
-    "engagement_claimed_by": {
-     "quote": "suit alleges",
-     "source_url": "https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php"
-    },
-    "civil_litigation": {
-     "quote": "suit alleges",
-     "source_url": "https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php"
-    },
-    "coverage_stage": {
-     "quote": "suit alleges",
-     "source_url": "https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php"
-    }
-   },
-   "claims": [
-    {
-     "claimant": "plaintiff_or_plaintiff_lawyer",
-     "paraphrase": "The suit alleges Autopilot was engaged before the Cybertruck crash.",
-     "quote": "Tesla Cybertruck crashed after Autopilot was engaged, suit alleges",
-     "source_url": "https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php",
-     "topic": "automation_engaged"
-    }
-   ],
-   "sources": [
-    {
-     "publisher": "Austin American-Statesman",
-     "title": "Tesla Cybertruck crashed after Autopilot was engaged, suit alleges",
-     "url": "https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php",
-     "published": "2026-03-06",
-     "read_by_coder": "headline"
-    }
-   ]
-  },
-  {
    "case_id": "SDI-00075",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00075.html",
@@ -9713,6 +9087,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": null,
     "incident_type": "near_miss_or_erratic_driving",
@@ -9848,6 +9223,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2025-12-07",
     "incident_type": "collision",
@@ -9972,176 +9348,6 @@
    ]
   },
   {
-   "case_id": "SDI-00042",
-   "maker": "Tesla",
-   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00042.html",
-   "first_reported": "2026-08-31",
-   "last_reported": "2026-09-01",
-   "sort_date": "2025-10-31",
-   "headline": "A second Tesla driver died stopped on a freeway with Autopilot/Self-Driving on",
-   "headline_publisher": "Electrek",
-   "source_summary": "A Tesla Model 3 sat stopped on a Mesa freeway with its driver-assist verified engaged before a fatal rear-end — weeks after a near-identical Florida death.",
-   "source_summary_publisher": "Electrek",
-   "auto": {
-    "location": null,
-    "model": null,
-    "tags": [
-     {
-      "key": "autopilot",
-      "label": "Autopilot mentioned in coverage"
-     },
-     {
-      "key": "fsd",
-      "label": "Full Self-Driving mentioned in coverage"
-     },
-     {
-      "key": "fatality",
-      "label": "Fatality mentioned in coverage"
-     }
-    ]
-   },
-   "narrative": "Electrek reported that a Tesla Model 3 stopped in an eastbound Loop 202 lane near Dobson Road in Mesa was struck from behind by a Ford F-350 pickup, and that the Tesla driver died at the scene. Electrek said Tesla’s NHTSA filing marked the driver-assist system as verified engaged; the report did not establish why the car was stopped.",
-   "review_status": "machine-coded, not yet reviewed",
-   "coder": "OpenAI gpt-6-luna",
-   "coded_at": "2026-11-22T20:26:17Z",
-   "codebook_version": "0.1",
-   "text_basis": "full_text",
-   "unsupported_values_removed": 0,
-   "variables": {
-    "incident_date": "2025-10-31",
-    "incident_type": "collision",
-    "collision_with": [
-     "passenger_vehicle"
-    ],
-    "vehicle_make": "Tesla",
-    "vehicle_model": "Model 3",
-    "vehicle_model_year": 2020,
-    "location_city": "Mesa",
-    "location_state_region": "Arizona",
-    "location_country": null,
-    "road_type": "highway_or_freeway",
-    "time_of_day": "night",
-    "system_named": [
-     "autopilot",
-     "full_self_driving"
-    ],
-    "engagement_status": "confirmed_by_official_source",
-    "engagement_claimed_by": [
-     "manufacturer"
-    ],
-    "driver_seat_occupied": null,
-    "driver_condition_mentioned": null,
-    "fatalities": 1,
-    "injuries": null,
-    "persons_harmed": null,
-    "police_action": "investigating",
-    "criminal_charges": null,
-    "criminal_case_stage": null,
-    "civil_litigation": null,
-    "regulator_involved": null,
-    "responsibility_attributed_to": null,
-    "coverage_stage": "follow_up_investigation"
-   },
-   "evidence": {
-    "incident_date": {
-     "quote": "Just after 3 a.m. on October 31, 2025",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "incident_type": {
-     "quote": "was struck from behind",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "collision_with": {
-     "quote": "a Ford F-350 pickup",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "vehicle_make": {
-     "quote": "a Tesla sedan",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "vehicle_model": {
-     "quote": "a 2020 Model 3",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "vehicle_model_year": {
-     "quote": "a 2020 Model 3",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "location_city": {
-     "quote": "in Mesa, Arizona",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "location_state_region": {
-     "quote": "in Mesa, Arizona",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "road_type": {
-     "quote": "the eastbound Loop 202 (Red Mountain) freeway",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "time_of_day": {
-     "quote": "Just after 3 a.m.",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "system_named": {
-     "quote": "whether it was Autopilot or “Full Self-Driving",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "engagement_status": {
-     "quote": "marks the automation “Engagement Status” as “Verified Engaged,",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "engagement_claimed_by": {
-     "quote": "Tesla identifies the vehicle as a 2020 Model 3, marks the automation “Engagement Status” as “Verified Engaged,",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "fatalities": {
-     "quote": "The Tesla’s driver died at the scene",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "police_action": {
-     "quote": "the investigating agency is left without.",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    },
-    "coverage_stage": {
-     "quote": "This article is part of an ongoing Electrek investigation",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/"
-    }
-   },
-   "claims": [
-    {
-     "claimant": "manufacturer",
-     "paraphrase": "Tesla’s filing marked the driver-assist system as verified engaged.",
-     "quote": "marks the automation “Engagement Status” as “Verified Engaged,",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/",
-     "topic": "automation_engaged"
-    },
-    {
-     "claimant": "manufacturer",
-     "paraphrase": "Tesla’s filing listed the car as stopped at 0 mph in a freeway lane before the collision.",
-     "quote": "lists the car’s pre-crash movement as “Stopped” at 0 mph in a freeway lane",
-     "source_url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/",
-     "topic": "automation_performance"
-    }
-   ],
-   "sources": [
-    {
-     "publisher": "Electrek",
-     "title": "A second Tesla driver died stopped on a freeway with Autopilot/Self-Driving on",
-     "url": "https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/",
-     "published": "2026-08-31",
-     "read_by_coder": "full_text"
-    },
-    {
-     "publisher": "Gizmodo",
-     "title": "Another Tesla on Autopilot Stopped on Freeway, Driver Died: Report",
-     "url": "https://gizmodo.com/another-telsa-on-autopilot-stopped-on-freeway-driver-died-report-2000805742",
-     "published": "2026-09-01",
-     "read_by_coder": "headline"
-    }
-   ]
-  },
-  {
    "case_id": "SDI-00036",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00036.html",
@@ -10177,6 +9383,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2025-10-06",
     "incident_type": "collision",
@@ -10341,6 +9548,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2025-09-13",
     "incident_type": "driver_asleep_or_absent",
@@ -10511,6 +9719,9 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 1,
+   "merged_ids": [
+    "SDI-00074"
+   ],
    "variables": {
     "incident_date": "2025-08-18",
     "incident_type": "collision",
@@ -10673,6 +9884,13 @@
      "read_by_coder": "not_read"
     },
     {
+     "publisher": "Austin American-Statesman",
+     "title": "Tesla Cybertruck crashed after Autopilot was engaged, suit alleges",
+     "url": "https://www.statesman.com/business/article/tesla-cybertruck-autopilot-lawsuit-houston-21950531.php",
+     "published": "2026-03-06",
+     "read_by_coder": "not_read"
+    },
+    {
      "publisher": "Chron",
      "title": "Cybertruck on Autopilot tried to drive off Houston bridge, lawsuit alleges",
      "url": "https://www.chron.com/culture/article/cybertruck-houston-lawsuit-21965298.php",
@@ -10773,6 +9991,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2025-07-23",
     "incident_type": "collision",
@@ -10964,6 +10183,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2025-07-06",
     "incident_type": "collision",
@@ -11152,6 +10372,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2025-04-14",
     "incident_type": "collision",
@@ -11310,6 +10531,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2025",
     "incident_type": "collision",
@@ -11472,6 +10694,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2024-12-23",
     "incident_type": "collision",
@@ -11632,6 +10855,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 3,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2024-04-19",
     "incident_type": "collision",
@@ -11811,7 +11035,7 @@
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00003.html",
    "first_reported": "2026-06-26",
-   "last_reported": "2026-06-29",
+   "last_reported": "2026-07-07",
    "sort_date": "2023-11-28",
    "headline": "Tesla settles lawsuit tied to fatal 2023 FSD crash in Arizona",
    "headline_publisher": "Transport Topics",
@@ -11838,6 +11062,9 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [
+    "SDI-00054"
+   ],
    "variables": {
     "incident_date": "2023-11-28",
     "incident_type": "collision",
@@ -11982,6 +11209,13 @@
      "url": "https://www.ttnews.com/articles/tesla-settles-2023-suit-crash",
      "published": "2026-06-29",
      "read_by_coder": "summary"
+    },
+    {
+     "publisher": "Vocal",
+     "title": "Tesla's FSD Lawsuit Settlement Raises Bigger Questions About the Future of Self-Driving Cars",
+     "url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars",
+     "published": "2026-07-07",
+     "read_by_coder": "not_read"
     }
    ]
   },
@@ -12017,6 +11251,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2023-10-12",
     "incident_type": "collision",
@@ -12204,6 +11439,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2023-09-01",
     "incident_type": "collision",
@@ -12373,6 +11609,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2023-06-29",
     "incident_type": "collision",
@@ -12569,6 +11806,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 3,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2023-02-18",
     "incident_type": "collision",
@@ -12753,139 +11991,6 @@
    ]
   },
   {
-   "case_id": "SDI-00054",
-   "maker": "Tesla",
-   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00054.html",
-   "first_reported": "2026-07-07",
-   "last_reported": "2026-07-07",
-   "sort_date": "2023-01-01",
-   "headline": "Tesla's FSD Lawsuit Settlement Raises Bigger Questions About the Future of Self-Driving Cars",
-   "headline_publisher": "Vocal",
-   "source_summary": null,
-   "source_summary_publisher": null,
-   "auto": {
-    "location": null,
-    "model": null,
-    "tags": [
-     {
-      "key": "fsd",
-      "label": "Full Self-Driving mentioned in coverage"
-     }
-    ]
-   },
-   "narrative": "The report says a Tesla Model Y struck a person who had left her vehicle to direct traffic around an earlier collision attributed to sun glare. It describes the Tesla as operating with Full Self-Driving technology and says the civil lawsuit was settled confidentially. The report also says NHTSA continues to examine the software's safety.",
-   "review_status": "machine-coded, not yet reviewed",
-   "coder": "OpenAI gpt-6-luna",
-   "coded_at": "2026-11-22T20:32:07Z",
-   "codebook_version": "0.1",
-   "text_basis": "full_text",
-   "unsupported_values_removed": 0,
-   "variables": {
-    "incident_date": "2023",
-    "incident_type": "collision",
-    "collision_with": [
-     "pedestrian"
-    ],
-    "vehicle_make": "Tesla",
-    "vehicle_model": "Model Y",
-    "vehicle_model_year": null,
-    "location_city": null,
-    "location_state_region": null,
-    "location_country": null,
-    "road_type": null,
-    "time_of_day": null,
-    "system_named": [
-     "full_self_driving"
-    ],
-    "engagement_status": "claimed",
-    "engagement_claimed_by": [
-     "news_outlet"
-    ],
-    "driver_seat_occupied": null,
-    "driver_condition_mentioned": null,
-    "fatalities": 1,
-    "injuries": null,
-    "persons_harmed": null,
-    "police_action": null,
-    "criminal_charges": null,
-    "criminal_case_stage": null,
-    "civil_litigation": "settled",
-    "regulator_involved": [
-     "nhtsa"
-    ],
-    "responsibility_attributed_to": null,
-    "coverage_stage": "legal_proceeding"
-   },
-   "evidence": {
-    "incident_date": {
-     "quote": "The lawsuit centered on a tragic 2023 accident",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    },
-    "incident_type": {
-     "quote": "a Tesla Model Y struck 71-year-old [name]",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    },
-    "collision_with": {
-     "quote": "after she exited her vehicle to direct traffic",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    },
-    "vehicle_make": {
-     "quote": "a Tesla Model Y",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    },
-    "vehicle_model": {
-     "quote": "a Tesla Model Y",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    },
-    "system_named": {
-     "quote": "Full Self-Driving (FSD) technology",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    },
-    "engagement_status": {
-     "quote": "one of its vehicles operating with Full Self-Driving (FSD) technology",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    },
-    "engagement_claimed_by": {
-     "quote": "one of its vehicles operating with Full Self-Driving (FSD) technology",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    },
-    "fatalities": {
-     "quote": "a fatal crash involving one of its vehicles",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    },
-    "civil_litigation": {
-     "quote": "Tesla has now settled the civil lawsuit, with the terms remaining confidential.",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    },
-    "regulator_involved": {
-     "quote": "the ongoing investigation by the U.S. National Highway Traffic Safety Administration (NHTSA)",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    },
-    "coverage_stage": {
-     "quote": "Tesla has now settled the civil lawsuit",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars"
-    }
-   },
-   "claims": [
-    {
-     "claimant": "news_outlet",
-     "paraphrase": "The report describes the Tesla as operating with Full Self-Driving technology during the crash.",
-     "quote": "one of its vehicles operating with Full Self-Driving (FSD) technology",
-     "source_url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars",
-     "topic": "automation_engaged"
-    }
-   ],
-   "sources": [
-    {
-     "publisher": "Vocal",
-     "title": "Tesla's FSD Lawsuit Settlement Raises Bigger Questions About the Future of Self-Driving Cars",
-     "url": "https://vocal.media/01/tesla-s-fsd-lawsuit-settlement-raises-bigger-questions-about-the-future-of-self-driving-cars",
-     "published": "2026-07-07",
-     "read_by_coder": "full_text"
-    }
-   ]
-  },
-  {
    "case_id": "SDI-00070",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00070.html",
@@ -12921,6 +12026,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 1,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2022-05",
     "incident_type": "collision",
@@ -13103,6 +12209,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2021-05-15",
     "incident_type": "collision",
@@ -13291,6 +12398,7 @@
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
+   "merged_ids": [],
    "variables": {
     "incident_date": "2019-04-25",
     "incident_type": "collision",
@@ -13593,6 +12701,71 @@
      "read_by_coder": "full_text"
     }
    ]
+  }
+ ],
+ "retired_ids": [
+  {
+   "retired_id": "SDI-00023",
+   "merged_into": "SDI-00019",
+   "retired_on": "2026-11-22",
+   "n_reports_moved": 1,
+   "reason": "The one report in this case (News.com.au, October 23, 2026) describes the same crash: a 71-year-old pedestrian struck while crossing Interstate 80 in Vallejo, California, near the I-780 interchange, with the driver telling the California Highway Patrol the car was in Full Self-Driving mode."
+  },
+  {
+   "retired_id": "SDI-00042",
+   "merged_into": "SDI-00033",
+   "retired_on": "2026-11-22",
+   "n_reports_moved": 2,
+   "reason": "Reports in both cases describe the same crash: at about 3 a.m. on October 31, 2025, a Tesla Model 3 stopped on eastbound Loop 202 in Mesa, Arizona, was struck from behind by a Ford F-350 pickup, and the Tesla's driver died."
+  },
+  {
+   "retired_id": "SDI-00054",
+   "merged_into": "SDI-00003",
+   "retired_on": "2026-11-22",
+   "n_reports_moved": 1,
+   "reason": "Both cases concern the settlement of the lawsuit over the same 2023 crash, in which a Tesla Model Y struck a 71-year-old woman who had left her vehicle to direct traffic around an earlier collision; the reports name the same person."
+  },
+  {
+   "retired_id": "SDI-00056",
+   "merged_into": "SDI-00002",
+   "retired_on": "2026-11-22",
+   "n_reports_moved": 1,
+   "reason": "The one report in this case (Austin American-Statesman, July 4, 2026) reports the manslaughter charge against the driver in the same crash: a Tesla Model 3 that left the road and struck a home in Katy, Texas, killing a 76-year-old woman inside; the reports name the same people."
+  },
+  {
+   "retired_id": "SDI-00057",
+   "merged_into": "SDI-00002",
+   "retired_on": "2026-11-22",
+   "n_reports_moved": 1,
+   "reason": "The one report in this case (Austin American-Statesman, June 22, 2026) is about the same crash: a Tesla Model 3 that left the road and struck a home in Katy, Texas, killing a 76-year-old woman inside; the reports name the same people."
+  },
+  {
+   "retired_id": "SDI-00061",
+   "merged_into": "SDI-00060",
+   "retired_on": "2026-11-22",
+   "n_reports_moved": 9,
+   "reason": "Reports in both cases give the same details: an 87-year-old driver, a Tesla Model Y that left the road, struck an electrical box and went into a pond in Florida, a 75-year-old passenger who survived, and the Florida Highway Patrol as the source."
+  },
+  {
+   "retired_id": "SDI-00063",
+   "merged_into": "SDI-00060",
+   "retired_on": "2026-11-22",
+   "n_reports_moved": 1,
+   "reason": "The one report in this case (10 Tampa Bay, May 28, 2026) is about the Pasco County, Florida crash in which a man died after his Tesla, said to be using Autopilot, left the road and went into a pond: the event recorded in SDI-00060."
+  },
+  {
+   "retired_id": "SDI-00064",
+   "merged_into": "SDI-00060",
+   "retired_on": "2026-11-22",
+   "n_reports_moved": 1,
+   "reason": "The one report in this case (10 Tampa Bay video, May 28, 2026) describes the Florida Highway Patrol investigation of a Tesla Model Y that left the road, hit an electrical box and went into a pond: the event recorded in SDI-00060."
+  },
+  {
+   "retired_id": "SDI-00074",
+   "merged_into": "SDI-00072",
+   "retired_on": "2026-11-22",
+   "n_reports_moved": 1,
+   "reason": "The one report in this case (Austin American-Statesman, March 6, 2026) is about the same lawsuit and crash: a Cybertruck that struck a concrete barrier at a Houston freeway overpass in August 2025, with the suit filed in Harris County, Texas; the reports name the same driver."
   }
  ]
 }

@@ -5,6 +5,7 @@ import json
 import os
 import tempfile
 import unittest
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 from unittest import mock
@@ -303,8 +304,12 @@ class Export(unittest.TestCase):
         self.assertIn("Said to be in use; not officially confirmed", home)
         self.assertIn("consortium@crimrxiv.com", home)
         for name in ("index.html", "search.html", "about.html", "sampling.html", "cases/SDI-00001.html"):
-            self.assertIn("A project of Scott Jacques and Miranda Baumann. Miranda drives a Tesla. Dedicated to Bob.",
-                          (self.root / name).read_text())
+            page = (self.root / name).read_text()
+            self.assertIn("A project of Scott Jacques and Miranda Baumann. Miranda drives a Tesla.</p>", page)
+            self.assertNotIn("Dedicated to", page)
+            self.assertIn(">About the data</a>", page)
+            self.assertIn(">Sampling</a>", page)
+            self.assertNotIn("nav-wide", page)
         for label in list(export.FEATURE_BADGE.values()) + [t["label"] for t in CFG["tags"]]:
             self.assertNotIn("confirmed", label.lower())
         self.assertNotIn("Jane", home)
@@ -464,6 +469,90 @@ class Archive(unittest.TestCase):
                 mock.patch.object(pages, "ROOT", tmp):
             export.export_all(published_store(), CFG)
         self.assertEqual([p for p in tmp.rglob("*.txt") if p.name != "robots.txt"], [])
+
+
+class Joining(unittest.TestCase):
+    """Published cases that turn out to be one event: the lowest ID survives, the others are retired."""
+    setUp, tearDown = Export.setUp, Export.tearDown
+
+    def three(self):
+        s = published_store()
+        for n in (2, 3):
+            c = copy.deepcopy(s["cases"][0])
+            c["key"], c["case_id"] = f"k{n}", f"SDI-0000{n}"
+            c["headline"] = f"Second telling {n} of the Vigo County crash"
+            c["sources"] = [dict(c["sources"][0], url=f"https://example.com/other{n}", publisher=f"Paper {n}")]
+            s["cases"].append(c)
+        s["next_id"], s["next_key"] = 4, 4
+        return s
+
+    def test_lowest_id_survives_and_gets_every_report_and_is_coded_again(self):
+        s = self.three()
+        target = run.join_published(s, CFG, ["SDI-00003", "SDI-00001"], "Same date, county and arrest.")
+        self.assertEqual(target["case_id"], "SDI-00001")
+        self.assertEqual([c["case_id"] for c in s["cases"]], ["SDI-00001", "SDI-00002"])
+        self.assertEqual(len(target["sources"]), 2)
+        self.assertTrue(target["needs_coding"])
+        self.assertEqual(target["status"], "published")       # never taken down while it waits to be recoded
+        self.assertIsNotNone(target["coding"])
+
+    def test_retired_id_is_recorded_and_never_given_to_another_case(self):
+        s = self.three()
+        run.join_published(s, CFG, ["SDI-00002", "SDI-00003"], "Same date, county and arrest.")
+        self.assertEqual([(r["case_id"], r["merged_into"]) for r in s["retired"]], [("SDI-00003", "SDI-00002")])
+        new = st.new_case(s, "Tesla")
+        st.assign_id(s, new)
+        self.assertEqual(new["case_id"], "SDI-00004")
+        # A later join carries earlier retired IDs along to the case that finally survives.
+        run.join_published(s, CFG, ["SDI-00001", "SDI-00002"], "Same event again.")
+        self.assertEqual({r["case_id"]: r["merged_into"] for r in s["retired"]},
+                         {"SDI-00003": "SDI-00001", "SDI-00002": "SDI-00001"})
+
+    def test_a_join_needs_a_reason_and_published_cases(self):
+        s = self.three()
+        with self.assertRaises(ValueError):
+            run.join_published(s, CFG, ["SDI-00001", "SDI-00002"], "  ")
+        with self.assertRaises(ValueError):
+            run.join_published(s, CFG, ["SDI-00001", "SDI-00099"], "Same event.")
+        with self.assertRaises(ValueError):
+            run.join_published(s, CFG, ["SDI-00001"], "Same event.")
+        self.assertEqual(len(s["cases"]), 3)
+        self.assertNotIn("retired", s)
+
+    def test_retired_id_keeps_its_address_and_is_listed_in_the_download(self):
+        s = self.three()
+        export.export_all(copy.deepcopy(s), CFG)
+        self.assertEqual((self.root / "data" / "retired_ids.csv").read_text().strip(),
+                         "retired_id,merged_into,retired_on,n_reports_moved,reason")
+        run.join_published(s, CFG, ["SDI-00001", "SDI-00002", "SDI-00003"], "Same date, county and arrest.")
+        stats = export.export_all(s, CFG)
+        self.assertEqual((stats["cases"], stats["retired_ids"]), (1, 2))
+        rows = list(csv.DictReader((self.root / "data" / "retired_ids.csv").read_text(encoding="utf-8").splitlines()))
+        self.assertEqual([(r["retired_id"], r["merged_into"], r["n_reports_moved"]) for r in rows],
+                         [("SDI-00002", "SDI-00001", "1"), ("SDI-00003", "SDI-00001", "1")])
+        self.assertTrue(all(r["reason"] == "Same date, county and arrest." for r in rows))
+        cases = list(csv.DictReader((self.root / "data" / "cases.csv").read_text(encoding="utf-8").splitlines()))
+        self.assertEqual([(c["case_id"], c["merged_ids"], c["n_sources"]) for c in cases],
+                         [("SDI-00001", "SDI-00002; SDI-00003", "3")])
+        data = json.loads((self.root / "data" / "cases.json").read_text())
+        self.assertEqual(data["cases"][0]["merged_ids"], ["SDI-00002", "SDI-00003"])
+        self.assertEqual([r["retired_id"] for r in data["retired_ids"]], ["SDI-00002", "SDI-00003"])
+        old = (self.root / "cases" / "SDI-00002.html").read_text()
+        self.assertIn("<title>SDI-00002 is now part of SDI-00001", old)
+        self.assertIn('href="SDI-00001.html"', old)
+        self.assertIn('content="noindex, follow"', old)
+        self.assertIn('rel="canonical" href="' + CFG["site"]["url"] + 'cases/SDI-00001.html"', old)
+        self.assertIn("Same date, county and arrest.", old)
+        kept = (self.root / "cases" / "SDI-00001.html").read_text()
+        self.assertIn('formerly filed as <span class="nowrap">SDI-00002</span> and <span class="nowrap">SDI-00003</span>', kept)
+        self.assertIn('content="index, follow', kept)
+        sitemap = (self.root / "sitemap.xml").read_text()
+        self.assertIn("cases/SDI-00001.html", sitemap)
+        self.assertNotIn("SDI-00002", sitemap)
+        self.assertIn("sdi-00002", (self.root / "data" / "site-data.js").read_text())   # the old ID still finds the case
+        with zipfile.ZipFile(self.root / "data" / "self-driving-incidents.zip") as z:
+            self.assertIn("retired_ids.csv", z.namelist())
+        self.assertIn("2 case IDs have been retired", (self.root / "sampling.html").read_text())
 
 
 class Store(unittest.TestCase):
