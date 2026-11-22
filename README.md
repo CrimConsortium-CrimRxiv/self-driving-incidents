@@ -77,6 +77,11 @@ This is not a count of all incidents, and counts are not rates. It holds only in
 reached published news in English and that the searches found. It does not establish fault or
 cause. Machine coding makes mistakes; check the linked sources before relying on a record.
 
+## Who is behind it
+
+A project of Scott Jacques and Miranda Baumann, provided by [CrimConsortium](https://crimconsortium.com).
+Miranda drives a Tesla.
+
 ## Licence and citation
 
 Data: CC BY 4.0. Code: MIT. See [`LICENSE`](LICENSE) and [`CITATION.cff`](CITATION.cff).

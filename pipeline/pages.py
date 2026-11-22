@@ -122,6 +122,7 @@ def shell(cfg: dict, *, path: str, title: str, description: str, body: str, root
           source code on <a href="{esc(site['repo'])}" target="_blank" rel="noopener">GitHub</a>.
           Corrections and suggestions: <a href="mailto:{esc(site['contact_email'])}">{esc(site['contact_email'])}</a>.
         </div>
+        <p class="footer-credit">A project of Scott Jacques and Miranda Baumann. Miranda drives a Tesla.</p>
       </footer>
     </div>
     <script src="{root}site.js" defer></script>{scripts}
