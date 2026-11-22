@@ -135,7 +135,8 @@ def call_model(messages: list[dict], cfg: dict) -> tuple[dict, str]:
                 return json.loads(_strip_fence(content)), model
             except (ValueError, KeyError, IndexError, TypeError) as exc:
                 last = f"{model}: unreadable answer ({exc})"
-                log.warning("Coder answer unreadable (attempt %d): %s", attempt, exc)
+                log.warning("Coder answer unreadable (attempt %d): %s | HTTP %s, %s, starts: %r", attempt, exc,
+                            resp.status_code, resp.headers.get("content-type"), resp.text[:300])
     raise CoderUnavailable(last)
 
 
