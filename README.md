@@ -92,7 +92,7 @@ cause. Machine coding makes mistakes; check the linked sources before relying on
 ## Who is behind it
 
 A project of Scott Jacques and Miranda Baumann, provided by [CrimConsortium](https://crimconsortium.com).
-Miranda drives a Tesla.
+Miranda drives a Tesla. Dedicated to Bob.
 
 ## Licence and citation
 

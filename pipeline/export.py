@@ -49,6 +49,11 @@ def write_if_changed(path, text: str | bytes) -> bool:
     return True
 
 
+def _var_order(name: str) -> tuple:
+    names = [v["name"] for v in cb.VARIABLES]
+    return (names.index(name) if name in names else len(names), name)
+
+
 def human(value) -> str:
     """Readable form of a coded value."""
     if isinstance(value, list):
@@ -161,7 +166,9 @@ def public_record(case: dict, v: dict, site_url: str) -> dict:
         "text_basis": coding.get("text_basis"),
         "unsupported_values_removed": coding.get("unsupported_values_removed"),
         "variables": {var["name"]: coding.get("values", {}).get(var["name"]) for var in cb.VARIABLES},
-        "evidence": coding.get("evidence", {}), "claims": coding.get("claims", []),
+        # Fixed key order, so the file reads the same whether the case was coded in this run or loaded from disk.
+        "evidence": {n: e for n, e in sorted(coding.get("evidence", {}).items(), key=lambda p: _var_order(p[0]))},
+        "claims": [dict(sorted(c.items())) for c in coding.get("claims", [])],
         "sources": [{"publisher": s["publisher"], "title": s["title"], "url": s["url"],
                      "published": s["published"][:10],
                      "read_by_coder": next((r["basis"] for r in coding.get("sources_read", [])

@@ -125,7 +125,7 @@ def shell(cfg: dict, *, path: str, title: str, description: str, body: str, root
           source code on <a href="{esc(site['repo'])}" target="_blank" rel="noopener">GitHub</a>.
           Corrections and suggestions: <a href="mailto:{esc(site['contact_email'])}">{esc(site['contact_email'])}</a>.
         </div>
-        <p class="footer-credit">A project of Scott Jacques and Miranda Baumann. Miranda drives a Tesla.</p>
+        <p class="footer-credit">A project of Scott Jacques and Miranda Baumann. Miranda drives a Tesla. Dedicated to Bob.</p>
       </footer>
     </div>
     <script src="{root}site.js" defer></script>{scripts}
@@ -189,7 +189,7 @@ def dataset_ld(cfg: dict, updated: str, n_cases: int, first: str) -> dict:
 
 def home(pairs, cfg, updated, n_reports, waiting=0) -> str:
     site = cfg["site"]
-    n = int(site.get("homepage_count", 25))
+    n = int(site.get("homepage_count", 10))
     latest = [v for _, v in pairs[:n]]
     items = "\n".join(incident_item(v) for v in latest)
     total = len(pairs)
@@ -228,19 +228,6 @@ def home(pairs, cfg, updated, n_reports, waiting=0) -> str:
             <a href="about.html#codebook">codebook</a>.</span>
         </div>
 
-        <section aria-labelledby="latest-title">
-          <div class="section-head"><h2 class="section-title" id="latest-title">Latest incidents</h2></div>
-          <p class="section-note">
-            The {min(n, total) if total else n} most recent, newest first. Each summary is the publisher's own words.
-            Labels record what coverage says, not what has been established, and the coding behind
-            them is machine-drafted and not yet reviewed. This is not a complete list{waiting_note}:
-            <a class="text-link" href="sampling.html">how cases are found, and why some are old</a>.
-          </p>
-          <ol class="incident-list">
-{items}
-          </ol>
-        </section>
-
         <section class="search-panel" aria-labelledby="search-title">
           <h2 id="search-title">Search the full dataset</h2>
           <p>Look through {'all ' + format(total, ',') + ' cases' if total != 1 else 'every case'} by place, vehicle, feature, publisher or any word in the record.</p>
@@ -253,6 +240,19 @@ def home(pairs, cfg, updated, n_reports, waiting=0) -> str:
             <button class="btn-primary" type="submit">Search</button>
           </form>
           <p class="browse-all"><a class="text-link" href="search.html">Browse and filter all cases</a></p>
+        </section>
+
+        <section aria-labelledby="latest-title">
+          <div class="section-head"><h2 class="section-title" id="latest-title">Latest incidents</h2></div>
+          <p class="section-note section-note-wide">
+            The {min(n, total) if total else n} most recent, newest first. Each summary is the publisher's own words.
+            Labels record what coverage says, not what has been established, and the coding behind
+            them is machine-drafted and not yet reviewed. This is not a complete list{waiting_note}:
+            <a class="text-link" href="sampling.html">how cases are found, and why some are old</a>.
+          </p>
+          <ol class="incident-list">
+{items}
+          </ol>
         </section>"""
     first = min((v["first"] for _, v in pairs), default=updated)
     ld = [dataset_ld(cfg, updated, total, first), ORG,

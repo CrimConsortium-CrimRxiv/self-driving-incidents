@@ -9,7 +9,7 @@ site:
   url: "https://selfdriving.crimconsortium.com/"
   contact_email: "consortium@crimrxiv.com"
   repo: "https://github.com/CrimConsortium-CrimRxiv/self-driving-incidents"
-  homepage_count: 25
+  homepage_count: 10
 
 # Vehicle makers covered. Add another block to widen the dataset beyond Tesla.
 makers:

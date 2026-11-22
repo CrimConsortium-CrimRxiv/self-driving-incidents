@@ -301,10 +301,35 @@ class Export(unittest.TestCase):
         self.assertIn("Said to be in use; not officially confirmed", home)
         self.assertIn("consortium@crimrxiv.com", home)
         for name in ("index.html", "search.html", "about.html", "sampling.html", "cases/SDI-00001.html"):
-            self.assertIn("A project of Scott Jacques and Miranda Baumann.", (self.root / name).read_text())
+            self.assertIn("A project of Scott Jacques and Miranda Baumann. Miranda drives a Tesla. Dedicated to Bob.",
+                          (self.root / name).read_text())
         for label in list(export.FEATURE_BADGE.values()) + [t["label"] for t in CFG["tags"]]:
             self.assertNotIn("confirmed", label.lower())
         self.assertNotIn("Jane", home)
+
+    def test_homepage_puts_search_before_the_ten_latest(self):
+        s = published_store()
+        template = s["cases"][0]
+        for i in range(2, 14):
+            c = copy.deepcopy(template)
+            c["key"], c["case_id"] = f"k{i}", f"SDI-{i:05d}"
+            s["cases"].append(c)
+        export.export_all(s, CFG)
+        home = (self.root / "index.html").read_text()
+        self.assertLess(home.index("Download the dataset"), home.index('id="search-title"'))
+        self.assertLess(home.index('id="search-title"'), home.index('id="latest-title"'))
+        self.assertEqual(home.count('<li class="incident"'), 10)
+        self.assertIn("The 10 most recent", home)
+
+    def test_json_key_order_does_not_depend_on_how_the_case_was_loaded(self):
+        s = published_store()
+        ev = s["cases"][0]["coding"]["evidence"]
+        self.assertGreater(len(ev), 1)
+        export.export_all(copy.deepcopy(s), CFG)
+        first = (self.root / "data" / "cases.json").read_bytes()
+        s["cases"][0]["coding"]["evidence"] = dict(reversed(list(ev.items())))
+        export.export_all(s, CFG)
+        self.assertEqual(first, (self.root / "data" / "cases.json").read_bytes())
 
     def test_pending_and_excluded_cases_stay_off_the_site(self):
         s = published_store()
