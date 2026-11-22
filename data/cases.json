@@ -14,7 +14,7 @@
    "sort_date": "2026-11-22",
    "headline": "Tesla Model Y's Full Self-Driving Stops Dead at Green Light, Owner Forced To Accelerate Through Intersection",
    "headline_publisher": "AOL.com",
-   "source_summary": "A Tesla Model Y owner is raising concerns about the company’s Full Self-Driving software after their brand-new SUV suddenly stopped in the middle of an intersection. The driver says the vehicle had a green left-turn ... Read more…",
+   "source_summary": "A Tesla Model Y owner is raising concerns about the company’s Full Self-Driving software after their brand-new SUV suddenly stopped in the middle of an intersection. The driver says the vehicle had a green left-turn…",
    "source_summary_publisher": "AOL.com",
    "auto": {
     "location": null,
@@ -1595,7 +1595,7 @@
    "narrative": "At 2:19 a.m. on a night in September 2026, a Tesla Cybercab with a test driver aboard collided with a passenger car while travelling at 53 mph on a highway in Philadelphia, Pennsylvania. The headline says Tesla redacted the account of what happened. Only the publisher's summary was available for coding, and it does not say whether an automated-driving feature was in use.",
    "review_status": "machine-coded, not yet reviewed",
    "coder": "Claude Fable 5.2 (Perplexity Computer), initial batch",
-   "coded_at": "2026-11-22T17:26:50Z",
+   "coded_at": "2026-11-22T17:30:53Z",
    "codebook_version": "0.1",
    "text_basis": "summary",
    "unsupported_values_removed": 0,
@@ -1613,10 +1613,8 @@
     "location_country": "United States",
     "road_type": "highway_or_freeway",
     "time_of_day": "night",
-    "system_named": [
-     "unspecified"
-    ],
-    "engagement_status": "mentioned_only",
+    "system_named": null,
+    "engagement_status": null,
     "engagement_claimed_by": null,
     "driver_seat_occupied": "yes",
     "driver_condition_mentioned": null,
@@ -1644,10 +1642,6 @@
      "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
      "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
     },
-    "engagement_status": {
-     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-    },
     "incident_date": {
      "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
      "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
@@ -1669,10 +1663,6 @@
      "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
     },
     "road_type": {
-     "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-     "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-    },
-    "system_named": {
      "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
      "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
     },

@@ -67,6 +67,10 @@ with that name, under Settings, Secrets and variables, Actions). Without it the 
 reports and rebuilds the site; cases wait in the store until they can be coded. The model and the
 per-run limit are set under `coder` in `config.yaml`.
 
+Each record names its coder in the `coder` column. The first cases (November 2026) were drafted by
+a different model in a one-off session using `python -m pipeline.handcode`, which runs drafted
+answers through exactly the same checks as the daily job. They have not been reviewed by a person.
+
 ## Limits
 
 This is not a count of all incidents, and counts are not rates. It holds only incidents that

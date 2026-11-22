@@ -5,6 +5,8 @@
    faculty.crimconsortium.com.
    ============================================================= */
 
+[hidden] { display: none !important; }
+
 :root, [data-theme="light"] {
   /* Surfaces — near-white paper, slightly warm */
   --color-bg: #f7f5f1;
@@ -700,6 +702,7 @@ a:hover { border-bottom-color: var(--color-primary); }
   padding: var(--space-2) var(--space-3); border-radius: var(--radius-md); border: 1px solid transparent;
   min-height: 40px; display: inline-flex; align-items: center;
 }
+.site-nav a { white-space: nowrap; }
 .site-nav a:hover { color: var(--color-text); background: var(--color-surface-offset); }
 .site-nav a[aria-current="page"] { color: var(--color-text); font-weight: 600; }
 
@@ -783,7 +786,7 @@ a:hover { border-bottom-color: var(--color-primary); }
 .search-panel h2 { font-size: var(--text-lg); margin-bottom: var(--space-1); }
 .search-panel p { color: var(--color-text-muted); font-size: var(--text-sm); margin-bottom: var(--space-4); }
 .search-form { display: flex; gap: var(--space-3); flex-wrap: wrap; }
-.search-form .search-bar { flex: 1 1 280px; margin-bottom: 0; }
+.search-form .search-bar { flex: 1 1 min(280px, 100%); min-width: 0; margin-bottom: 0; }
 .search-form .btn-primary { min-height: 48px; }
 .search-panel .browse-all { margin: var(--space-4) 0 0; font-size: var(--text-sm); }
 
@@ -879,6 +882,7 @@ blockquote.source-quote footer { margin-top: var(--space-1); font-size: var(--te
   .brand-title { font-size: var(--text-base); }
   .header-actions { gap: 0; }
   .site-nav a { padding: var(--space-2); }
+  .nav-extra { display: none; }
   .page { padding: var(--space-4) var(--space-4) var(--space-12); }
   .site-header { gap: var(--space-3); }
   .var-table th, .var-table td { display: block; width: 100%; }

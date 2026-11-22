@@ -1581,7 +1581,7 @@
    "key": "k13",
    "maker": "Tesla",
    "needs_coding": true,
-   "source_summary": "The Tesla Cybercab has recently entered service, most notably in Austin, Texas. It has been around two months since the robotaxi entered public service, but according to the NHTSA, it hasn’t gone entirely smoothly for ... Read more…",
+   "source_summary": "The Tesla Cybercab has recently entered service, most notably in Austin, Texas. It has been around two months since the robotaxi entered public service, but according to the NHTSA, it hasn’t gone entirely smoothly for…",
    "source_summary_publisher": "AOL.com",
    "sources": [
     {
@@ -1666,7 +1666,7 @@
      "published": "2026-11-18T17:49:50Z",
      "publisher": "AOL.com",
      "resolved": true,
-     "summary": "The Tesla Cybercab has recently entered service, most notably in Austin, Texas. It has been around two months since the robotaxi entered public service, but according to the NHTSA, it hasn’t gone entirely smoothly for ... Read more…",
+     "summary": "The Tesla Cybercab has recently entered service, most notably in Austin, Texas. It has been around two months since the robotaxi entered public service, but according to the NHTSA, it hasn’t gone entirely smoothly for…",
      "title": "The NHTSA Says the Tesla Cybercab Has Now Crashed Eight Times",
      "url": "https://www.aol.com/articles/nhtsa-says-tesla-cybercab-now-174950000.html"
     }
@@ -2343,7 +2343,7 @@
     ]
    },
    "case_id": "SDI-00010",
-   "code_attempts": 1,
+   "code_attempts": 2,
    "coding": {
     "claims": [
      {
@@ -2355,7 +2355,7 @@
      }
     ],
     "codebook_version": "0.1",
-    "coded_at": "2026-11-22T17:26:50Z",
+    "coded_at": "2026-11-22T17:30:53Z",
     "coder": "Claude Fable 5.2 (Perplexity Computer), initial batch",
     "evidence": {
      "collision_with": {
@@ -2367,10 +2367,6 @@
       "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
      },
      "driver_seat_occupied": {
-      "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-      "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-     },
-     "engagement_status": {
       "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
       "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
      },
@@ -2395,10 +2391,6 @@
       "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
      },
      "road_type": {
-      "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
-      "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
-     },
-     "system_named": {
       "quote": "At 2:19 a.m. on a September night, a Tesla Cybercab with a test driver aboard was traveling at 53 mph on a highway in Philadelphia, Pennsylvania, when it collided with a passenger car.",
       "source_url": "https://theautowire.com/2026/11/19/tesla-cybercab-crashes-nhtsa-redacted-philadelphia/"
      },
@@ -2435,16 +2427,12 @@
      ],
      "coverage_stage": "follow_up_investigation",
      "driver_seat_occupied": "yes",
-     "engagement_status": "mentioned_only",
      "incident_date": "2026-09",
      "incident_type": "collision",
      "location_city": "Philadelphia",
      "location_country": "United States",
      "location_state_region": "Pennsylvania",
      "road_type": "highway_or_freeway",
-     "system_named": [
-      "unspecified"
-     ],
      "time_of_day": "night",
      "vehicle_make": "Tesla",
      "vehicle_model": "Cybercab"
@@ -2478,7 +2466,7 @@
     }
    ],
    "status": "published",
-   "updated": "2026-11-22T17:26:50Z"
+   "updated": "2026-11-22T17:30:53Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
@@ -3338,7 +3326,7 @@
    "key": "k39",
    "maker": "Tesla",
    "needs_coding": false,
-   "source_summary": "A Tesla Model Y owner is raising concerns about the company’s Full Self-Driving software after their brand-new SUV suddenly stopped in the middle of an intersection. The driver says the vehicle had a green left-turn ... Read more…",
+   "source_summary": "A Tesla Model Y owner is raising concerns about the company’s Full Self-Driving software after their brand-new SUV suddenly stopped in the middle of an intersection. The driver says the vehicle had a green left-turn…",
    "source_summary_publisher": "AOL.com",
    "sources": [
     {
@@ -3346,7 +3334,7 @@
      "published": "2026-11-22T15:18:48Z",
      "publisher": "AOL.com",
      "resolved": true,
-     "summary": "A Tesla Model Y owner is raising concerns about the company’s Full Self-Driving software after their brand-new SUV suddenly stopped in the middle of an intersection. The driver says the vehicle had a green left-turn ... Read more…",
+     "summary": "A Tesla Model Y owner is raising concerns about the company’s Full Self-Driving software after their brand-new SUV suddenly stopped in the middle of an intersection. The driver says the vehicle had a green left-turn…",
      "title": "Tesla Model Y's Full Self-Driving Stops Dead at Green Light, Owner Forced To Accelerate Through Intersection",
      "url": "https://www.aol.com/articles/tesla-model-ys-full-self-151848000.html"
     }

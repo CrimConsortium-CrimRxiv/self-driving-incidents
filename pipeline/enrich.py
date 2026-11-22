@@ -140,9 +140,19 @@ def clean_text(text: str | None) -> str:
     return re.sub(r"\s+", " ", t).strip()
 
 
+_TEASER = re.compile(r"\s*(?:\.{3}|\u2026)?\s*(?:read more|continue reading|read the full (?:story|article)|see more)"
+                     r"\s*(?:\.{3}|\u2026|\u00bb|>)*\s*$", re.I)
+
+
+def strip_teaser(text: str) -> str:
+    """Remove a trailing "Read more..." link label; the summary then ends with an ellipsis."""
+    cut = _TEASER.sub("", text or "")
+    return cut if cut == (text or "") else cut.rstrip(" .\u2026") + "\u2026"
+
+
 def clean_summary(text: str | None, headline: str, max_chars: int) -> str | None:
     """Tidy a publisher's summary line; return None when it is boilerplate or just repeats the headline."""
-    t = clean_text(text)
+    t = strip_teaser(clean_text(text))
     if not t:
         return None
     # Drop datelines like "TAMPA, Fla. (WFLA) - "

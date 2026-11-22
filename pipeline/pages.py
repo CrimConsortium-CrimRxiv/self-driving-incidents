@@ -99,7 +99,7 @@ def shell(cfg: dict, *, path: str, title: str, description: str, body: str, root
         <div class="header-actions">
           <nav class="site-nav" aria-label="Site">
             {nav("search.html", "Search", "search")}
-            {nav("about.html", "About the data", "about")}
+            {nav("about.html", 'About<span class="nav-extra">&nbsp;the data</span>', "about")}
           </nav>
           <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle color scheme" title="Toggle light or dark"></button>
         </div>
