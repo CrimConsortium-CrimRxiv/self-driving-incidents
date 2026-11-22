@@ -15197,8 +15197,8 @@
    "code_attempts": 0,
    "coding": null,
    "exclusion_reason": null,
-   "headline": "Tesla’s record month: 4 fatal Autopilot and Full Self-Driving crashes",
-   "headline_publisher": "Electrek",
+   "headline": "Tesla records worst month ever for driver-assist crashes, with 4 fatal cases under Autopilot",
+   "headline_publisher": "Yahoo",
    "key": "k324",
    "maker": "Tesla",
    "needs_coding": true,
@@ -15222,10 +15222,18 @@
      "summary": "$Tesla (TSLA.US)$ Jul 2026 was the worst month on record for Tesla driver-assist crashes. Tesla reported 236 of them to federal regulators, the most it has ever filed in a single month. Four of those crashes killed someone.",
      "title": "Tesla’s record month: 4 fatal Autopilot and Full Self-Driving crashes",
      "url": "http://www.moomoo.com/community/feed/tesla-s-record-month-4-fatal-autopilot-and-full-self-117330135941126"
+    },
+    {
+     "published": "2026-09-20T05:27:00Z",
+     "publisher": "Yahoo",
+     "resolved": true,
+     "summary": "In July 2026, Tesla sent 236 crash reports involving its driver assistance systems to federal regulators, according to Electrek — more than in any prior month. Those filings included four deadly ...",
+     "title": "Tesla records worst month ever for driver-assist crashes, with 4 fatal cases under Autopilot",
+     "url": "https://www.yahoo.com/news/us/articles/tesla-records-worst-month-ever-122800459.html"
     }
    ],
    "status": "pending",
-   "updated": "2026-11-22T19:24:15Z"
+   "updated": "2026-11-22T19:48:01Z"
   },
   {
    "added": "2026-11-22T19:24:15Z",
