@@ -1,6 +1,6 @@
 {
  "dataset": "Self-Driving Incidents Explorer",
- "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/",
+ "url": "https://selfdriving.crimconsortium.com/",
  "updated": "2026-11-22",
  "codebook_version": "0.1",
  "license": "CC BY 4.0",
@@ -8,7 +8,7 @@
   {
    "case_id": "SDI-00013",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00013.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00013.html",
    "first_reported": "2026-11-22",
    "last_reported": "2026-11-22",
    "sort_date": "2026-11-22",
@@ -163,7 +163,7 @@
   {
    "case_id": "SDI-00012",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00012.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00012.html",
    "first_reported": "2026-11-22",
    "last_reported": "2026-11-22",
    "sort_date": "2026-11-22",
@@ -284,7 +284,7 @@
   {
    "case_id": "SDI-00011",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00011.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00011.html",
    "first_reported": "2026-11-20",
    "last_reported": "2026-11-21",
    "sort_date": "2026-11-19",
@@ -592,7 +592,7 @@
   {
    "case_id": "SDI-00009",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00009.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00009.html",
    "first_reported": "2026-11-17",
    "last_reported": "2026-11-19",
    "sort_date": "2026-11-02",
@@ -820,7 +820,7 @@
   {
    "case_id": "SDI-00014",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00014.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00014.html",
    "first_reported": "2026-11-17",
    "last_reported": "2026-11-17",
    "sort_date": "2026-11-01",
@@ -965,7 +965,7 @@
   {
    "case_id": "SDI-00004",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00004.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00004.html",
    "first_reported": "2026-10-16",
    "last_reported": "2026-10-17",
    "sort_date": "2026-10-13",
@@ -1135,7 +1135,7 @@
   {
    "case_id": "SDI-00007",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00007.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00007.html",
    "first_reported": "2026-11-16",
    "last_reported": "2026-11-17",
    "sort_date": "2026-09-30",
@@ -1372,7 +1372,7 @@
   {
    "case_id": "SDI-00006",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00006.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00006.html",
    "first_reported": "2026-11-16",
    "last_reported": "2026-11-16",
    "sort_date": "2026-09-12",
@@ -1581,7 +1581,7 @@
   {
    "case_id": "SDI-00010",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00010.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00010.html",
    "first_reported": "2026-11-19",
    "last_reported": "2026-11-19",
    "sort_date": "2026-09-01",
@@ -1715,7 +1715,7 @@
   {
    "case_id": "SDI-00002",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00002.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00002.html",
    "first_reported": "2026-06-22",
    "last_reported": "2026-07-16",
    "sort_date": "2026-06-19",
@@ -1926,7 +1926,7 @@
   {
    "case_id": "SDI-00008",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00008.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00008.html",
    "first_reported": "2026-11-16",
    "last_reported": "2026-11-16",
    "sort_date": "2026-05-31",
@@ -2139,7 +2139,7 @@
   {
    "case_id": "SDI-00003",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00003.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00003.html",
    "first_reported": "2026-06-29",
    "last_reported": "2026-06-29",
    "sort_date": "2023-01-01",
@@ -2316,7 +2316,7 @@
   {
    "case_id": "SDI-00001",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00001.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00001.html",
    "first_reported": "2021-05-18",
    "last_reported": "2021-05-18",
    "sort_date": "2021-05-15",
@@ -2492,7 +2492,7 @@
   {
    "case_id": "SDI-00005",
    "maker": "Tesla",
-   "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/cases/SDI-00005.html",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00005.html",
    "first_reported": "2026-11-10",
    "last_reported": "2026-11-10",
    "sort_date": "2019-04-25",

@@ -9,7 +9,7 @@ abstract: >-
 authors:
   - name: "CrimConsortium"
     website: "https://crimconsortium.com"
-url: "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/"
+url: "https://selfdriving.crimconsortium.com/"
 repository-code: "https://github.com/CrimConsortium-CrimRxiv/self-driving-incidents"
 license: CC-BY-4.0
 keywords:

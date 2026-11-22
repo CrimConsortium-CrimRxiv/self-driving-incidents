@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://crimconsortium-crimrxiv.github.io/self-driving-incidents/sitemap.xml
+Sitemap: https://selfdriving.crimconsortium.com/sitemap.xml

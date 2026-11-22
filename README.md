@@ -4,7 +4,7 @@ An open dataset of incidents in which a vehicle's automated-driving feature is c
 or confirmed to be involved: crashes, near misses, police stops, people found asleep at the wheel,
 and the court cases that follow. Provided by [CrimConsortium](https://crimconsortium.com).
 
-- **Site:** https://crimconsortium-crimrxiv.github.io/self-driving-incidents/
+- **Site:** https://selfdriving.crimconsortium.com/
 - **Download:** [`data/self-driving-incidents.zip`](data/self-driving-incidents.zip) (everything), or single files in [`data/`](data)
 - **Codebook:** [`CODEBOOK.md`](CODEBOOK.md)
 - **Corrections and suggestions:** consortium@crimrxiv.com
@@ -86,4 +86,4 @@ Miranda drives a Tesla.
 
 Data: CC BY 4.0. Code: MIT. See [`LICENSE`](LICENSE) and [`CITATION.cff`](CITATION.cff).
 
-> CrimConsortium. *Self-Driving Incidents Explorer* [dataset]. https://crimconsortium-crimrxiv.github.io/self-driving-incidents/
+> CrimConsortium. *Self-Driving Incidents Explorer* [dataset]. https://selfdriving.crimconsortium.com/

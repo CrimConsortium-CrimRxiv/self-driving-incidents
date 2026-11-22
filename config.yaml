@@ -6,7 +6,7 @@ site:
   name: "Self-Driving Incidents Explorer"
   # Public address of the site. Change this one line (and add a CNAME file) when a custom
   # domain is attached; every canonical link, sitemap entry and share card follows it.
-  url: "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/"
+  url: "https://selfdriving.crimconsortium.com/"
   contact_email: "consortium@crimrxiv.com"
   repo: "https://github.com/CrimConsortium-CrimRxiv/self-driving-incidents"
   homepage_count: 25
