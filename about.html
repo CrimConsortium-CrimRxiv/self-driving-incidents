@@ -41,6 +41,7 @@
         document.documentElement.setAttribute("data-theme", t);
       })();
     </script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://selfdriving.crimconsortium.com/about.html", "url": "https://selfdriving.crimconsortium.com/about.html", "name": "About the data | Self-Driving Incidents Explorer", "dateModified": "2026-11-22", "isPartOf": {"@id": "https://selfdriving.crimconsortium.com/#website"}, "about": {"@id": "https://selfdriving.crimconsortium.com/#dataset"}, "publisher": {"@id": "https://crimconsortium.com/#org"}}, {"@type": "Organization", "@id": "https://crimconsortium.com/#org", "name": "CrimConsortium", "url": "https://crimconsortium.com/"}]}</script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -81,9 +82,9 @@
           <p>The searches, the rules for keeping a report, the time period covered and the known gaps are set out in full on the <a href="sampling.html">sampling page</a>.</p>
 
           <h2>How cases are coded</h2>
-          <p>A language model reads the reports attached to a case (the article text where the publisher allows it, otherwise the headline and summary) and drafts the coded variables, a short neutral narrative, and a list of who said what. Three rules limit what it can assert:</p>
+          <p>A language model reads up to 5 of the reports attached to a case: those with the most text, always including the newest. It reads the article text where the publisher allows it, otherwise the headline and summary; <code>sources.csv</code> marks which reports were read and how. From these it drafts the coded variables, a short neutral narrative, and a list of who said what. Three rules limit what it can assert:</p>
           <ul>
-            <li>It may use only the reports attached to the case.</li>
+            <li>It may use only the reports it was given for that case.</li>
             <li>Every coded value must come with a quotation, and the program keeps the value only if that quotation is found word for word in the report. Values that fail are removed and counted on the case page.</li>
             <li>A mention of a feature is never treated as evidence that it was in use. The variable <code>engagement_status</code> separates what an official source or the maker's own data states from what a driver, lawyer or witness claims.</li>
           </ul>
@@ -91,11 +92,11 @@
 
           <h2>What it cannot tell you</h2>
           <ul>
-            <li><strong>It is not a count of all incidents.</strong> It holds only incidents that reached published news in English and that our searches found. Many incidents are never reported.</li>
+            <li><strong>It is not a count of all incidents.</strong> It holds only incidents that reached published news in English and that our searches found, in news published since January 1, 2026. Many incidents are never reported.</li>
             <li><strong>Counts are not rates.</strong> Nothing here says how often these features are used without incident, so the data cannot show whether they are safer or less safe than a human driver.</li>
             <li><strong>It does not establish fault or cause.</strong> It records what coverage reports and who says so.</li>
             <li><strong>Machine coding makes mistakes.</strong> Dates, places and counts can be wrong, and two cases may turn out to be the same event. Check the linked sources before relying on a record.</li>
-            <li><strong>Case IDs are permanent, and a few are retired.</strong> When the reports show that two cases are one event, a person joins them under the lower ID and that case is coded again from all its reports. The other ID is retired: it is never reused, its page stays in place and points to the case that holds its reports, and it is listed with the reason in <a href="data/retired_ids.csv" download>retired_ids.csv</a>. Cases that only look alike are left separate.</li>
+            <li><strong>Case IDs are permanent, and a few are retired.</strong> When the reports show that two cases are one event, they are joined under the lower ID and that case is coded again from the combined reports. Joining is a separate, recorded step with a written reason; the daily program never joins published cases on its own. The other ID is retired: it is never reused, its page stays in place and points to the case that holds its reports, and it is listed with the reason in <a href="data/retired_ids.csv" download>retired_ids.csv</a>. Cases that only look alike are left separate. The joins made so far were worked out with an AI assistant by comparing the reports and, like the coding, have not yet been checked by a person.</li>
             <li><strong>Coverage changes.</strong> Early reports are often revised. A case reflects the reports attached to it on the date shown.</li>
           </ul>
 

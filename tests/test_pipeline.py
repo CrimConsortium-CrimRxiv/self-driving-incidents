@@ -552,7 +552,11 @@ class Joining(unittest.TestCase):
         self.assertIn("sdi-00002", (self.root / "data" / "site-data.js").read_text())   # the old ID still finds the case
         with zipfile.ZipFile(self.root / "data" / "self-driving-incidents.zip") as z:
             self.assertIn("retired_ids.csv", z.namelist())
-        self.assertIn("2 case IDs have been retired", (self.root / "sampling.html").read_text())
+        samp = (self.root / "sampling.html").read_text()
+        self.assertIn("2 case IDs have been retired", samp)
+        self.assertIn("Retired case IDs</th><td>2,", samp)
+        self.assertNotIn("joined by hand", samp)
+        self.assertNotIn("a person joins", (self.root / "about.html").read_text())
 
 
 class Store(unittest.TestCase):

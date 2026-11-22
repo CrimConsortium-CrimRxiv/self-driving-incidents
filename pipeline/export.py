@@ -249,7 +249,8 @@ def write_site_data(published: list[tuple[dict, dict]], updated: str) -> None:
         vals = v["vals"]
         blob = " ".join([v["id"], " ".join(v["merged"]), v["lead"], v["title"], v["summary"] or "", v["narrative"],
                          " ".join(s["publisher"] for s in v["sources"]),
-                         " ".join(human(x) for x in vals.values())]).lower()
+                         # Codebook order, so the file is the same whether a case was coded in this run or loaded from disk.
+                         " ".join(human(vals[var["name"]]) for var in cb.VARIABLES if var["name"] in vals)]).lower()
         rows.append({
             "id": v["id"], "url": v["url"], "lead": v["lead"], "date": v["date_label"], "sort": v["sort"],
             "title": v["title"], "summary": v["summary"], "by": v["summary_by"], "kind": v["summary_kind"],

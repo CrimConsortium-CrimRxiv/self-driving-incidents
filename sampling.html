@@ -76,7 +76,7 @@
           <h2 id="why-few">Why there are few cases, and why some are old</h2>
           <p>Collection began on November 22, 2026. Each daily run looks back 7 days. On the first day the Google News searches were also repeated one week at a time back to January 1, 2026, so the dataset draws on news published since then. Nothing earlier has been searched.</p>
           <p>The weeks before November 15, 2026 were searched after the fact, on Google News only, and return whatever it still lists for those weeks. Expect them to be thinner than the period collected live.</p>
-          <p>Finding a report is only the first step. A case appears on the site after it has been coded and screened, and 216 of the 285 cases coded so far were set aside (see <a href="#numbers">the numbers</a>). Until the waiting cases are coded, the published list will stay much shorter than the list of what has been found.</p>
+          <p>Finding a report is only the first step. A case appears on the site after it has been coded and screened, and 216 of the 285 cases coded so far were set aside (see <a href="#numbers">the numbers</a>). Most of what the searches return is not a single identifiable incident, which is why the published list is much shorter than the list of what has been found.</p>
           <p>Cases are dated by when the incident happened, not when it was reported, so an old incident appears whenever it is in current news. That happens in two ways:</p>
           <ul>
             <li><strong>New coverage of an old event.</strong> A verdict, an appeal, a settlement or a regulator's report brings an earlier crash back into the news. A crash from 2019 can enter the dataset because of a court filing this month.</li>
@@ -88,9 +88,10 @@
           <table class="var-table">
             <tr><th>Reports kept</th><td>635, published between May 18, 2021 and November 22, 2026</td></tr>
             <tr><th>Candidate cases</th><td>285, after grouping reports about the same event</td></tr>
-            <tr><th>Published</th><td>69</td></tr>
+            <tr><th>Published</th><td>69 cases, holding 327 of the reports</td></tr>
             <tr><th>Screened out</th><td>216, each listed with its reason in <a href="data/screened_out.csv" download>screened_out.csv</a></td></tr>
             <tr><th>Waiting to be coded</th><td>0. These are not shown on the site until they have been coded and screened.</td></tr>
+            <tr><th>Retired case IDs</th><td>9, duplicates joined into a published case and listed in <a href="data/retired_ids.csv" download>retired_ids.csv</a>. Their reports are counted under the case that now holds them.</td></tr>
           </table>
           <p style="margin-top: var(--space-3)">These figures are recalculated every time the site is rebuilt.</p>
           <details class="month-counts">
@@ -134,7 +135,7 @@
             <li><strong>An automated-driving feature is claimed, questioned or confirmed to be involved.</strong> A crash in which no report raises the feature is set aside.</li>
             <li><strong>A covered maker.</strong> Incidents involving another maker's vehicle are set aside for now.</li>
           </ul>
-          <p>The coding step reads up to 5 reports per case: those with the most text, always including the newest. Where a publisher blocks automated reading, only the headline and summary are available, and the variable <code>text_basis</code> records which was used. A published case is never withdrawn automatically; it is recoded when new reports are attached to it.</p>
+          <p>The coding step reads up to 5 reports per case: those with the most text, always including the newest. So far it has read 180 of the 327 reports attached to published cases; <code>sources.csv</code> marks which. Where a publisher blocks automated reading, only the headline and summary are available, and the variable <code>text_basis</code> records which was used. A published case is never withdrawn automatically; it is recoded when new reports are attached to it.</p>
 
           <h2 id="limits">Known gaps and biases</h2>
           <ul>
@@ -144,7 +145,7 @@
             <li><strong>Time coverage is uneven.</strong> Fullest for news published from November 15, 2026 onward, which was collected live from both search services. News from January 1, 2026 to then was searched afterwards on Google News only and is thinner. Anything earlier is accidental.</li>
             <li><strong>Headline wording matters.</strong> Incidents reported without a feature term in the headline are missed; incidents where the feature is the story are favoured.</li>
             <li><strong>Round-ups are lost.</strong> An incident reported only inside a round-up does not become a case.</li>
-            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two. The joining rules were tightened on November 22, 2026 after a test showed that the earlier rules let a long-running case absorb unrelated reports; nothing from that test was published. On the same day the first automated coding batch published 32 cases, several of which duplicated one another because the model was shown too few earlier cases to compare against; those 32 were returned to the waiting list within the hour, the comparison list was widened, and they were coded again. Published cases that the reports show to be one event are joined by hand under the lower ID; 9 case IDs have been retired this way so far, each listed with the reason in <a href="data/retired_ids.csv" download>retired_ids.csv</a>.</li>
+            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two. The joining rules were tightened on November 22, 2026 after a test showed that the earlier rules let a long-running case absorb unrelated reports; nothing from that test was published. On the same day the first automated coding batch published 32 cases, several of which duplicated one another because the model was shown too few earlier cases to compare against; those 32 were returned to the waiting list within the hour, the comparison list was widened, and they were coded again. Published cases that the reports show to be one event are joined under the lower ID in a separate, recorded step, never by the daily program; 9 case IDs have been retired this way so far, each listed with the reason in <a href="data/retired_ids.csv" download>retired_ids.csv</a>. Those joins were worked out with an AI assistant by comparing the reports and have not yet been checked by a person.</li>
             <li><strong>Coding has changed hands.</strong> Each record names its coder in the <code>coder</code> column; the first cases were drafted by a different model from the one the daily job is set to use. None has been reviewed by a person yet.</li>
             <li><strong>No denominator.</strong> Nothing here measures how much these features are used, so counts cannot be turned into rates or risks.</li>
           </ul>

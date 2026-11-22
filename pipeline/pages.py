@@ -473,6 +473,9 @@ def codebook_html() -> str:
 def about_page(cfg, total, updated) -> str:
     site = cfg["site"]
     mail = esc(site["contact_email"])
+    limit = int(cfg["coder"].get("max_sources_per_case", 5))
+    since = str(cfg.get("backfill_from") or cfg.get("collection_started") or "")
+    since_txt = f", in news published since {ex.nice_date(since)}" if since else ""
     body = f"""        <header class="page-head">
           <h1>About the data</h1>
           <p>What this dataset is, how each case is found and coded, what it cannot tell you, and how to use and cite it.</p>
@@ -489,9 +492,9 @@ def about_page(cfg, total, updated) -> str:
           <p>The searches, the rules for keeping a report, the time period covered and the known gaps are set out in full on the <a href="sampling.html">sampling page</a>.</p>
 
           <h2>How cases are coded</h2>
-          <p>A language model reads the reports attached to a case (the article text where the publisher allows it, otherwise the headline and summary) and drafts the coded variables, a short neutral narrative, and a list of who said what. Three rules limit what it can assert:</p>
+          <p>A language model reads up to {limit} of the reports attached to a case: those with the most text, always including the newest. It reads the article text where the publisher allows it, otherwise the headline and summary; <code>sources.csv</code> marks which reports were read and how. From these it drafts the coded variables, a short neutral narrative, and a list of who said what. Three rules limit what it can assert:</p>
           <ul>
-            <li>It may use only the reports attached to the case.</li>
+            <li>It may use only the reports it was given for that case.</li>
             <li>Every coded value must come with a quotation, and the program keeps the value only if that quotation is found word for word in the report. Values that fail are removed and counted on the case page.</li>
             <li>A mention of a feature is never treated as evidence that it was in use. The variable <code>engagement_status</code> separates what an official source or the maker's own data states from what a driver, lawyer or witness claims.</li>
           </ul>
@@ -499,11 +502,11 @@ def about_page(cfg, total, updated) -> str:
 
           <h2>What it cannot tell you</h2>
           <ul>
-            <li><strong>It is not a count of all incidents.</strong> It holds only incidents that reached published news in English and that our searches found. Many incidents are never reported.</li>
+            <li><strong>It is not a count of all incidents.</strong> It holds only incidents that reached published news in English and that our searches found{since_txt}. Many incidents are never reported.</li>
             <li><strong>Counts are not rates.</strong> Nothing here says how often these features are used without incident, so the data cannot show whether they are safer or less safe than a human driver.</li>
             <li><strong>It does not establish fault or cause.</strong> It records what coverage reports and who says so.</li>
             <li><strong>Machine coding makes mistakes.</strong> Dates, places and counts can be wrong, and two cases may turn out to be the same event. Check the linked sources before relying on a record.</li>
-            <li><strong>Case IDs are permanent, and a few are retired.</strong> When the reports show that two cases are one event, a person joins them under the lower ID and that case is coded again from all its reports. The other ID is retired: it is never reused, its page stays in place and points to the case that holds its reports, and it is listed with the reason in <a href="data/retired_ids.csv" download>retired_ids.csv</a>. Cases that only look alike are left separate.</li>
+            <li><strong>Case IDs are permanent, and a few are retired.</strong> When the reports show that two cases are one event, they are joined under the lower ID and that case is coded again from the combined reports. Joining is a separate, recorded step with a written reason; the daily program never joins published cases on its own. The other ID is retired: it is never reused, its page stays in place and points to the case that holds its reports, and it is listed with the reason in <a href="data/retired_ids.csv" download>retired_ids.csv</a>. Cases that only look alike are left separate. The joins made so far were worked out with an AI assistant by comparing the reports and, like the coding, have not yet been checked by a person.</li>
             <li><strong>Coverage changes.</strong> Early reports are often revised. A case reflects the reports attached to it on the date shown.</li>
           </ul>
 
@@ -521,7 +524,11 @@ def about_page(cfg, total, updated) -> str:
         <div class="codebook">
 {codebook_html()}
         </div>"""
-    return shell(cfg, path="about.html", current="about", body=body,
+    ld = [{"@type": "WebPage", "@id": site["url"] + "about.html", "url": site["url"] + "about.html",
+           "name": f"About the data | {site['name']}", "dateModified": updated,
+           "isPartOf": {"@id": site["url"] + "#website"}, "about": {"@id": site["url"] + "#dataset"},
+           "publisher": {"@id": ORG["@id"]}}, ORG]
+    return shell(cfg, path="about.html", current="about", body=body, jsonld=ld,
                  title=f"About the data and codebook | {site['name']}",
                  description="How the Self-Driving Incidents Explorer finds and codes cases, what the data can and "
                              "cannot show, the full codebook, licence and citation.")
@@ -541,6 +548,10 @@ def sampling_stats(store: dict, cfg: dict) -> dict:
         "excluded": sum(c["status"] == "excluded" for c in cases),
         "pending": sum(c["status"] == "pending" for c in cases),
         "retired": len(store.get("retired", [])),
+        "reports_published": sum(len(c["sources"]) for c in cases if c["status"] == "published"),
+        "reports_read": sum(
+            sum(1 for s in c["sources"] if s["url"] in {r["url"] for r in (c.get("coding") or {}).get("sources_read", [])})
+            for c in cases if c["status"] == "published"),
         "first_report": days[0] if days else "", "last_report": days[-1] if days else "",
         "started": started, "backfill": str(cfg.get("backfill_from") or ""),
         "live_from": _days_before(started, int(cfg.get("lookback_days", 7))) if started else "",
@@ -569,9 +580,21 @@ def sampling_page(cfg, stats, updated) -> str:
     plural = lambda n, one, many: f"{n:,} {one if n == 1 else many}"
     live_from, back = stats["live_from"], stats["backfill"]
     n_gone = stats.get("retired", 0)
-    joined_note = (f" Published cases that the reports show to be one event are joined by hand under the lower ID; "
-                   f"{n_gone} case ID{'s have' if n_gone != 1 else ' has'} been retired this way so far, each listed with "
-                   f"the reason in <a href=\"data/retired_ids.csv\" download>retired_ids.csv</a>." if n_gone else "")
+    joined_note = (f" Published cases that the reports show to be one event are joined under the lower ID in a separate, "
+                   f"recorded step, never by the daily program; {n_gone} case ID{'s have' if n_gone != 1 else ' has'} "
+                   f"been retired this way so far, each listed with the reason in "
+                   f"<a href=\"data/retired_ids.csv\" download>retired_ids.csv</a>. Those joins were worked out with an "
+                   f"AI assistant by comparing the reports and have not yet been checked by a person." if n_gone else "")
+    n_pub, n_read = stats.get("reports_published", 0), stats.get("reports_read", 0)
+    shorter = ("Until the waiting cases are coded, the published list will stay much shorter than the list of what has been found."
+               if stats["pending"] else
+               "Most of what the searches return is not a single identifiable incident, which is why the published list "
+               "is much shorter than the list of what has been found.")
+    gone_row = (f"<tr><th>Retired case IDs</th><td>{n_gone:,}, duplicates joined into a published case and listed in "
+                f"<a href=\"data/retired_ids.csv\" download>retired_ids.csv</a>. Their reports are counted under the "
+                f"case that now holds them.</td></tr>" if n_gone else "")
+    read_note = (f" So far it has read {n_read:,} of the {n_pub:,} reports attached to published cases; "
+                 f"<code>sources.csv</code> marks which." if n_pub else "")
     searched_from = back or live_from
     days_all = stats["by_month"]
     older = sum(n for m, n in days_all if m < searched_from[:7])
@@ -603,7 +626,7 @@ def sampling_page(cfg, stats, updated) -> str:
           <h2 id="why-few">Why there are few cases, and why some are old</h2>
           <p>{when}</p>
           <p>{thin}</p>
-          <p>Finding a report is only the first step. A case appears on the site after it has been coded and screened, and {stats["excluded"]:,} of the {stats["published"] + stats["excluded"]:,} cases coded so far were set aside (see <a href="#numbers">the numbers</a>). Until the waiting cases are coded, the published list will stay much shorter than the list of what has been found.</p>
+          <p>Finding a report is only the first step. A case appears on the site after it has been coded and screened, and {stats["excluded"]:,} of the {stats["published"] + stats["excluded"]:,} cases coded so far were set aside (see <a href="#numbers">the numbers</a>). {shorter}</p>
           <p>Cases are dated by when the incident happened, not when it was reported, so an old incident appears whenever it is in current news. That happens in two ways:</p>
           <ul>
             <li><strong>New coverage of an old event.</strong> A verdict, an appeal, a settlement or a regulator's report brings an earlier crash back into the news. A crash from 2019 can enter the dataset because of a court filing this month.</li>
@@ -615,9 +638,10 @@ def sampling_page(cfg, stats, updated) -> str:
           <table class="var-table">
             <tr><th>Reports kept</th><td>{stats["reports"]:,}, published between {ex.nice_date(stats["first_report"])} and {ex.nice_date(stats["last_report"])}</td></tr>
             <tr><th>Candidate cases</th><td>{stats["cases"]:,}, after grouping reports about the same event</td></tr>
-            <tr><th>Published</th><td>{stats["published"]:,}</td></tr>
+            <tr><th>Published</th><td>{stats["published"]:,} cases, holding {n_pub:,} of the reports</td></tr>
             <tr><th>Screened out</th><td>{stats["excluded"]:,}, each listed with its reason in <a href="data/screened_out.csv" download>screened_out.csv</a></td></tr>
             <tr><th>Waiting to be coded</th><td>{stats["pending"]:,}. These are not shown on the site until they have been coded and screened.</td></tr>
+            {gone_row}
           </table>
           <p style="margin-top: var(--space-3)">These figures are recalculated every time the site is rebuilt.</p>
           <details class="month-counts">
@@ -661,7 +685,7 @@ def sampling_page(cfg, stats, updated) -> str:
             <li><strong>An automated-driving feature is claimed, questioned or confirmed to be involved.</strong> A crash in which no report raises the feature is set aside.</li>
             <li><strong>A covered maker.</strong> Incidents involving another maker's vehicle are set aside for now.</li>
           </ul>
-          <p>The coding step reads up to {limit} reports per case: those with the most text, always including the newest. Where a publisher blocks automated reading, only the headline and summary are available, and the variable <code>text_basis</code> records which was used. A published case is never withdrawn automatically; it is recoded when new reports are attached to it.</p>
+          <p>The coding step reads up to {limit} reports per case: those with the most text, always including the newest.{read_note} Where a publisher blocks automated reading, only the headline and summary are available, and the variable <code>text_basis</code> records which was used. A published case is never withdrawn automatically; it is recoded when new reports are attached to it.</p>
 
           <h2 id="limits">Known gaps and biases</h2>
           <ul>

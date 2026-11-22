@@ -89,6 +89,8 @@ python -m pipeline.handcode join SDI-00003 SDI-00054 --reason "What in the repor
   and points to the surviving case, so an old citation still leads somewhere.
 - Every retired ID is listed in `data/retired_ids.csv` with the date and the reason, and the
   surviving case lists them in its `merged_ids` column.
+- The daily job never joins published cases. The nine joins made on November 22, 2026 were worked
+  out with an AI assistant by comparing the reports and have not yet been checked by a person.
 
 The daily job never joins published cases on its own, and cases that only look alike are left
 separate. Wrongly joining two events loses information that is hard to get back; leaving a
