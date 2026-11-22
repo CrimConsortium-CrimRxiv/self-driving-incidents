@@ -314,6 +314,36 @@ class Export(unittest.TestCase):
             self.assertNotIn("confirmed", label.lower())
         self.assertNotIn("Jane", home)
 
+    def test_homepage_grid_has_one_square_per_case(self):
+        import re
+        store = published_store()
+        export.export_all(store, CFG)
+        home = (self.root / "index.html").read_text()
+        n = sum(c["status"] == "published" for c in store["cases"])
+        squares = re.findall(r'<a class="cell" href="cases/(SDI-\d+)\.html"', home)
+        self.assertEqual(len(squares), n)
+        self.assertEqual(len(set(squares)), n)                       # no case drawn twice
+        counts = [int(x) for x in re.findall(r'class="grid-count">(\d+)<', home)]
+        self.assertEqual(sum(counts), n)                             # every case is in exactly one row
+        config = json.loads(re.search(r'id="grid-config">(.*?)</script>', home, re.S).group(1))
+        self.assertEqual([d["key"] for d in config["dims"]], ["status", "type", "feature", "harm"])
+        for d in config["dims"]:                                     # every square has a row to go to
+            keys = {g[0] for g in d["groups"]}
+            for value in re.findall(rf'data-{d["key"]}="([^"]*)"', home):
+                self.assertIn(value, keys)
+        self.assertIn('<script src="grid.js" defer></script>', home)
+        self.assertIn("not rates", " ".join(home.split()))
+
+    def test_grid_puts_each_case_in_one_group(self):
+        from pipeline import pages
+        k = pages._grid_keys({"system_named": ["full_self_driving", "autopilot", "unspecified"], "fatalities": 0, "injuries": 2})
+        self.assertEqual(k["feature"], "autopilot+full_self_driving")
+        self.assertEqual(k["harm"], "injury")
+        self.assertEqual(pages._grid_keys({"system_named": ["unspecified"], "injuries": 0})["feature"], "unspecified")
+        self.assertEqual(pages._grid_keys({"injuries": 0})["harm"], "none")
+        self.assertEqual(pages._grid_keys({"fatalities": 0})["harm"], "")     # nobody died, injuries not stated
+        self.assertEqual(pages._grid_keys({})["status"], "")
+
     def test_homepage_puts_search_before_the_ten_latest(self):
         s = published_store()
         template = s["cases"][0]

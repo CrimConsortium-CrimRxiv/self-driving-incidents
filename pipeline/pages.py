@@ -78,7 +78,7 @@ def shell(cfg: dict, *, path: str, title: str, description: str, body: str, root
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="{FONTS}" rel="stylesheet" />
-    <link rel="stylesheet" href="{root}style.css?v=4" />
+    <link rel="stylesheet" href="{root}style.css?v=5" />
     <script>
       (function () {{
         var t = null;
@@ -188,6 +188,105 @@ def dataset_ld(cfg: dict, updated: str, n_cases: int, first: str) -> dict:
     }
 
 
+# --------------------------------------------------------------------------- case grid (homepage)
+
+# How strongly coverage supports that the feature was in use. Shown as the shading of each square.
+GRID_TONE = {"confirmed_by_official_source": "confirmed", "claimed": "claimed", "alleged_in_legal_filing": "claimed"}
+GRID_FEATURE = {"autopilot": "Autopilot", "full_self_driving": "Full Self-Driving",
+                "robotaxi_or_driverless_service": "Robotaxi or driverless service",
+                "summon_or_autopark": "Summon or Autopark"}
+GRID_HARM = [("death", "Death reported"), ("injury", "Injury reported, no death"),
+             ("none", "No injuries, per coverage"), ("", "Not stated")]
+
+
+def _grid_keys(vals: dict) -> dict:
+    """The group a case falls in under each way of arranging the grid. Every case gets exactly one."""
+    named = [s for s in GRID_FEATURE if s in (vals.get("system_named") or [])]
+    if named:
+        feature = "+".join(named)
+    else:
+        feature = "unspecified" if "unspecified" in (vals.get("system_named") or []) else ""
+    deaths, hurt = vals.get("fatalities"), vals.get("injuries")
+    harm = "death" if deaths else "injury" if hurt else "none" if hurt == 0 else ""
+    return {"status": vals.get("engagement_status") or "", "type": vals.get("incident_type") or "",
+            "feature": feature, "harm": harm}
+
+
+def case_grid(pairs) -> str:
+    """One square per published case, arranged by engagement status; grid.js lets a visitor rearrange them."""
+    if not pairs:
+        return ""
+    cells = []
+    for order, (_, v) in enumerate(pairs):          # pairs arrive newest first
+        keys = _grid_keys(v["vals"])
+        tone = GRID_TONE.get(keys["status"], "other")
+        badge = ex.STATUS_BADGE.get(keys["status"], "Use of the feature not stated")
+        cells.append({"v": v, "keys": keys, "tone": tone, "badge": badge,
+                      "rank": ({"confirmed": 0, "claimed": 1, "other": 2}[tone], order)})
+    cells.sort(key=lambda c: c["rank"])
+
+    combos = sorted({c["keys"]["feature"] for c in cells if "+" in c["keys"]["feature"]},
+                    key=lambda k: [list(GRID_FEATURE).index(s) for s in k.split("+")])
+    features = ([(k, lab) for k, lab in GRID_FEATURE.items()]
+                + [(k, " and ".join(GRID_FEATURE[s] for s in k.split("+"))) for k in combos]
+                + [("unspecified", "Product not named"), ("", "Not stated")])
+    types = [(k, ex.human(k)) for k in cb.BY_NAME["incident_type"]["values"]] + [("", "Not stated")]
+    # Row labels use the same wording as the status tags shown everywhere else on the site.
+    statuses = [(k, label) for k, label in ex.STATUS_BADGE.items()] + [("", "Not stated")]
+    dims = [{"key": "status", "label": "Was the feature in use?", "groups": statuses},
+            {"key": "type", "label": "Type of incident", "groups": types},
+            {"key": "feature", "label": "Feature named", "groups": features},
+            {"key": "harm", "label": "Harm reported", "groups": GRID_HARM}]
+
+    def cell(c) -> str:
+        v, k = c["v"], c["keys"]
+        said = " ".join(p for p in (v["lead"] + "." if v["lead"] else "", v["date_label"] + ".", c["badge"] + ".") if p)
+        return (f'<a class="cell" href="{v["url"]}" data-tone="{c["tone"]}" data-status="{k["status"]}" '
+                f'data-type="{k["type"]}" data-feature="{k["feature"]}" data-harm="{k["harm"]}" '
+                f'data-id="{v["id"]}" data-lead="{esc(v["lead"])}" data-date="{esc(v["date_label"])}" '
+                f'data-title="{esc(v["title"])}" data-badge="{esc(c["badge"])}" '
+                f'aria-label="{v["id"]}: {esc(said)}"></a>')
+
+    rows = []
+    for key, label in statuses:
+        members = [c for c in cells if c["keys"]["status"] == key]
+        if members:
+            rows.append(f"""            <div class="grid-row" role="group" aria-label="{esc(label)}: {len(members)}">
+              <div class="grid-label"><span class="grid-name">{esc(label)}</span><span class="grid-count">{len(members)}</span></div>
+              <div class="grid-cells">{"".join(cell(c) for c in members)}</div>
+            </div>""")
+    buttons = "".join(f'<button class="grid-btn" type="button" data-dim="{d["key"]}" '
+                      f'aria-pressed="{"true" if d["key"] == "status" else "false"}">{esc(d["label"])}</button>'
+                      for d in dims)
+    config = json.dumps({"dims": dims}, ensure_ascii=False).replace("</", "<\\/")
+    n = len(cells)
+    return f"""        <section class="grid-panel" aria-labelledby="grid-title" data-case-grid>
+          <div class="section-head"><h2 class="section-title" id="grid-title">Every case, one square each</h2></div>
+          <p class="section-note section-note-wide">
+            Each square is one case, {n:,} in all; select one to see it. The shading shows what coverage says
+            about whether the feature was in use. These are counts of reported cases, not rates, and the
+            coding is machine-drafted and not yet reviewed.
+          </p>
+          <div class="grid-controls" role="group" aria-label="Arrange the cases by" hidden>
+            <span class="grid-controls-label">Arrange by</span>{buttons}
+          </div>
+          <ul class="grid-legend" aria-label="What the shading means">
+            <li><span class="cell" data-tone="confirmed" aria-hidden="true"></span>In use, per an official source or the maker's data</li>
+            <li><span class="cell" data-tone="claimed" aria-hidden="true"></span>Claimed or alleged to be in use</li>
+            <li><span class="cell" data-tone="other" aria-hidden="true"></span>Unsettled, not in use, or not stated</li>
+          </ul>
+          <div class="grid-rows">
+{chr(10).join(rows)}
+          </div>
+          <div class="grid-detail" aria-live="polite">
+            <p class="grid-detail-hint">Point at a square, or tap one, to see the case here.</p>
+          </div>
+          <script type="application/json" id="grid-config">{config}</script>
+        </section>
+
+"""
+
+
 # --------------------------------------------------------------------------- homepage
 
 def home(pairs, cfg, updated, n_reports, waiting=0) -> str:
@@ -231,7 +330,7 @@ def home(pairs, cfg, updated, n_reports, waiting=0) -> str:
             <a href="about.html#codebook">codebook</a>.</span>
         </div>
 
-        <section class="search-panel" aria-labelledby="search-title">
+{case_grid(pairs)}        <section class="search-panel" aria-labelledby="search-title">
           <h2 id="search-title">Search the full dataset</h2>
           <p>Look through {'all ' + format(total, ',') + ' cases' if total != 1 else 'every case'} by place, vehicle, feature, publisher or any word in the record.</p>
           <form class="search-form" action="search.html" method="get" role="search">
@@ -264,6 +363,7 @@ def home(pairs, cfg, updated, n_reports, waiting=0) -> str:
            "potentialAction": {"@type": "SearchAction", "target": site["url"] + "search.html?q={search_term_string}",
                                "query-input": "required name=search_term_string"}}]
     return shell(cfg, path="", current="home", jsonld=ld, body=body,
+                 scripts='\n    <script src="grid.js" defer></script>' if pairs else "",
                  title=f"{site['name']}: Open Data on Tesla Autopilot and FSD incidents",
                  description=("Open dataset of crashes, near misses, police stops and court cases in which Tesla "
                               "Autopilot, Full Self-Driving or another automated-driving feature is claimed, questioned or confirmed. "
