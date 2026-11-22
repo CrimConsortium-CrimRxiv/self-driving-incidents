@@ -1651,9 +1651,158 @@
    ],
    "status": "pending",
    "updated": "2026-11-22T17:09:35Z"
+  },
+  {
+   "added": "2026-11-22T17:13:40Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "autopilot",
+      "label": "Autopilot mentioned in coverage"
+     },
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 0,
+   "coding": null,
+   "exclusion_reason": null,
+   "headline": "Tesla Autopilot crash data: The regulatory gap every driver-assist owner should know",
+   "headline_publisher": "MSN",
+   "key": "k40",
+   "maker": "Tesla",
+   "needs_coding": true,
+   "source_summary": "Tesla is throwing a party in Austin on September 3 to launch the Cybercab, a two-seat pod with no steering wheel and no pedals. The invitation, sent to sweepstakes winners from its robotaxi app, ...",
+   "source_summary_publisher": "MSN",
+   "sources": [
+    {
+     "published": "2026-08-26T07:10:00Z",
+     "publisher": "MSN",
+     "resolved": true,
+     "summary": "Tesla is throwing a party in Austin on September 3 to launch the Cybercab, a two-seat pod with no steering wheel and no pedals. The invitation, sent to sweepstakes winners from its robotaxi app, ...",
+     "title": "Tesla Autopilot crash data: The regulatory gap every driver-assist owner should know",
+     "url": "https://www.msn.com/en-us/autos/general/tesla-autopilot-crash-data-the-regulatory-gap-every-driver-assist-owner-should-know/ar-AA2aYxqZ"
+    }
+   ],
+   "status": "pending",
+   "updated": "2026-11-22T17:13:40Z"
+  },
+  {
+   "added": "2026-11-22T17:13:40Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 0,
+   "coding": null,
+   "exclusion_reason": null,
+   "headline": "A Tesla Dashcam Caught a Zoox Robotaxi Involved in an Accident, But Was It Really at Fault?",
+   "headline_publisher": "YAHOO!",
+   "key": "k41",
+   "maker": "Tesla",
+   "needs_coding": true,
+   "source_summary": "Remarkable dashcam footage from a Tesla shows a Zoox Robotaxi involved in a collision at a set of traffic lights. Amazon’s autonomous driving subsidiary, Zoox Inc., developed the autonomous vehicle, ...",
+   "source_summary_publisher": "YAHOO!",
+   "sources": [
+    {
+     "published": "2026-10-30T07:49:00Z",
+     "publisher": "YAHOO!",
+     "resolved": true,
+     "summary": "Remarkable dashcam footage from a Tesla shows a Zoox Robotaxi involved in a collision at a set of traffic lights. Amazon’s autonomous driving subsidiary, Zoox Inc., developed the autonomous vehicle, ...",
+     "title": "A Tesla Dashcam Caught a Zoox Robotaxi Involved in an Accident, But Was It Really at Fault?",
+     "url": "https://autos.yahoo.com/policy-and-environment/articles/tesla-dashcam-caught-zoox-robotaxi-144956064.html"
+    }
+   ],
+   "status": "pending",
+   "updated": "2026-11-22T17:13:40Z"
+  },
+  {
+   "added": "2026-11-22T17:13:40Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 0,
+   "coding": null,
+   "exclusion_reason": null,
+   "headline": "Tesla Driver Credits Self-Driving Technology for Avoiding High-Speed Collision: \"No Safer Car\"",
+   "headline_publisher": "Yahoo",
+   "key": "k42",
+   "maker": "Tesla",
+   "needs_coding": true,
+   "source_summary": "Self-driving technology remains a controversial subject among motorists, but one Tesla owner’s experience during a serious Utah crash has sparked renewed interest in the system’s potential safety ...",
+   "source_summary_publisher": "Yahoo",
+   "sources": [
+    {
+     "published": "2026-11-17T15:14:00Z",
+     "publisher": "Yahoo",
+     "resolved": true,
+     "summary": "Self-driving technology remains a controversial subject among motorists, but one Tesla owner’s experience during a serious Utah crash has sparked renewed interest in the system’s potential safety ...",
+     "title": "Tesla Driver Credits Self-Driving Technology for Avoiding High-Speed Collision: \"No Safer Car\"",
+     "url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
+    }
+   ],
+   "status": "pending",
+   "updated": "2026-11-22T17:13:40Z"
+  },
+  {
+   "added": "2026-11-22T17:13:40Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 0,
+   "coding": null,
+   "exclusion_reason": null,
+   "headline": "Tesla 2026.44.1 Adds Charger View, Collision Evasion, FSD v14.3.13",
+   "headline_publisher": "Teslahubs",
+   "key": "k43",
+   "maker": "Tesla",
+   "needs_coding": true,
+   "source_summary": "Tesla 2026.44.1 aggiunge visualizzazione delle colonnine di ricarica, evasione automatica delle collisioni e FSD v14.3.13 Visualizzazione della rete delle colonnine di ricarica Le colonnine di ricarica sulla mappa ora vengono raggruppate…",
+   "source_summary_publisher": "Teslahubs",
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxONDlZaElPSFByTU5oa3N0cW1Rb3NTdlpWLUpZZkNOYVhkTmF6STJ6ZEVJTUFKQ2lZWlVncFloTVNwSmdQMkNWT1UxdVFwcDU2TU15UEppRXVIMFFDMklQazc5azdpLWtPZkJxT2dtc0duLXI2b0lIYXhmV3dyLVhTT2dVUjJ0U0tFREJUR1FwX0FLUGJfSGlmaFEwTGNIX2xUSjdYTTVkSQ?oc=5",
+     "published": "2026-11-17T17:02:17Z",
+     "publisher": "Teslahubs",
+     "resolved": true,
+     "summary": "Tesla 2026.44.1 aggiunge visualizzazione delle colonnine di ricarica, evasione automatica delle collisioni e FSD v14.3.13 Visualizzazione della rete delle colonnine di ricarica Le colonnine di ricarica sulla mappa ora vengono raggruppate…",
+     "title": "Tesla 2026.44.1 Adds Charger View, Collision Evasion, FSD v14.3.13",
+     "url": "https://teslahubs.com/it/blogs/consigli/tesla-2026-44-1-adds-charger-view-collision-evasion-fsd-v14-3-13"
+    }
+   ],
+   "status": "pending",
+   "updated": "2026-11-22T17:13:40Z"
   }
  ],
  "next_id": 1,
- "next_key": 40,
+ "next_key": 44,
  "schema": 1
 }
