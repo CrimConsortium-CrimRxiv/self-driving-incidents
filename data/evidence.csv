@@ -39,6 +39,18 @@ SDI-00011,criminal_charges,unlawful operation in a worksite; BAC over 0.08; oper
 SDI-00011,criminal_case_stage,charged,"Court records show she was charged with unlawful operation of a vehicle in a worksite, operating a vehicle with a blood alcohol content of more than 0.08 and operating a vehicle while intoxicated endangering a person.",https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/
 SDI-00011,responsibility_attributed_to,driver,"Ames emphasized drivers remain responsible for their vehicles, even when using self-driving technology.",https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/
 SDI-00011,coverage_stage,initial_report,According to an ISP news release,https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/
+SDI-00015,incident_date,2026-11-19,"A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
+SDI-00015,incident_type,collision,"A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
+SDI-00015,collision_with,truck_or_bus,"A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
+SDI-00015,vehicle_make,Tesla,"A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
+SDI-00015,vehicle_model,Cybercab,"A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
+SDI-00015,location_city,Austin,"A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
+SDI-00015,location_state_region,Texas,"A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
+SDI-00015,location_country,United States,"A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
+SDI-00015,time_of_day,daytime,"A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
+SDI-00015,system_named,robotaxi_or_driverless_service,"Tesla has filed reports with the National Highway Traffic Safety Administration (NHTSA) covering eight Cybercab incidents as of mid-November 2026, split evenly between driverless robotaxi operations and supervised testing.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
+SDI-00015,engagement_status,mentioned_only,"The witness was quick to blame the Cybercab and its autonomous software, but photos of the scene tell a different story.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
+SDI-00015,coverage_stage,initial_report,"The latest incident occurred on Thursday morning in Austin, the same day Tesla expanded Cybercab rides to Dallas.",https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/
 SDI-00009,incident_date,2026-11-02,at around 11:28 a.m. on Nov. 2,https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html
 SDI-00009,incident_type,collision,crashed into a garbage truck and tractor trailer,https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html
 SDI-00009,collision_with,truck_or_bus,crashed into a garbage truck and tractor trailer,https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html

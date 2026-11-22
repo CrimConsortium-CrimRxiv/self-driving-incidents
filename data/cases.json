@@ -590,6 +590,149 @@
    ]
   },
   {
+   "case_id": "SDI-00015",
+   "maker": "Tesla",
+   "url": "https://selfdriving.crimconsortium.com/cases/SDI-00015.html",
+   "first_reported": "2026-11-19",
+   "last_reported": "2026-11-20",
+   "sort_date": "2026-11-19",
+   "headline": "Tesla Cybercab Crash in Austin: What We Know and What to Watch",
+   "headline_publisher": "BASENOR - Tesla Accessories",
+   "source_summary": null,
+   "source_summary_publisher": null,
+   "auto": {
+    "location": "Austin",
+    "model": "Tesla Cybercab",
+    "tags": [
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "narrative": "Drive Tesla Canada reported that a Tesla Cybercab and a truck collided Thursday morning in Austin. It said a witness blamed the Cybercab and its autonomous software, while the outlet argued that the truck driver was at fault.",
+   "review_status": "machine-coded, not yet reviewed",
+   "coder": "OpenAI gpt-6-luna",
+   "coded_at": "2026-11-22T19:49:34Z",
+   "codebook_version": "0.1",
+   "text_basis": "full_text",
+   "unsupported_values_removed": 0,
+   "variables": {
+    "incident_date": "2026-11-19",
+    "incident_type": "collision",
+    "collision_with": [
+     "truck_or_bus"
+    ],
+    "vehicle_make": "Tesla",
+    "vehicle_model": "Cybercab",
+    "vehicle_model_year": null,
+    "location_city": "Austin",
+    "location_state_region": "Texas",
+    "location_country": "United States",
+    "road_type": null,
+    "time_of_day": "daytime",
+    "system_named": [
+     "robotaxi_or_driverless_service"
+    ],
+    "engagement_status": "mentioned_only",
+    "engagement_claimed_by": null,
+    "driver_seat_occupied": null,
+    "driver_condition_mentioned": null,
+    "fatalities": null,
+    "injuries": null,
+    "persons_harmed": null,
+    "police_action": null,
+    "criminal_charges": null,
+    "criminal_case_stage": null,
+    "civil_litigation": null,
+    "regulator_involved": null,
+    "responsibility_attributed_to": null,
+    "coverage_stage": "initial_report"
+   },
+   "evidence": {
+    "incident_date": {
+     "quote": "A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    "incident_type": {
+     "quote": "A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    "collision_with": {
+     "quote": "A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    "vehicle_make": {
+     "quote": "A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    "vehicle_model": {
+     "quote": "A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    "location_city": {
+     "quote": "A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    "location_state_region": {
+     "quote": "A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    "location_country": {
+     "quote": "A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    "time_of_day": {
+     "quote": "A Tesla Cybercab and a truck collided Thursday morning in Austin, Texas.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    "system_named": {
+     "quote": "Tesla has filed reports with the National Highway Traffic Safety Administration (NHTSA) covering eight Cybercab incidents as of mid-November 2026, split evenly between driverless robotaxi operations and supervised testing.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    "engagement_status": {
+     "quote": "The witness was quick to blame the Cybercab and its autonomous software, but photos of the scene tell a different story.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    "coverage_stage": {
+     "quote": "The latest incident occurred on Thursday morning in Austin, the same day Tesla expanded Cybercab rides to Dallas.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    }
+   },
+   "claims": [
+    {
+     "claimant": "witness",
+     "topic": "cause_or_responsibility",
+     "paraphrase": "A witness blamed the Cybercab and its autonomous software.",
+     "quote": "The witness was quick to blame the Cybercab and its autonomous software",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    },
+    {
+     "claimant": "news_outlet",
+     "topic": "cause_or_responsibility",
+     "paraphrase": "The outlet said the truck driver was at fault.",
+     "quote": "putting the fault squarely on the human driver.",
+     "source_url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/"
+    }
+   ],
+   "sources": [
+    {
+     "publisher": "BASENOR - Tesla Accessories",
+     "title": "Tesla Cybercab Crash in Austin: What We Know and What to Watch",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQZ2dGMFAtWTFKQjJMQmtKN3ZGZ19peDNoOGxvOHBGaVRNbXAxRG9Ma1BCeTlkZHBOZ0RaeFQ4aEEwSENoTE9heGlYUXJiUXJ2U2djMXhhRHp4czVfdC1ldFFaZlh1c1FZZ3ZPZGdEVC1WU25jM0JZOWQ3ZVF6RHRJWW8wVVFUSXhhMTJaNGNyWFRjcVVONUZ3c1RVMEg?oc=5",
+     "published": "2026-11-19",
+     "read_by_coder": "headline"
+    },
+    {
+     "publisher": "Drive Tesla Canada",
+     "title": "Tesla Cybercab involved in Austin crash — who’s at fault?",
+     "url": "https://driveteslacanada.ca/news/tesla-cybercab-crash-austin/",
+     "published": "2026-11-20",
+     "read_by_coder": "full_text"
+    }
+   ]
+  },
+  {
    "case_id": "SDI-00009",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00009.html",
@@ -821,20 +964,24 @@
    "case_id": "SDI-00014",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00014.html",
-   "first_reported": "2026-11-17",
+   "first_reported": "2026-11-15",
    "last_reported": "2026-11-17",
    "sort_date": "2026-11-01",
-   "headline": "Tesla Driver Credits Self-Driving Technology for Avoiding High-Speed Collision: \"No Safer Car\"",
-   "headline_publisher": "Yahoo",
+   "headline": "Watch Video: Tesla’s Self-Driving Feature Appears To Detect Speeding Car Moments Before Fatal Utah Crash, Dashcam Footage Sparks Debate Online",
+   "headline_publisher": "The Sunday Guardian",
    "source_summary": "Self-driving technology remains a controversial subject among motorists, but one Tesla owner’s experience during a serious Utah crash has sparked renewed interest in the system’s potential safety ...",
    "source_summary_publisher": "Yahoo",
    "auto": {
-    "location": null,
+    "location": "Utah",
     "model": null,
     "tags": [
      {
       "key": "fsd",
       "label": "Full Self-Driving mentioned in coverage"
+     },
+     {
+      "key": "fatality",
+      "label": "Fatality mentioned in coverage"
      }
     ]
    },
@@ -953,6 +1100,13 @@
     }
    ],
    "sources": [
+    {
+     "publisher": "The Sunday Guardian",
+     "title": "Watch Video: Tesla’s Self-Driving Feature Appears To Detect Speeding Car Moments Before Fatal Utah Crash, Dashcam Footage Sparks Debate Online",
+     "url": "https://sundayguardianlive.com/trending/watch-video-teslas-self-driving-feature-appears-to-detect-speeding-car-moments-before-fatal-utah-crash-dashcam-footage-sparks-debate-online-322529/",
+     "published": "2026-11-15",
+     "read_by_coder": "not_read"
+    },
     {
      "publisher": "Yahoo",
      "title": "Tesla Driver Credits Self-Driving Technology for Avoiding High-Speed Collision: \"No Safer Car\"",
@@ -1260,8 +1414,8 @@
    "sort_date": "2026-09-30",
    "headline": "Tesla confirms Autopilot or FSD activity during fatal crash in Florida — Electrek",
    "headline_publisher": "UA.NEWS",
-   "source_summary": "Tesla's federal filing confirmed a driver-assistance system was engaged before a fatal Florida crash, but the narrative explaining what happened is redacted.",
-   "source_summary_publisher": "Yahoo",
+   "source_summary": "The police report on a fatal Tesla Model X crash in Naples, Florida, omitted mention of driver-assist technology, but Tesla said the system was engaged before impact.",
+   "source_summary_publisher": "The Cool Down",
    "auto": {
     "location": "Florida",
     "model": "Tesla Model X",
@@ -1480,11 +1634,25 @@
      "read_by_coder": "full_text"
     },
     {
+     "publisher": "The Cool Down on MSN",
+     "title": "Tesla reported driver-assist use in fatal crash, a detail missing from police's public account",
+     "url": "https://www.msn.com/en-us/news/other/tesla-reported-driver-assist-use-in-fatal-crash-a-detail-missing-from-polices-public-account/ar-AA2hE0ae",
+     "published": "2026-11-17",
+     "read_by_coder": "not_read"
+    },
+    {
      "publisher": "Gadget Review",
      "title": "Tesla Model X With Autopilot/FSD Engaged Hits Pole and Flips, Killing Passenger",
      "url": "https://www.gadgetreview.com/tesla-model-x-with-autopilot-fsd-engaged-hits-pole-and-flips-killing-passenger",
      "published": "2026-11-17",
      "read_by_coder": "full_text"
+    },
+    {
+     "publisher": "The Cool Down",
+     "title": "Tesla reported driver-assist use in fatal crash, a detail missing from police's public account",
+     "url": "https://www.thecooldown.com/green-tech/tesla-driver-assist-crash-naples-report/",
+     "published": "2026-11-17",
+     "read_by_coder": "not_read"
     }
    ]
   },
