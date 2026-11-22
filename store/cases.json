@@ -5628,142 +5628,165 @@
     ]
    },
    "case_id": "SDI-00077",
-   "code_attempts": 1,
+   "code_attempts": 2,
    "coding": {
     "claims": [
      {
+      "claimant": "driver",
+      "paraphrase": "The driver told a trooper he was using Autopilot when the collision happened.",
+      "quote": "the Tesla driver told a Washington State Patrol (WSP) trooper he was looking at his phone and using the car’s Autopilot feature when he crashed",
+      "source_url": "https://www.kiro7.com/news/local/tesla-faces-lawsuit-over-autopilot-after-fatal-motorcycle-crash-wa/PTBFTXPBCNHHTJ4HVQ4ZP76ILQ/",
+      "topic": "automation_engaged"
+     },
+     {
+      "claimant": "manufacturer",
+      "paraphrase": "Internal Tesla data reportedly showed the feature had been enabled shortly before the collision.",
+      "quote": "Internal Tesla data revealed the driver had enabled the self-driving feature approximately two minutes before the crash.",
+      "source_url": "https://www.kiro7.com/news/local/tesla-faces-lawsuit-over-autopilot-after-fatal-motorcycle-crash-wa/PTBFTXPBCNHHTJ4HVQ4ZP76ILQ/",
+      "topic": "automation_engaged"
+     },
+     {
       "claimant": "plaintiff_or_plaintiff_lawyer",
-      "paraphrase": "The family alleges Autopilot failed to detect the motorcyclist or a change in traffic.",
-      "quote": "In the lawsuit filed in January, Nissen's family alleges that the Autopilot feature failed to detect Nissen or the change in traffic",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute",
+      "paraphrase": "The lawsuit alleges Autopilot did not detect the stopped motorcycle.",
+      "quote": "did not detect a stopped motorcycle, resulting in the death",
+      "source_url": "https://komonews.com/news/local/stanwood-family-sues-tesla-after-autopilot-fails-to-detect-motorcycle-killing-28-year-old-motorcycle-rider-lawsuit-elon-musk-fatal-crash",
       "topic": "automation_performance"
      },
      {
-      "claimant": "news_outlet",
-      "paraphrase": "Initial reports said the driver was distracted by a cell phone.",
-      "quote": "Initial reports indicated that he was distracted by his cell phone when the vehicle lurched forward.",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute",
-      "topic": "driver_behavior"
-     },
-     {
-      "claimant": "other",
-      "paraphrase": "The victim's mother said the crash could have been prevented if the driver had been paying attention rather than relying on a computer.",
-      "quote": "It could be prevented if you're actually paying attention instead of relying on a computer",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute",
+      "claimant": "plaintiff_or_plaintiff_lawyer",
+      "paraphrase": "The lawsuit names the driver as partly liable for the collision.",
+      "quote": "The lawsuit names the Tesla driver, now 58, as also being partly liable for the crash.",
+      "source_url": "https://www.heraldnet.com/2026/01/16/stanwood-family-sues-tesla-over-deadly-autopilot-crash/",
       "topic": "cause_or_responsibility"
      },
      {
       "claimant": "other",
-      "paraphrase": "A law professor said the Autopilot feature appeared to be a root cause and described the issue as a Tesla design problem.",
-      "quote": "in terms of root cause, it sort of seems to be a Tesla design problem",
+      "paraphrase": "A law professor said the incident seemed to point to a Tesla design problem.",
+      "quote": "in terms of root cause, it sort of seems to be a Tesla design problem.",
       "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute",
       "topic": "cause_or_responsibility"
      }
     ],
     "codebook_version": "0.1",
-    "coded_at": "2026-11-22T20:58:52Z",
+    "coded_at": "2026-11-22T21:12:17Z",
     "coder": "OpenAI gpt-6-luna",
     "evidence": {
-     "civil_litigation": {
-      "quote": "A Snohomish County family is taking legal action against Tesla",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
-     },
      "collision_with": {
-      "quote": "was riding his motorcycle on State Route 522 in Snohomish County in April 2024 when a Tesla, operating on Autopilot, collided with him",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
+      "quote": "The vehicle lurched forward and lodged on top of a motorcyclist",
+      "source_url": "https://www.heraldnet.com/2026/01/16/stanwood-family-sues-tesla-over-deadly-autopilot-crash/"
      },
      "coverage_stage": {
       "quote": "In the lawsuit filed in January",
       "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
      },
      "driver_condition_mentioned": {
-      "quote": "Initial reports indicated that he was distracted by his cell phone",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
+      "quote": "The driver’s hands were off the steering wheel for more than a minute before the crash.",
+      "source_url": "https://www.kiro7.com/news/local/tesla-faces-lawsuit-over-autopilot-after-fatal-motorcycle-crash-wa/PTBFTXPBCNHHTJ4HVQ4ZP76ILQ/"
+     },
+     "driver_seat_occupied": {
+      "quote": "A Snohomish man driving in a 2022 Tesla Model S",
+      "source_url": "https://www.heraldnet.com/2026/01/16/stanwood-family-sues-tesla-over-deadly-autopilot-crash/"
      },
      "engagement_claimed_by": {
-      "quote": "In the lawsuit filed in January, Nissen's family alleges that the Autopilot feature failed to detect Nissen or the change in traffic",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
+      "quote": "the Tesla driver told a Washington State Patrol (WSP) trooper he was looking at his phone and using the car’s Autopilot feature when he crashed",
+      "source_url": "https://www.kiro7.com/news/local/tesla-faces-lawsuit-over-autopilot-after-fatal-motorcycle-crash-wa/PTBFTXPBCNHHTJ4HVQ4ZP76ILQ/"
      },
      "engagement_status": {
-      "quote": "In the lawsuit filed in January, Nissen's family alleges that the Autopilot feature failed to detect Nissen or the change in traffic",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
-     },
-     "fatalities": {
-      "quote": "motorcyclist son killed",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
+      "quote": "Internal Tesla data revealed the driver had enabled the self-driving feature approximately two minutes before the crash.",
+      "source_url": "https://www.kiro7.com/news/local/tesla-faces-lawsuit-over-autopilot-after-fatal-motorcycle-crash-wa/PTBFTXPBCNHHTJ4HVQ4ZP76ILQ/"
      },
      "incident_date": {
-      "quote": "in April 2024",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
+      "quote": "on April 19, 2024, in Snohomish County, Washington",
+      "source_url": "https://komonews.com/news/local/stanwood-family-sues-tesla-after-autopilot-fails-to-detect-motorcycle-killing-28-year-old-motorcycle-rider-lawsuit-elon-musk-fatal-crash"
      },
      "incident_type": {
-      "quote": "when a Tesla, operating on Autopilot, collided with him",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
+      "quote": "The vehicle lurched forward and lodged on top of a motorcyclist",
+      "source_url": "https://www.heraldnet.com/2026/01/16/stanwood-family-sues-tesla-over-deadly-autopilot-crash/"
      },
      "location_city": {
-      "quote": "in Snohomish County",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
+      "quote": "at Fales Road near Monroe",
+      "source_url": "https://www.heraldnet.com/2026/01/16/stanwood-family-sues-tesla-over-deadly-autopilot-crash/"
      },
-     "persons_harmed": {
-      "quote": "motorcyclist son killed",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
+     "location_state_region": {
+      "quote": "Snohomish County, Washington",
+      "source_url": "https://komonews.com/news/local/stanwood-family-sues-tesla-after-autopilot-fails-to-detect-motorcycle-killing-28-year-old-motorcycle-rider-lawsuit-elon-musk-fatal-crash"
      },
      "police_action": {
-      "quote": "Although he was initially arrested for the crash",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
+      "quote": "He was arrested for vehicular homicide",
+      "source_url": "https://komonews.com/news/local/stanwood-family-sues-tesla-after-autopilot-fails-to-detect-motorcycle-killing-28-year-old-motorcycle-rider-lawsuit-elon-musk-fatal-crash"
      },
      "responsibility_attributed_to": {
-      "quote": "It could be prevented if you're actually paying attention instead of relying on a computer",
+      "quote": "in terms of root cause, it sort of seems to be a Tesla design problem.",
       "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
      },
      "system_named": {
-      "quote": "operating on Autopilot",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
+      "quote": "using the car’s Autopilot feature",
+      "source_url": "https://www.kiro7.com/news/local/tesla-faces-lawsuit-over-autopilot-after-fatal-motorcycle-crash-wa/PTBFTXPBCNHHTJ4HVQ4ZP76ILQ/"
      },
      "vehicle_make": {
-      "quote": "when a Tesla, operating on Autopilot, collided with him",
-      "source_url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
+      "quote": "a 2022 Tesla Model S",
+      "source_url": "https://www.heraldnet.com/2026/01/16/stanwood-family-sues-tesla-over-deadly-autopilot-crash/"
+     },
+     "vehicle_model": {
+      "quote": "a 2022 Tesla Model S",
+      "source_url": "https://www.heraldnet.com/2026/01/16/stanwood-family-sues-tesla-over-deadly-autopilot-crash/"
+     },
+     "vehicle_model_year": {
+      "quote": "a 2022 Tesla Model S",
+      "source_url": "https://www.heraldnet.com/2026/01/16/stanwood-family-sues-tesla-over-deadly-autopilot-crash/"
      }
     },
-    "narrative": "The report says a Tesla operating on Autopilot collided with a motorcyclist on State Route 522 in Snohomish County in April 2024, killing him. His family filed a lawsuit alleging that Autopilot failed to detect him or a change in traffic. The report also says initial reports described the driver as distracted by a cell phone and that the driver was initially arrested; no criminal charges had been filed.",
+    "narrative": "The reports describe a Tesla Model S striking a motorcyclist on State Route 522 in Snohomish County in April 2024; the motorcyclist died. The driver told a trooper he was using Autopilot and looking at his phone, and internal Tesla data reportedly showed the feature had been enabled shortly before the crash. The driver was arrested but was not charged, and the motorcyclist’s family filed a wrongful-death lawsuit alleging that Tesla’s system failed to detect the motorcycle.",
     "review_status": "machine-coded, not yet reviewed",
     "sources_read": [
+     {
+      "basis": "full_text",
+      "url": "https://komonews.com/news/local/stanwood-family-sues-tesla-after-autopilot-fails-to-detect-motorcycle-killing-28-year-old-motorcycle-rider-lawsuit-elon-musk-fatal-crash"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://www.kiro7.com/news/local/tesla-faces-lawsuit-over-autopilot-after-fatal-motorcycle-crash-wa/PTBFTXPBCNHHTJ4HVQ4ZP76ILQ/"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://www.heraldnet.com/2026/01/16/stanwood-family-sues-tesla-over-deadly-autopilot-crash/"
+     },
      {
       "basis": "full_text",
       "url": "https://komonews.com/news/local/snohomish-county-family-sues-tesla-after-son-killed-in-autopilot-crash-lawsuit-elon-musk-fatal-crash-trap-software-test-danger-community-safety-damages-million-glitch-road-highway-traffic-commute"
      }
     ],
     "text_basis": "full_text",
-    "unsupported_values_removed": 0,
+    "unsupported_values_removed": 3,
     "values": {
-     "civil_litigation": "lawsuit_filed",
      "collision_with": [
       "motorcycle"
      ],
      "coverage_stage": "legal_proceeding",
      "driver_condition_mentioned": [
-      "distracted"
+      "alcohol_or_drugs",
+      "distracted",
+      "not_supervising"
      ],
+     "driver_seat_occupied": "yes",
      "engagement_claimed_by": [
-      "plaintiff_or_plaintiff_lawyer"
+      "driver"
      ],
-     "engagement_status": "alleged_in_legal_filing",
-     "fatalities": 1,
-     "incident_date": "2024-04",
+     "engagement_status": "confirmed_by_official_source",
+     "incident_date": "2024-04-19",
      "incident_type": "collision",
-     "location_city": "Snohomish County",
-     "persons_harmed": [
-      "motorcyclist"
-     ],
+     "location_city": "Monroe",
+     "location_state_region": "Washington",
      "police_action": "arrest_made",
      "responsibility_attributed_to": [
-      "driver",
       "automation_or_manufacturer"
      ],
      "system_named": [
       "autopilot"
      ],
-     "vehicle_make": "Tesla"
+     "vehicle_make": "Tesla",
+     "vehicle_model": "Model S",
+     "vehicle_model_year": 2022
     }
    },
    "exclusion_reason": null,
@@ -5771,7 +5794,7 @@
    "headline_publisher": "KOMO",
    "key": "k66",
    "maker": "Tesla",
-   "needs_coding": true,
+   "needs_coding": false,
    "source_summary": "The family of a 28-year-old man has filed a wrongful death lawsuit against Tesla, alleging that the company's Autopilot system failed to prevent a fatal crash.",
    "source_summary_publisher": "KOMO",
    "sources": [
@@ -5813,7 +5836,7 @@
     }
    ],
    "status": "published",
-   "updated": "2026-11-22T21:01:01Z"
+   "updated": "2026-11-22T21:12:17Z"
   },
   {
    "added": "2026-11-22T19:24:15Z",
@@ -7266,125 +7289,137 @@
     ]
    },
    "case_id": "SDI-00072",
-   "code_attempts": 1,
+   "code_attempts": 2,
    "coding": {
     "claims": [
      {
-      "claimant": "news_outlet",
-      "paraphrase": "The report says Full Self-Driving was engaged as the Cybertruck approached the overpass split.",
-      "quote": "with “Full Self-Driving” engaged",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/",
+      "claimant": "plaintiff_or_plaintiff_lawyer",
+      "paraphrase": "The lawsuit says Autopilot was engaged as the vehicle approached the overpass.",
+      "quote": "The petition claims the vehicle attempted to drive straight off an overpass while Autopilot was engaged",
+      "source_url": "https://www.click2houston.com/news/local/2026/03/13/houston-driver-sues-tesla-after-cybertruck-on-autopilot-crashes-into-overpass/",
       "topic": "automation_engaged"
      },
      {
       "claimant": "manufacturer",
-      "paraphrase": "Elon Musk said Tesla’s logs showed the driver disengaged the system four seconds before impact.",
+      "paraphrase": "Elon Musk said Tesla logs showed the driver disengaged Autopilot four seconds before the crash.",
       "quote": "Logs show driver disengaged Autopilot four seconds before crashing.",
       "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/",
       "topic": "automation_not_engaged"
      },
      {
       "claimant": "plaintiff_or_plaintiff_lawyer",
-      "paraphrase": "The report attributes to the driver’s attorney the view that the system was failing before she took control.",
+      "paraphrase": "The driver's attorney said the system was failing before the driver tried to take control.",
       "quote": "the system was already failing",
       "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/",
       "topic": "automation_performance"
      },
      {
-      "claimant": "news_outlet",
-      "paraphrase": "The report says the Cybertruck continued straight instead of following the curve toward the overpass split.",
-      "quote": "the Cybertruck barreling straight ahead at what appears to be highway speed",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/",
-      "topic": "automation_performance"
+      "claimant": "plaintiff_or_plaintiff_lawyer",
+      "paraphrase": "The attorney attributed the crash to decisions Tesla made about the system.",
+      "quote": "It was the foreseeable result of choices Tesla made knowingly, repeatedly, and without regard for the people on the road.",
+      "source_url": "https://www.click2houston.com/news/local/2026/03/13/houston-driver-sues-tesla-after-cybertruck-on-autopilot-crashes-into-overpass/",
+      "topic": "cause_or_responsibility"
      }
     ],
     "codebook_version": "0.1",
-    "coded_at": "2026-11-22T20:53:55Z",
+    "coded_at": "2026-11-22T21:11:46Z",
     "coder": "OpenAI gpt-6-luna",
     "evidence": {
      "civil_litigation": {
-      "quote": "She is suing Tesla for over $1 million",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "A Texas woman is suing Tesla for over $1 million",
+      "source_url": "https://electrek.co/2026/03/11/tesla-cybertruck-fsd-lawsuit-musk-negligent-hiring/"
      },
      "collision_with": {
-      "quote": "slamming into the concrete barrier",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "crashed into a concrete barrier",
+      "source_url": "https://electrek.co/2026/03/11/tesla-cybertruck-fsd-lawsuit-musk-negligent-hiring/"
      },
      "coverage_stage": {
-      "quote": "She is suing Tesla for over $1 million",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "The case, filed in Harris County District Court",
+      "source_url": "https://electrek.co/2026/03/11/tesla-cybertruck-fsd-lawsuit-musk-negligent-hiring/"
      },
      "driver_seat_occupied": {
-      "quote": "was driving her Cybertruck",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "was driving her Tesla Cybertruck",
+      "source_url": "https://www.click2houston.com/news/local/2026/03/13/houston-driver-sues-tesla-after-cybertruck-on-autopilot-crashes-into-overpass/"
      },
      "engagement_claimed_by": {
-      "quote": "with “Full Self-Driving” engaged",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "The petition claims the vehicle attempted to drive straight off an overpass while Autopilot was engaged",
+      "source_url": "https://www.click2houston.com/news/local/2026/03/13/houston-driver-sues-tesla-after-cybertruck-on-autopilot-crashes-into-overpass/"
      },
      "engagement_status": {
-      "quote": "Logs show driver disengaged Autopilot four seconds before crashing.",
+      "quote": "Tesla’s logs show the driver disengaged the system 4 seconds before impact.",
       "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
      },
      "incident_date": {
-      "quote": "The incident happened on August 18, 2025",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "On August 18, 2025,",
+      "source_url": "https://electrek.co/2026/03/11/tesla-cybertruck-fsd-lawsuit-musk-negligent-hiring/"
      },
      "incident_type": {
-      "quote": "slamming into the concrete barrier",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "crashed into a concrete barrier",
+      "source_url": "https://electrek.co/2026/03/11/tesla-cybertruck-fsd-lawsuit-musk-negligent-hiring/"
      },
      "injuries": {
-      "quote": "Saint Amour suffered two herniated discs in her lower back",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "suffered serious injuries in the crash",
+      "source_url": "https://www.click2houston.com/news/local/2026/03/13/houston-driver-sues-tesla-after-cybertruck-on-autopilot-crashes-into-overpass/"
      },
      "location_city": {
-      "quote": "on Houston’s 69 Eastex Freeway",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
-     },
-     "location_country": {
-      "quote": "on Houston’s 69 Eastex Freeway",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "on the 69 Eastex Freeway in Houston",
+      "source_url": "https://electrek.co/2026/03/11/tesla-cybertruck-fsd-lawsuit-musk-negligent-hiring/"
      },
      "location_state_region": {
-      "quote": "on Houston’s 69 Eastex Freeway",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "A Texas lawsuit over a Cybertruck FSD crash on a Houston overpass",
+      "source_url": "https://electrek.co/2026/03/11/tesla-cybertruck-fsd-lawsuit-musk-negligent-hiring/"
      },
      "persons_harmed": {
-      "quote": "Saint Amour suffered two herniated discs in her lower back",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "suffered serious injuries in the crash",
+      "source_url": "https://www.click2houston.com/news/local/2026/03/13/houston-driver-sues-tesla-after-cybertruck-on-autopilot-crashes-into-overpass/"
      },
      "responsibility_attributed_to": {
-      "quote": "the system was already failing",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "It was the foreseeable result of choices Tesla made knowingly, repeatedly, and without regard for the people on the road.",
+      "source_url": "https://www.click2houston.com/news/local/2026/03/13/houston-driver-sues-tesla-after-cybertruck-on-autopilot-crashes-into-overpass/"
      },
      "road_type": {
-      "quote": "on Houston’s 69 Eastex Freeway",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "on the 69 Eastex Freeway",
+      "source_url": "https://electrek.co/2026/03/11/tesla-cybertruck-fsd-lawsuit-musk-negligent-hiring/"
      },
      "system_named": {
       "quote": "with “Full Self-Driving” engaged",
       "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
      },
      "vehicle_make": {
-      "quote": "a Tesla Cybertruck",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "Tesla Cybertruck",
+      "source_url": "https://www.click2houston.com/news/local/2026/03/13/houston-driver-sues-tesla-after-cybertruck-on-autopilot-crashes-into-overpass/"
      },
      "vehicle_model": {
-      "quote": "a Tesla Cybertruck",
-      "source_url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
+      "quote": "Tesla Cybertruck",
+      "source_url": "https://www.click2houston.com/news/local/2026/03/13/houston-driver-sues-tesla-after-cybertruck-on-autopilot-crashes-into-overpass/"
      }
     },
-    "narrative": "The report says a Tesla Cybertruck struck a concrete barrier on Houston’s 69 Eastex Freeway on August 18, 2025. It says Full Self-Driving was engaged as the vehicle approached an overpass split, while Elon Musk said Tesla’s logs showed the driver disengaged the system four seconds before impact. The driver was injured, and the report says she is suing Tesla.",
+    "narrative": "The reports say a Cybertruck crashed into a concrete barrier at a Houston freeway overpass on August 18, 2025, and that the driver was injured. The lawsuit says Autopilot was engaged, while Elon Musk said Tesla logs showed the driver disengaged it four seconds before impact; her attorney said the system was already failing before she tried to take control.",
     "review_status": "machine-coded, not yet reviewed",
     "sources_read": [
+     {
+      "basis": "full_text",
+      "url": "https://electrek.co/2026/03/11/tesla-cybertruck-fsd-lawsuit-musk-negligent-hiring/"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://teslahubs.com/blogs/tips/tesla-sued-over-cybertruck-fsd-crash-lawsuit-blames-musk"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://www.notateslaapp.com/news/3785/tesla-sued-over-cybertruck-fsd-crash-lawsuit-blames-musk"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://www.click2houston.com/news/local/2026/03/13/houston-driver-sues-tesla-after-cybertruck-on-autopilot-crashes-into-overpass/"
+     },
      {
       "basis": "full_text",
       "url": "https://electrek.co/2026/03/18/tesla-cybertruck-fsd-crash-video-musk-logs-overconfidence/"
      }
     ],
     "text_basis": "full_text",
-    "unsupported_values_removed": 0,
+    "unsupported_values_removed": 1,
     "values": {
      "civil_litigation": "lawsuit_filed",
      "collision_with": [
@@ -7393,15 +7428,13 @@
      "coverage_stage": "legal_proceeding",
      "driver_seat_occupied": "yes",
      "engagement_claimed_by": [
-      "manufacturer",
-      "news_outlet"
+      "plaintiff_or_plaintiff_lawyer"
      ],
      "engagement_status": "disputed",
      "incident_date": "2025-08-18",
      "incident_type": "collision",
      "injuries": 1,
      "location_city": "Houston",
-     "location_country": "United States",
      "location_state_region": "Texas",
      "persons_harmed": [
       "subject_vehicle_driver"
@@ -7411,6 +7444,7 @@
      ],
      "road_type": "highway_or_freeway",
      "system_named": [
+      "autopilot",
       "full_self_driving"
      ],
      "vehicle_make": "Tesla",
@@ -7422,7 +7456,7 @@
    "headline_publisher": "FOX 26 Houston",
    "key": "k95",
    "maker": "Tesla",
-   "needs_coding": true,
+   "needs_coding": false,
    "source_summary": "A Houston woman is suing Tesla after her Cybertruck, using autopilot, crashed on the Eastex Freeway. The lawsuit slams Tesla’s \"misleading\" marketing and alleges critical safety tech failures.",
    "source_summary_publisher": "FOX 26 Houston",
    "sources": [
@@ -7536,7 +7570,7 @@
     }
    ],
    "status": "published",
-   "updated": "2026-11-22T20:57:00Z"
+   "updated": "2026-11-22T21:11:46Z"
   },
   {
    "added": "2026-11-22T19:24:15Z",
@@ -8956,71 +8990,85 @@
     ]
    },
    "case_id": "SDI-00067",
-   "code_attempts": 1,
+   "code_attempts": 2,
    "coding": {
     "claims": [
      {
       "claimant": "news_outlet",
-      "paraphrase": "The headline says the driver was on Autopilot.",
-      "quote": "Tesla driver passes out drunk on Autopilot",
-      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/",
+      "paraphrase": "Futurism reported that the Tesla was in Full Self-Driving mode; Electrek’s headline called it Autopilot.",
+      "quote": "caught dead asleep behind the wheel of a Tesla on Full Self-Driving (FSD) mode",
+      "source_url": "https://futurism.com/advanced-transport/tesla-fsd-wine-pizza",
       "topic": "automation_engaged"
      },
      {
       "claimant": "police",
-      "paraphrase": "Police investigators said the driver was under the influence of alcohol and marijuana, and police arrested the driver on suspicion of DUI.",
-      "quote": "Investigators say the driver was under the influence of alcohol and marijuana, and he was arrested for DUI.",
+      "paraphrase": "Investigators said the driver was under the influence of alcohol and marijuana.",
+      "quote": "Investigators say the driver was under the influence of alcohol and marijuana",
       "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/",
       "topic": "driver_behavior"
+     },
+     {
+      "claimant": "news_outlet",
+      "paraphrase": "Electrek reported that the car continued moving through city streets while the driver was unconscious.",
+      "quote": "the car was still rolling through busy city streets on its own",
+      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/",
+      "topic": "automation_performance"
+     },
+     {
+      "claimant": "news_outlet",
+      "paraphrase": "Electrek stated that the driver remained legally and operationally responsible for the vehicle.",
+      "quote": "The driver is legally and operationally responsible for the vehicle at all times.",
+      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/",
+      "topic": "cause_or_responsibility"
      }
     ],
     "codebook_version": "0.1",
-    "coded_at": "2026-11-22T20:50:57Z",
+    "coded_at": "2026-11-22T21:11:20Z",
     "coder": "OpenAI gpt-6-luna",
     "evidence": {
+     "coverage_stage": {
+      "quote": "dispatchers received a call shortly after 11 a.m. on Wednesday, March 25",
+      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
+     },
+     "criminal_charges": {
+      "quote": "he was arrested for DUI",
+      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
+     },
      "driver_condition_mentioned": {
       "quote": "the driver was under the influence of alcohol and marijuana",
       "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
      },
      "driver_seat_occupied": {
-      "quote": "slumped over and unconscious at the wheel",
-      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
+      "quote": "slumped over in the driver’s seat",
+      "source_url": "https://futurism.com/advanced-transport/tesla-fsd-wine-pizza"
      },
      "engagement_claimed_by": {
-      "quote": "Tesla driver passes out drunk on Autopilot",
-      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
+      "quote": "caught dead asleep behind the wheel of a Tesla on Full Self-Driving (FSD) mode",
+      "source_url": "https://futurism.com/advanced-transport/tesla-fsd-wine-pizza"
      },
      "engagement_status": {
-      "quote": "Tesla driver passes out drunk on Autopilot",
-      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
+      "quote": "caught dead asleep behind the wheel of a Tesla on Full Self-Driving (FSD) mode",
+      "source_url": "https://futurism.com/advanced-transport/tesla-fsd-wine-pizza"
      },
      "incident_date": {
-      "quote": "on Wednesday, March 25",
+      "quote": "shortly after 11 a.m. on Wednesday, March 25",
       "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
      },
      "incident_type": {
-      "quote": "another driver apparently slumped over and unconscious at the wheel",
-      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
-     },
-     "location_city": {
-      "quote": "through busy streets in Vacaville, California",
-      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
-     },
-     "location_state_region": {
-      "quote": "through busy streets in Vacaville, California",
-      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
+      "quote": "they found a man slumped over in the driver’s seat",
+      "source_url": "https://futurism.com/advanced-transport/tesla-fsd-wine-pizza"
      },
      "police_action": {
       "quote": "he was arrested for DUI",
       "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
      },
-     "road_type": {
-      "quote": "through busy city streets on its own",
+     "responsibility_attributed_to": {
+      "quote": "The driver is legally and operationally responsible for the vehicle at all times.",
       "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
      },
      "system_named": {
-      "quote": "Tesla driver passes out drunk on Autopilot",
-      "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
+      "quote": "on Full Self-Driving (FSD) mode",
+      "source_url": "https://futurism.com/advanced-transport/tesla-fsd-wine-pizza"
      },
      "time_of_day": {
       "quote": "shortly after 11 a.m.",
@@ -9031,17 +9079,23 @@
       "source_url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
      }
     },
-    "narrative": "The report says a community member alerted dispatch after seeing a driver slumped over and unconscious at the wheel in Vacaville on March 25, 2026. It says officers stopped the car near Elmira Road and Shasta Drive, and investigators said the driver was under the influence of alcohol and marijuana; the driver was arrested for DUI. The headline characterized the event as involving Autopilot, but the report does not cite an official finding that the feature was in use.",
+    "narrative": "The reports say a community member alerted police to a Tesla moving through Vacaville with its driver slumped over and unconscious. Police stopped the car near Elmira Road and Shasta Drive and arrested the driver for DUI; Futurism described the system as Full Self-Driving, while Electrek’s headline called it Autopilot.",
     "review_status": "machine-coded, not yet reviewed",
     "sources_read": [
+     {
+      "basis": "full_text",
+      "url": "https://futurism.com/advanced-transport/tesla-fsd-wine-pizza"
+     },
      {
       "basis": "full_text",
       "url": "https://electrek.co/2026/04/07/tesla-autopilot-drunk-driver-vacaville-passed-out-dui/"
      }
     ],
     "text_basis": "full_text",
-    "unsupported_values_removed": 0,
+    "unsupported_values_removed": 3,
     "values": {
+     "coverage_stage": "initial_report",
+     "criminal_charges": "DUI",
      "driver_condition_mentioned": [
       "alcohol_or_drugs",
       "asleep_or_drowsy"
@@ -9053,12 +9107,13 @@
      "engagement_status": "claimed",
      "incident_date": "2026-03-25",
      "incident_type": "driver_asleep_or_absent",
-     "location_city": "Vacaville",
-     "location_state_region": "California",
      "police_action": "arrest_made",
-     "road_type": "urban_or_suburban_street",
+     "responsibility_attributed_to": [
+      "driver"
+     ],
      "system_named": [
-      "autopilot"
+      "autopilot",
+      "full_self_driving"
      ],
      "time_of_day": "daytime",
      "vehicle_make": "Tesla"
@@ -9069,7 +9124,7 @@
    "headline_publisher": "Futurism",
    "key": "k125",
    "maker": "Tesla",
-   "needs_coding": true,
+   "needs_coding": false,
    "source_summary": "A Tesla driver was found passed out behind the wheel as his car drove itself through Vacaville, California. Police arrested him for DUI on alcohol and marijuana.",
    "source_summary_publisher": "Electrek",
    "sources": [
@@ -9093,7 +9148,7 @@
     }
    ],
    "status": "published",
-   "updated": "2026-11-22T20:51:17Z"
+   "updated": "2026-11-22T21:11:20Z"
   },
   {
    "added": "2026-11-22T19:24:15Z",
@@ -9680,39 +9735,39 @@
     ]
    },
    "case_id": "SDI-00065",
-   "code_attempts": 1,
+   "code_attempts": 2,
    "coding": {
     "claims": [
      {
       "claimant": "police",
-      "paraphrase": "Troopers said Autopilot was on while the driver was asleep in the Tesla.",
-      "quote": "Troopers: Woman twice the legal limit found sleeping in Tesla with autopilot on",
-      "source_url": "https://abcnews4.com/news/nation-world/troopers-woman-twice-legal-limit-found-sleeping-tesla-autopilot-feature-sarasota-florida-i75-kimberly-brown-dui-intoxicated-crime-news",
-      "topic": "automation_engaged"
+      "paraphrase": "A trooper said the driver was intoxicated and had assumed the Tesla would get her home safely.",
+      "quote": "Unfortunately, she was intoxicated more than two times the legal limit and made the assumption that the Tesla would get her home safely.",
+      "source_url": "https://nypost.com/2026/04/27/us-news/drunk-driver-found-asleep-in-tesla-using-autopilot/",
+      "topic": "driver_behavior"
      },
      {
       "claimant": "police",
-      "paraphrase": "A trooper said the driver should not have been behind the wheel.",
-      "quote": "She should not have been behind the wheel.",
-      "source_url": "https://abcnews4.com/news/nation-world/troopers-woman-twice-legal-limit-found-sleeping-tesla-autopilot-feature-sarasota-florida-i75-kimberly-brown-dui-intoxicated-crime-news",
-      "topic": "driver_behavior"
+      "paraphrase": "Police said Autopilot detected the driver’s closed eyes and the vehicle stopped in the interstate’s middle lane.",
+      "quote": "when the autopilot detected her eyes had been closed for too long, leaving it in the middle lane of Interstate 75 in Sarasota, police said.",
+      "source_url": "https://nypost.com/2026/04/27/us-news/drunk-driver-found-asleep-in-tesla-using-autopilot/",
+      "topic": "automation_performance"
      }
     ],
     "codebook_version": "0.1",
-    "coded_at": "2026-11-22T20:49:24Z",
+    "coded_at": "2026-11-22T21:10:57Z",
     "coder": "OpenAI gpt-6-luna",
     "evidence": {
      "coverage_stage": {
-      "quote": "arrested and charged with DUI",
-      "source_url": "https://abcnews4.com/news/nation-world/troopers-woman-twice-legal-limit-found-sleeping-tesla-autopilot-feature-sarasota-florida-i75-kimberly-brown-dui-intoxicated-crime-news"
+      "quote": "Detectives are still investigating the incident",
+      "source_url": "https://www.mysuncoast.com/2026/04/24/woman-found-asleep-tesla-with-autopilot-arrested-dui-i-75/"
      },
      "criminal_case_stage": {
-      "quote": "was arrested and charged with DUI",
-      "source_url": "https://abcnews4.com/news/nation-world/troopers-woman-twice-legal-limit-found-sleeping-tesla-autopilot-feature-sarasota-florida-i75-kimberly-brown-dui-intoxicated-crime-news"
+      "quote": "Woman charged with DUI",
+      "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
      },
      "criminal_charges": {
-      "quote": "was arrested and charged with DUI",
-      "source_url": "https://abcnews4.com/news/nation-world/troopers-woman-twice-legal-limit-found-sleeping-tesla-autopilot-feature-sarasota-florida-i75-kimberly-brown-dui-intoxicated-crime-news"
+      "quote": "Woman charged with DUI",
+      "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
      },
      "driver_condition_mentioned": {
       "quote": "intoxicated at nearly twice the legal limit",
@@ -9722,16 +9777,8 @@
       "quote": "asleep behind the wheel",
       "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
      },
-     "engagement_claimed_by": {
-      "quote": "Troopers: Woman twice the legal limit found sleeping in Tesla with autopilot on",
-      "source_url": "https://abcnews4.com/news/nation-world/troopers-woman-twice-legal-limit-found-sleeping-tesla-autopilot-feature-sarasota-florida-i75-kimberly-brown-dui-intoxicated-crime-news"
-     },
-     "engagement_status": {
-      "quote": "Authorities said [name] was using the vehicle’s Autopilot feature.",
-      "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
-     },
      "incident_date": {
-      "quote": "on Friday, April 24",
+      "quote": "Friday, April 24",
       "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
      },
      "incident_type": {
@@ -9739,23 +9786,23 @@
       "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
      },
      "location_city": {
-      "quote": "SARASOTA, Fla.",
-      "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
+      "quote": "in Sarasota",
+      "source_url": "https://nypost.com/2026/04/27/us-news/drunk-driver-found-asleep-in-tesla-using-autopilot/"
      },
      "location_state_region": {
       "quote": "Florida authorities",
       "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
      },
      "police_action": {
-      "quote": "A woman is under arrest",
+      "quote": "a woman is under arrest",
       "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
      },
      "road_type": {
-      "quote": "on Interstate 75",
-      "source_url": "https://www.yahoo.com/news/articles/drunk-driver-used-tesla-autopilot-191518557.html"
+      "quote": "middle of Interstate 75",
+      "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
      },
      "system_named": {
-      "quote": "Authorities said [name] was using the vehicle’s Autopilot feature.",
+      "quote": "the vehicle’s Autopilot feature",
       "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
      },
      "time_of_day": {
@@ -9763,11 +9810,11 @@
       "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
      },
      "vehicle_make": {
-      "quote": "with her Tesla stopped in the middle of Interstate 75",
-      "source_url": "https://www.live5news.com/2026/04/25/twice-legal-limit-woman-charged-with-dui-after-being-found-asleep-tesla-using-autopilot/"
+      "quote": "her Tesla’s autopilot",
+      "source_url": "https://www.mysuncoast.com/2026/04/24/woman-found-asleep-tesla-with-autopilot-arrested-dui-i-75/"
      }
     },
-    "narrative": "Florida authorities said a driver was found asleep behind the wheel of a Tesla stopped in the middle of I-75 in Sarasota around 2 a.m. on April 24, 2026. Authorities said Autopilot was in use, and the driver was arrested and charged with DUI. Troopers said the driver was intoxicated at nearly twice the legal limit.",
+    "narrative": "Authorities said a driver was found asleep and intoxicated in a Tesla stopped in the middle lane of I-75 in Sarasota around 2 a.m. on April 24. They said Autopilot was in use and that its eye-detection feature brought the vehicle to a halt. The driver was arrested on a DUI charge, and police said the incident remained under investigation.",
     "review_status": "machine-coded, not yet reviewed",
     "sources_read": [
      {
@@ -9784,7 +9831,7 @@
      },
      {
       "basis": "full_text",
-      "url": "https://abcnews4.com/news/nation-world/troopers-woman-twice-legal-limit-found-sleeping-tesla-autopilot-feature-sarasota-florida-i75-kimberly-brown-dui-intoxicated-crime-news"
+      "url": "https://nypost.com/2026/04/27/us-news/drunk-driver-found-asleep-in-tesla-using-autopilot/"
      },
      {
       "basis": "full_text",
@@ -9792,9 +9839,9 @@
      }
     ],
     "text_basis": "full_text",
-    "unsupported_values_removed": 0,
+    "unsupported_values_removed": 3,
     "values": {
-     "coverage_stage": "legal_proceeding",
+     "coverage_stage": "initial_report",
      "criminal_case_stage": "charged",
      "criminal_charges": "DUI",
      "driver_condition_mentioned": [
@@ -9802,10 +9849,6 @@
       "asleep_or_drowsy"
      ],
      "driver_seat_occupied": "yes",
-     "engagement_claimed_by": [
-      "police"
-     ],
-     "engagement_status": "confirmed_by_official_source",
      "incident_date": "2026-04-24",
      "incident_type": "driver_asleep_or_absent",
      "location_city": "Sarasota",
@@ -9824,7 +9867,7 @@
    "headline_publisher": "Yahoo",
    "key": "k136",
    "maker": "Tesla",
-   "needs_coding": true,
+   "needs_coding": false,
    "source_summary": "While the Autopilot feature on a Tesla has several advantages, people have been getting creative with it, going to the extent of using it to drive them home when they’re too drunk to drive. However, ....",
    "source_summary_publisher": "Yahoo",
    "sources": [
@@ -9884,7 +9927,7 @@
     }
    ],
    "status": "published",
-   "updated": "2026-11-22T20:49:46Z"
+   "updated": "2026-11-22T21:10:57Z"
   },
   {
    "added": "2026-11-22T19:24:15Z",
@@ -23415,9 +23458,99 @@
    ],
    "status": "excluded",
    "updated": "2026-11-22T19:51:55Z"
+  },
+  {
+   "added": "2026-11-22T21:10:18Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Not about one identifiable incident. The report is a guide to a Tesla feature and does not describe a specific incident.",
+   "headline": "Tesla Automatic Collision Evasion: When It Takes Over (2026)",
+   "headline_publisher": "The Droid Guy",
+   "key": "k435",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "Automatic Collision Evasion is a Tesla feature that can switch on Full Self-Driving (Supervised) while you are driving by hand and steer the car around ...",
+   "source_summary_publisher": "The Droid Guy",
+   "sources": [
+    {
+     "published": "2026-11-22T12:36:00Z",
+     "publisher": "The Droid Guy",
+     "resolved": true,
+     "summary": "Automatic Collision Evasion is a Tesla feature that can switch on Full Self-Driving (Supervised) while you are driving by hand and steer the car around ...",
+     "title": "Tesla Automatic Collision Evasion: When It Takes Over (2026)",
+     "url": "https://thedroidguy.com/tesla-automatic-collision-evasion-1295372"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-22T21:10:24Z"
+  },
+  {
+   "added": "2026-11-22T21:10:18Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Covers several incidents; not split into cases. The reports describe a month-long product test with several driving episodes, not one identifiable incident.",
+   "headline": "Tesla skeptic praises 'Full Self-Driving,' then takes over to avoid a parking lot crash",
+   "headline_publisher": "The Cool Down on MSN",
+   "key": "k436",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "Tesla skeptic Linus Sebastian praised Full Self-Driving, but a parking-lot scare showed why drivers must stay alert and ready to take control while driving.",
+   "source_summary_publisher": "The Cool Down",
+   "sources": [
+    {
+     "published": "2026-11-22T12:39:00Z",
+     "publisher": "The Cool Down on MSN",
+     "resolved": true,
+     "summary": "",
+     "title": "Tesla skeptic praises 'Full Self-Driving,' then takes over to avoid a parking lot crash",
+     "url": "https://www.msn.com/en-us/news/other/tesla-skeptic-praises-full-self-driving-then-takes-over-to-avoid-a-parking-lot-crash/ar-AA2hZiyy"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNRmdfVEVvQWdMcUMtMWpMOEdrZ0lXQmRGMzJWV1J1MlljbVdYaS1QZ3pVSG5xUXI4VTJBT1VSQm9OMGtaZGNyTFJaUktQQXU0OVVFMWo3Q1pXZUpTN19tQl9WekdrN0w1Zks1WlFvV2RTUVd3bG53Ni1iQ19NdjVXM2RzTQ?oc=5",
+     "published": "2026-11-22T20:39:00Z",
+     "publisher": "The Cool Down",
+     "resolved": true,
+     "summary": "Tesla skeptic Linus Sebastian praised Full Self-Driving, but a parking-lot scare showed why drivers must stay alert and ready to take control while driving.",
+     "title": "Tesla skeptic praises 'Full Self-Driving,' then takes over to avoid a parking lot crash",
+     "url": "https://www.thecooldown.com/green-tech/tesla-full-self-driving-parking-crash/"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNLW1NeGtBU09EZ2o3Z2llemRiODNmZEhPRmtVYzAyWGZ3WUhYcFpDb3FTQ3IxZ1ZQcjd1Mm5BNFVROUdGZGs4Yk1taHNreDFnQjJOQVRQX3VjU2haZDZVQVVxMzhQdklEUXRzVUlPV1gtNWxDZ2RNYk5GMTJvd19la3o5YTBJYl9acE9ndDh1dGMyTTJCd0VKR0JHUFRWbkU?oc=5",
+     "published": "2026-11-22T20:39:00Z",
+     "publisher": "Yahoo Autos",
+     "resolved": true,
+     "summary": "",
+     "title": "Tesla skeptic praises 'Full Self-Driving,' then takes over to avoid a parking lot crash",
+     "url": "https://autos.yahoo.com/ev-and-future-tech/articles/tesla-skeptic-praises-full-self-203900938.html"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-22T21:10:30Z"
   }
  ],
  "next_id": 79,
- "next_key": 435,
+ "next_key": 437,
  "schema": 1
 }
