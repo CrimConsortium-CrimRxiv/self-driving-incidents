@@ -26,6 +26,9 @@ makers:
       - "Tesla Full Self-Driving crash"
       - "Tesla robotaxi crash"
 
+# The day daily collection began. Shown on the sampling page; do not change.
+collection_started: "2026-11-22"
+
 # Each regular run looks back this many days (Google News "when:" window).
 lookback_days: 7
 

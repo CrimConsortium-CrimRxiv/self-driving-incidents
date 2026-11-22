@@ -259,6 +259,7 @@ def export_all(store: dict, cfg: dict) -> dict:
     updated = max((c["updated"][:10] for c in published), default=date.today().isoformat())
     write_downloads(pairs, excluded, cfg, updated)
     write_site_data(pairs, updated)
-    pages.write_pages(pairs, cfg, updated, n_reports=sum(len(c["sources"]) for c in published))
+    pages.write_pages(pairs, cfg, updated, n_reports=sum(len(c["sources"]) for c in published),
+                      stats=pages.sampling_stats(store, cfg))
     return {"cases": len(published), "sources": sum(len(c["sources"]) for c in published),
             "excluded": len(excluded)}

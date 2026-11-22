@@ -821,6 +821,8 @@ a:hover { border-bottom-color: var(--color-primary); }
 .prose ul { padding-left: var(--space-5); margin: var(--space-3) 0; }
 .prose li + li { margin-top: var(--space-2); }
 .prose a { color: var(--color-link); text-decoration: underline; text-underline-offset: 2px; border: 0; }
+.prose .query-list { list-style: none; padding-left: 0; display: grid; gap: var(--space-2); }
+.prose .query-list code { display: inline-block; padding: 3px 8px; overflow-wrap: anywhere; }
 .prose code, .codebook code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; background: var(--color-surface-offset); padding: 1px 5px; border-radius: 4px; }
 blockquote.source-quote {
   margin: 0; padding-left: var(--space-4); border-left: 2px solid var(--color-divider);
@@ -854,7 +856,7 @@ blockquote.source-quote footer { margin-top: var(--space-1); font-size: var(--te
 .source-title a:hover { color: var(--color-link); text-decoration-color: var(--color-link); }
 .source-meta { font-size: var(--text-sm); color: var(--color-text-muted); }
 .case-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-10); padding-top: var(--space-6); border-top: 1px solid var(--color-divider); }
-.cite-box { font-size: var(--text-sm); color: var(--color-text-muted); background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-md); padding: var(--space-4); max-width: 80ch; }
+.cite-box { font-size: var(--text-sm); color: var(--color-text-muted); background: var(--color-surface); border: 1px solid var(--color-divider); border-radius: var(--radius-md); padding: var(--space-4); max-width: 80ch; overflow-wrap: anywhere; }
 
 /* ----------- Codebook (about page) ----------- */
 .codebook { margin-top: var(--space-4); }
@@ -885,6 +887,7 @@ blockquote.source-quote footer { margin-top: var(--space-1); font-size: var(--te
   .header-actions { gap: 0; }
   .site-nav a { padding: var(--space-2); }
   .nav-extra { display: none; }
+  .site-nav .nav-wide { display: none; }
   .page { padding: var(--space-4) var(--space-4) var(--space-12); }
   .site-header { gap: var(--space-3); }
   .var-table th, .var-table td { display: block; width: 100%; }

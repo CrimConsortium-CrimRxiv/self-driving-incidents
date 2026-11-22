@@ -26,6 +26,16 @@ A scheduled job (`.github/workflows/refresh.yml`) runs once a day and does four 
 Nothing needs to be done by hand. To run it on demand, open the **Actions** tab, choose
 **Refresh dataset**, and press **Run workflow**.
 
+## Sampling
+
+The dataset is every case a fixed set of daily news searches has found since November 22, 2026
+and that passed screening. It is not a complete list or a random sample, and it has not been
+filled in for earlier periods. Older incidents appear only when they are in current news (a
+verdict, a lawsuit) or when a search returns an older article. The searches, the rules for
+keeping a report, current counts and known gaps are on the
+[sampling page](https://selfdriving.crimconsortium.com/sampling.html), which is built from
+`config.yaml` on every run.
+
 ## Rules the coding follows
 
 - The model may use only the reports attached to the case.
@@ -50,7 +60,7 @@ Nothing needs to be done by hand. To run it on demand, open the **Actions** tab,
 | `store/cases.json` | The working record of every case, including those waiting to be coded |
 | `data/` | Public download files, rebuilt from the store |
 | `cases/` | One web page per case |
-| `index.html`, `search.html`, `about.html` | The site, rebuilt on every run |
+| `index.html`, `search.html`, `about.html`, `sampling.html` | The site, rebuilt on every run |
 | `tests/` | Checks that the rules above hold; they run before every refresh |
 
 ## Run it yourself

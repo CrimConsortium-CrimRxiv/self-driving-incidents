@@ -207,7 +207,7 @@ class Export(unittest.TestCase):
         first = self.snapshot()
         export.export_all(copy.deepcopy(s), CFG)
         self.assertEqual(first, self.snapshot())
-        for name in ("index.html", "search.html", "about.html", "cases/SDI-00001.html", "sitemap.xml", "robots.txt",
+        for name in ("index.html", "search.html", "about.html", "sampling.html", "cases/SDI-00001.html", "sitemap.xml", "robots.txt",
                      "data/cases.csv", "data/self-driving-incidents.zip", "data/site-data.js", "CODEBOOK.md"):
             self.assertIn(name, first)
 
@@ -217,7 +217,7 @@ class Export(unittest.TestCase):
         self.assertIn("Self-driving mode mentioned in coverage", home)
         self.assertIn("Said to be in use; not officially confirmed", home)
         self.assertIn("consortium@crimrxiv.com", home)
-        for name in ("index.html", "search.html", "about.html", "cases/SDI-00001.html"):
+        for name in ("index.html", "search.html", "about.html", "sampling.html", "cases/SDI-00001.html"):
             self.assertIn("A project of Scott Jacques and Miranda Baumann.", (self.root / name).read_text())
         for label in list(export.FEATURE_BADGE.values()) + [t["label"] for t in CFG["tags"]]:
             self.assertNotIn("confirmed", label.lower())

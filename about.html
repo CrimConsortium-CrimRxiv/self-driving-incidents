@@ -58,6 +58,7 @@
           <nav class="site-nav" aria-label="Site">
             <a href="search.html">Search</a>
             <a href="about.html" aria-current="page">About<span class="nav-extra">&nbsp;the data</span></a>
+            <a href="sampling.html" class="nav-wide">Sampling</a>
           </nav>
           <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle color scheme" title="Toggle light or dark"></button>
         </div>
@@ -77,6 +78,7 @@
 
           <h2>How cases are found</h2>
           <p>Once a day, a program searches Google News and Bing News for reports that name an automated-driving feature and describe something that happened. Reports about the same event are grouped into one case, and later reports (an arrest, a lawsuit, a verdict) are attached to the case they belong to. Round-ups of several incidents, statistics, product news and opinion pieces are set aside and listed, with the reason, in <code>screened_out.csv</code>.</p>
+          <p>The searches, the rules for keeping a report, the time period covered and the known gaps are set out in full on the <a href="sampling.html">sampling page</a>.</p>
 
           <h2>How cases are coded</h2>
           <p>A language model reads the reports attached to a case (the article text where the publisher allows it, otherwise the headline and summary) and drafts the coded variables, a short neutral narrative, and a list of who said what. Three rules limit what it can assert:</p>
@@ -145,7 +147,8 @@
 
       <footer class="site-footer">
         <div class="footer-note">
-          Compiled from published news reports found through Google News and Bing News searches, refreshed daily.
+          Compiled from published news reports found through Google News and Bing News searches, refreshed daily
+          (<a href="sampling.html">how cases are sampled</a>).
           Coded values are drafted by a language model from those reports and are not yet reviewed by a person;
           each one links to the passage it rests on. A count of incidents is not a rate, and a mention of an
           automated-driving feature is not a finding that it was in use. Verify every case at its sources.
