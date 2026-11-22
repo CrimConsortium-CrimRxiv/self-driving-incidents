@@ -821,6 +821,9 @@ a:hover { border-bottom-color: var(--color-primary); }
 .prose ul { padding-left: var(--space-5); margin: var(--space-3) 0; }
 .prose li + li { margin-top: var(--space-2); }
 .prose a { color: var(--color-link); text-decoration: underline; text-underline-offset: 2px; border: 0; }
+.prose .month-counts { margin-top: var(--space-3); font-size: var(--text-sm); }
+.prose .month-counts summary { cursor: pointer; color: var(--color-link); text-decoration: underline; text-underline-offset: 2px; width: fit-content; }
+.prose .month-counts .var-table { margin-top: var(--space-3); max-width: 28rem; }
 .prose .query-list { list-style: none; padding-left: 0; display: grid; gap: var(--space-2); }
 .prose .query-list code { display: inline-block; padding: 3px 8px; overflow-wrap: anywhere; }
 .prose code, .codebook code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; background: var(--color-surface-offset); padding: 1px 5px; border-radius: 4px; }

@@ -16,6 +16,9 @@ _COMMON = {
     "at", "is", "was", "by", "an", "autopilot", "fsd", "self", "driving", "full", "new", "report",
     "kills", "dies", "died", "dead", "deadly", "fires", "injures", "injuring", "killing", "mode",
     "engaged", "autonomous", "driverless", "lawsuit", "while", "during", "hits", "hit",
+    # stock headline phrases ("What owners need to know") that say nothing about which event it is
+    "what", "owners", "owner", "need", "know", "should", "means", "mean", "matter", "details", "really",
+    "here", "why", "how", "watch", "video", "now",
 }
 _GENERIC = set("""a an the and or of to in on at by for with from as is was were be been has have had her his
 their its it this that after before during while when who what which near into over under than then there
@@ -27,7 +30,10 @@ early new latest video watch photos update
 january february march april may june july august september october november december
 four five six seven eight nine ten dozen first second third more most
 report reports reported data file files filed filing record records list nhtsa ntsb federal
-involv includ additional investigation investigat identifi happen show shows""".split())
+involv includ additional investigation investigat identifi happen show shows
+national traffic safety administration transportation board agency department public
+system technology feature software assistance assist automated summon smart supervised unsupervised
+month months since through time using used use operating operated behind wheel being via whilst back""".split())
 _GENERIC |= {str(y) for y in range(2015, 2036)}
 
 # Different outlets word the same detail differently; map those to one shared word before comparing.
@@ -58,15 +64,90 @@ def _distinct_tokens(norm: str) -> set[str]:
     return {w for w in norm.split() if len(w) > 2 and w not in _COMMON}
 
 
-def same_story(a: str, b: str, threshold: int) -> bool:
-    """Headlines are the same report if they're >= threshold similar, or if they share 3+
-    distinctive words (not 'Tesla', 'crash', etc.) and one is mostly contained in the other."""
-    if fuzz.token_sort_ratio(a, b) >= threshold:
+# --------------------------------------------------------------------------- report-level comparison
+
+WINDOW_DAYS = 45   # two reports further apart than this are never matched by rule
+CLOSE_DAYS = 5     # shared specific words only count between reports this close together
+_STATE_RX = [(n, re.compile(rf"\b{re.escape(n)}\b")) for n in _STATE_NAMES]
+_GENERIC_STEMS = {_stem(w) for w in _GENERIC | _COMMON} | {"interstate"}  # a road counts once, by its number
+_ROAD = re.compile(r"i\d{1,3}")
+_SIGS: dict[tuple, dict] = {}
+_CASE_STATES: dict[str, set[str]] = {}
+
+
+def _specific(text: str, publisher: str = "") -> set[str]:
+    """Words that say which event this is (places, road numbers, charges), in a common form."""
+    skip = set(normalize_title(publisher or "").split())
+    out = set()
+    for w in _AGENCIES.sub(" ", normalize_title(_canon(text))).split():
+        if (len(w) <= 2 and not _ROAD.fullmatch(w)) or w in _COMMON or w in _GENERIC or w in skip:
+            continue
+        stem = _stem(w)
+        if stem not in _GENERIC_STEMS:
+            out.add(stem)
+    return out
+
+
+def _states(text: str) -> set[str]:
+    """US states named in full (to avoid 'IN', 'OR')."""
+    return {n for n, rx in _STATE_RX if rx.search(text)}
+
+
+def _day(s) -> datetime | None:
+    if isinstance(s, datetime):
+        return datetime(s.year, s.month, s.day)
+    try:
+        return datetime.fromisoformat((s or "")[:10])
+    except ValueError:
+        return None
+
+
+def signature(title: str, publisher: str, published, summary: str | None = None) -> dict:
+    """What the matching rules need to know about one report. Cached, since each is compared often."""
+    key = (title, publisher, str(published)[:10], summary or "")
+    sig = _SIGS.get(key)
+    if sig is None:
+        norm = normalize_title(title, publisher or None)
+        text = f"{title} {summary or ''}"
+        sig = _SIGS[key] = {"norm": norm, "words": _distinct_tokens(norm), "specific": _specific(text, publisher),
+                            "states": _states(text), "day": _day(published)}
+    return sig
+
+
+def _source_sig(s: dict) -> dict:
+    return signature(s.get("title") or "", s.get("publisher") or "", s.get("published"),
+                     s.get("summary") or s.get("snippet"))
+
+
+def same_report_event(x: dict, y: dict, threshold: int, need: int) -> bool:
+    """Do two reports (as signatures) describe the same event? The dates compared are those of the two
+    reports themselves, so a case that has gathered months of coverage does not attract unrelated news."""
+    if not x["day"] or not y["day"]:
+        return False
+    gap = abs((x["day"] - y["day"]).days)
+    if gap > WINDOW_DAYS:
+        return False
+    if x["states"] and y["states"] and not (x["states"] & y["states"]):
+        return False  # clearly different places
+    alike = fuzz.token_sort_ratio(x["norm"], y["norm"])
+    shared = len(x["words"] & y["words"])
+    # Near-identical headlines, or similar headlines that share at least two distinctive words.
+    # Similar wording alone is not enough: "Tesla in self-driving mode involved in crash" fits many events.
+    if alike >= max(90, threshold) or (alike >= threshold and shared >= 2):
         return True
-    return len(_distinct_tokens(a) & _distinct_tokens(b)) >= 3 and fuzz.token_set_ratio(a, b) >= 80
+    if shared >= 3 and fuzz.token_set_ratio(x["norm"], y["norm"]) >= 80:
+        return True
+    if gap <= CLOSE_DAYS:
+        common, small = len(x["specific"] & y["specific"]), min(len(x["specific"]), len(y["specific"]))
+        if common >= need or (small and common >= 3 and common == small):
+            return True
+    return False
 
 
-def group_items(items: list[Item], threshold: int) -> list[list[Item]]:
+def group_items(items: list[Item], cfg: dict) -> list[list[Item]]:
+    threshold = int(cfg.get("similarity_threshold", 75))
+    need = int(cfg.get("merge_min_shared_words", 4))
+    sigs = [signature(i.title, i.source, i.published, i.snippet) for i in items]
     parent = list(range(len(items)))
 
     def find(i):
@@ -77,7 +158,7 @@ def group_items(items: list[Item], threshold: int) -> list[list[Item]]:
 
     for i in range(len(items)):
         for j in range(i + 1, len(items)):
-            if same_story(items[i].norm, items[j].norm, threshold):
+            if same_report_event(sigs[i], sigs[j], threshold, need):
                 parent[find(i)] = find(j)
     groups: dict[int, list[Item]] = {}
     for i, it in enumerate(items):
@@ -94,55 +175,33 @@ def case_text(case: dict) -> str:
 
 
 def case_tokens(case: dict) -> set[str]:
-    t = _AGENCIES.sub(" ", normalize_title(_canon(case_text(case))))
-    publishers = {w for s in case.get("sources", []) for w in normalize_title(s.get("publisher") or "").split()}
-    return {_stem(w) for w in t.split()
-            if len(w) > 2 and w not in _COMMON and w not in _GENERIC and w not in publishers}
+    out = _specific(" ".join([case.get("headline") or "", case.get("source_summary") or ""]))
+    for src in case.get("sources", []):
+        out |= _source_sig(src)["specific"]
+    return out
 
 
 def case_states(case: dict) -> set[str]:
-    """US states named in full (to avoid 'IN', 'OR') anywhere in the case's headlines or summary."""
+    """US states named in full anywhere in the case's headlines or summary."""
     text = " ".join([(case.get("auto") or {}).get("location") or "", case_text(case)])
-    found = {n for n in _STATE_NAMES if re.search(rf"\b{re.escape(n)}\b", text)}
+    found = _CASE_STATES.get(text)
+    if found is None:
+        found = _CASE_STATES[text] = _states(text)
     return found
 
 
-def _day(s: str | None) -> datetime | None:
-    try:
-        return datetime.fromisoformat((s or "")[:10])
-    except ValueError:
-        return None
-
-
-def days_apart(a: dict, b: dict) -> float:
-    """Smallest gap in days between any report in case a and any report in case b."""
-    da = [d for d in (_day(s.get("published")) for s in a.get("sources", [])) if d]
-    db = [d for d in (_day(s.get("published")) for s in b.get("sources", [])) if d]
-    if not da or not db:
-        return 9999.0
-    return min(abs((x - y).days) for x in da for y in db)
-
-
 def same_incident(a: dict, b: dict, cfg: dict) -> bool:
-    """Rule-based match between two cases. Deliberately cautious: when unsure it says no, and the
-    coding step gets a second look with the candidate list."""
+    """Rule-based match between two cases: true when any report in one matches any report in the
+    other. Deliberately cautious: when unsure it says no, and the coding step gets a second look
+    with the candidate list."""
     threshold = int(cfg.get("similarity_threshold", 75))
     need = int(cfg.get("merge_min_shared_words", 4))
-    gap = days_apart(a, b)
     sa, sb = case_states(a), case_states(b)
     if sa and sb and not (sa & sb):
         return False  # clearly different places
-    if gap <= 45:
-        ta = [normalize_title(s["title"]) for s in a.get("sources", [])]
-        tb = [normalize_title(s["title"]) for s in b.get("sources", [])]
-        if any(same_story(x, y, threshold) for x in ta for y in tb):
-            return True
-    if gap <= 5:
-        ka, kb = case_tokens(a), case_tokens(b)
-        shared, small = len(ka & kb), min(len(ka), len(kb))
-        if shared >= need or (small and shared >= 3 and shared == small):
-            return True
-    return False
+    xs = [_source_sig(s) for s in a.get("sources", [])]
+    ys = [_source_sig(s) for s in b.get("sources", [])]
+    return any(same_report_event(x, y, threshold, need) for x in xs for y in ys)
 
 
 def candidates(case: dict, others: list[dict], limit: int = 6) -> list[dict]:

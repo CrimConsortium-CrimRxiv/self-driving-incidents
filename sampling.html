@@ -71,26 +71,32 @@
           <p>Where reports come from, which are kept, how they become cases, and what that means for what the data can support.</p>
         </header>
         <div class="prose">
-          <p class="notice" style="margin-top: 0"><strong>In brief.</strong> This is not a complete list or a random sample of incidents. It is every case that a fixed set of daily news searches has found since November 22, 2026 and that passed the screening rules below. It can show what kinds of incidents are reported and how they are handled. It cannot show how often they happen.</p>
+          <p class="notice" style="margin-top: 0"><strong>In brief.</strong> This is not a complete list or a random sample of incidents. It is every case found by a fixed set of news searches, in news published since January 1, 2026, that has been coded and has passed the screening rules below. <strong>347 candidate cases are still waiting to be coded</strong>, so the published list is a small part of what has been found. It can show what kinds of incidents are reported and how they are handled. It cannot show how often they happen.</p>
 
           <h2 id="why-few">Why there are few cases, and why some are old</h2>
-          <p>Collection began on November 22, 2026. The first run looked back 7 days, and each daily run since has done the same. The dataset has not been filled in for earlier months or years, so it holds roughly the news of the period since then, not the history of these incidents.</p>
+          <p>Collection began on November 22, 2026. Each daily run looks back 7 days. On the first day the Google News searches were also repeated one week at a time back to January 1, 2026, so the dataset draws on news published since then. Nothing earlier has been searched.</p>
+          <p>The weeks before November 15, 2026 were searched after the fact, on Google News only, and return whatever it still lists for those weeks. Expect them to be thinner than the period collected live.</p>
+          <p>Finding a report is only the first step. A case appears on the site after it has been coded and screened, and 14 of the 28 cases coded so far were set aside (see <a href="#numbers">the numbers</a>). Until the waiting cases are coded, the published list will stay much shorter than the list of what has been found.</p>
           <p>Cases are dated by when the incident happened, not when it was reported, so an old incident appears whenever it is in current news. That happens in two ways:</p>
           <ul>
             <li><strong>New coverage of an old event.</strong> A verdict, an appeal, a settlement or a regulator's report brings an earlier crash back into the news. A crash from 2019 can enter the dataset because of a court filing this month.</li>
-            <li><strong>Older articles returned by a search.</strong> One of the two news searches has no date limit and sometimes lists articles that are months or years old. They are kept if they pass the rules. Of the 78 reports collected so far, 13 were published before the first look-back window.</li>
+            <li><strong>Older articles returned by a search.</strong> One of the two news searches has no date limit and sometimes lists articles that are months or years old. They are kept if they pass the rules. Of the 629 reports collected so far, 1 was published before January 2026.</li>
           </ul>
-          <p>So a case dated 2023 does not mean coverage of 2023 is complete. It means one incident from 2023 was in the news we searched. Earlier periods can be searched week by week (see <a href="#reproduce">the last section</a>), but that has not been done yet.</p>
+          <p>So a case dated 2023 does not mean coverage of 2023 is complete. It means one incident from 2023 was in the news we searched.</p>
 
           <h2 id="numbers">The numbers so far</h2>
           <table class="var-table">
-            <tr><th>Reports kept</th><td>78, published between May 18, 2021 and November 22, 2026</td></tr>
-            <tr><th>Candidate cases</th><td>33, after grouping reports about the same event</td></tr>
+            <tr><th>Reports kept</th><td>629, published between May 18, 2021 and November 22, 2026</td></tr>
+            <tr><th>Candidate cases</th><td>375, after grouping reports about the same event</td></tr>
             <tr><th>Published</th><td>14</td></tr>
             <tr><th>Screened out</th><td>14, each listed with its reason in <a href="data/screened_out.csv" download>screened_out.csv</a></td></tr>
-            <tr><th>Waiting to be coded</th><td>5. These are not shown on the site until they have been coded and screened.</td></tr>
+            <tr><th>Waiting to be coded</th><td>347. These are not shown on the site until they have been coded and screened.</td></tr>
           </table>
           <p style="margin-top: var(--space-3)">These figures are recalculated every time the site is rebuilt.</p>
+          <details class="month-counts">
+            <summary>Reports kept, by month of publication</summary>
+            <table class="var-table"><tr><th>May 2021</th><td>1</td></tr><tr><th>January 2026</th><td>21</td></tr><tr><th>February 2026</th><td>39</td></tr><tr><th>March 2026</th><td>47</td></tr><tr><th>April 2026</th><td>35</td></tr><tr><th>May 2026</th><td>33</td></tr><tr><th>June 2026</th><td>68</td></tr><tr><th>July 2026</th><td>52</td></tr><tr><th>August 2026</th><td>38</td></tr><tr><th>September 2026</th><td>90</td></tr><tr><th>October 2026</th><td>114</td></tr><tr><th>November 2026</th><td>91</td></tr></table>
+          </details>
 
           <h2 id="sources">Where reports come from</h2>
           <p>Once a day a program runs the searches below on Google News (United States, English edition) and Bing News. The Google searches are limited to the last 7 days. Bing offers no date limit, so it returns whatever it currently lists. No other source is searched: not police or court records, regulators' databases, social media or reader submissions.</p>
@@ -113,8 +119,10 @@
           <p>The unit is the incident, not the article. Reports are joined into one case by rule, and the rules are cautious, so they are more likely to leave one event as two cases than to join two events:</p>
           <ul>
             <li>The same link, or the same publisher and headline, is counted once.</li>
-            <li>Headlines that are at least 75% alike are treated as the same report.</li>
-            <li>A new report joins an existing case when the two do not name different U.S. states and either a headline matches one published within 45 days, or the reports are within 5 days of each other and share at least 4 specific words (places, road numbers, charges).</li>
+            <li>Two reports are compared only if they were published within 45 days of each other and do not name different U.S. states.</li>
+            <li>They are treated as the same event when their headlines are nearly identical (90% alike), or at least 75% alike and share two distinctive words, or share three distinctive words with one headline largely contained in the other. Similar wording alone is not enough: &ldquo;Tesla in self-driving mode involved in crash&rdquo; fits many events.</li>
+            <li>Reports within 5 days of each other are also treated as the same event when their headlines and summary lines share at least 4 specific words (places, road numbers, charges).</li>
+            <li>A report joins a case when it matches any report already in that case. Dates are compared report to report, so a case with months of coverage does not pull in unrelated later news.</li>
             <li>At coding time the model is shown similar earlier cases and may say a new one is the same incident, in which case the reports are joined.</li>
           </ul>
 
@@ -133,10 +141,10 @@
             <li><strong>News decides what is here.</strong> Deaths, arrests, lawsuits and anything on video are far more likely to be reported than minor events, so serious and unusual incidents are over-represented.</li>
             <li><strong>English, and mostly the United States.</strong> The searches use English terms and a U.S. news edition.</li>
             <li><strong>Search services are a filter we do not control.</strong> Their ranking, limits and removals are not documented, so the collection cannot be exactly repeated.</li>
-            <li><strong>Time coverage is uneven.</strong> Fullest for news published from November 15, 2026 onward; sparse and accidental before.</li>
+            <li><strong>Time coverage is uneven.</strong> Fullest for news published from November 15, 2026 onward, which was collected live from both search services. News from January 1, 2026 to then was searched afterwards on Google News only and is thinner. Anything earlier is accidental.</li>
             <li><strong>Headline wording matters.</strong> Incidents reported without a feature term in the headline are missed; incidents where the feature is the story are favoured.</li>
             <li><strong>Round-ups are lost.</strong> An incident reported only inside a round-up does not become a case.</li>
-            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two.</li>
+            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two. The joining rules were tightened on November 22, 2026 after a test showed that the earlier rules let a long-running case absorb unrelated reports; nothing from that test was published.</li>
             <li><strong>Coding has changed hands.</strong> Each record names its coder in the <code>coder</code> column; the first cases were drafted by a different model from the one the daily job is set to use. None has been reviewed by a person yet.</li>
             <li><strong>No denominator.</strong> Nothing here measures how much these features are used, so counts cannot be turned into rates or risks.</li>
           </ul>
@@ -149,7 +157,7 @@
             <li><a href="https://github.com/CrimConsortium-CrimRxiv/self-driving-incidents/blob/main/pipeline/coder.py" target="_blank" rel="noopener">coder.py</a>: the screening and quotation checks.</li>
             <li><a href="https://github.com/CrimConsortium-CrimRxiv/self-driving-incidents/commits/main" target="_blank" rel="noopener">Change history</a>: every daily refresh, with its counts.</li>
           </ul>
-          <p>Earlier periods can be searched with <code>python -m pipeline.run --backfill 2026-01-01</code>, which repeats the Google searches one week at a time back to the date given. Results for past weeks are whatever Google News still lists, so a backfill will be thinner than live collection.</p>
+          <p>Earlier periods are searched with <code>python -m pipeline.run --backfill 2026-01-01</code>, which repeats the Google searches one week at a time back to the date given. Results for past weeks are whatever Google News still lists, so a search of the past will be thinner than live collection.</p>
           <p>See also <a href="about.html">About the data</a> for how cases are coded and the codebook. Suggestions for other sources or search terms are welcome at <a href="mailto:consortium@crimrxiv.com">consortium@crimrxiv.com</a>.</p>
         </div>
       </main>

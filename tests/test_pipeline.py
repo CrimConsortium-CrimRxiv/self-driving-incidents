@@ -82,6 +82,37 @@ class Matching(unittest.TestCase):
         b = case(["Tesla driver allegedly asleep with Full Self-Driving on crashes into police vehicle in California"])
         self.assertFalse(cluster.same_incident(a, b, CFG))
 
+    def test_similar_wording_alone_is_not_enough(self):
+        a = case(["Tesla in self-driving mode involved in Mesa crash, investigation finds"])
+        b = case(["Pedestrian killed in I-80 crash involving Tesla in self-driving mode, CHP investigates"])
+        self.assertFalse(cluster.same_incident(a, b, CFG))
+
+    def test_same_road_same_week_different_events(self):
+        a = case(["Video shows Tesla hit CHP car on I-80 in Fairfield; driver says he slept with Full Self-Driving on"])
+        b = case(["Pedestrian killed in I-80 crash involving Tesla in self-driving mode, CHP investigates"], day=22)
+        self.assertFalse(cluster.same_incident(a, b, CFG))
+
+    def test_long_running_case_does_not_attract_unrelated_news(self):
+        # The case has coverage in June and again in November. A November report that resembles
+        # only the June headline is too far from it to be matched.
+        a = case(["Tesla sued over fatal Texas home crash linked to Autopilot",
+                  "NTSB: driver overrode self-driving before deadly Katy crash"])
+        a["sources"][0]["published"] = "2026-06-24T12:00:00Z"
+        b = case(["Tesla sued over fatal Texas highway crash linked to Autopilot"])
+        self.assertFalse(cluster.same_incident(a, b, CFG))
+        a["sources"][0]["published"] = "2026-11-18T12:00:00Z"
+        self.assertTrue(cluster.same_incident(a, b, CFG))
+
+    def test_grouping_respects_dates(self):
+        import datetime as dt
+        first = item("US judge upholds $243 million verdict against Tesla over fatal Autopilot crash")
+        later = item("US judge upholds $243 million verdict against Tesla over fatal Autopilot crash")
+        later.published = first.published - dt.timedelta(days=120)
+        later.source = "Another Paper"
+        self.assertEqual(len(cluster.group_items([first, later], CFG)), 2)
+        later.published = first.published - dt.timedelta(days=1)
+        self.assertEqual(len(cluster.group_items([first, later], CFG)), 1)
+
 
 class Quotes(unittest.TestCase):
     def test_exact_quote_found(self):

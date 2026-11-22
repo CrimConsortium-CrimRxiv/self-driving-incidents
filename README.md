@@ -28,11 +28,13 @@ Nothing needs to be done by hand. To run it on demand, open the **Actions** tab,
 
 ## Sampling
 
-The dataset is every case a fixed set of daily news searches has found since November 22, 2026
-and that passed screening. It is not a complete list or a random sample, and it has not been
-filled in for earlier periods. Older incidents appear only when they are in current news (a
-verdict, a lawsuit) or when a search returns an older article. The searches, the rules for
-keeping a report, current counts and known gaps are on the
+The dataset is every case found by a fixed set of news searches, in news published since
+January 1, 2026, that has been coded and has passed screening. Daily collection began on
+November 22, 2026; the months before were searched after the fact, one week at a time, on Google
+News only, and are thinner. It is not a complete list or a random sample. Incidents from before
+2026 appear only when they are in 2026 news (a verdict, a lawsuit). Cases found but not yet coded
+are kept in `store/cases.json` and are not shown on the site. The searches, the rules for keeping
+and joining reports, current counts and known gaps are on the
 [sampling page](https://selfdriving.crimconsortium.com/sampling.html), which is built from
 `config.yaml` on every run.
 

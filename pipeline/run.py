@@ -61,7 +61,7 @@ def add_reports(store: dict, items: list[collect.Item], cfg: dict) -> int:
             seen.add(k)
             unique.append(it)
     touched = []
-    for group in cluster.group_items(unique, int(cfg.get("similarity_threshold", 75))):
+    for group in cluster.group_items(unique, cfg):
         probe = {"sources": [_source(i) for i in group], "headline": "", "auto": {}}
         home = next((c for c in store["cases"] if cluster.same_incident(probe, c, cfg)), None)
         if home is None:
@@ -71,7 +71,12 @@ def add_reports(store: dict, items: list[collect.Item], cfg: dict) -> int:
         home["sources"].extend(probe["sources"])
         home["updated"] = st.now_iso()
         touched.append(home)
-    todo = [s for c in touched for s in c["sources"] if s.get("summary") is None][:400]
+    # Look up the publisher's link and summary line: this run's reports first, then any left over
+    # from an earlier run that found more than could be looked up at once.
+    todo = [s for c in touched for s in c["sources"] if s.get("summary") is None]
+    queued = {id(s) for s in todo}
+    todo += [s for c in store["cases"] for s in c["sources"] if s.get("summary") is None and id(s) not in queued]
+    todo = todo[:400]
     max_chars = int(cfg.get("max_summary_chars", 240))
 
     def work(src):
@@ -103,17 +108,17 @@ def absorb(target: dict, other: dict, store: dict, cfg: dict) -> None:
 def merge_pending(store: dict, cfg: dict) -> None:
     """Once summaries are known, pending cases about the same event can be recognised and joined."""
     changed = True
-    while changed:
+    while changed:  # repeat until a full pass joins nothing
         changed = False
-        pending = [c for c in store["cases"] if c["status"] == "pending"]
-        for p in pending:
+        for p in [c for c in store["cases"] if c["status"] == "pending"]:
+            if not any(c is p for c in store["cases"]):
+                continue  # already joined to another case earlier in this pass
             other = next((c for c in store["cases"] if c is not p and c["status"] != "excluded"
                           and cluster.same_incident(p, c, cfg)), None)
             if other is not None:
                 target, gone = (other, p) if other["status"] != "pending" or len(other["sources"]) >= len(p["sources"]) else (p, other)
                 absorb(target, gone, store, cfg)
                 changed = True
-                break
 
 
 # --------------------------------------------------------------------------- code

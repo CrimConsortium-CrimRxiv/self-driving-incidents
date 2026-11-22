@@ -966,13 +966,13 @@
    "case_id": "SDI-00004",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00004.html",
-   "first_reported": "2026-10-16",
-   "last_reported": "2026-10-17",
+   "first_reported": "2026-10-15",
+   "last_reported": "2026-10-20",
    "sort_date": "2026-10-13",
    "headline": "Tesla driver allegedly asleep with Full Self-Driving on? Video shows car crashing into police vehicle in California",
    "headline_publisher": "Mint on MSN",
-   "source_summary": "The incident occurred on October 13, 2026, on eastbound I-80, west of Air Base Parkway, while CHP officers from Solano County were investigating a fatal crash, the department said in a social media ...",
-   "source_summary_publisher": "Mint on MSN",
+   "source_summary": "The incident occurred on October 13, 2026, on eastbound I-80, west of Air Base Parkway, while CHP officers from Solano County were investigating a fatal crash, the department said in a social media post accompanying video of the incident.",
+   "source_summary_publisher": "Livemint",
    "auto": {
     "location": "California",
     "model": null,
@@ -1110,6 +1110,69 @@
    ],
    "sources": [
     {
+     "publisher": "ABC7 Bay Area",
+     "title": "VIDEO: Driver asleep as Tesla in self-driving mode plows into scene of crash on I-80 in Fairfield",
+     "url": "https://abc7news.com/post/video-driver-asleep-tesla-driving-mode-plows-scene-crash-80-fairfield/19942866/",
+     "published": "2026-10-15",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "The Independent",
+     "title": "Sleeping Tesla driver using self-driving mode crashes into police car injuring officers",
+     "url": "https://www.independent.co.uk/tv/news/sleeping-tesla-driver-crashes-into-police-b3068222.html",
+     "published": "2026-10-16",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "KION Central Coast",
+     "title": "Video shows Tesla hit CHP car on I-80 in Fairfield; driver says he slept with Full Self-Driving on",
+     "url": "https://kioncentralcoast.com/news/top-stories/2026/10/16/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/",
+     "published": "2026-10-16",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Electrek",
+     "title": "Tesla driver says he was asleep on FSD when he hit CHP car, 2 officers hurt",
+     "url": "https://electrek.co/2026/10/16/tesla-fsd-crash-chp-patrol-car-driver-asleep-fairfield/",
+     "published": "2026-10-16",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Road & Track",
+     "title": "Tesla Driver Says He Was Asleep Using FSD When He Crashed Into CHP Police Car, Injuring 2 Officers: Cops",
+     "url": "https://www.roadandtrack.com/news/a74159752/tesla-driver-says-he-was-asleep-using-full-self-driving-when-he-crashed-into-police-car/",
+     "published": "2026-10-16",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "The Verge",
+     "title": "Tesla driver says he was asleep and using FSD when he crashed into highway patrol cars",
+     "url": "https://www.theverge.com/transportation/1013280/tesla-chp-fsd-crash",
+     "published": "2026-10-16",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Futurism",
+     "title": "Tesla Running FSD Slams Into Police Cruiser After Driver Falls Asleep Behind the Wheel, Hospitalizing Two Officers With Serious Injuries",
+     "url": "https://futurism.com/advanced-transport/tesla-fsd-slams-police-car",
+     "published": "2026-10-16",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "People.com",
+     "title": "Man, 22, Allegedly Sleeping Behind Wheel of Self-Driving Tesla Slams into Police Vehicle, Seriously Injuring 2 Officers",
+     "url": "https://people.com/man-sleeping-behind-wheel-of-self-driving-tesla-slams-into-vehicle-12176930",
+     "published": "2026-10-16",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "WKRC",
+     "title": "2 officers injured after self-driving Tesla crashes into cruiser at crash scene",
+     "url": "https://local12.com/news/nation-world/2-officers-injured-after-tesla-crashes-into-cruiser-at-crash-scene-sacramento-california-police-self-driving",
+     "published": "2026-10-16",
+     "read_by_coder": "not_read"
+    },
+    {
      "publisher": "CBS News on MSN",
      "title": "Video shows Tesla hit CHP car on I-80 in Fairfield; driver says he slept with Full Self-Driving on",
      "url": "https://www.msn.com/en-us/news/other/video-shows-tesla-hit-chp-car-on-i-80-in-fairfield-driver-says-he-slept-with-full-self-driving-on/ar-AA2eo9Qx",
@@ -1124,11 +1187,67 @@
      "read_by_coder": "summary"
     },
     {
+     "publisher": "kmph.com",
+     "title": "CHP: Tesla driver says he fell asleep in Full Self-Driving before hitting CHP cruiser",
+     "url": "https://kmph.com/news/local/gallery/chp-tesla-driver-says-he-fell-asleep-in-full-self-driving-before-hitting-chp-cruiser",
+     "published": "2026-10-17",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "NDTV",
+     "title": "Video: Sleeping Driver Using Tesla's Self-Driving Mode Crashes Into Police Car",
+     "url": "https://www.ndtv.com/world-news/video-sleeping-driver-using-teslas-self-driving-mode-crashes-into-police-car-12197738",
+     "published": "2026-10-17",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Yahoo",
+     "title": "Tesla Driver Says He Was Asleep With FSD On When He Hit Police Car",
+     "url": "https://www.yahoo.com/news/us/articles/tesla-driver-says-asleep-fsd-121500973.html",
+     "published": "2026-10-17",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "LiveNOW from FOX",
+     "title": "Dashcam: Tesla driver claims he was asleep on self-driving before hitting CHP cruiser, injuring 2",
+     "url": "https://www.livenowfox.com/news/dashcam-tesla-driver-claims-he-was-asleep-self-driving-before-hitting-chp-cruiser-injuring-2",
+     "published": "2026-10-17",
+     "read_by_coder": "not_read"
+    },
+    {
      "publisher": "Mint on MSN",
      "title": "Tesla driver allegedly asleep with Full Self-Driving on? Video shows car crashing into police vehicle in California",
      "url": "https://www.msn.com/en-in/news/other/tesla-driver-allegedly-asleep-with-full-self-driving-on-video-shows-car-crashing-into-police-vehicle-in-california/ar-AA2erZAC",
      "published": "2026-10-17",
      "read_by_coder": "summary"
+    },
+    {
+     "publisher": "Livemint",
+     "title": "Tesla driver allegedly asleep with Full Self-Driving on? Video shows car crashing into police vehicle in California",
+     "url": "https://www.livemint.com/news/us-news/tesla-driver-allegedly-asleep-with-full-self-driving-on-video-shows-car-crashing-into-police-vehicle-in-california-11792266778538.html",
+     "published": "2026-10-18",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "The Auto Wire",
+     "title": "Full Self-Driving (Supervised) Had No Supervisor: Driver Says He Was Asleep When His Tesla Hit a CHP Cruiser",
+     "url": "https://theautowire.com/2026/10/20/tesla-fsd-driver-asleep-chp-cruiser-i-80-fairfield/",
+     "published": "2026-10-20",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Yahoo Autos",
+     "title": "Full Self-Driving (Supervised) Had No Supervisor: Driver Says He Was Asleep When His Tesla Hit a CHP Cruiser",
+     "url": "https://autos.yahoo.com/policy-and-environment/articles/full-self-driving-supervised-had-170300466.html",
+     "published": "2026-10-20",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "EVXL.co",
+     "title": "Tesla Driver Says He Slept Through an FSD Crash Into a CHP Cruiser",
+     "url": "https://evxl.co/2026/10/20/tesla-fsd-driver-asleep-chp-patrol-car-i-80-fairfield/",
+     "published": "2026-10-20",
+     "read_by_coder": "not_read"
     }
    ]
   },
@@ -1716,13 +1835,13 @@
    "case_id": "SDI-00002",
    "maker": "Tesla",
    "url": "https://selfdriving.crimconsortium.com/cases/SDI-00002.html",
-   "first_reported": "2026-06-22",
+   "first_reported": "2026-06-20",
    "last_reported": "2026-07-16",
    "sort_date": "2026-06-19",
-   "headline": "Tesla driver in fatal Texas crash overrode driver assistance system: NTSB",
-   "headline_publisher": "The Hill",
-   "source_summary": "A Tesla driver in a fatal Texas crash overrode the car’s driver assistance system, the National Transportation Safety Board (NTSB) said Wednesday. The NTSB said in its preliminary findings that in mid ...",
-   "source_summary_publisher": "The Hill",
+   "headline": "A man whose Tesla crashed into a house last month in Texas and killed a woman while he was using its autopilot function has been charged with manslaughter, court records show.",
+   "headline_publisher": "Facebook",
+   "source_summary": "After a Tesla crashed into a Katy home, killing a woman inside, officials said the driver claimed the vehicle was on autopilot when the crash happened. The driver was later arrested for the crash as records say his claim wasn't true.",
+   "source_summary_publisher": "FOX 26 Houston",
    "auto": {
     "location": "Texas",
     "model": null,
@@ -1730,6 +1849,10 @@
      {
       "key": "autopilot",
       "label": "Autopilot mentioned in coverage"
+     },
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
      },
      {
       "key": "fatality",
@@ -1908,11 +2031,186 @@
    ],
    "sources": [
     {
+     "publisher": "Electrek",
+     "title": "Tesla driver says it was on Autopilot before fatal Texas home crash",
+     "url": "https://electrek.co/2026/06/20/tesla-autopilot-katy-texas-home-crash-woman-killed/",
+     "published": "2026-06-20",
+     "read_by_coder": "not_read"
+    },
+    {
      "publisher": "TechCrunch",
      "title": "Tesla pushes back on Autopilot narrative after fatal Texas crash",
      "url": "https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/",
      "published": "2026-06-22",
      "read_by_coder": "full_text"
+    },
+    {
+     "publisher": "FOX 26 Houston",
+     "title": "Tesla official says driver in deadly Katy crash overrode self-driving",
+     "url": "https://www.fox26houston.com/news/tesla-official-says-driver-deadly-katy-crash-overrode-self-driving",
+     "published": "2026-06-23",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "The Verge",
+     "title": "Tesla claims driver ‘manually overrode self-driving’ in deadly Texas crash",
+     "url": "https://www.theverge.com/transportation/955153/tesla-full-self-driving-texas-crash",
+     "published": "2026-06-23",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Yahoo Finance",
+     "title": "Tesla pushes back as fatal Texas crash reignites self-driving scrutiny",
+     "url": "https://finance.yahoo.com/markets/article/tesla-pushes-back-as-fatal-texas-crash-reignites-self-driving-scrutiny-173130065.html",
+     "published": "2026-06-23",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "ABC7 Chicago",
+     "title": "Tesla says driver overrode autopilot before crashing into Texas home, killing grandmother",
+     "url": "https://abc7chicago.com/story/tesla-car-crashes-house-company-says-driver-overrode-autopilot-texas-crash-killed-woman/19364037/",
+     "published": "2026-06-23",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "ABC7 Los Angeles",
+     "title": "Tesla says driver overrode autopilot before crashing into Texas home, killing grandmother",
+     "url": "https://abc7.com/story/tesla-car-crashes-house-company-says-driver-overrode-autopilot-texas-crash-killed-woman/19364037/",
+     "published": "2026-06-23",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "FOX 26 Houston",
+     "title": "Records claim Katy Tesla crash suspect overrode 'self-driving' mode before fatal incident",
+     "url": "https://www.fox26houston.com/news/katy-texas-tesla-crash-autopilot-override-2026-june",
+     "published": "2026-07-02",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "KHOU",
+     "title": "Man overrode Tesla’s self-driving mode, hit 73 mph before deadly Katy-area home crash, court docs say",
+     "url": "https://www.khou.com/article/news/local/katy-houston-tesla-crash-charges/285-c9665350-c771-4a5d-ab85-258b8522fb83",
+     "published": "2026-07-02",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "ABC13 Houston",
+     "title": "Deadly Tesla crash: Driver overrode autopilot seconds before plowing into Katy-area home, killing woman, docs state",
+     "url": "https://abc13.com/post/deadly-tesla-crash-driver-overrode-autopilot-seconds-before-plowing-katy-area-home-killing-woman-docs-state/19435992/",
+     "published": "2026-07-02",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "New York Post",
+     "title": "Driver charged with killing grandma after crashing Tesla into home as EV maker says he ‘manually overrode’ autopilot",
+     "url": "https://nypost.com/2026/07/02/us-news/driver-who-crashed-tesla-into-home-killing-grandma-charged-after-ev-company-says-he-manually-overrode-autopilot/",
+     "published": "2026-07-02",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "The New York Times",
+     "title": "Tesla Driver Using Autopilot in Texas Crash Is Charged With Manslaughter",
+     "url": "https://www.nytimes.com/2026/07/02/us/tesla-autopilot-crash-texas-manslaughter.html",
+     "published": "2026-07-02",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Facebook",
+     "title": "A man whose Tesla crashed into a house last month in Texas and killed a woman while he was using its autopilot function has been charged with manslaughter, court records show.",
+     "url": "https://www.facebook.com/nytimes/posts/a-man-whose-tesla-crashed-into-a-house-last-month-in-texas-and-killed-a-woman-wh/1418239973491795/",
+     "published": "2026-07-02",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "The Tech Buzz",
+     "title": "Tesla FSD Driver Faces Manslaughter in Fatal Texas Crash",
+     "url": "https://www.techbuzz.ai/articles/tesla-fsd-driver-faces-manslaughter-in-fatal-texas-crash",
+     "published": "2026-07-02",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Electrek",
+     "title": "Tesla driver charged with manslaughter in Katy crash was Googling ‘FSD too timid’",
+     "url": "https://electrek.co/2026/07/03/tesla-fsd-driver-manslaughter-katy-crash/",
+     "published": "2026-07-03",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "TechSpot",
+     "title": "Tesla driver charged with manslaughter after car in FSD mode crashes into Texas home",
+     "url": "https://www.techspot.com/news/112990-tesla-driver-charged-manslaughter-after-fsd-crash-kills.html",
+     "published": "2026-07-03",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Teslarati",
+     "title": "Texas man charged in fatal Tesla crash where he blamed Autopilot",
+     "url": "https://www.teslarati.com/texas-man-charged-in-fatal-tesla-crash-where-he-blamed-autopilot/",
+     "published": "2026-07-03",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "The Guardian",
+     "title": "Man charged with manslaughter over Tesla crash originally blamed on car’s self-driving mode",
+     "url": "https://www.theguardian.com/us-news/2026/jul/03/tesla-texas-crash-manslaughter",
+     "published": "2026-07-03",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "CarScoops",
+     "title": "Tesla Driver Who Blamed FSD For Fatal Home Crash Charged With Manslaughter",
+     "url": "https://www.carscoops.com/2026/07/tesla-home-crash-charge/",
+     "published": "2026-07-07",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Houston Public Media",
+     "title": "Preliminary NTSB findings: Driver in fatal Tesla crash in Katy overrode self-driving mode",
+     "url": "https://www.houstonpublicmedia.org/articles/news/transportation/2026/07/15/557180/tesla-fatal-crash-houston-ntsb-investigation/",
+     "published": "2026-07-15",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Houston Chronicle",
+     "title": "NTSB: Tesla driver overrode car's self-driving mode before deadly Katy crash",
+     "url": "https://www.houstonchronicle.com/news/houston-texas/article/tesla-crash-investigation-report-22347173.php",
+     "published": "2026-07-15",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "USA Today",
+     "title": "Tesla driver overrode self-driving before deadly Texas home crash, NTSB says",
+     "url": "https://www.usatoday.com/story/news/nation/2026/07/16/tesla-crash-katy-texas-ntsb-report-full-self-driving/90941239007/",
+     "published": "2026-07-16",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "NBC News",
+     "title": "Tesla driver whose car slammed into Texas home overrode driver assistance mode, NTSB says",
+     "url": "https://www.nbcnews.com/news/us-news/tesla-driver-whose-car-slammed-texas-home-overrode-driver-assistance-rcna587823",
+     "published": "2026-07-16",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Engadget",
+     "title": "NTSB Investigators Confirm Tesla Driver Overrode Full Self-Driving System In Fatal Crash",
+     "url": "https://www.engadget.com/2216921/ntsb-investigators-confirm-tesla-driver-overrode-full-self-driving-system-in-fatal-crash/",
+     "published": "2026-07-16",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "The Verge",
+     "title": "Tesla driver in fatal Texas crash overrode FSD by pressing accelerator ‘100 percent,’ investigators confirm",
+     "url": "https://www.theverge.com/transportation/966563/tesla-texas-crash-ntsb-investigation",
+     "published": "2026-07-16",
+     "read_by_coder": "not_read"
+    },
+    {
+     "publisher": "Ars Technica",
+     "title": "Tesla driver who blamed crash on autopilot pressed accelerator 100%, NTSB finds",
+     "url": "https://arstechnica.com/tech-policy/2026/07/tesla-driver-who-blamed-crash-on-autopilot-pressed-accelerator-100-ntsb-finds/",
+     "published": "2026-07-16",
+     "read_by_coder": "not_read"
     },
     {
      "publisher": "The Hill",

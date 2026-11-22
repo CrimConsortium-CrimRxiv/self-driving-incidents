@@ -6,6 +6,7 @@ import json
 from html import escape as esc
 from urllib.parse import quote
 
+from . import cluster
 from . import codebook as cb
 from . import export as ex
 from .common import ROOT
@@ -186,13 +187,15 @@ def dataset_ld(cfg: dict, updated: str, n_cases: int, first: str) -> dict:
 
 # --------------------------------------------------------------------------- homepage
 
-def home(pairs, cfg, updated, n_reports) -> str:
+def home(pairs, cfg, updated, n_reports, waiting=0) -> str:
     site = cfg["site"]
     n = int(site.get("homepage_count", 25))
     latest = [v for _, v in pairs[:n]]
     items = "\n".join(incident_item(v) for v in latest)
     total = len(pairs)
     mail = esc(site["contact_email"])
+    waiting_note = (f", and {waiting:,} more candidate {'case is' if waiting == 1 else 'cases are'} waiting to be coded"
+                    if waiting else "")
     if not latest:
         items = '          <li class="incident"><p class="incident-summary">The first cases are being coded and will appear here shortly.</p></li>'
     body = f"""        <section class="hero">
@@ -230,7 +233,7 @@ def home(pairs, cfg, updated, n_reports) -> str:
           <p class="section-note">
             The {min(n, total) if total else n} most recent, newest first. Each summary is the publisher's own words.
             Labels record what coverage says, not what has been established, and the coding behind
-            them is machine-drafted and not yet reviewed. This is not a complete list:
+            them is machine-drafted and not yet reviewed. This is not a complete list{waiting_note}:
             <a class="text-link" href="sampling.html">how cases are found, and why some are old</a>.
           </p>
           <ol class="incident-list">
@@ -515,6 +518,7 @@ def about_page(cfg, total, updated) -> str:
 # --------------------------------------------------------------------------- sampling page
 
 def sampling_stats(store: dict, cfg: dict) -> dict:
+    from collections import Counter
     """Counts shown on the sampling page, taken from the working record on every rebuild."""
     cases = store["cases"]
     days = sorted(s["published"][:10] for c in cases for s in c["sources"] if s.get("published"))
@@ -525,8 +529,9 @@ def sampling_stats(store: dict, cfg: dict) -> dict:
         "excluded": sum(c["status"] == "excluded" for c in cases),
         "pending": sum(c["status"] == "pending" for c in cases),
         "first_report": days[0] if days else "", "last_report": days[-1] if days else "",
-        "since_start": sum(d >= _days_before(started, int(cfg.get("lookback_days", 7))) for d in days) if started else 0,
-        "started": started,
+        "started": started, "backfill": str(cfg.get("backfill_from") or ""),
+        "live_from": _days_before(started, int(cfg.get("lookback_days", 7))) if started else "",
+        "by_month": sorted(Counter(d[:7] for d in days).items()),
     }
 
 
@@ -549,22 +554,45 @@ def sampling_page(cfg, stats, updated) -> str:
     bing = "".join(f"<li><code>{esc(q)}</code></li>" for m in cfg["makers"] for q in m.get("bing_queries", []))
     terms = lambda words: ", ".join(esc(w) for w in words)
     plural = lambda n, one, many: f"{n:,} {one if n == 1 else many}"
-    older = stats["reports"] - stats["since_start"]
+    live_from, back = stats["live_from"], stats["backfill"]
+    searched_from = back or live_from
+    days_all = stats["by_month"]
+    older = sum(n for m, n in days_all if m < searched_from[:7])
+    months = "".join(f"<tr><th>{ex.nice_date(m)}</th><td>{n:,}</td></tr>" for m, n in days_all)
+    if back:
+        when = (f"Collection began on {ex.nice_date(stats['started'])}. Each daily run looks back {look} days. "
+                f"On the first day the Google News searches were also repeated one week at a time back to "
+                f"{ex.nice_date(back)}, so the dataset draws on news published since then. Nothing earlier has been searched.")
+        thin = (f"The weeks before {ex.nice_date(live_from)} were searched after the fact, on Google News only, and return "
+                f"whatever it still lists for those weeks. Expect them to be thinner than the period collected live.")
+        brief = (f"It is every case found by a fixed set of news searches, in news published since {ex.nice_date(back)}, "
+                 f"that has been coded and has passed the screening rules below.")
+    else:
+        when = (f"Collection began on {ex.nice_date(stats['started'])}. The first run looked back {look} days, and each daily "
+                f"run since has done the same. The dataset has not been filled in for earlier months or years, so it holds "
+                f"roughly the news of the period since then, not the history of these incidents.")
+        thin = "Earlier periods can be searched week by week (see <a href=\"#reproduce\">the last section</a>), but that has not been done yet."
+        brief = (f"It is every case that a fixed set of daily news searches has found since {ex.nice_date(stats['started'])} "
+                 f"and that passed the screening rules below.")
+    backlog = (f" <strong>{stats['pending']:,} candidate cases are still waiting to be coded</strong>, so the published list "
+               f"is a small part of what has been found." if stats["pending"] > stats["published"] else "")
     body = f"""        <header class="page-head">
           <h1>Sampling: how cases get into the dataset</h1>
           <p>Where reports come from, which are kept, how they become cases, and what that means for what the data can support.</p>
         </header>
         <div class="prose">
-          <p class="notice" style="margin-top: 0"><strong>In brief.</strong> This is not a complete list or a random sample of incidents. It is every case that a fixed set of daily news searches has found since {ex.nice_date(stats["started"])} and that passed the screening rules below. It can show what kinds of incidents are reported and how they are handled. It cannot show how often they happen.</p>
+          <p class="notice" style="margin-top: 0"><strong>In brief.</strong> This is not a complete list or a random sample of incidents. {brief}{backlog} It can show what kinds of incidents are reported and how they are handled. It cannot show how often they happen.</p>
 
           <h2 id="why-few">Why there are few cases, and why some are old</h2>
-          <p>Collection began on {ex.nice_date(stats["started"])}. The first run looked back {look} days, and each daily run since has done the same. The dataset has not been filled in for earlier months or years, so it holds roughly the news of the period since then, not the history of these incidents.</p>
+          <p>{when}</p>
+          <p>{thin}</p>
+          <p>Finding a report is only the first step. A case appears on the site after it has been coded and screened, and {stats["excluded"]:,} of the {stats["published"] + stats["excluded"]:,} cases coded so far were set aside (see <a href="#numbers">the numbers</a>). Until the waiting cases are coded, the published list will stay much shorter than the list of what has been found.</p>
           <p>Cases are dated by when the incident happened, not when it was reported, so an old incident appears whenever it is in current news. That happens in two ways:</p>
           <ul>
             <li><strong>New coverage of an old event.</strong> A verdict, an appeal, a settlement or a regulator's report brings an earlier crash back into the news. A crash from 2019 can enter the dataset because of a court filing this month.</li>
-            <li><strong>Older articles returned by a search.</strong> One of the two news searches has no date limit and sometimes lists articles that are months or years old. They are kept if they pass the rules. Of the {plural(stats["reports"], "report", "reports")} collected so far, {older:,} {"was" if older == 1 else "were"} published before the first look-back window.</li>
+            <li><strong>Older articles returned by a search.</strong> One of the two news searches has no date limit and sometimes lists articles that are months or years old. They are kept if they pass the rules. Of the {plural(stats["reports"], "report", "reports")} collected so far, {older:,} {"was" if older == 1 else "were"} published before {ex.nice_date(searched_from[:7])}.</li>
           </ul>
-          <p>So a case dated 2023 does not mean coverage of 2023 is complete. It means one incident from 2023 was in the news we searched. Earlier periods can be searched week by week (see <a href="#reproduce">the last section</a>), but that has not been done yet.</p>
+          <p>So a case dated 2023 does not mean coverage of 2023 is complete. It means one incident from 2023 was in the news we searched.</p>
 
           <h2 id="numbers">The numbers so far</h2>
           <table class="var-table">
@@ -575,6 +603,10 @@ def sampling_page(cfg, stats, updated) -> str:
             <tr><th>Waiting to be coded</th><td>{stats["pending"]:,}. These are not shown on the site until they have been coded and screened.</td></tr>
           </table>
           <p style="margin-top: var(--space-3)">These figures are recalculated every time the site is rebuilt.</p>
+          <details class="month-counts">
+            <summary>Reports kept, by month of publication</summary>
+            <table class="var-table">{months}</table>
+          </details>
 
           <h2 id="sources">Where reports come from</h2>
           <p>Once a day a program runs the searches below on Google News (United States, English edition) and Bing News. The Google searches are limited to the last {look} days. Bing offers no date limit, so it returns whatever it currently lists. No other source is searched: not police or court records, regulators' databases, social media or reader submissions.</p>
@@ -597,8 +629,10 @@ def sampling_page(cfg, stats, updated) -> str:
           <p>The unit is the incident, not the article. Reports are joined into one case by rule, and the rules are cautious, so they are more likely to leave one event as two cases than to join two events:</p>
           <ul>
             <li>The same link, or the same publisher and headline, is counted once.</li>
-            <li>Headlines that are at least {sim}% alike are treated as the same report.</li>
-            <li>A new report joins an existing case when the two do not name different U.S. states and either a headline matches one published within 45 days, or the reports are within 5 days of each other and share at least {need} specific words (places, road numbers, charges).</li>
+            <li>Two reports are compared only if they were published within {cluster.WINDOW_DAYS} days of each other and do not name different U.S. states.</li>
+            <li>They are treated as the same event when their headlines are nearly identical (90% alike), or at least {sim}% alike and share two distinctive words, or share three distinctive words with one headline largely contained in the other. Similar wording alone is not enough: &ldquo;Tesla in self-driving mode involved in crash&rdquo; fits many events.</li>
+            <li>Reports within {cluster.CLOSE_DAYS} days of each other are also treated as the same event when their headlines and summary lines share at least {need} specific words (places, road numbers, charges).</li>
+            <li>A report joins a case when it matches any report already in that case. Dates are compared report to report, so a case with months of coverage does not pull in unrelated later news.</li>
             <li>At coding time the model is shown similar earlier cases and may say a new one is the same incident, in which case the reports are joined.</li>
           </ul>
 
@@ -617,10 +651,10 @@ def sampling_page(cfg, stats, updated) -> str:
             <li><strong>News decides what is here.</strong> Deaths, arrests, lawsuits and anything on video are far more likely to be reported than minor events, so serious and unusual incidents are over-represented.</li>
             <li><strong>English, and mostly the United States.</strong> The searches use English terms and a U.S. news edition.</li>
             <li><strong>Search services are a filter we do not control.</strong> Their ranking, limits and removals are not documented, so the collection cannot be exactly repeated.</li>
-            <li><strong>Time coverage is uneven.</strong> Fullest for news published from {ex.nice_date(_days_before(stats["started"], look))} onward; sparse and accidental before.</li>
+            <li><strong>Time coverage is uneven.</strong> Fullest for news published from {ex.nice_date(live_from)} onward, which was collected live from both search services. {("News from " + ex.nice_date(back) + " to then was searched afterwards on Google News only and is thinner. Anything earlier is accidental.") if back else "Sparse and accidental before."}</li>
             <li><strong>Headline wording matters.</strong> Incidents reported without a feature term in the headline are missed; incidents where the feature is the story are favoured.</li>
             <li><strong>Round-ups are lost.</strong> An incident reported only inside a round-up does not become a case.</li>
-            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two.</li>
+            <li><strong>Duplicates and wrong joins are possible.</strong> Two cases may be one event, and rarely one case may mix two. The joining rules were tightened on November 22, 2026 after a test showed that the earlier rules let a long-running case absorb unrelated reports; nothing from that test was published.</li>
             <li><strong>Coding has changed hands.</strong> Each record names its coder in the <code>coder</code> column; the first cases were drafted by a different model from the one the daily job is set to use. None has been reviewed by a person yet.</li>
             <li><strong>No denominator.</strong> Nothing here measures how much these features are used, so counts cannot be turned into rates or risks.</li>
           </ul>
@@ -633,7 +667,7 @@ def sampling_page(cfg, stats, updated) -> str:
             <li><a href="{repo}/blob/main/pipeline/coder.py" target="_blank" rel="noopener">coder.py</a>: the screening and quotation checks.</li>
             <li><a href="{repo}/commits/main" target="_blank" rel="noopener">Change history</a>: every daily refresh, with its counts.</li>
           </ul>
-          <p>Earlier periods can be searched with <code>python -m pipeline.run --backfill 2026-01-01</code>, which repeats the Google searches one week at a time back to the date given. Results for past weeks are whatever Google News still lists, so a backfill will be thinner than live collection.</p>
+          <p>Earlier periods are searched with <code>python -m pipeline.run --backfill 2026-01-01</code>, which repeats the Google searches one week at a time back to the date given. Results for past weeks are whatever Google News still lists, so a search of the past will be thinner than live collection.</p>
           <p>See also <a href="about.html">About the data</a> for how cases are coded and the codebook. Suggestions for other sources or search terms are welcome at <a href="mailto:{mail}">{mail}</a>.</p>
         </div>"""
     ld = [{"@type": "WebPage", "@id": site["url"] + "sampling.html", "url": site["url"] + "sampling.html",
@@ -651,7 +685,7 @@ def sampling_page(cfg, stats, updated) -> str:
 def write_pages(pairs, cfg, updated, n_reports, stats=None) -> None:
     site = cfg["site"]
     total = len(pairs)
-    ex.write_if_changed(ROOT / "index.html", home(pairs, cfg, updated, n_reports))
+    ex.write_if_changed(ROOT / "index.html", home(pairs, cfg, updated, n_reports, (stats or {}).get("pending", 0)))
     ex.write_if_changed(ROOT / "search.html", search_page(cfg, total))
     ex.write_if_changed(ROOT / "about.html", about_page(cfg, total, updated))
     if stats:
