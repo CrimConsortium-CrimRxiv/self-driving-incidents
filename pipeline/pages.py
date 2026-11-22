@@ -255,7 +255,7 @@ def home(pairs, cfg, updated, n_reports) -> str:
            "potentialAction": {"@type": "SearchAction", "target": site["url"] + "search.html?q={search_term_string}",
                                "query-input": "required name=search_term_string"}}]
     return shell(cfg, path="", current="home", jsonld=ld, body=body,
-                 title=f"{site['name']}: open data on Tesla Autopilot and FSD incidents",
+                 title=f"{site['name']}: Open Data on Tesla Autopilot and FSD incidents",
                  description=("Open dataset of crashes, near misses, police stops and court cases in which Tesla "
                               "Autopilot, Full Self-Driving or another automated-driving feature is in question. "
                               "Coded from published reports. Free download. From CrimConsortium."))
