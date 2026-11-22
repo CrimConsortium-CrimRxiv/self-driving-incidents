@@ -2313,7 +2313,7 @@
    "headline_publisher": "MySA",
    "key": "k25",
    "maker": "Tesla",
-   "needs_coding": false,
+   "needs_coding": true,
    "source_summary": "Nine days apart in October, two crashes involving Teslas on Interstate 80 in Northern California left two California Highway Patrol officers seriously injured and a 71-year-old pedestrian dead.",
    "source_summary_publisher": "MySA",
    "sources": [
@@ -2333,10 +2333,18 @@
      "summary": "In October 2026, two crashes involving Teslas on Interstate 80 in Northern California left two California Highway Patrol officers seriously injured and a 71-year-old pedestrian dead.",
      "title": "Two California Tesla Crashes Allegedly On Autopilot",
      "url": "https://www.carpro.com/blog/two-california-tesla-crashes-allegedly-on-auto-pilot"
+    },
+    {
+     "published": "2026-11-18T16:01:00Z",
+     "publisher": "Times Union",
+     "resolved": true,
+     "summary": "Nine days apart in October, two crashes involving Teslas on Interstate 80 in Northern California left two California Highway Patrol officers seriously injured and a 71-year-old pedestrian dead.",
+     "title": "Two California Tesla Crashes Allegedly On Autopilot",
+     "url": "https://www.timesunion.com/news/article/two-california-tesla-crashes-allegedly-on-auto-22540869.php"
     }
    ],
    "status": "excluded",
-   "updated": "2026-11-22T17:26:50Z"
+   "updated": "2026-11-22T18:16:14Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
