@@ -1,13 +1,15 @@
 """Checks that the rules the dataset promises actually hold. Run: python -m unittest discover -s tests"""
 import copy
+import csv
 import json
+import os
 import tempfile
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
 from unittest import mock
 
-from pipeline import cluster, codebook as cb, coder, collect, export, pages, run, store as st
+from pipeline import archive, cluster, codebook as cb, coder, collect, enrich, export, pages, run, store as st
 from pipeline.common import load_config
 
 CFG = load_config()
@@ -342,6 +344,126 @@ class Export(unittest.TestCase):
         self.assertNotIn("crashed 8 times", home)
         self.assertNotIn("parked police car", home)
         self.assertIn("crashed 8 times", (self.root / "data" / "screened_out.csv").read_text())
+
+
+class Archive(unittest.TestCase):
+    """Full text goes to a separate private folder, one file per report, and never into this repository."""
+    BODY = "Police said the Tesla left the road. " * 20
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        self.calls = []
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def fetch(self, src):
+        self.calls.append(src["url"])
+        return ("", "") if "blocked" in src["url"] else (self.BODY, "publisher")
+
+    def rows(self):
+        with open(self.root / "index.csv", encoding="utf-8", newline="") as fh:
+            return {r["url"]: r for r in csv.DictReader(fh)}
+
+    def store(self):
+        s = published_store()
+        s["cases"][0]["sources"].append({"publisher": "Paywall Post", "title": "Blocked report",
+                                         "url": "https://example.com/blocked", "published": "2026-11-20T12:00:00Z",
+                                         "summary": None})
+        waiting = case(["Tesla in Autopilot mode crashes into parked police car"], day=21)
+        s["cases"].append(waiting)
+        return s
+
+    def test_nothing_happens_without_a_connected_archive(self):
+        with mock.patch.dict(os.environ, {archive.ENV: ""}):
+            self.assertIsNone(archive.update(self.store(), CFG, fetch=self.fetch))
+        self.assertEqual(self.calls, [])
+
+    def test_archive_inside_the_public_repository_is_refused(self):
+        with mock.patch.dict(os.environ, {archive.ENV: str(archive.ROOT / "data")}):
+            with self.assertRaises(ValueError):
+                archive.archive_dir()
+
+    def test_saves_one_file_per_report_of_published_cases_only(self):
+        s = self.store()
+        before = json.dumps(s, sort_keys=True)
+        tally = archive.update(s, CFG, root=self.root, fetch=self.fetch)
+        self.assertEqual(json.dumps(s, sort_keys=True), before)          # the public record is untouched
+        rows = self.rows()
+        published = [x["url"] for x in s["cases"][0]["sources"]]
+        self.assertEqual(sorted(rows), sorted(published))                # the waiting case is not archived
+        good = rows[published[0]]
+        self.assertEqual((good["status"], good["case_id"], good["copy_from"]), ("saved", "SDI-00001", "publisher"))
+        text = (self.root / good["file"]).read_text()
+        self.assertTrue(good["file"].startswith("texts/SDI-00001/"))
+        self.assertIn(f"URL: {published[0]}", text)
+        self.assertTrue(text.rstrip().endswith(self.BODY.strip()))
+        self.assertEqual(int(good["chars"]), len(self.BODY.strip()))
+        blocked = rows["https://example.com/blocked"]
+        self.assertEqual((blocked["status"], blocked["file"], blocked["attempts"]), ("unavailable", "", "1"))
+        self.assertEqual(tally["saved"], len(published) - 1)
+
+    def test_saved_text_is_not_fetched_again_and_blocked_reports_are_retried_on_later_days_only(self):
+        s = self.store()
+        archive.update(s, CFG, root=self.root, fetch=self.fetch, today="2026-11-22")
+        first = {p.name: p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+        self.calls.clear()
+        archive.update(s, CFG, root=self.root, fetch=self.fetch, today=st.now_iso()[:10])
+        self.assertEqual(self.calls, [])                                 # same day: nothing is tried again
+        self.assertEqual(first, {p.name: p.read_bytes() for p in self.root.rglob("*") if p.is_file()})
+        for day in ("2026-12-01", "2026-12-02", "2026-12-03", "2026-12-04"):
+            rows = self.rows()
+            for r in rows.values():                                      # pretend the last try was earlier
+                r["retrieved"] = "2026-11-01T00:00:00Z" if r["status"] != "saved" else r["retrieved"]
+            archive.save_index(self.root, {r["text_id"]: r for r in rows.values()})
+            archive.update(s, CFG, root=self.root, fetch=self.fetch, today=day)
+        self.assertEqual(self.calls, ["https://example.com/blocked"] * 2)  # three tries in all, then left alone
+        self.assertEqual(self.rows()["https://example.com/blocked"]["attempts"], "3")
+
+    def test_file_follows_a_report_that_moves_to_another_case(self):
+        s = self.store()
+        archive.update(s, CFG, root=self.root, fetch=self.fetch)
+        url = s["cases"][0]["sources"][0]["url"]
+        old = self.root / self.rows()[url]["file"]
+        s["cases"][0]["case_id"] = "SDI-00009"
+        archive.update(s, CFG, root=self.root, fetch=self.fetch)
+        row = self.rows()[url]
+        self.assertEqual(row["case_id"], "SDI-00009")
+        self.assertTrue(row["file"].startswith("texts/SDI-00009/"))
+        self.assertTrue((self.root / row["file"]).exists())
+        self.assertFalse(old.exists())
+
+    def test_complete_text_keeps_short_lines_but_needs_a_real_article(self):
+        para = "<p>Troopers said the driver told them the car was in self-driving mode when it left the road.</p>"
+        article = "<html><body><h1>Tesla crash</h1>" + para.replace("Troopers", "Troopers A") \
+                  + "<p>No one was hurt.</p>" + "".join(para.replace("Troopers", f"Officer {i}") for i in range(6)) \
+                  + "<p>Sign up now</p><p>Sign up now</p></body></html>"
+        teasers = "<html><body><h1>Video</h1>" + "".join(f"<p>Story {i}</p>" for i in range(200)) + "</body></html>"
+
+        class Reply:
+            status_code, headers, encoding = 200, {"content-type": "text/html"}, "utf-8"
+            def __init__(self, body): self.body = body
+            def __enter__(self): return self
+            def __exit__(self, *a): return False
+            def iter_content(self, n): yield self.body.encode()
+
+        src = {"url": "https://example.com/a", "resolved": True}
+        with mock.patch.object(enrich.requests, "get", return_value=Reply(article)):
+            text = enrich.complete_text(src)
+        self.assertIn("Tesla crash", text)
+        self.assertIn("No one was hurt.", text)
+        self.assertEqual(text.count("Sign up now"), 1)
+        with mock.patch.object(enrich.requests, "get", return_value=Reply(teasers)):
+            self.assertEqual(enrich.complete_text(src), "")
+        self.assertEqual(enrich.complete_text({"url": "https://example.com/a", "resolved": False}), "")
+
+    def test_export_writes_no_article_text_into_the_repository(self):
+        tmp = Path(self.tmp.name) / "site"
+        with mock.patch.object(export, "ROOT", tmp), mock.patch.object(export, "DATA", tmp / "data"), \
+                mock.patch.object(pages, "ROOT", tmp):
+            export.export_all(published_store(), CFG)
+        self.assertEqual([p for p in tmp.rglob("*.txt") if p.name != "robots.txt"], [])
 
 
 class Store(unittest.TestCase):

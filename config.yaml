@@ -92,6 +92,14 @@ coder:
   max_prompt_chars: 60000      # about 15,000 tokens of reports per case
   max_quote_chars: 300
 
+# Private full-text archive. The complete text of each report linked to a published case is
+# saved in a separate private repository, never in this one. That repository runs
+# `python -m pipeline.archive` on its own schedule; the daily job here does not.
+archive:
+  max_per_run: 300             # most reports fetched for the archive in one run
+  max_attempts: 3              # a report that cannot be read is tried on this many days, then left
+  min_chars: 400               # shorter than this is treated as blocked, not as an article
+
 license:
   data: "CC BY 4.0"
   code: "MIT"

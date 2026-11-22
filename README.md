@@ -23,6 +23,9 @@ A scheduled job (`.github/workflows/refresh.yml`) runs once a day and does four 
    and drafts the coded variables, a short neutral narrative, and a list of who said what.
 4. **Rebuilds the site and the download files**, and saves them here only if something changed.
 
+The text of the reports is saved separately, in a private archive, described under
+[Full text of the reports](#full-text-of-the-reports).
+
 Nothing needs to be done by hand. To run it on demand, open the **Actions** tab, choose
 **Refresh dataset**, and press **Run workflow**.
 
@@ -50,8 +53,24 @@ and joining reports, current counts and known gaps are on the
 - A case is published only after it is screened as one identifiable incident. Round-ups,
   statistics and product news are set aside and listed in `data/screened_out.csv` with the reason.
 - Every record is marked "machine-coded, not yet reviewed" until a person has checked it.
-- Article text is read at coding time and not stored. The repository keeps links, headlines,
-  publisher summaries and short quotations.
+- Article text is never published. This repository, the site and the download keep links,
+  headlines, publisher summaries and short quotations only.
+
+## Full text of the reports
+
+Publishers hold the copyright in their articles, so the text is not part of this dataset. To let
+the coding be checked and the reports be studied later, the complete text of each report linked to
+a published case is saved in a separate private repository (`self-driving-incidents-fulltext`): one
+plain-text file per report, in a folder named for the case ID, with an `index.csv` that ties each
+file to its case and its link. The text is taken from the publisher's page as served to a reader
+who is not signed in, or, when that page cannot be read, from the Internet Archive's saved copy of
+the same link. Reports that cannot be read either way are listed in the index as unavailable and
+tried again on two later days.
+
+The private repository does this itself, once a day, an hour after the job here: it downloads this
+repository, reads `store/cases.json`, and runs `python -m pipeline.archive`. No key to the private
+repository is kept here, and no article text passes through this repository's job or its logs.
+The code refuses to write inside this repository.
 
 ## Files
 
