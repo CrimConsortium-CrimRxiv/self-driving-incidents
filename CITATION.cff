@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below and give the date you downloaded it."
+type: dataset
+title: "Self-Driving Incidents Explorer"
+abstract: >-
+  An open dataset of crashes, near misses, police stops and court cases in which a vehicle's
+  automated-driving feature is claimed, questioned or confirmed to be involved. One case per
+  incident, built from published reports, with coded variables, supporting quotations and source links.
+authors:
+  - name: "CrimConsortium"
+    website: "https://crimconsortium.com"
+url: "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/"
+repository-code: "https://github.com/CrimConsortium-CrimRxiv/self-driving-incidents"
+license: CC-BY-4.0
+keywords:
+  - self-driving cars
+  - automated driving
+  - criminology
+  - open data

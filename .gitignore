@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+refresh.log
+.DS_Store
+/qa/

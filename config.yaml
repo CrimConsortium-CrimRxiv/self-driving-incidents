@@ -1,0 +1,85 @@
+# ---------------------------------------------------------------------------
+# Self-Driving Incidents Explorer: settings. Edit here; no code changes needed.
+# ---------------------------------------------------------------------------
+
+site:
+  name: "Self-Driving Incidents Explorer"
+  # Public address of the site. Change this one line (and add a CNAME file) when a custom
+  # domain is attached; every canonical link, sitemap entry and share card follows it.
+  url: "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/"
+  contact_email: "consortium@crimrxiv.com"
+  repo: "https://github.com/CrimConsortium-CrimRxiv/self-driving-incidents"
+  homepage_count: 25
+
+# Vehicle makers covered. Add another block to widen the dataset beyond Tesla.
+makers:
+  - name: "Tesla"
+    terms: ["tesla", "cybertruck", "cybercab"]
+    queries:
+      - 'Tesla (Autopilot OR "Full Self-Driving" OR FSD OR "self-driving") (crash OR accident OR collision)'
+      - 'Tesla (robotaxi OR Cybercab OR driverless) (crash OR accident OR collision OR incident)'
+      - 'Tesla (Autopilot OR FSD OR "self-driving") (police OR arrested OR charged OR asleep OR DUI)'
+      - 'Tesla (Autopilot OR "Full Self-Driving") (lawsuit OR verdict OR trial OR investigation)'
+      - 'Tesla ("Smart Summon" OR Summon OR Autopark) (crash OR hit OR collision)'
+    bing_queries:
+      - "Tesla Autopilot crash"
+      - "Tesla Full Self-Driving crash"
+      - "Tesla robotaxi crash"
+
+# Each regular run looks back this many days (Google News "when:" window).
+lookback_days: 7
+
+keywords:
+  # A headline (or the source's own summary) must name an automated-driving feature ...
+  automation: ["autopilot", "full self-driving", "fsd", "self-driving", "self driving", "robotaxi",
+               "cybercab", "driverless", "autonomous", "summon", "autopark", "autosteer",
+               "driver-assist", "driver assistance", "no driver", "no one behind the wheel",
+               "nobody behind the wheel", "empty driver"]
+  # ... and the headline must point to something that happened.
+  incident: ["crash", "collision", "collide", "accident", "wreck", "hit", "struck", "strike", "slam",
+             "rear-end", "kill", "fatal", "death", "dead", "die", "injure", "injury", "hurt",
+             "asleep", "sleeping", "dui", "dwi", "owi", "drunk", "intoxicated", "arrest", "charged",
+             "cited", "ticket", "pulled over", "police", "lawsuit", "sue", "sued", "verdict", "jury",
+             "trial", "settle", "settlement", "wrong way", "red light", "near miss", "swerve",
+             "railroad", "train", "school bus", "pedestrian", "cyclist", "motorcyclist", "fire",
+             "investigation", "investigate", "probe", "ntsb"]
+  # Headlines mentioning any of these are dropped before anything else happens.
+  exclude: ["stock", "shares", "earnings", "price target", "market crash", "release notes",
+            "rolls out", "accessories"]
+
+# Headlines at least this similar (0-100) are treated as the same report.
+similarity_threshold: 75
+merge_min_shared_words: 4
+max_summary_chars: 240
+
+# Labels drafted by simple word matching. Always worded "mentioned in coverage".
+tags:
+  - label: "Autopilot mentioned in coverage"
+    key: "autopilot"
+    words: ["autopilot", "autosteer"]
+  - label: "Full Self-Driving mentioned in coverage"
+    key: "fsd"
+    words: ["full self-driving", "fsd", "self-driving mode", "self-driving"]
+  - label: "Robotaxi mentioned in coverage"
+    key: "robotaxi"
+    words: ["robotaxi", "cybercab", "driverless"]
+  - label: "Summon mentioned in coverage"
+    key: "summon"
+    words: ["summon", "autopark"]
+  - label: "Fatality mentioned in coverage"
+    key: "fatality"
+    words: ["killed", "kills", "dead", "deadly", "died", "dies", "death", "fatal", "fatally", "fatality"]
+
+# Machine coding (GitHub Models, free tier, called from GitHub Actions).
+coder:
+  endpoint: "https://models.github.ai/inference/chat/completions"
+  models: ["openai/gpt-4.1-mini", "openai/gpt-4o-mini"]   # tried in this order
+  max_cases_per_run: 90        # free tier allows about 150 requests a day
+  seconds_between_requests: 4.5
+  max_sources_per_case: 5
+  max_prompt_chars: 25000      # keeps each request under the 8,000-token input limit
+  max_quote_chars: 300
+
+license:
+  data: "CC BY 4.0"
+  code: "MIT"

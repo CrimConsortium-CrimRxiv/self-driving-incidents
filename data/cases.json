@@ -1,0 +1,8 @@
+{
+ "dataset": "Self-Driving Incidents Explorer",
+ "url": "https://crimconsortium-crimrxiv.github.io/self-driving-incidents/",
+ "updated": "2026-11-22",
+ "codebook_version": "0.1",
+ "license": "CC BY 4.0",
+ "cases": []
+}

@@ -1,0 +1,77 @@
+name: Refresh dataset
+
+on:
+  schedule:
+    - cron: "17 10 * * *"   # every day, about 5:17 am Eastern
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: "Also search week by week back to this date (YYYY-MM-DD). Leave empty for a normal run."
+        required: false
+        default: ""
+      max_code:
+        description: "Most cases to code in this run. Leave empty for the setting in config.yaml."
+        required: false
+        default: ""
+
+permissions:
+  contents: write   # save the refreshed data to the repository
+  models: read      # use GitHub Models to draft the coded variables
+  pages: write      # ask GitHub Pages to rebuild the site
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m unittest discover -s tests
+
+      - name: Collect, code and rebuild
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          # Optional: a personal token with "Models: read" raises the free daily allowance.
+          SDI_MODELS_TOKEN: ${{ secrets.SDI_MODELS_TOKEN }}
+          BACKFILL: ${{ inputs.backfill }}
+          MAX_CODE: ${{ inputs.max_code }}
+        run: |
+          set -o pipefail
+          args=()
+          if [ -n "$BACKFILL" ]; then args+=(--backfill "$BACKFILL"); fi
+          if [ -n "$MAX_CODE" ]; then args+=(--max-code "$MAX_CODE"); fi
+          python -u -m pipeline.run "${args[@]}" | tee refresh.log
+
+      - name: Save changes
+        id: publish
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add store data cases index.html search.html about.html sitemap.xml robots.txt CODEBOOK.md
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "$(tail -1 refresh.log)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Ask GitHub Pages to rebuild
+        if: steps.publish.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"

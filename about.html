@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About the data and codebook | Self-Driving Incidents Explorer</title>
+    <meta name="description" content="How the Self-Driving Incidents Explorer finds and codes cases, what the data can and cannot show, the full codebook, licence and citation." />
+    <meta name="author" content="CrimConsortium" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#0e0e0e" />
+    <link rel="canonical" href="https://crimconsortium-crimrxiv.github.io/self-driving-incidents/about.html" />
+
+    <meta property="og:title" content="About the data and codebook | Self-Driving Incidents Explorer" />
+    <meta property="og:description" content="How the Self-Driving Incidents Explorer finds and codes cases, what the data can and cannot show, the full codebook, licence and citation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://crimconsortium-crimrxiv.github.io/self-driving-incidents/about.html" />
+    <meta property="og:site_name" content="Self-Driving Incidents Explorer" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://crimconsortium-crimrxiv.github.io/self-driving-incidents/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Self-Driving Incidents Explorer: incidents where self-driving is in question" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@CrimConsortium" />
+    <meta name="twitter:title" content="About the data and codebook | Self-Driving Incidents Explorer" />
+    <meta name="twitter:description" content="How the Self-Driving Incidents Explorer finds and codes cases, what the data can and cannot show, the full codebook, licence and citation." />
+    <meta name="twitter:image" content="https://crimconsortium-crimrxiv.github.io/self-driving-incidents/og-image.png" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("sdi-theme"); } catch (e) {}
+        if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page page-narrow">
+      <header class="site-header">
+        <div class="brand">
+          <a class="brand-link" href="https://crimconsortium.com" target="_blank" rel="noopener" aria-label="CrimConsortium">
+            <img class="brand-mark" src="crimconsortium-logo.png" alt="CrimConsortium" width="36" height="36" />
+          </a>
+          <div class="brand-text">
+            <a class="brand-title brand-title-link" href="index.html">Self-Driving Incidents Explorer</a>
+          </div>
+        </div>
+        <div class="header-actions">
+          <nav class="site-nav" aria-label="Site">
+            <a href="search.html">Search</a>
+            <a href="about.html" aria-current="page">About the data</a>
+          </nav>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle color scheme" title="Toggle light or dark"></button>
+        </div>
+      </header>
+
+      <main id="main">
+        <header class="page-head">
+          <h1>About the data</h1>
+          <p>What this dataset is, how each case is found and coded, what it cannot tell you, and how to use and cite it.</p>
+        </header>
+        <div class="prose">
+          <p class="notice" style="margin-top: 0">We're iteratively improving this site and dataset. Please email corrections or suggestions to <a href="mailto:consortium@crimrxiv.com">consortium@crimrxiv.com</a>.</p>
+
+          <h2>What it is</h2>
+          <p>A case is one incident in which a vehicle's automated-driving feature is claimed, questioned or confirmed to be involved: a crash, a near miss, a police stop, a person found asleep at the wheel, or a court case about any of these. Incidents with no collision are included. The dataset covers Tesla (Autopilot, Full Self-Driving, Summon and its robotaxi service) for now, and is built so other makers can be added.</p>
+          <p>It is meant for research and teaching in criminology and related fields: who is said to have done what, how police, prosecutors, regulators and courts respond, and how responsibility is attributed when a machine shares the driving.</p>
+
+          <h2>How cases are found</h2>
+          <p>Once a day, a program searches Google News and Bing News for reports that name an automated-driving feature and describe something that happened. Reports about the same event are grouped into one case, and later reports (an arrest, a lawsuit, a verdict) are attached to the case they belong to. Round-ups of several incidents, statistics, product news and opinion pieces are set aside and listed, with the reason, in <code>screened_out.csv</code>.</p>
+
+          <h2>How cases are coded</h2>
+          <p>A language model reads the reports attached to a case (the article text where the publisher allows it, otherwise the headline and summary) and drafts the coded variables, a short neutral narrative, and a list of who said what. Three rules limit what it can assert:</p>
+          <ul>
+            <li>It may use only the reports attached to the case.</li>
+            <li>Every coded value must come with a quotation, and the program keeps the value only if that quotation is found word for word in the report. Values that fail are removed and counted on the case page.</li>
+            <li>A mention of a feature is never treated as evidence that it was in use. The variable <code>engagement_status</code> separates what an official source or the maker's own data states from what a driver, lawyer or witness claims.</li>
+          </ul>
+          <p>Every record is marked &ldquo;machine-coded, not yet reviewed&rdquo; until a person has checked it. Summaries shown on the homepage are each publisher's own words, not ours.</p>
+
+          <h2>What it cannot tell you</h2>
+          <ul>
+            <li><strong>It is not a count of all incidents.</strong> It holds only incidents that reached published news in English and that our searches found. Many incidents are never reported.</li>
+            <li><strong>Counts are not rates.</strong> Nothing here says how often these features are used without incident, so the data cannot show whether they are safer or less safe than a human driver.</li>
+            <li><strong>It does not establish fault or cause.</strong> It records what coverage reports and who says so.</li>
+            <li><strong>Machine coding makes mistakes.</strong> Dates, places and counts can be wrong, and two cases may turn out to be the same event. Check the linked sources before relying on a record.</li>
+            <li><strong>Coverage changes.</strong> Early reports are often revised. A case reflects the reports attached to it on the date shown.</li>
+          </ul>
+
+          <h2>Privacy</h2>
+          <p>Coded fields, narratives and claims describe people by role (&ldquo;the driver&rdquo;, &ldquo;a passenger&rdquo;) and do not name private individuals. Names may still appear in publishers' headlines and in the linked reports. We store links and short quotations, not copies of articles. To ask for a change, email <a href="mailto:consortium@crimrxiv.com">consortium@crimrxiv.com</a>.</p>
+
+          <h2>Download, licence and citation</h2>
+          <p><a href="data/self-driving-incidents.zip" download>Download everything as one .zip</a>, or take single files: <a href="data/cases.csv" download>cases.csv</a>, <a href="data/evidence.csv" download>evidence.csv</a>, <a href="data/claims.csv" download>claims.csv</a>, <a href="data/sources.csv" download>sources.csv</a>, <a href="data/screened_out.csv" download>screened_out.csv</a>, <a href="data/cases.json" download>cases.json</a>, <a href="data/codebook.json" download>codebook.json</a>.</p>
+          <p>The data are free to reuse under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. The code that builds them is on <a href="https://github.com/CrimConsortium-CrimRxiv/self-driving-incidents" target="_blank" rel="noopener">GitHub</a>, where every change to the data is recorded.</p>
+          <p>Cite as: CrimConsortium. <em>Self-Driving Incidents Explorer</em> [dataset]. https://crimconsortium-crimrxiv.github.io/self-driving-incidents/ (data as of November 22, 2026; codebook version 0.1).</p>
+
+          <h2 id="codebook">Codebook, version 0.1</h2>
+          <p>26 coded variables. Select one to see its definition and allowed values. A blank value means the reports read did not state it.</p>
+        </div>
+        <div class="codebook">
+<h3>Incident</h3>
+<details><summary><span>Incident date</span><code>incident_date</code></summary><div class="cb-body"><p>Date the incident happened, as stated in coverage: YYYY-MM-DD, or YYYY-MM or YYYY when only that much is given. Work out relative dates (&quot;Thursday night&quot;) from the report&#x27;s publication date. <em>(date)</em></p></div></details>
+<details><summary><span>Type of incident</span><code>incident_type</code></summary><div class="cb-body"><p>What kind of event the coverage describes. <em>(one value)</em></p><dl><dt><code>collision</code></dt><dd>The vehicle struck, or was struck by, something or someone.</dd><dt><code>near_miss_or_erratic_driving</code></dt><dd>No collision reported: a near miss, swerving, running a signal, wrong-way travel or similar.</dd><dt><code>traffic_stop_or_violation</code></dt><dd>No collision reported: the coverage centres on a police stop, citation or arrest.</dd><dt><code>driver_asleep_or_absent</code></dt><dd>No collision reported: the person in the car was seen asleep, out of the driver&#x27;s seat, or absent.</dd><dt><code>low_speed_or_parking_manoeuvre</code></dt><dd>Something that happened while parking, summoning or creeping at walking pace.</dd><dt><code>other</code></dt><dd>An identifiable incident that fits none of the above.</dd></dl></div></details>
+<details><summary><span>Collided with</span><code>collision_with</code></summary><div class="cb-body"><p>What the vehicle collided with, if there was a collision. <em>(one or more values)</em></p><dl><dt><code>passenger_vehicle</code></dt><dd>Car, SUV, pickup or van.</dd><dt><code>truck_or_bus</code></dt><dd>Heavy truck, tractor-trailer or bus.</dd><dt><code>motorcycle</code></dt><dd>Motorcycle or scooter.</dd><dt><code>bicycle</code></dt><dd>Bicycle or e-bike.</dd><dt><code>pedestrian</code></dt><dd>Person on foot.</dd><dt><code>emergency_or_police_vehicle</code></dt><dd>Police, fire, ambulance or tow vehicle.</dd><dt><code>train</code></dt><dd>Train or tram.</dd><dt><code>fixed_object</code></dt><dd>Pole, tree, barrier, wall, building and the like.</dd><dt><code>construction_zone_or_equipment</code></dt><dd>Work-zone equipment, barrels or vehicles.</dd><dt><code>animal</code></dt><dd>Animal.</dd><dt><code>other</code></dt><dd>Anything else.</dd></dl></div></details>
+<details><summary><span>Vehicle make</span><code>vehicle_make</code></summary><div class="cb-body"><p>Make of the vehicle whose automated-driving feature is in question (for example Tesla). <em>(short text)</em></p></div></details>
+<details><summary><span>Vehicle model</span><code>vehicle_model</code></summary><div class="cb-body"><p>Model, as named in coverage (for example Model Y, Cybertruck, Cybercab). <em>(short text)</em></p></div></details>
+<details><summary><span>Model year</span><code>vehicle_model_year</code></summary><div class="cb-body"><p>Model year of that vehicle, when coverage gives it. <em>(whole number)</em></p></div></details>
+<h3>Place and time</h3>
+<details><summary><span>City or locality</span><code>location_city</code></summary><div class="cb-body"><p>City, town or county where the incident happened. <em>(short text)</em></p></div></details>
+<details><summary><span>State or region</span><code>location_state_region</code></summary><div class="cb-body"><p>State, province or region, written in full. <em>(short text)</em></p></div></details>
+<details><summary><span>Country</span><code>location_country</code></summary><div class="cb-body"><p>Country, written in full (for example United States). <em>(short text)</em></p></div></details>
+<details><summary><span>Road setting</span><code>road_type</code></summary><div class="cb-body"><p>Where on the road network the incident happened. <em>(one value)</em></p><dl><dt><code>highway_or_freeway</code></dt><dd>Interstate, freeway, motorway or other limited-access road.</dd><dt><code>urban_or_suburban_street</code></dt><dd>City or suburban street.</dd><dt><code>rural_road</code></dt><dd>Rural or country road.</dd><dt><code>intersection</code></dt><dd>At a junction or signal.</dd><dt><code>parking_lot_or_driveway</code></dt><dd>Car park, garage or driveway.</dd><dt><code>rail_crossing</code></dt><dd>Railway or tram crossing.</dd><dt><code>other</code></dt><dd>Any other setting.</dd></dl></div></details>
+<details><summary><span>Time of day</span><code>time_of_day</code></summary><div class="cb-body"><p>When in the day the incident happened. <em>(one value)</em></p><dl><dt><code>daytime</code></dt><dd>In daylight.</dd><dt><code>night</code></dt><dd>After dark.</dd><dt><code>dawn_or_dusk</code></dt><dd>Around sunrise or sunset.</dd></dl></div></details>
+<h3>Automation</h3>
+<details><summary><span>Automated-driving feature named</span><code>system_named</code></summary><div class="cb-body"><p>Which automated-driving feature(s) the coverage names. Naming a feature is not evidence it was in use. <em>(one or more values)</em></p><dl><dt><code>autopilot</code></dt><dd>Tesla Autopilot or Autosteer.</dd><dt><code>full_self_driving</code></dt><dd>Tesla Full Self-Driving (FSD), supervised or otherwise.</dd><dt><code>robotaxi_or_driverless_service</code></dt><dd>A robotaxi or other vehicle operating with no driver.</dd><dt><code>summon_or_autopark</code></dt><dd>Summon, Smart Summon or Autopark.</dd><dt><code>unspecified</code></dt><dd>&quot;Self-driving mode&quot;, &quot;driver assistance&quot; and similar, with no product named.</dd></dl></div></details>
+<details><summary><span>Was the feature in use?</span><code>engagement_status</code></summary><div class="cb-body"><p>The strongest statement the coverage supports about whether the feature was in use at the time. This records what coverage reports; it is not a finding by this dataset. <em>(one value)</em></p><dl><dt><code>confirmed_by_official_source</code></dt><dd>A police or regulator finding, a court finding, or the manufacturer&#x27;s own data report states the feature was in use.</dd><dt><code>claimed</code></dt><dd>Someone says it was in use (for example the driver, or police relaying the driver&#x27;s account) and coverage reports no official confirmation.</dd><dt><code>alleged_in_legal_filing</code></dt><dd>The claim that it was in use is made in a lawsuit or criminal case.</dd><dt><code>under_investigation</code></dt><dd>Coverage says whether it was in use is unknown or being investigated.</dd><dt><code>disputed</code></dt><dd>Sources in the coverage contradict each other about whether it was in use.</dd><dt><code>reported_not_engaged</code></dt><dd>An official source or the manufacturer says it was not in use.</dd><dt><code>mentioned_only</code></dt><dd>The feature is mentioned as background; nobody in the coverage says it was in use.</dd></dl></div></details>
+<details><summary><span>Who says it was in use</span><code>engagement_claimed_by</code></summary><div class="cb-body"><p>Everyone the coverage reports as saying the feature was in use. <em>(one or more values)</em></p><dl><dt><code>driver</code></dt><dd>Driver.</dd><dt><code>passenger</code></dt><dd>Passenger.</dd><dt><code>police</code></dt><dd>Police.</dd><dt><code>prosecutor</code></dt><dd>Prosecutor.</dd><dt><code>manufacturer</code></dt><dd>Manufacturer.</dd><dt><code>regulator</code></dt><dd>Regulator.</dd><dt><code>ntsb</code></dt><dd>NTSB.</dd><dt><code>plaintiff_or_plaintiff_lawyer</code></dt><dd>Plaintiff or plaintiff lawyer.</dd><dt><code>defense_lawyer</code></dt><dd>Defense lawyer.</dd><dt><code>court_or_jury</code></dt><dd>Court or jury.</dd><dt><code>witness</code></dt><dd>Witness.</dd><dt><code>news_outlet</code></dt><dd>News outlet.</dd><dt><code>other</code></dt><dd>Other.</dd></dl></div></details>
+<details><summary><span>Someone in the driver&#x27;s seat</span><code>driver_seat_occupied</code></summary><div class="cb-body"><p>Whether coverage says a person was in the driver&#x27;s seat. <em>(one value)</em></p><dl><dt><code>yes</code></dt><dd>A person was in the driver&#x27;s seat.</dd><dt><code>no</code></dt><dd>The driver&#x27;s seat was empty.</dd></dl></div></details>
+<details><summary><span>Driver condition mentioned</span><code>driver_condition_mentioned</code></summary><div class="cb-body"><p>Conditions of the person responsible for the vehicle that coverage mentions. Mentions, not findings. <em>(one or more values)</em></p><dl><dt><code>alcohol_or_drugs</code></dt><dd>Alcohol or drug impairment is alleged or reported.</dd><dt><code>asleep_or_drowsy</code></dt><dd>The driver is said to have been asleep or drowsy.</dd><dt><code>distracted</code></dt><dd>Phone use or another distraction is reported.</dd><dt><code>medical_event</code></dt><dd>A medical emergency is reported.</dd><dt><code>not_supervising</code></dt><dd>Hands off the wheel, eyes off the road, or otherwise not monitoring.</dd></dl></div></details>
+<h3>Harm</h3>
+<details><summary><span>Deaths reported</span><code>fatalities</code></summary><div class="cb-body"><p>Number of people coverage reports as killed. 0 only when coverage says nobody died. <em>(whole number)</em></p></div></details>
+<details><summary><span>Injuries reported</span><code>injuries</code></summary><div class="cb-body"><p>Number of people coverage reports as injured but not killed. 0 only when coverage says nobody was hurt. <em>(whole number)</em></p></div></details>
+<details><summary><span>Who was harmed</span><code>persons_harmed</code></summary><div class="cb-body"><p>Roles of the people reported killed or injured. <em>(one or more values)</em></p><dl><dt><code>subject_vehicle_driver</code></dt><dd>The driver of the vehicle in question.</dd><dt><code>subject_vehicle_passenger</code></dt><dd>A passenger in that vehicle.</dd><dt><code>other_vehicle_occupant</code></dt><dd>Someone in another vehicle.</dd><dt><code>motorcyclist</code></dt><dd>A motorcyclist.</dd><dt><code>cyclist</code></dt><dd>A cyclist.</dd><dt><code>pedestrian</code></dt><dd>A pedestrian.</dd><dt><code>emergency_or_road_worker</code></dt><dd>A police officer, firefighter, medic, tow operator or road worker.</dd></dl></div></details>
+<h3>Official response</h3>
+<details><summary><span>Police action</span><code>police_action</code></summary><div class="cb-body"><p>The furthest police action that coverage reports. <em>(one value)</em></p><dl><dt><code>investigating</code></dt><dd>Police are investigating.</dd><dt><code>citation_issued</code></dt><dd>A citation or ticket was issued.</dd><dt><code>arrest_made</code></dt><dd>Someone was arrested.</dd></dl></div></details>
+<details><summary><span>Criminal charges</span><code>criminal_charges</code></summary><div class="cb-body"><p>Charges reported, in a few words (for example &quot;DUI; reckless driving&quot;). No names. <em>(short text)</em></p></div></details>
+<details><summary><span>Criminal case stage</span><code>criminal_case_stage</code></summary><div class="cb-body"><p>The furthest stage of any criminal case that coverage reports. <em>(one value)</em></p><dl><dt><code>charged</code></dt><dd>Charges filed or announced.</dd><dt><code>plea</code></dt><dd>A plea was entered.</dd><dt><code>trial</code></dt><dd>At trial.</dd><dt><code>convicted</code></dt><dd>Found guilty.</dd><dt><code>acquitted</code></dt><dd>Found not guilty.</dd><dt><code>sentenced</code></dt><dd>Sentenced.</dd><dt><code>dismissed</code></dt><dd>Charges dropped or dismissed.</dd></dl></div></details>
+<details><summary><span>Civil litigation</span><code>civil_litigation</code></summary><div class="cb-body"><p>The furthest stage of any lawsuit about the incident that coverage reports. <em>(one value)</em></p><dl><dt><code>lawsuit_filed</code></dt><dd>A lawsuit has been filed.</dd><dt><code>trial</code></dt><dd>At trial.</dd><dt><code>verdict_for_plaintiff</code></dt><dd>Verdict for the person suing.</dd><dt><code>verdict_for_defendant</code></dt><dd>Verdict for the party sued.</dd><dt><code>settled</code></dt><dd>Settled.</dd><dt><code>dismissed</code></dt><dd>Dismissed.</dd></dl></div></details>
+<details><summary><span>Regulator or safety board</span><code>regulator_involved</code></summary><div class="cb-body"><p>Regulators or safety boards that coverage says are involved in this incident. <em>(one or more values)</em></p><dl><dt><code>nhtsa</code></dt><dd>U.S. National Highway Traffic Safety Administration.</dd><dt><code>ntsb</code></dt><dd>U.S. National Transportation Safety Board.</dd><dt><code>state_regulator</code></dt><dd>A U.S. state agency such as a DMV or utilities commission.</dd><dt><code>non_us_regulator</code></dt><dd>A regulator outside the United States.</dd></dl></div></details>
+<details><summary><span>Responsibility attributed to</span><code>responsibility_attributed_to</code></summary><div class="cb-body"><p>Where anyone quoted or cited in coverage places responsibility. This records attributions made by others; the dataset never judges fault. <em>(one or more values)</em></p><dl><dt><code>driver</code></dt><dd>The person responsible for the vehicle.</dd><dt><code>automation_or_manufacturer</code></dt><dd>The automated-driving feature or its maker.</dd><dt><code>other_road_user</code></dt><dd>Another driver, rider or pedestrian.</dd><dt><code>road_or_weather_conditions</code></dt><dd>Road design, work zones, weather or lighting.</dd></dl></div></details>
+<h3>Coverage</h3>
+<details><summary><span>Stage of coverage</span><code>coverage_stage</code></summary><div class="cb-body"><p>What the most recent coverage is mainly about. <em>(one value)</em></p><dl><dt><code>initial_report</code></dt><dd>First reports of the incident.</dd><dt><code>follow_up_investigation</code></dt><dd>Later reporting on an investigation or new findings.</dd><dt><code>legal_proceeding</code></dt><dd>Reporting on charges, a lawsuit, a trial or a verdict.</dd><dt><code>retrospective</code></dt><dd>A look back at an older incident.</dd></dl></div></details>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-note">
+          Compiled from published news reports found through Google News and Bing News searches, refreshed daily.
+          Coded values are drafted by a language model from those reports and are not yet reviewed by a person;
+          each one links to the passage it rests on. A count of incidents is not a rate, and a mention of an
+          automated-driving feature is not a finding that it was in use. Verify every case at its sources.
+          <br><br>
+          Provided by <a href="https://crimconsortium.com" target="_blank" rel="noopener">CrimConsortium</a>.
+          Read open-access criminology on <a href="https://www.crimrxiv.com" target="_blank" rel="noopener">CrimRxiv</a>.
+          Data licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>;
+          source code on <a href="https://github.com/CrimConsortium-CrimRxiv/self-driving-incidents" target="_blank" rel="noopener">GitHub</a>.
+          Corrections and suggestions: <a href="mailto:consortium@crimrxiv.com">consortium@crimrxiv.com</a>.
+        </div>
+      </footer>
+    </div>
+    <script src="site.js" defer></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "82ab01d233344610a30702e8de41b140"}'></script>
+  </body>
+</html>
