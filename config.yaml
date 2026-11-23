@@ -10,6 +10,9 @@ site:
   contact_email: "consortium@crimrxiv.com"
   repo: "https://github.com/CrimConsortium-CrimRxiv/self-driving-incidents"
   homepage_count: 10
+  # The case grid (one square per case, rearranged by status, type, feature or harm) is built
+  # but switched off. Change false to true to show it on the homepage, above the search box.
+  homepage_grid: false
 
 # Vehicle makers covered. Add another block to widen the dataset beyond Tesla.
 makers:

@@ -106,7 +106,7 @@ possible duplicate in place does not.
 | `data/` | Public download files, rebuilt from the store |
 | `cases/` | One web page per case, plus a short pointer page for each retired ID |
 | `index.html`, `search.html`, `about.html`, `sampling.html` | The site, rebuilt on every run |
-| `grid.js` | The homepage grid: one square per case, which a visitor can rearrange by engagement status, type of incident, feature named or harm reported. The squares are written into `index.html` on every run, so the grid updates with the data and still shows without JavaScript |
+| `grid.js` | The case grid, kept but switched off: one square per case, which a visitor can rearrange by engagement status, type of incident, feature named or harm reported. Set `homepage_grid: true` in `config.yaml` to show it on the homepage; the squares are then written into `index.html` on every run |
 | `tests/` | Checks that the rules above hold; they run before every refresh |
 
 ## Run it yourself

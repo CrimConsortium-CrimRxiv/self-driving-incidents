@@ -318,6 +318,12 @@ class Export(unittest.TestCase):
         import re
         store = published_store()
         export.export_all(store, CFG)
+        off = (self.root / "index.html").read_text()                 # switched off by default
+        self.assertNotIn('class="cell"', off)
+        self.assertNotIn("grid.js", off)
+        on = copy.deepcopy(CFG)
+        on["site"]["homepage_grid"] = True
+        export.export_all(store, on)
         home = (self.root / "index.html").read_text()
         n = sum(c["status"] == "published" for c in store["cases"])
         squares = re.findall(r'<a class="cell" href="cases/(SDI-\d+)\.html"', home)

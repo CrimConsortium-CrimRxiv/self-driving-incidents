@@ -293,6 +293,7 @@ def home(pairs, cfg, updated, n_reports, waiting=0) -> str:
     site = cfg["site"]
     n = int(site.get("homepage_count", 10))
     latest = [v for _, v in pairs[:n]]
+    grid = case_grid(pairs) if site.get("homepage_grid") else ""    # kept, switched off in config.yaml
     items = "\n".join(incident_item(v) for v in latest)
     total = len(pairs)
     mail = esc(site["contact_email"])
@@ -330,7 +331,7 @@ def home(pairs, cfg, updated, n_reports, waiting=0) -> str:
             <a href="about.html#codebook">codebook</a>.</span>
         </div>
 
-{case_grid(pairs)}        <section class="search-panel" aria-labelledby="search-title">
+{grid}        <section class="search-panel" aria-labelledby="search-title">
           <h2 id="search-title">Search the full dataset</h2>
           <p>Look through {'all ' + format(total, ',') + ' cases' if total != 1 else 'every case'} by place, vehicle, feature, publisher or any word in the record.</p>
           <form class="search-form" action="search.html" method="get" role="search">
@@ -363,7 +364,7 @@ def home(pairs, cfg, updated, n_reports, waiting=0) -> str:
            "potentialAction": {"@type": "SearchAction", "target": site["url"] + "search.html?q={search_term_string}",
                                "query-input": "required name=search_term_string"}}]
     return shell(cfg, path="", current="home", jsonld=ld, body=body,
-                 scripts='\n    <script src="grid.js" defer></script>' if pairs else "",
+                 scripts='\n    <script src="grid.js" defer></script>' if grid else "",
                  title=f"{site['name']}: Open Data on Tesla Autopilot and FSD incidents",
                  description=("Open dataset of crashes, near misses, police stops and court cases in which Tesla "
                               "Autopilot, Full Self-Driving or another automated-driving feature is claimed, questioned or confirmed. "
