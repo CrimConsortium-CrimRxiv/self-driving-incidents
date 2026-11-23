@@ -2732,71 +2732,53 @@
     ]
    },
    "case_id": "SDI-00008",
-   "code_attempts": 1,
+   "code_attempts": 2,
    "coding": {
     "claims": [
      {
       "claimant": "manufacturer",
-      "paraphrase": "Tesla's crash report to NHTSA marks the feature as verified engaged and logs a pre-crash speed of 71 mph.",
-      "quote": "It logs a pre-crash speed of 71 mph and a fatality, lists the Florida Highway Patrol as the investigating agency",
+      "paraphrase": "Tesla’s report marked the automation as verified engaged.",
+      "quote": "marks the automation “Engagement Status” as “Verified Engaged.",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/",
       "topic": "automation_engaged"
      },
      {
       "claimant": "police",
-      "paraphrase": "A Florida Highway Patrol trooper said the driver would have seen only the underside of the overturned truck, with no lights or reflectors.",
-      "quote": "said the Tesla driver would have seen only the truck’s underside",
-      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/",
-      "topic": "cause_or_responsibility"
-     },
-     {
-      "claimant": "police",
-      "paraphrase": "According to the highway patrol, the truck's driver left the road near the Pine Ridge Road exit, steered back onto I-75 and overturned, blocking two lanes.",
-      "quote": "The overturned truck ended up blocking the center and outside lanes.",
+      "paraphrase": "A trooper said the Tesla driver would have seen the overturned truck’s underside without lights or reflectors to warn them.",
+      "quote": "with “no lights, no reflectors, nothing warning them.",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/",
       "topic": "other"
      },
      {
       "claimant": "news_outlet",
-      "paraphrase": "The outlet cautions that the reporting trigger is engagement within 30 seconds, that the speed may be a snapshot, and that it cannot tell whether Autopilot or FSD was in use.",
-      "quote": "And with the software version redacted, we can’t say whether this was Autopilot or FSD.",
-      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/",
-      "topic": "automation_engaged"
-     },
-     {
-      "claimant": "news_outlet",
-      "paraphrase": "The outlet argues that a large unlit obstacle across two lanes at night is the kind of thing a driver-assistance system is supposed to detect.",
+      "paraphrase": "Electrek argued that a driver-assist system should detect a large, unlit obstacle across two lanes at night.",
       "quote": "a big, unlit obstacle sitting across two lanes at night is exactly the kind of thing a driver-assist system is supposed to catch",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/",
       "topic": "automation_performance"
      }
     ],
     "codebook_version": "0.1",
-    "coded_at": "2026-11-22T17:26:50Z",
-    "coder": "Claude Fable 5.2 (Perplexity Computer), initial batch",
+    "coded_at": "2026-11-23T22:05:54Z",
+    "coder": "OpenAI gpt-6-luna",
     "evidence": {
      "collision_with": {
-      "quote": "killing two of its passengers and a man who had stopped to help",
+      "quote": "The front of the Tesla hit the underside of the overturned truck and [name].",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "coverage_stage": {
-      "quote": "It’s the latest case in our ongoing investigation into fatal crashes hidden in Tesla’s NHTSA data",
+      "quote": "Tesla filed one for this crash.",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "driver_seat_occupied": {
-      "quote": "The 20-year-old driver and two more passengers were seriously hurt.",
+      "quote": "the 20-year-old driver and two more passengers were seriously hurt",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "engagement_claimed_by": {
-      "quote": "That means Tesla confirmed through its own telematics that Autopilot or FSD was on.",
+      "quote": "Tesla’s own report to federal regulators says Autopilot or “Full Self-Driving” was engaged",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "engagement_status": {
-      "quote": "That means Tesla confirmed through its own telematics that Autopilot or FSD was on.",
-      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-     },
-     "fatalities": {
-      "quote": "killing two of its passengers and a man who had stopped to help",
+      "quote": "marks the automation “Engagement Status” as “Verified Engaged.",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "incident_date": {
@@ -2812,19 +2794,15 @@
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "location_city": {
-      "quote": "A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida",
-      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-     },
-     "location_country": {
-      "quote": "A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida",
+      "quote": "on I-75 near Naples, Florida",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "location_state_region": {
-      "quote": "A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida",
+      "quote": "near Naples, Florida",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "persons_harmed": {
-      "quote": "killing two of its passengers and a man who had stopped to help",
+      "quote": "The 20-year-old driver and two more passengers were seriously hurt.",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "police_action": {
@@ -2832,48 +2810,40 @@
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "regulator_involved": {
-      "quote": "Under NHTSA’s Standing General Order, automakers have to report crashes where a Level 2 driver-assist system was engaged within 30 seconds of impact",
-      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-     },
-     "responsibility_attributed_to": {
-      "quote": "said the Tesla driver would have seen only the truck’s underside",
-      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-     },
-     "road_type": {
-      "quote": "It identifies the car as a 2023 Model 3 on a highway",
+      "quote": "Under NHTSA’s Standing General Order, automakers have to report crashes",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "system_named": {
-      "quote": "Tesla’s own report to federal regulators says Autopilot or “Full Self-Driving” was engaged, at 71 mph.",
+      "quote": "Autopilot or “Full Self-Driving” was engaged, at 71 mph.",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "time_of_day": {
-      "quote": "Just before 4 a.m. on Sunday, May 31, 2026",
+      "quote": "Just before 4 a.m.",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "vehicle_make": {
-      "quote": "A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida",
+      "quote": "A Tesla Model 3 drove into an overturned box truck",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      },
      "vehicle_model": {
-      "quote": "It identifies the car as a 2023 Model 3 on a highway",
-      "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
-     },
-     "vehicle_model_year": {
-      "quote": "It identifies the car as a 2023 Model 3 on a highway",
+      "quote": "A Tesla Model 3 drove into an overturned box truck",
       "source_url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
      }
     },
-    "narrative": "Just before 4 a.m. on May 31, 2026, a 2023 Tesla Model 3 struck an overturned box truck on southbound I-75 near Naples, Florida, and a man who had stopped to help the truck's driver. Two of the Tesla's passengers and the man who stopped were killed; the Tesla's driver and two other passengers were seriously hurt. A Florida Highway Patrol trooper said the driver would have seen only the truck's unlit underside. Electrek reported in November that Tesla's own crash report to NHTSA lists the driver-assistance feature as verified engaged with a pre-crash speed of 71 mph, with the narrative redacted.",
+    "narrative": "Electrek reports that a Tesla Model 3 struck an overturned box truck on I-75 near Naples before 4 a.m. on May 31, 2026. It says two Tesla passengers and a man who had stopped to help died, and the Tesla driver and two passengers were seriously hurt. Electrek says Tesla’s report to federal regulators marked Autopilot or Full Self-Driving as verified engaged; it also reports that the Florida Highway Patrol investigated the crash.",
     "review_status": "machine-coded, not yet reviewed",
     "sources_read": [
      {
       "basis": "full_text",
       "url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+     },
+     {
+      "basis": "summary",
+      "url": "https://www.moomoo.com/community/feed/tesla-on-autopilot-fsd-hit-an-overturned-truck-at-71-117636328718342"
      }
     ],
     "text_basis": "full_text",
-    "unsupported_values_removed": 0,
+    "unsupported_values_removed": 3,
     "values": {
      "collision_with": [
       "truck_or_bus",
@@ -2885,12 +2855,10 @@
       "manufacturer"
      ],
      "engagement_status": "confirmed_by_official_source",
-     "fatalities": 3,
      "incident_date": "2026-05-31",
      "incident_type": "collision",
      "injuries": 3,
      "location_city": "Naples",
-     "location_country": "United States",
      "location_state_region": "Florida",
      "persons_harmed": [
       "subject_vehicle_driver",
@@ -2901,18 +2869,13 @@
      "regulator_involved": [
       "nhtsa"
      ],
-     "responsibility_attributed_to": [
-      "road_or_weather_conditions"
-     ],
-     "road_type": "highway_or_freeway",
      "system_named": [
       "autopilot",
       "full_self_driving"
      ],
      "time_of_day": "night",
      "vehicle_make": "Tesla",
-     "vehicle_model": "Model 3",
-     "vehicle_model_year": 2023
+     "vehicle_model": "Model 3"
     }
    },
    "exclusion_reason": null,
@@ -2921,8 +2884,8 @@
    "key": "k14",
    "maker": "Tesla",
    "needs_coding": false,
-   "source_summary": "Tesla confirms Autopilot or FSD was engaged at 71 mph when a Model 3 hit an overturned truck on I-75 in Naples, killing three. Nobody told the public.",
-   "source_summary_publisher": "Electrek",
+   "source_summary": "$Tesla (TSLA.US)$ A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida, killing two of its passengers and a man who had stopped to help.",
+   "source_summary_publisher": "Moomoo",
    "sources": [
     {
      "feed_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxObmZVTUtGc3R1T2tqSy1QNEd2ajE3QXZFU0pIT0o1Z2ZraHlibTdRWDNFYURiSE1Ic3pFWklWSmhWYkxtekhYa0ltMjdYczZuN0RZZXVJTVo4elRfZHpwT0dXWThHbldocWpQc1VEV3NIOUpnRUo3UnFXN1dTSVhueElEcVdPQQ?oc=5",
@@ -2932,10 +2895,19 @@
      "summary": "Tesla confirms Autopilot or FSD was engaged at 71 mph when a Model 3 hit an overturned truck on I-75 in Naples, killing three. Nobody told the public.",
      "title": "Tesla on Autopilot/FSD hit an overturned truck at 71 mph, killing 3",
      "url": "https://electrek.co/2026/11/16/tesla-autopilot-fsd-overturned-truck-naples-i75/"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPblZKcmVHVTdMMS1hZ2t3aXdleVljdlh0cUZ1bHAwNmJEZGMxdjhRV1V1Vjl4TFc2N3JST0ExSW9JTWhfOU9qVnVtM0c1alI3Y1AyTmo5NHktT1JPLTh0NE1VdU8xUVdyTFNFU1pZMWxSYmo2bkJCRHZfeUVraHRoXy1aXy0wdFdlR25UZS1PZFdtcUZ3dGdlaWJ1N25rMlBEN3hHRnFHWXJOUQ?oc=5",
+     "published": "2026-11-18T07:45:26Z",
+     "publisher": "Moomoo",
+     "resolved": true,
+     "summary": "$Tesla (TSLA.US)$ A Tesla Model 3 drove into an overturned box truck on I-75 near Naples, Florida, killing two of its passengers and a man who had stopped to help.",
+     "title": "Tesla on Autopilot/FSD hit an overturned truck at 71 mph, killing 3",
+     "url": "https://www.moomoo.com/community/feed/tesla-on-autopilot-fsd-hit-an-overturned-truck-at-71-117636328718342"
     }
    ],
    "status": "published",
-   "updated": "2026-11-22T17:26:50Z"
+   "updated": "2026-11-23T22:05:54Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
@@ -3338,10 +3310,18 @@
      "summary": "Nine days apart in October, two crashes involving Teslas on Interstate 80 in Northern California left two California Highway Patrol officers seriously injured and a 71-year-old pedestrian dead.",
      "title": "Two California Tesla Crashes Allegedly On Autopilot",
      "url": "https://www.timesunion.com/news/article/two-california-tesla-crashes-allegedly-on-auto-22540869.php"
+    },
+    {
+     "published": "2026-11-18T16:01:00Z",
+     "publisher": "SFGATE",
+     "resolved": true,
+     "summary": "Nine days apart in October, two crashes involving Teslas on Interstate 80 in Northern California left two California Highway Patrol officers seriously injured and a 71-year-old pedestrian dead.",
+     "title": "Two California Tesla Crashes Allegedly On Autopilot",
+     "url": "https://www.sfgate.com/news/article/two-california-tesla-crashes-allegedly-on-auto-22540869.php"
     }
    ],
    "status": "excluded",
-   "updated": "2026-11-22T21:02:01Z"
+   "updated": "2026-11-23T22:04:02Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
@@ -3502,8 +3482,8 @@
    "key": "k28",
    "maker": "Tesla",
    "needs_coding": false,
-   "source_summary": "Tesla withheld all four test-crash narratives under a confidential business information designation.",
-   "source_summary_publisher": "The Cool Down on MSN",
+   "source_summary": "Tesla withheld details of four Cybercab test crashes, including a 53 mph Philadelphia highway collision, raising safety questions for passengers and road users.",
+   "source_summary_publisher": "The Cool Down",
    "sources": [
     {
      "published": "2026-11-19T22:05:00Z",
@@ -3521,10 +3501,19 @@
      "summary": "Tesla withheld all four test-crash narratives under a confidential business information designation.",
      "title": "Tesla withholds details of 4 Cybercab test crashes, including a 53 mph collision",
      "url": "https://www.yahoo.com/news/us/articles/tesla-withholds-details-4-cybercab-060500868.html"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxObGozTnZvalpKZXMwUHJ3bnc1Q0I2aG5aWjF2NkdEVWJZYTlNeDdHakQ2dl8zNkIycWgtc2JzSUxjNzlNLU1uSkowNW9Pb1NHSTVoRm1oZGJOYzlhVFVzWTlYR01uSmVYRlpBT0RwMnd2eWJmbmN3NTZ5ZWp6WWgwV0JsQ0RSdWgyaVN6TUlfUFJidTJH?oc=5",
+     "published": "2026-11-20T06:05:00Z",
+     "publisher": "The Cool Down",
+     "resolved": true,
+     "summary": "Tesla withheld details of four Cybercab test crashes, including a 53 mph Philadelphia highway collision, raising safety questions for passengers and road users.",
+     "title": "Tesla withholds details of 4 Cybercab test crashes, including a 53 mph collision",
+     "url": "https://www.thecooldown.com/green-tech/tesla-cybercab-test-crashes-philadelphia-collision/"
     }
    ],
    "status": "excluded",
-   "updated": "2026-11-22T21:02:07Z"
+   "updated": "2026-11-23T22:04:02Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
@@ -3773,149 +3762,115 @@
     ]
    },
    "case_id": "SDI-00011",
-   "code_attempts": 1,
+   "code_attempts": 2,
    "coding": {
     "claims": [
      {
       "claimant": "police",
-      "paraphrase": "Indiana State Police said their investigation found the car was in self-driving mode during the crash; one outlet reports this as alleged.",
-      "quote": "During the investigation, it was learned that the Tesla was in self-driving mode during the crash.",
-      "source_url": "https://wibc.com/902576/isp-woman-was-intoxicated-in-self-driving-tesla-during-i-70-crash/",
+      "paraphrase": "Indiana State Police said investigators determined the Tesla was activated in self-driving mode during the collision.",
+      "quote": "Investigators determined the vehicle was activated in self-driving mode at the time of the collision.",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/",
       "topic": "automation_engaged"
      },
      {
       "claimant": "police",
-      "paraphrase": "State police said the driver failed field sobriety tests and a certified test showed a blood alcohol content of 0.14%.",
-      "quote": "indicated a blood alcohol content of .14%, almost twice the legal limit",
-      "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/",
+      "paraphrase": "Police reported that the driver failed field sobriety tests and that a chemical test showed a blood alcohol content of 0.14%.",
+      "quote": "Police said [name] failed standard field sobriety tests and consented to a certified chemical test",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/",
       "topic": "driver_behavior"
      },
      {
       "claimant": "police",
-      "paraphrase": "A state police spokesman said drivers remain responsible for their vehicles even when using self-driving technology.",
+      "paraphrase": "A police spokesperson said drivers remain responsible for their vehicles when using self-driving technology.",
       "quote": "Ames emphasized drivers remain responsible for their vehicles, even when using self-driving technology.",
       "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/",
       "topic": "cause_or_responsibility"
-     },
-     {
-      "claimant": "police",
-      "paraphrase": "According to the probable cause affidavit, several construction workers were nearby at the time.",
-      "quote": "Several construction workers were actively in the vicinity during the crash, according to the affidavit.",
-      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/",
-      "topic": "other"
-     },
-     {
-      "claimant": "news_outlet",
-      "paraphrase": "One local outlet describes the self-driving mode as alleged.",
-      "quote": "her Tesla, allegedly in “self-driving” mode, struck arrow signs in an Interstate 70 construction zone",
-      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/",
-      "topic": "automation_engaged"
      }
     ],
     "codebook_version": "0.1",
-    "coded_at": "2026-11-22T17:26:50Z",
-    "coder": "Claude Fable 5.2 (Perplexity Computer), initial batch",
+    "coded_at": "2026-11-23T22:05:18Z",
+    "coder": "OpenAI gpt-6-luna",
     "evidence": {
      "collision_with": {
-      "quote": "struck arrow signs in an Interstate 70 construction zone",
-      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+      "quote": "struck two activated arrow boards",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "coverage_stage": {
-      "quote": "According to an ISP news release",
-      "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+      "quote": "A woman is facing an impaired driving charge",
+      "source_url": "https://www.starcitytv.com/news/crime/indiana-woman-charged-after-self-driving-tesla-hits-road-signs/article_c4c38451-1048-4e1f-967b-a1aa27156bda.html"
      },
      "criminal_case_stage": {
-      "quote": "Court records show she was charged with unlawful operation of a vehicle in a worksite, operating a vehicle with a blood alcohol content of more than 0.08 and operating a vehicle while intoxicated endangering a person.",
+      "quote": "Court records show she was charged with",
       "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
      },
      "criminal_charges": {
-      "quote": "Court records show she was charged with unlawful operation of a vehicle in a worksite, operating a vehicle with a blood alcohol content of more than 0.08 and operating a vehicle while intoxicated endangering a person.",
-      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+      "quote": "operating a vehicle while intoxicated with endangerment (Class A misdemeanor), reckless driving in a highway work zone (Class A Misdemeanor), and operating while intoxicated (Class C misdemeanor)",
+      "source_url": "https://www.constructionequipment.com/safety-security/news/55420878/self-driving-car-hits-work-zone-equipment"
      },
      "driver_condition_mentioned": {
-      "quote": "indicated a blood alcohol content of .14%, almost twice the legal limit",
-      "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
-     },
-     "driver_seat_occupied": {
-      "quote": "the began a DUI investigation on the Tesla’s lone occupant",
-      "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+      "quote": "which showed a blood alcohol content of 0.14%.",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "engagement_claimed_by": {
-      "quote": "During the investigation, it was learned that the Tesla was in self-driving mode during the crash.",
-      "source_url": "https://wibc.com/902576/isp-woman-was-intoxicated-in-self-driving-tesla-during-i-70-crash/"
+      "quote": "According to Indiana State Police",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "engagement_status": {
-      "quote": "An investigation found that the 2016 Tesla was activated in self-driving mode.",
-      "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
-     },
-     "fatalities": {
-      "quote": "According to the documents, no one was hurt.",
-      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+      "quote": "Investigators determined the vehicle was activated in self-driving mode at the time of the collision.",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "incident_date": {
-      "quote": "Troopers were called around 10:30 p.m. to eastbound I-70 near the 13-mile marker on Thursday, November 19.",
-      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+      "quote": "on Nov. 19",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "incident_type": {
-      "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
-      "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
+      "quote": "struck two activated arrow boards",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "injuries": {
-      "quote": "According to the documents, no one was hurt.",
-      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+      "quote": "No injuries were reported.",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "location_city": {
-      "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
-      "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
-     },
-     "location_country": {
-      "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
-      "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
+      "quote": "in Vigo County",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "location_state_region": {
-      "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
-      "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
+      "quote": "VIGO COUNTY, Ind.",
+      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
      },
      "police_action": {
-      "quote": "was arrested and turned over to the Vigo County Sheriff’s Department jail staff without incident",
-      "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+      "quote": "Officers arrested 57-year-old [name]",
+      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
      },
      "responsibility_attributed_to": {
       "quote": "Ames emphasized drivers remain responsible for their vehicles, even when using self-driving technology.",
       "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
      },
      "road_type": {
-      "quote": "A 57-year-old woman in Vigo County, Indiana, was arrested after her Tesla, operating in self-driving mode, crashed into construction equipment on Interstate 70.",
-      "source_url": "https://oecd.ai/en/incidents/2026-11-20-92bc"
+      "quote": "on Interstate 70",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "system_named": {
-      "quote": "An investigation found that the 2016 Tesla was activated in self-driving mode.",
-      "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+      "quote": "in self-driving mode",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "time_of_day": {
-      "quote": "Troopers were called around 10:30 p.m. to eastbound I-70 near the 13-mile marker on Thursday, November 19.",
-      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+      "quote": "around 10:30 p.m.",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "vehicle_make": {
-      "quote": "An investigation found that the 2016 Tesla was activated in self-driving mode.",
-      "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+      "quote": "a 2016 Tesla",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "vehicle_model_year": {
-      "quote": "An investigation found that the 2016 Tesla was activated in self-driving mode.",
-      "source_url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
+      "quote": "a 2016 Tesla",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      }
     },
-    "narrative": "At about 10:30 p.m. on November 19, 2026, a 2016 Tesla struck two arrow boards in a construction zone on eastbound I-70 near mile marker 13 in Vigo County, Indiana. Indiana State Police said their investigation found the car was in self-driving mode; no product was named and one outlet describes the mode as alleged. No one was hurt, though workers were nearby. The driver, 57, was arrested after a test showed a blood alcohol content of 0.14% and was charged with three offences related to intoxicated driving and a highway work zone.",
+    "narrative": "Indiana State Police said a Tesla struck two activated arrow boards on eastbound I-70 in Vigo County on November 19. The police account said investigators determined the vehicle was activated in self-driving mode, and reported that the driver failed field sobriety tests and had a blood alcohol content of 0.14%. The driver was arrested and faced impaired-driving and work-zone charges; police reported no injuries.",
     "review_status": "machine-coded, not yet reviewed",
     "sources_read": [
-     {
-      "basis": "full_text",
-      "url": "https://wibc.com/902576/isp-woman-was-intoxicated-in-self-driving-tesla-during-i-70-crash/"
-     },
-     {
-      "basis": "full_text",
-      "url": "https://www.wrtv.com/news/crime/brazil-woman-arrested-after-her-self-driving-tesla-crashed-into-construction-equipment/"
-     },
      {
       "basis": "full_text",
       "url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
@@ -3926,7 +3881,15 @@
      },
      {
       "basis": "full_text",
-      "url": "https://www.wzdm.com/2026/11/21/intoxicated-driver-in-self-driving-tesla-hits-construction-equipment/"
+      "url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://www.constructionequipment.com/safety-security/news/55420878/self-driving-car-hits-work-zone-equipment"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://www.starcitytv.com/news/crime/indiana-woman-charged-after-self-driving-tesla-hits-road-signs/article_c4c38451-1048-4e1f-967b-a1aa27156bda.html"
      }
     ],
     "text_basis": "full_text",
@@ -3937,21 +3900,18 @@
      ],
      "coverage_stage": "initial_report",
      "criminal_case_stage": "charged",
-     "criminal_charges": "unlawful operation in a worksite; BAC over 0.08; operating while intoxicated endangering a person",
+     "criminal_charges": "Operating while intoxicated with endangerment; reckless driving in a highway work zone; operating while intoxicated",
      "driver_condition_mentioned": [
       "alcohol_or_drugs"
      ],
-     "driver_seat_occupied": "yes",
      "engagement_claimed_by": [
       "police"
      ],
      "engagement_status": "confirmed_by_official_source",
-     "fatalities": 0,
      "incident_date": "2026-11-19",
      "incident_type": "collision",
      "injuries": 0,
      "location_city": "Vigo County",
-     "location_country": "United States",
      "location_state_region": "Indiana",
      "police_action": "arrest_made",
      "responsibility_attributed_to": [
@@ -4118,10 +4078,37 @@
      "summary": "State police say blood alcohol content was 0.14%…",
      "title": "Driver arrested after Tesla in self-driving mode hits arrow boards on I-70 in Vigo Co.",
      "url": "https://www.wthitv.com/2026/11/20/driver-arrested-after-tesla-self-driving-mode-hits-arrow-boards-i-70-vigo-co/"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObHN5QUpMcjdmRkJ2ZVFINWk3NGd4eXVtYzZnVWFkbFVfbHdoX011V2VrTnhVZmcwdy1Od0NrQklMMlhfellrMzdwWnc1Zkw0STFtR3ZaODdrZzRSQnB3VnlhNVZzVnM4WHZ1RkNUYjUyUGQxcjJDRE01aGhUdlJNbmRZZlZkT3ctbzdIcUF2Z1VJY3ZheldDOWtJWlpKamZwdlllTmJ6b3h4Q2hzTVRjcDRQSkZDdHlzeThVYzVtdV9YTTdCT0k4SUxkWWVtUzQ?oc=5",
+     "published": "2026-11-23T14:17:32Z",
+     "publisher": "WBIW",
+     "resolved": true,
+     "summary": "VIGO COUNTY — A Brazil woman was arrested on impaired driving and work zone charges Thursday night after her Tesla, operating in self-driving mode, struck...",
+     "title": "Brazil woman arrested for OWI after Tesla in self-driving mode strikes construction equipment on I-70",
+     "url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOSFVRS09HRWxkTGFzQURPMjlISjlOV2FpNnBwTHpiTXlscXp3VTFUVlk3OXFYR2Y1aXlVclpOZmlCWjhoTnlkSnoxTEZWeWVENFpBcFhZVDd5SlJqT2p0UTJwcGYyYnZHLWNHQm1LOGRTUmNWV2NYcUNJMllsWmtfTmhGb3FHLWo4dnZoTjJma25RM3ZfQ1dmd3VDbF81YXlFOVB1SW1QYW9fb1NybGxEMGRkdl9zdjh6Nm1MdzFCUnlpc3RBWElzUEp2S2dDZFp5TmtTeV9mMDNiOGUzMjhfMWpxVHM?oc=5",
+     "published": "2026-11-23T17:32:00Z",
+     "publisher": "starcitytv.com",
+     "resolved": true,
+     "summary": "An Indiana woman faces an impaired driving charge after state police say her Tesla, operating in self-driving mode, struck two activated arrow boards on I-70. No injuries were reported.",
+     "title": "Indiana woman charged after self-driving Tesla hits road signs",
+     "url": "https://www.starcitytv.com/news/crime/indiana-woman-charged-after-self-driving-tesla-hits-road-signs/article_c4c38451-1048-4e1f-967b-a1aa27156bda.html"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOLXN0TkxIaEJqRktyT0dfcDVEaVZELTZGVWFBRkVXNncxWWFXU3pWY2lLcnF6UG1uZHhIaHVVNnVfd2hvRFpQVWJsY0xSMHZyNHBiYWJwZjI0azZMVWpHVWE0cW5ybDZQN2gtZ3g1TDZsS2lpdkEzcGNVdGcxVlIxaXQ0d3dqRVFHOHdGVzBBX3lwbU9xVzQxVlQ5bll6c2UwZ0FrdzBhWThRNmRnbnc?oc=5",
+     "published": "2026-11-23T15:32:31Z",
+     "publisher": "Construction Equipment",
+     "resolved": true,
+     "summary": "",
+     "title": "Drunk Driver Puts Tesla in Self-Driving Mode, Hits Arrow Boards",
+     "url": "https://www.constructionequipment.com/safety-security/news/55420878/self-driving-car-hits-work-zone-equipment"
     }
    ],
    "status": "published",
-   "updated": "2026-11-22T17:26:50Z"
+   "updated": "2026-11-23T22:05:18Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
@@ -4544,30 +4531,41 @@
     ]
    },
    "case_id": "SDI-00014",
-   "code_attempts": 2,
+   "code_attempts": 3,
    "coding": {
     "claims": [
      {
-      "claimant": "other",
-      "paraphrase": "The person who shared the footage said the Tesla was operating in self-driving mode.",
+      "claimant": "witness",
+      "paraphrase": "The person sharing the footage said the Tesla was operating in self-driving mode.",
       "quote": "The Tesla, on self-driving, sees the approaching car coming from behind at excessive speed and moves out of the way",
       "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html",
       "topic": "automation_engaged"
      },
      {
-      "claimant": "other",
-      "paraphrase": "The person who shared the footage said the Tesla detected the approaching car and moved aside.",
-      "quote": "The Tesla, on self-driving, sees the approaching car coming from behind at excessive speed and moves out of the way",
+      "claimant": "witness",
+      "paraphrase": "The person sharing the footage said the Tesla detected a rapidly approaching vehicle and moved out of its path.",
+      "quote": "Anderson claiming the Tesla detected a rapidly approaching vehicle from behind and moved out of its path",
+      "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html",
+      "topic": "automation_performance"
+     },
+     {
+      "claimant": "news_outlet",
+      "paraphrase": "The report said available police information neither identified a Tesla as involved nor confirmed that its system made an evasive maneuver.",
+      "quote": "the available police information does not identify a Tesla as one of the vehicles involved or confirm that its autonomous driving system performed an emergency evasive maneuver",
       "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html",
       "topic": "automation_performance"
      }
     ],
     "codebook_version": "0.1",
-    "coded_at": "2026-11-22T21:02:56Z",
+    "coded_at": "2026-11-23T22:06:21Z",
     "coder": "OpenAI gpt-6-luna",
     "evidence": {
      "collision_with": {
       "quote": "a Toyota Camry, Honda Civic, and Jeep Cherokee",
+      "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
+     },
+     "engagement_claimed_by": {
+      "quote": "Anderson claiming the Tesla detected a rapidly approaching vehicle from behind and moved out of its path while operating in self-driving mode",
       "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
      },
      "engagement_status": {
@@ -4575,11 +4573,11 @@
       "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
      },
      "incident_date": {
-      "quote": "a serious November 4 collision in Pleasant Grove",
+      "quote": "serious November 4 collision in Pleasant Grove",
       "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
      },
      "incident_type": {
-      "quote": "a serious November 4 collision in Pleasant Grove involving a Toyota Camry, Honda Civic, and Jeep Cherokee",
+      "quote": "serious November 4 collision",
       "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
      },
      "injuries": {
@@ -4587,27 +4585,23 @@
       "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
      },
      "location_city": {
-      "quote": "the location as Pleasant Grove, Utah",
+      "quote": "the incident occurred in Pleasant Grove, Utah",
       "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
      },
      "location_state_region": {
-      "quote": "the location as Pleasant Grove, Utah",
+      "quote": "Pleasant Grove, Utah",
       "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
      },
-     "road_type": {
-      "quote": "colliding with another vehicle at an intersection",
-      "source_url": "https://sundayguardianlive.com/trending/watch-video-teslas-self-driving-feature-appears-to-detect-speeding-car-moments-before-fatal-utah-crash-dashcam-footage-sparks-debate-online-322529/"
-     },
      "system_named": {
-      "quote": "its Full Self-Driving (FSD) feature",
-      "source_url": "https://sundayguardianlive.com/trending/watch-video-teslas-self-driving-feature-appears-to-detect-speeding-car-moments-before-fatal-utah-crash-dashcam-footage-sparks-debate-online-322529/"
+      "quote": "operating in self-driving mode",
+      "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
      },
      "vehicle_make": {
       "quote": "a Tesla driven by her brother's friend",
       "source_url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
      }
     },
-    "narrative": "The reports associate the footage with a November 4 collision in Pleasant Grove involving a Toyota Camry, Honda Civic and Jeep Cherokee; the Camry driver was reported to have been airlifted in extremely critical condition. A person sharing the footage said a Tesla was operating in self-driving mode and moved aside as a vehicle approached from behind. The reports say the available police information does not identify a Tesla as one of the vehicles involved or confirm that its system performed the maneuver.",
+    "narrative": "Reports describe a November 4 collision in Pleasant Grove involving a Toyota Camry, Honda Civic and Jeep Cherokee; the Camry driver was reported to have been airlifted in extremely critical condition. A person sharing video said a Tesla was in self-driving mode and moved aside from a rapidly approaching car, but the reports say available police information does not identify a Tesla as involved or confirm the system made the maneuver.",
     "review_status": "machine-coded, not yet reviewed",
     "sources_read": [
      {
@@ -4617,13 +4611,20 @@
      {
       "basis": "full_text",
       "url": "https://www.yahoo.com/news/us/articles/tesla-driver-credits-self-driving-231452981.html"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://www.aol.com/articles/tesla-driver-credits-self-driving-231452000.html"
      }
     ],
     "text_basis": "full_text",
-    "unsupported_values_removed": 2,
+    "unsupported_values_removed": 0,
     "values": {
      "collision_with": [
       "passenger_vehicle"
+     ],
+     "engagement_claimed_by": [
+      "witness"
      ],
      "engagement_status": "claimed",
      "incident_date": "2026-11-04",
@@ -4631,9 +4632,7 @@
      "injuries": 1,
      "location_city": "Pleasant Grove",
      "location_state_region": "Utah",
-     "road_type": "intersection",
      "system_named": [
-      "full_self_driving",
       "unspecified"
      ],
      "vehicle_make": "Tesla"
@@ -4645,8 +4644,8 @@
    "key": "k42",
    "maker": "Tesla",
    "needs_coding": false,
-   "source_summary": "Self-driving technology remains a controversial subject among motorists, but one Tesla owner’s experience during a serious Utah crash has sparked renewed interest in the system’s potential safety ...",
-   "source_summary_publisher": "Yahoo",
+   "source_summary": "Self-driving technology remains a controversial subject among motorists, but one Tesla owner’s experience during a serious Utah crash has sparked renewed interest in the system’s potential safety benefits.",
+   "source_summary_publisher": "AOL.com",
    "sources": [
     {
      "published": "2026-11-17T15:14:00Z",
@@ -4664,10 +4663,19 @@
      "summary": "A viral dashcam video appears to show a Tesla moving aside seconds before a speeding car crashes into another vehicle in Utah.",
      "title": "Watch Video: Tesla’s Self-Driving Feature Appears To Detect Speeding Car Moments Before Fatal Utah Crash, Dashcam Footage Sparks Debate Online",
      "url": "https://sundayguardianlive.com/trending/watch-video-teslas-self-driving-feature-appears-to-detect-speeding-car-moments-before-fatal-utah-crash-dashcam-footage-sparks-debate-online-322529/"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQWGZkRE9yVVY3Zkg0NUR4UnFIMXN5d0JOckxXSnVqTGpzRWhfclVvQnRvM3ZOVi1QWm1Wa200MXRNUklBeXNPUV9BR1dacWpaeDNHX0xEYXFjMDU1RGVHOW1QWXA2QjhkNEZfTWdIVUVJNV9objBVNTZuVkk0SUN1S21obw?oc=5",
+     "published": "2026-11-17T23:14:52Z",
+     "publisher": "AOL.com",
+     "resolved": true,
+     "summary": "Self-driving technology remains a controversial subject among motorists, but one Tesla owner’s experience during a serious Utah crash has sparked renewed interest in the system’s potential safety benefits.",
+     "title": "Tesla Driver Credits Self-Driving Technology for Avoiding High-Speed Collision: \"No Safer Car\"",
+     "url": "https://www.aol.com/articles/tesla-driver-credits-self-driving-231452000.html"
     }
    ],
    "status": "published",
-   "updated": "2026-11-22T21:02:56Z"
+   "updated": "2026-11-23T22:06:21Z"
   },
   {
    "added": "2026-11-22T17:13:40Z",
@@ -22743,10 +22751,243 @@
    ],
    "status": "excluded",
    "updated": "2026-11-22T21:10:30Z"
+  },
+  {
+   "added": "2026-11-23T22:04:02Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "autopilot",
+      "label": "Autopilot mentioned in coverage"
+     },
+     {
+      "key": "fatality",
+      "label": "Fatality mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Covers several incidents; not split into cases. The report summarizes lawsuits over multiple Autopilot crashes rather than one identifiable incident.",
+   "headline": "Tesla resolves wrongful death lawsuits over Autopilot crashes ahead of jury trials",
+   "headline_publisher": "MSN",
+   "key": "k437",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "A mounting wave of wrongful death lawsuits linked to crashes involving Tesla’s driver-assistance technology among them Autopilot are now making their way through the courts. In recent weeks, Tesla’s ...",
+   "source_summary_publisher": "MSN",
+   "sources": [
+    {
+     "published": "2026-09-23T04:46:00Z",
+     "publisher": "MSN",
+     "resolved": true,
+     "summary": "A mounting wave of wrongful death lawsuits linked to crashes involving Tesla’s driver-assistance technology among them Autopilot are now making their way through the courts. In recent weeks, Tesla’s ...",
+     "title": "Tesla resolves wrongful death lawsuits over Autopilot crashes ahead of jury trials",
+     "url": "https://www.msn.com/en-us/news/other/tesla-resolves-wrongful-death-lawsuits-over-autopilot-crashes-ahead-of-jury-trials/ar-AA2cOWPJ"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-23T22:04:53Z"
+  },
+  {
+   "added": "2026-11-23T22:04:02Z",
+   "auto": {
+    "location": null,
+    "model": "Tesla Cybercab",
+    "tags": [
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Covers several incidents; not split into cases. The headline describes eight accidents involving Tesla Cybercabs, with no single incident as the main subject.",
+   "headline": "Tesla Cybercab Records Eight Accidents, Speed is the Spotlight",
+   "headline_publisher": "VOI.ID",
+   "key": "k438",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": null,
+   "source_summary_publisher": null,
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQOGIzaWVPX0NvSW9sVTZDbndmWDhUZUZqRWVnNE5OVTNVNnJVWWRYMXV6YlRadG5MRm9uZC1LdGMySFFxcy1WRkZkZUQ1WGNXTmgwazVCTVVkbWpoSEJzSndXZzhhSzdyM0NFRUpXbnRzM2ZSSEhHUTdoeVdqMlVyeDl5TWFVYzBOeXN2eWEwUmw0dzF5bnNROQ?oc=5",
+     "published": "2026-11-17T06:35:00Z",
+     "publisher": "VOI.ID",
+     "resolved": true,
+     "summary": "",
+     "title": "Tesla Cybercab Records Eight Accidents, Speed is the Spotlight",
+     "url": "https://voi.id/en/mobil/602877/tesla-cybercab-catat-delapan-kecelakaan-kecepatan-jadi-sorotan"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-23T22:04:46Z"
+  },
+  {
+   "added": "2026-11-23T22:04:02Z",
+   "auto": {
+    "location": null,
+    "model": "Tesla Cybercab",
+    "tags": [
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     },
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Covers several incidents; not split into cases. The report summarizes multiple Cybercab accidents and broader Tesla crash data rather than focusing on one event.",
+   "headline": "Tesla Cybercab faces speed issues with 8 accidents",
+   "headline_publisher": "SecNews.gr",
+   "key": "k439",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "The Tesla Cybercab has recorded eight accidents, with data indicating a speed problem in Tesla's self-driving program.",
+   "source_summary_publisher": "SecNews.gr",
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBvWW5TRmxxdko2eXJfdlNiM1dRZFFxVnZYTlc1NTZRRGlZRFBWQUEyZ2tjek9yZ0lGOWpkd2tOTmY5NEx5bzNYaGw4SkhCUW5MdGREU0k1cHFOQUl1S2tmVE5DTXhKTWtzR1J4bi1nTTNYOHpPeDFfdQ?oc=5",
+     "published": "2026-11-17T10:50:00Z",
+     "publisher": "SecNews.gr",
+     "resolved": true,
+     "summary": "The Tesla Cybercab has recorded eight accidents, with data indicating a speed problem in Tesla's self-driving program.",
+     "title": "Tesla Cybercab faces speed issues with 8 accidents",
+     "url": "https://www.secnews.gr/en/751870/tesla-cybercab-provlima-8-atyximata/"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-23T22:04:50Z"
+  },
+  {
+   "added": "2026-11-23T22:04:02Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Covers several incidents; not split into cases. The report is a roundup of multiple incidents involving claims that automated-driving features were in use.",
+   "headline": "'Full Self-Driving' Tesla Owners Can't Stop Falling Asleep At The Wheel",
+   "headline_publisher": "SlashGear",
+   "key": "k440",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "The Tesla FSD function is not meant for drivers to take a nap while driving, but dozens of dangerous instances in the U.S. and Canada have been occurring.",
+   "source_summary_publisher": "SlashGear",
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOYWFhTnZGT3RVcUlQS3U3YW9SMHRSRW8xVm9kcldxMTJjQWcteFhqSHp3MWgySWcxSm1RZzRQYmtoNnM3SUF1MnRINGx1R2NTS3B1ckc0ZElsLXdLQmoxSnVoOVhWM1ljNzZURXppTzI4eG9YNWlyQVpTajllb05OLWVFRi1rZzQ?oc=5",
+     "published": "2026-11-23T13:15:00Z",
+     "publisher": "SlashGear",
+     "resolved": true,
+     "summary": "The Tesla FSD function is not meant for drivers to take a nap while driving, but dozens of dangerous instances in the U.S. and Canada have been occurring.",
+     "title": "'Full Self-Driving' Tesla Owners Can't Stop Falling Asleep At The Wheel",
+     "url": "https://www.slashgear.com/2319241/tesla-full-self-driving-owners-falling-asleep/"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-23T22:04:09Z"
+  },
+  {
+   "added": "2026-11-23T22:04:02Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     },
+     {
+      "key": "fatality",
+      "label": "Fatality mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Covers several incidents; not split into cases. The report mainly discusses broad safety and marketing issues, crash statistics, and a separate parking-lot incident.",
+   "headline": "Tesla FSD for Seniors: 2,400 Crashes, No Age Data",
+   "headline_publisher": "shattered.io",
+   "key": "k442",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "Tesla FSD for seniors draws expert warnings: almost 2,400 reported crashes, 24 with a death, and no driver-age data to settle the risk.",
+   "source_summary_publisher": "shattered.io",
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOZFI5a3g3V09iSkNDdWhUd2dydWxvbHVibUtrenN2WVhsZzV2RHhFR1ZoVldHNVB4TGhZdzduQmZVWXlaVVZzMnRYcFFoeXVSMEgzN1FZRkFOR1JEaGVubDJ5MDBxTHJFRmIyOWVodDBTUjFsUWswcjdxVEQ5UjRGVUlxSm5NZ20xYS1hQ05LOXI?oc=5",
+     "published": "2026-11-23T16:31:52Z",
+     "publisher": "shattered.io",
+     "resolved": true,
+     "summary": "Tesla FSD for seniors draws expert warnings: almost 2,400 reported crashes, 24 with a death, and no driver-age data to settle the risk.",
+     "title": "Tesla FSD for Seniors: 2,400 Crashes, No Age Data",
+     "url": "https://shattered.io/tesla-fsd-seniors-2400-crashes-24-deaths-no-age-data-experts-warn/"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-23T22:04:37Z"
+  },
+  {
+   "added": "2026-11-23T22:04:02Z",
+   "auto": {
+    "location": null,
+    "model": "Tesla Cybercab",
+    "tags": [
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Not about one identifiable incident. The report describes Cybercab traffic-stop procedures, not an identifiable incident.",
+   "headline": "What Happens When Police Pull Over a Tesla Cybercab?",
+   "headline_publisher": "TeslaNorth.com",
+   "key": "k444",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "Tesla’s first responder guide explains how Cybercab handles a traffic stop, from fast-flashing hazards to a call with Robotaxi Support.",
+   "source_summary_publisher": "TeslaNorth.com",
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5Obm1GT081eExRNzFZRTd0MGc3aGtQaFZWdHhwMTZWTnAwaEhybzdYRHFCRlRqY2V0M3ZuQWhMMnVqa09GWjNHbTllQkhZR3o1eERXUEpnVUkyck1JcjRVWnl5QmNyeUE4eVpTV0JyRmlrNjA3NmprLQ?oc=5",
+     "published": "2026-11-23T18:49:36Z",
+     "publisher": "TeslaNorth.com",
+     "resolved": true,
+     "summary": "Tesla’s first responder guide explains how Cybercab handles a traffic stop, from fast-flashing hazards to a call with Robotaxi Support.",
+     "title": "What Happens When Police Pull Over a Tesla Cybercab?",
+     "url": "https://teslanorth.com/2026/11/23/tesla-cybercab-police-traffic-stop/"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-23T22:04:42Z"
   }
  ],
  "next_id": 79,
- "next_key": 437,
+ "next_key": 445,
  "retired": [
   {
    "case_id": "SDI-00061",
