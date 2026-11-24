@@ -3762,33 +3762,33 @@
     ]
    },
    "case_id": "SDI-00011",
-   "code_attempts": 2,
+   "code_attempts": 3,
    "coding": {
     "claims": [
      {
       "claimant": "police",
-      "paraphrase": "Indiana State Police said investigators determined the Tesla was activated in self-driving mode during the collision.",
+      "paraphrase": "State police reported that investigators determined self-driving mode was active at the time of the collision.",
       "quote": "Investigators determined the vehicle was activated in self-driving mode at the time of the collision.",
       "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/",
       "topic": "automation_engaged"
      },
      {
       "claimant": "police",
-      "paraphrase": "Police reported that the driver failed field sobriety tests and that a chemical test showed a blood alcohol content of 0.14%.",
-      "quote": "Police said [name] failed standard field sobriety tests and consented to a certified chemical test",
-      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/",
+      "paraphrase": "Police reported a chemical test result of 0.14% blood alcohol content.",
+      "quote": "a certified chemical test put her blood alcohol content at 0.14%.",
+      "source_url": "https://www.yahoo.com/news/us/articles/police-indiana-woman-tested-0-140019189.html",
       "topic": "driver_behavior"
      },
      {
       "claimant": "police",
-      "paraphrase": "A police spokesperson said drivers remain responsible for their vehicles when using self-driving technology.",
+      "paraphrase": "A state police spokesperson said drivers remain responsible for their vehicles when using self-driving technology.",
       "quote": "Ames emphasized drivers remain responsible for their vehicles, even when using self-driving technology.",
       "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/",
       "topic": "cause_or_responsibility"
      }
     ],
     "codebook_version": "0.1",
-    "coded_at": "2026-11-23T22:05:18Z",
+    "coded_at": "2026-11-24T20:42:21Z",
     "coder": "OpenAI gpt-6-luna",
     "evidence": {
      "collision_with": {
@@ -3796,23 +3796,27 @@
       "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "coverage_stage": {
-      "quote": "A woman is facing an impaired driving charge",
-      "source_url": "https://www.starcitytv.com/news/crime/indiana-woman-charged-after-self-driving-tesla-hits-road-signs/article_c4c38451-1048-4e1f-967b-a1aa27156bda.html"
+      "quote": "The public docket in State of Indiana v. [name], case 84D05-2611-F6-005622",
+      "source_url": "https://www.yahoo.com/news/us/articles/police-indiana-woman-tested-0-140019189.html"
      },
      "criminal_case_stage": {
-      "quote": "Court records show she was charged with",
-      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+      "quote": "The public docket in State of Indiana v. [name], case 84D05-2611-F6-005622, opened Nov. 20 with three counts dated Nov. 19",
+      "source_url": "https://www.yahoo.com/news/us/articles/police-indiana-woman-tested-0-140019189.html"
      },
      "criminal_charges": {
-      "quote": "operating a vehicle while intoxicated with endangerment (Class A misdemeanor), reckless driving in a highway work zone (Class A Misdemeanor), and operating while intoxicated (Class C misdemeanor)",
-      "source_url": "https://www.constructionequipment.com/safety-security/news/55420878/self-driving-car-hits-work-zone-equipment"
+      "quote": "unlawful operation of a vehicle in a worksite, operating a vehicle with a blood alcohol content of more than 0.08 and operating a vehicle while intoxicated endangering a person.",
+      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
      },
      "driver_condition_mentioned": {
-      "quote": "which showed a blood alcohol content of 0.14%.",
-      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
+      "quote": "a certified chemical test put her blood alcohol content at 0.14%.",
+      "source_url": "https://www.yahoo.com/news/us/articles/police-indiana-woman-tested-0-140019189.html"
+     },
+     "driver_seat_occupied": {
+      "quote": "The woman behind the wheel",
+      "source_url": "https://www.yahoo.com/news/us/articles/police-indiana-woman-tested-0-140019189.html"
      },
      "engagement_claimed_by": {
-      "quote": "According to Indiana State Police",
+      "quote": "According to Indiana State Police, troopers from the Putnamville Post",
       "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "engagement_status": {
@@ -3820,8 +3824,8 @@
       "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "incident_date": {
-      "quote": "on Nov. 19",
-      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
+      "quote": "Thursday, November 19.",
+      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
      },
      "incident_type": {
       "quote": "struck two activated arrow boards",
@@ -3832,27 +3836,27 @@
       "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "location_city": {
-      "quote": "in Vigo County",
+      "quote": "on Interstate 70 in Vigo County.",
       "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "location_state_region": {
-      "quote": "VIGO COUNTY, Ind.",
-      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+      "quote": "Vigo County, Indiana.",
+      "source_url": "https://www.constructionequipment.com/safety-security/news/55420878/self-driving-car-hits-work-zone-equipment"
      },
      "police_action": {
-      "quote": "Officers arrested 57-year-old [name]",
-      "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
+      "quote": "A Brazil woman was arrested on impaired driving and work zone charges Thursday night",
+      "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "responsibility_attributed_to": {
       "quote": "Ames emphasized drivers remain responsible for their vehicles, even when using self-driving technology.",
       "source_url": "https://www.wthitv.com/2026/11/20/woman-facing-dui-charges-after-tesla-self-driving-mode-crash-vigo-county-construction-zone/"
      },
      "road_type": {
-      "quote": "on Interstate 70",
+      "quote": "on Interstate 70 in Vigo County.",
       "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "system_named": {
-      "quote": "in self-driving mode",
+      "quote": "in self-driving mode at the time of the collision.",
       "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "time_of_day": {
@@ -3860,15 +3864,15 @@
       "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "vehicle_make": {
-      "quote": "a 2016 Tesla",
+      "quote": "a 2016 Tesla had struck two activated arrow boards",
       "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      },
      "vehicle_model_year": {
-      "quote": "a 2016 Tesla",
+      "quote": "a 2016 Tesla had struck two activated arrow boards",
       "source_url": "https://www.wbiw.com/2026/11/23/brazil-woman-arrested-for-owi-after-tesla-in-self-driving-mode-strikes-construction-equipment-on-i-70/"
      }
     },
-    "narrative": "Indiana State Police said a Tesla struck two activated arrow boards on eastbound I-70 in Vigo County on November 19. The police account said investigators determined the vehicle was activated in self-driving mode, and reported that the driver failed field sobriety tests and had a blood alcohol content of 0.14%. The driver was arrested and faced impaired-driving and work-zone charges; police reported no injuries.",
+    "narrative": "Indiana State Police reported that a Tesla struck two arrow boards in an I-70 construction zone in Vigo County on November 19, 2026; investigators determined self-driving mode was active. Police said no injuries were reported and a chemical test showed the driver had a blood alcohol content of 0.14%. The driver was arrested and faced worksite and impaired-driving charges. A state police spokesperson said drivers remain responsible for their vehicles when using self-driving technology.",
     "review_status": "machine-coded, not yet reviewed",
     "sources_read": [
      {
@@ -3889,7 +3893,7 @@
      },
      {
       "basis": "full_text",
-      "url": "https://www.starcitytv.com/news/crime/indiana-woman-charged-after-self-driving-tesla-hits-road-signs/article_c4c38451-1048-4e1f-967b-a1aa27156bda.html"
+      "url": "https://www.yahoo.com/news/us/articles/police-indiana-woman-tested-0-140019189.html"
      }
     ],
     "text_basis": "full_text",
@@ -3898,12 +3902,13 @@
      "collision_with": [
       "construction_zone_or_equipment"
      ],
-     "coverage_stage": "initial_report",
+     "coverage_stage": "legal_proceeding",
      "criminal_case_stage": "charged",
-     "criminal_charges": "Operating while intoxicated with endangerment; reckless driving in a highway work zone; operating while intoxicated",
+     "criminal_charges": "unlawful operation of a vehicle in a worksite; operating while intoxicated endangering a person; operating with a blood",
      "driver_condition_mentioned": [
       "alcohol_or_drugs"
      ],
+     "driver_seat_occupied": "yes",
      "engagement_claimed_by": [
       "police"
      ],
@@ -4105,10 +4110,19 @@
      "summary": "",
      "title": "Drunk Driver Puts Tesla in Self-Driving Mode, Hits Arrow Boards",
      "url": "https://www.constructionequipment.com/safety-security/news/55420878/self-driving-car-hits-work-zone-equipment"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVG9EVzAwTkc2STNuZ0gzemhZTGwtcnBRX1otS245eEFyNDc0YTRNQURhYzVnc25ZdTR5Y1RvMXVuSnY5UTkyNUtNWldTYTNRTEhkRUdSb29pWUJBMGlCN0h1bG44enMtSHhSMGNidEREcjIzYl93aTkwSVBOeVlaRjBuUmJVM1VFbW1j?oc=5",
+     "published": "2026-11-24T14:00:19Z",
+     "publisher": "Yahoo",
+     "resolved": true,
+     "summary": "The Tesla may have been steering. In Indiana, that changes nothing. State police say a 2016 Tesla was in self-driving mode when it ran into two lit arrow boards in an Interstate 70 work zone in Vigo C...",
+     "title": "Police Say an Indiana Woman Tested at 0.14 After Her ‘Self-Driving’ Tesla Hit I-70 Work-Zone Arrow Boards — Now She Faces a Felony",
+     "url": "https://www.yahoo.com/news/us/articles/police-indiana-woman-tested-0-140019189.html"
     }
    ],
    "status": "published",
-   "updated": "2026-11-23T22:05:18Z"
+   "updated": "2026-11-24T20:42:21Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
@@ -4158,7 +4172,7 @@
   {
    "added": "2026-11-22T17:09:35Z",
    "auto": {
-    "location": null,
+    "location": "Austin",
     "model": "Tesla Cybercab",
     "tags": [
      {
@@ -4250,11 +4264,11 @@
     }
    },
    "exclusion_reason": null,
-   "headline": "Cybercab Dodges a Crash While the Human Next to It Doesn't",
-   "headline_publisher": "BASENOR - Tesla Accessories",
+   "headline": "Tesla Cybercab Avoids Crash as Another Car Gets Hit in Austin",
+   "headline_publisher": "TeslaNorth.com",
    "key": "k37",
    "maker": "Tesla",
-   "needs_coding": false,
+   "needs_coding": true,
    "source_summary": "A video circulating on X this weekend captures something that safety advocates have been arguing in spreadsheets for years — rendered in a single, unambiguous clip. A Tesla Cybercab detects an incoming collision and maneuvers clear.",
    "source_summary_publisher": "BASENOR - Tesla Accessories",
    "sources": [
@@ -4266,10 +4280,37 @@
      "summary": "A video circulating on X this weekend captures something that safety advocates have been arguing in spreadsheets for years — rendered in a single, unambiguous clip. A Tesla Cybercab detects an incoming collision and maneuvers clear.",
      "title": "Cybercab Dodges a Crash While the Human Next to It Doesn't",
      "url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOTjVqaGxzZ3gwTGJadGVxeDhNajBYVEIxbnh2c2JHeW1JWjdlSG5LaWJ5SXNOZmhoSm9LaWtaWTNEOU5SZlp4VF9FOHFZWkNhYVpfSWpnVG1mNDAzeFQ5cWU2blNIRjlyWng4OWhBUE8xemRxOTdyNThMMG44S3FMaTU2VWd1YWUteHFGOGJwaGhOTmF3YS1aSnpYYw?oc=5",
+     "published": "2026-11-24T15:49:40Z",
+     "publisher": "Yahoo Autos",
+     "resolved": true,
+     "summary": "A Tesla Cybercab apparently managed to avoid a collision at an intersection when another driver ran a red light, but a nearby motorist wasn’t nearly as fortunate. The close call was captured in a short…",
+     "title": "Red-Light Runner Nearly Hits Tesla Cybercab, Crashes Into Another Vehicle Instead",
+     "url": "https://autos.yahoo.com/ev-and-future-tech/articles/red-light-runner-nearly-hits-154940588.html"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQbC1CdVFtamNQQ1VCMl9BbDUtaWFfcXNoOWRMVDlBZVU0QzA2SzBsaUtVVnpsT2ZzTWxwZjdFd2RweXFEZUI0WENwaFhESTFqNFB5OE5DS3Y5S3FxODNObVFUOXVFR3JVT2tYTE4wN3JDWTdoVi0wZ2pwandlRmZ0Y0lnUUZxWVBwVjNpbk5CRnFDeDEwVFU4?oc=5",
+     "published": "2026-11-24T16:40:32Z",
+     "publisher": "shattered.io",
+     "resolved": true,
+     "summary": "Tesla Cybercab video: Yahoo Autos says it stopped as another car was hit. The red-light and near-miss claims remain unconfirmed.",
+     "title": "Tesla Cybercab Red-Light Video: What Is Confirmed",
+     "url": "https://shattered.io/tesla-cybercab-red-light-runner-video-one-claim-zero-statements-nov-24/"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBLMHI3YVVrc19PUjdaZUtxVm5vbWhncWNaZi1BNkVCc2dLWk9JakxFVFpGeVE2aHJrblkxTV81TVlBLUhrYjlJMnBnTzBraWxJRjJrdjByNzBEdTdjbS1ubmtWMzZscWZNaFcwWWVmSUtyV0Z0VnF3?oc=5",
+     "published": "2026-11-23T19:14:38Z",
+     "publisher": "TeslaNorth.com",
+     "resolved": true,
+     "summary": "Tesla and Elon Musk shared an Austin video that its original poster says shows a Cybercab stopping while another driver continued.",
+     "title": "Tesla Cybercab Avoids Crash as Another Car Gets Hit in Austin",
+     "url": "https://teslanorth.com/2026/11/23/tesla-cybercab-stops-austin-video/"
     }
    ],
    "status": "published",
-   "updated": "2026-11-22T17:26:50Z"
+   "updated": "2026-11-24T20:41:46Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
@@ -22984,10 +23025,47 @@
    ],
    "status": "excluded",
    "updated": "2026-11-23T22:04:42Z"
+  },
+  {
+   "added": "2026-11-24T20:40:44Z",
+   "auto": {
+    "location": "California",
+    "model": null,
+    "tags": [
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Covers several incidents; not split into cases. The report covers several Waymo incidents and broader safety and regulatory issues, not one main event.",
+   "headline": "Waymo says its robotaxis crash far less than humans. California just called them an ‘imminent hazard’ and pulled them off freeways",
+   "headline_publisher": "Fortune",
+   "key": "k445",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": null,
+   "source_summary_publisher": null,
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVnVLb3JYUGN5czUzU0xRV2kwNUJZMnIwT2s4UFRiazFEM3FEcDAxUnB1Z25ObHYwLXdBbEMzajltTGVZUTJqX241cWRxNWNxdmdFMWlxbWhVUk1mVWQxSTZVUjJIbWVxWFFXOVlUd0tSYjBheWhINVQxLXRKY1JsNjRmQ3hrbERXMHc?oc=5",
+     "published": "2026-11-18T20:53:00Z",
+     "publisher": "Fortune",
+     "resolved": true,
+     "summary": "",
+     "title": "Waymo says its robotaxis crash far less than humans. California just called them an ‘imminent hazard’ and pulled them off freeways",
+     "url": "https://fortune.com/2026/11/18/waymo-driverless-freeway-ban-california-nationwide/"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-24T20:41:50Z"
   }
  ],
  "next_id": 79,
- "next_key": 445,
+ "next_key": 449,
  "retired": [
   {
    "case_id": "SDI-00061",
