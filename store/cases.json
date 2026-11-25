@@ -4182,83 +4182,106 @@
     ]
    },
    "case_id": "SDI-00012",
-   "code_attempts": 1,
+   "code_attempts": 2,
    "coding": {
     "claims": [
      {
       "claimant": "other",
-      "paraphrase": "A Tesla commentator who shared the clip said the car's cameras give it all-round awareness that a distracted human driver cannot match.",
-      "quote": "Tesla's camera suite gives the car 360-degree situational awareness at all times",
-      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt",
+      "paraphrase": "The original poster described the Cybercab stopping while another driver continued.",
+      "quote": "The Tesla Cybercab Robotaxi stops while the human driver keeps going.",
+      "source_url": "https://teslanorth.com/2026/11/23/tesla-cybercab-stops-austin-video/",
       "topic": "automation_performance"
      },
      {
       "claimant": "news_outlet",
-      "paraphrase": "The report cautions that the clip comes from a social media post, not an official safety report, and should be treated as illustrative.",
-      "quote": "the clip originates from a social media post rather than an official Tesla safety report, so it should be treated as illustrative rather than statistically definitive",
+      "paraphrase": "Yahoo Autos reported that a vehicle entered against the signal, narrowly missed the Cybercab, and collided with another car.",
+      "quote": "another vehicle enters against the traffic signal, narrowly missing the autonomous vehicle before colliding with another car.",
+      "source_url": "https://autos.yahoo.com/ev-and-future-tech/articles/red-light-runner-nearly-hits-154940588.html",
+      "topic": "cause_or_responsibility"
+     },
+     {
+      "claimant": "other",
+      "paraphrase": "A user on X said the human-driven car ran a red light; the report says this is unconfirmed by an official source.",
+      "quote": "A user on X says the human-driven car ran it, but reporting on the clip says no official source has confirmed that.",
+      "source_url": "https://shattered.io/tesla-cybercab-red-light-runner-video-one-claim-zero-statements-nov-24/",
+      "topic": "cause_or_responsibility"
+     },
+     {
+      "claimant": "news_outlet",
+      "paraphrase": "BASENOR said the human driver in the adjacent vehicle was not paying attention.",
+      "quote": "The human driver in the adjacent vehicle, not paying attention, takes the hit.",
       "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt",
-      "topic": "other"
+      "topic": "driver_behavior"
      }
     ],
     "codebook_version": "0.1",
-    "coded_at": "2026-11-22T17:26:50Z",
-    "coder": "Claude Fable 5.2 (Perplexity Computer), initial batch",
+    "coded_at": "2026-11-25T19:58:38Z",
+    "coder": "OpenAI gpt-6-luna",
     "evidence": {
-     "coverage_stage": {
-      "quote": "A video circulating on X this weekend",
-      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
-     },
-     "engagement_claimed_by": {
-      "quote": "As a collision develops nearby, the Cybercab reacts and clears the danger zone.",
-      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
-     },
      "engagement_status": {
-      "quote": "As a collision develops nearby, the Cybercab reacts and clears the danger zone.",
-      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+      "quote": "the recording doesn't establish exactly when its autonomous driving system detected the danger or what prompted its response.",
+      "source_url": "https://autos.yahoo.com/ev-and-future-tech/articles/red-light-runner-nearly-hits-154940588.html"
      },
      "incident_type": {
-      "quote": "A Tesla Cybercab detects an incoming collision and maneuvers clear.",
-      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+      "quote": "the Cybercab avoiding the collision",
+      "source_url": "https://autos.yahoo.com/ev-and-future-tech/articles/red-light-runner-nearly-hits-154940588.html"
+     },
+     "location_state_region": {
+      "quote": "Downtown Austin, Texas.",
+      "source_url": "https://teslanorth.com/2026/11/23/tesla-cybercab-stops-austin-video/"
      },
      "road_type": {
-      "quote": "shows the Cybercab operating in what appears to be a standard urban traffic scenario",
-      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+      "quote": "The 12-second nighttime video shows traffic at a cone-lined intersection from a fixed camera.",
+      "source_url": "https://teslanorth.com/2026/11/23/tesla-cybercab-stops-austin-video/"
      },
      "system_named": {
-      "quote": "As a collision develops nearby, the Cybercab reacts and clears the danger zone.",
-      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+      "quote": "Tesla Cybercab Robotaxi",
+      "source_url": "https://teslanorth.com/2026/11/23/tesla-cybercab-stops-austin-video/"
+     },
+     "time_of_day": {
+      "quote": "The 12-second nighttime video shows traffic at a cone-lined intersection from a fixed camera.",
+      "source_url": "https://teslanorth.com/2026/11/23/tesla-cybercab-stops-austin-video/"
      },
      "vehicle_make": {
-      "quote": "A Tesla Cybercab detects an incoming collision and maneuvers clear.",
-      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+      "quote": "Tesla Cybercab",
+      "source_url": "https://autos.yahoo.com/ev-and-future-tech/articles/red-light-runner-nearly-hits-154940588.html"
      },
      "vehicle_model": {
-      "quote": "A Tesla Cybercab detects an incoming collision and maneuvers clear.",
-      "source_url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+      "quote": "Tesla Cybercab",
+      "source_url": "https://autos.yahoo.com/ev-and-future-tech/articles/red-light-runner-nearly-hits-154940588.html"
      }
     },
-    "narrative": "A video shared on X in November 2026 shows a Tesla Cybercab in city traffic moving clear of a developing collision, while a vehicle beside it is hit. The commentator who shared it credits the car's cameras. The report does not give the date or place and cautions that the clip comes from social media rather than an official report.",
+    "narrative": "Reports describe a video in which a Tesla Cybercab stops as another vehicle continues through an intersection and is struck by a separate car. One report identifies the video as being from downtown Austin at night, while another says the intersection’s location and the recording date are unknown. The red-light claim is attributed to a social-media user and is described as unconfirmed; the reports do not establish whether the Cybercab’s automated system detected or responded to the danger.",
     "review_status": "machine-coded, not yet reviewed",
     "sources_read": [
      {
       "basis": "full_text",
       "url": "https://www.basenor.com/blogs/news/cybercab-dodges-a-crash-while-the-human-next-to-it-doesnt"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://teslanorth.com/2026/11/23/tesla-cybercab-stops-austin-video/"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://autos.yahoo.com/ev-and-future-tech/articles/red-light-runner-nearly-hits-154940588.html"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://shattered.io/tesla-cybercab-red-light-runner-video-one-claim-zero-statements-nov-24/"
      }
     ],
     "text_basis": "full_text",
-    "unsupported_values_removed": 0,
+    "unsupported_values_removed": 1,
     "values": {
-     "coverage_stage": "initial_report",
-     "engagement_claimed_by": [
-      "news_outlet",
-      "other"
-     ],
-     "engagement_status": "claimed",
+     "engagement_status": "mentioned_only",
      "incident_type": "near_miss_or_erratic_driving",
-     "road_type": "urban_or_suburban_street",
+     "location_state_region": "Texas",
+     "road_type": "intersection",
      "system_named": [
       "robotaxi_or_driverless_service"
      ],
+     "time_of_day": "night",
      "vehicle_make": "Tesla",
      "vehicle_model": "Cybercab"
     }
@@ -4268,7 +4291,7 @@
    "headline_publisher": "TeslaNorth.com",
    "key": "k37",
    "maker": "Tesla",
-   "needs_coding": true,
+   "needs_coding": false,
    "source_summary": "A video circulating on X this weekend captures something that safety advocates have been arguing in spreadsheets for years — rendered in a single, unambiguous clip. A Tesla Cybercab detects an incoming collision and maneuvers clear.",
    "source_summary_publisher": "BASENOR - Tesla Accessories",
    "sources": [
@@ -4310,7 +4333,7 @@
     }
    ],
    "status": "published",
-   "updated": "2026-11-24T20:41:46Z"
+   "updated": "2026-11-25T19:58:38Z"
   },
   {
    "added": "2026-11-22T17:09:35Z",
@@ -23062,10 +23085,184 @@
    ],
    "status": "excluded",
    "updated": "2026-11-24T20:41:50Z"
+  },
+  {
+   "added": "2026-11-25T19:57:52Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": "SDI-00079",
+   "code_attempts": 1,
+   "coding": {
+    "claims": [
+     {
+      "claimant": "driver",
+      "paraphrase": "The driver said Full Self-Driving was engaged during the crash.",
+      "quote": "I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged.",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html",
+      "topic": "automation_engaged"
+     }
+    ],
+    "codebook_version": "0.1",
+    "coded_at": "2026-11-25T19:58:06Z",
+    "coder": "OpenAI gpt-6-luna",
+    "evidence": {
+     "collision_with": {
+      "quote": "I hit a temporary barrier",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     "driver_seat_occupied": {
+      "quote": "while driving home at night",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     "engagement_claimed_by": {
+      "quote": "I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged.",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     "engagement_status": {
+      "quote": "with Tesla’s Full Self-Driving (Supervised) engaged",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     "incident_date": {
+      "quote": "Earlier this month, I hit a temporary barrier on the New Jersey Turnpike",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     "incident_type": {
+      "quote": "I hit a temporary barrier",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     "location_state_region": {
+      "quote": "on the New Jersey Turnpike",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     "road_type": {
+      "quote": "on the New Jersey Turnpike",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     "system_named": {
+      "quote": "Tesla’s Full Self-Driving (Supervised) engaged",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     "time_of_day": {
+      "quote": "while driving home at night",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     "vehicle_make": {
+      "quote": "with Tesla’s Full Self-Driving (Supervised) engaged",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     }
+    },
+    "narrative": "The driver reported hitting a temporary barrier on the New Jersey Turnpike at night earlier in November 2026, with Full Self-Driving (Supervised) engaged. The report says the windshield cracked and the driver walked away. It does not state what caused the collision.",
+    "review_status": "machine-coded, not yet reviewed",
+    "sources_read": [
+     {
+      "basis": "full_text",
+      "url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     {
+      "basis": "full_text",
+      "url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     }
+    ],
+    "text_basis": "full_text",
+    "unsupported_values_removed": 0,
+    "values": {
+     "collision_with": [
+      "fixed_object"
+     ],
+     "driver_seat_occupied": "yes",
+     "engagement_claimed_by": [
+      "driver"
+     ],
+     "engagement_status": "claimed",
+     "incident_date": "2026-11",
+     "incident_type": "collision",
+     "location_state_region": "New Jersey",
+     "road_type": "highway_or_freeway",
+     "system_named": [
+      "full_self_driving"
+     ],
+     "time_of_day": "night",
+     "vehicle_make": "Tesla"
+    }
+   },
+   "exclusion_reason": null,
+   "headline": "My Tesla crash and the limits of self-driving",
+   "headline_publisher": "AOL",
+   "key": "k449",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "Earlier this month, I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged. I’d used the system plenty of times, and until the impact, […]…",
+   "source_summary_publisher": "AOL.com",
+   "sources": [
+    {
+     "published": "2026-11-25T09:11:00Z",
+     "publisher": "AOL",
+     "resolved": true,
+     "summary": "Earlier this month, I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged. I’d used the system plenty of times, and until ...",
+     "title": "My Tesla crash and the limits of self-driving",
+     "url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNcHpRRmVNTDQtNmx4QzFwRWx4TU9ERzBTMmlrUlNFQ0d6bU1MLXJob25wd0dqWWEzclJ0UldiUjVoUTl0N25ka0M1NGpybEdTOFU4bEYxUjJPeUo1WHh2OEJhMlZLaXFNOGdsZjNxQzBqaFNTNzNUT1NOU2FZQWlqNw?oc=5",
+     "published": "2026-11-25T17:11:07Z",
+     "publisher": "AOL.com",
+     "resolved": true,
+     "summary": "Earlier this month, I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged. I’d used the system plenty of times, and until the impact, […]…",
+     "title": "My Tesla crash and the limits of self-driving",
+     "url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+    }
+   ],
+   "status": "published",
+   "updated": "2026-11-25T19:58:06Z"
+  },
+  {
+   "added": "2026-11-25T19:57:52Z",
+   "auto": {
+    "location": "Texas",
+    "model": "Tesla Cybercab",
+    "tags": [
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Not about one identifiable incident. The report concerns vehicle registry totals and service expansion, not a particular incident.",
+   "headline": "Tesla’s Texas Robotaxi Registry Hits 822 Cybercabs",
+   "headline_publisher": "TeslaNorth.com",
+   "key": "k450",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "Texas records now list 822 Cybercabs and 734 Model Ys under Tesla Robotaxi, up 49 Cybercabs from our November 17 check.",
+   "source_summary_publisher": "TeslaNorth.com",
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWTVTQWFzWjFDdmhJQmE0SkxEMFpfdHJReU5rcDJKTDZhUnlJTkI2U1V6ckMtMkZjQUU5YS1jS3Fmc0RxWVhOSlhNQ3NVc0Nnall6cXhZcEJaVUdITUpBZThETXZ1VS1tWERKVzRvRml0ZnBRQ25pVGxNTk1NVldOdUhB?oc=5",
+     "published": "2026-11-25T12:00:52Z",
+     "publisher": "TeslaNorth.com",
+     "resolved": true,
+     "summary": "Texas records now list 822 Cybercabs and 734 Model Ys under Tesla Robotaxi, up 49 Cybercabs from our November 17 check.",
+     "title": "Tesla’s Texas Robotaxi Registry Hits 822 Cybercabs",
+     "url": "https://teslanorth.com/2026/11/25/tesla-texas-robotaxi-roster-822-cybercabs/"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-25T19:58:08Z"
   }
  ],
- "next_id": 79,
- "next_key": 449,
+ "next_id": 80,
+ "next_key": 451,
  "retired": [
   {
    "case_id": "SDI-00061",
