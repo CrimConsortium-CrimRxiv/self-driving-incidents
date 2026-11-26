@@ -23099,23 +23099,27 @@
     ]
    },
    "case_id": "SDI-00079",
-   "code_attempts": 1,
+   "code_attempts": 2,
    "coding": {
     "claims": [
      {
       "claimant": "driver",
       "paraphrase": "The driver said Full Self-Driving was engaged during the crash.",
-      "quote": "I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged.",
+      "quote": "with Tesla’s Full Self-Driving (Supervised) engaged",
       "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html",
       "topic": "automation_engaged"
      }
     ],
     "codebook_version": "0.1",
-    "coded_at": "2026-11-25T19:58:06Z",
+    "coded_at": "2026-11-26T19:39:21Z",
     "coder": "OpenAI gpt-6-luna",
     "evidence": {
      "collision_with": {
       "quote": "I hit a temporary barrier",
+      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     "coverage_stage": {
+      "quote": "Since the crash, I’ve found myself thinking less about how many times a car has driven a route",
       "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
      },
      "driver_seat_occupied": {
@@ -23123,7 +23127,7 @@
       "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
      },
      "engagement_claimed_by": {
-      "quote": "I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged.",
+      "quote": "I hit a temporary barrier",
       "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
      },
      "engagement_status": {
@@ -23131,11 +23135,11 @@
       "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
      },
      "incident_date": {
-      "quote": "Earlier this month, I hit a temporary barrier on the New Jersey Turnpike",
+      "quote": "Earlier this month, I hit a temporary barrier",
       "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
      },
      "incident_type": {
-      "quote": "I hit a temporary barrier",
+      "quote": "I hit a temporary barrier on the New Jersey Turnpike",
       "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
      },
      "location_state_region": {
@@ -23151,7 +23155,7 @@
       "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
      },
      "time_of_day": {
-      "quote": "while driving home at night",
+      "quote": "driving home at night",
       "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
      },
      "vehicle_make": {
@@ -23159,12 +23163,16 @@
       "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
      }
     },
-    "narrative": "The driver reported hitting a temporary barrier on the New Jersey Turnpike at night earlier in November 2026, with Full Self-Driving (Supervised) engaged. The report says the windshield cracked and the driver walked away. It does not state what caused the collision.",
+    "narrative": "The driver said they hit a temporary barrier on the New Jersey Turnpike at night earlier in November while Full Self-Driving was engaged. They reported that the windshield cracked and that they walked away.",
     "review_status": "machine-coded, not yet reviewed",
     "sources_read": [
      {
       "basis": "full_text",
       "url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+     },
+     {
+      "basis": "summary",
+      "url": "https://www.msn.com/en-us/autos/general/my-tesla-crash-and-the-limits-of-self-driving/ar-AA2ihD2R"
      },
      {
       "basis": "full_text",
@@ -23177,6 +23185,7 @@
      "collision_with": [
       "fixed_object"
      ],
+     "coverage_stage": "retrospective",
      "driver_seat_occupied": "yes",
      "engagement_claimed_by": [
       "driver"
@@ -23218,10 +23227,18 @@
      "summary": "Earlier this month, I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged. I’d used the system plenty of times, and until the impact, […]…",
      "title": "My Tesla crash and the limits of self-driving",
      "url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+    },
+    {
+     "published": "2026-11-25T09:11:07Z",
+     "publisher": "Mediafeed on MSN",
+     "resolved": true,
+     "summary": "Earlier this month, I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged. I’d used the system plenty of times, and until ...",
+     "title": "My Tesla crash and the limits of self-driving",
+     "url": "https://www.msn.com/en-us/autos/general/my-tesla-crash-and-the-limits-of-self-driving/ar-AA2ihD2R"
     }
    ],
    "status": "published",
-   "updated": "2026-11-25T19:58:06Z"
+   "updated": "2026-11-26T19:39:21Z"
   },
   {
    "added": "2026-11-25T19:57:52Z",
@@ -23259,10 +23276,128 @@
    ],
    "status": "excluded",
    "updated": "2026-11-25T19:58:08Z"
+  },
+  {
+   "added": "2026-11-26T19:38:56Z",
+   "auto": {
+    "location": "Austin",
+    "model": null,
+    "tags": [
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Covers several incidents; not split into cases. The report summarizes crash and injury data across multiple robotaxi operators and incidents.",
+   "headline": "Austin hits 249 robotaxi wrecks and 14 people reportedly injured: NHTSA",
+   "headline_publisher": "AOL",
+   "key": "k451",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "Data from the National Highway Traffic Safety Administration reveals that robotaxi accidents in Austin have caused at least 14 alleged minor injuries since October 2023, involving companies such as ...",
+   "source_summary_publisher": "AOL",
+   "sources": [
+    {
+     "published": "2026-10-27T13:24:00Z",
+     "publisher": "AOL",
+     "resolved": true,
+     "summary": "Data from the National Highway Traffic Safety Administration reveals that robotaxi accidents in Austin have caused at least 14 alleged minor injuries since October 2023, involving companies such as ...",
+     "title": "Austin hits 249 robotaxi wrecks and 14 people reportedly injured: NHTSA",
+     "url": "https://www.aol.com/articles/austin-hits-249-robotaxi-wrecks-202321000.html"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-26T19:39:08Z"
+  },
+  {
+   "added": "2026-11-26T19:38:56Z",
+   "auto": {
+    "location": null,
+    "model": null,
+    "tags": [
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Not about one identifiable incident. The report covers Full Self-Driving hardware lawsuits and product capability, not a specific incident.",
+   "headline": "Tesla FSD HW3 Lawsuits: What Owners Need to Know",
+   "headline_publisher": "BASENOR - Tesla Accessories",
+   "key": "k452",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "Tesla owners who paid up to $15,000 for Full Self-Driving on Hardware 3 vehicles are increasingly looking at the courts for relief — and they now have something they didn't have a year ago: the CEO's own words on record.",
+   "source_summary_publisher": "BASENOR - Tesla Accessories",
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdXZCbkVqZG4tRVlMOFNmYVMxN192emZrQTQ1TEZ2TEg4Um42aWx0WnlXSy0wbmxRNUpNWm9ucGl4UV9qcGNpT3JyenpRdHZMdlByUXVrN3dacWExVGJEOVZSYnoyOVBnQ1pOdXhvbnRCRUFUSGhVSDlvdVBab1FUSWtGVWhzMUNLX2c?oc=5",
+     "published": "2026-11-24T01:10:17Z",
+     "publisher": "BASENOR - Tesla Accessories",
+     "resolved": true,
+     "summary": "Tesla owners who paid up to $15,000 for Full Self-Driving on Hardware 3 vehicles are increasingly looking at the courts for relief — and they now have something they didn't have a year ago: the CEO's own words on record.",
+     "title": "Tesla FSD HW3 Lawsuits: What Owners Need to Know",
+     "url": "https://www.basenor.com/blogs/news/tesla-fsd-hw3-lawsuits-what-owners-need-to-know"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-26T19:39:04Z"
+  },
+  {
+   "added": "2026-11-26T19:38:56Z",
+   "auto": {
+    "location": null,
+    "model": "Tesla Cybercab",
+    "tags": [
+     {
+      "key": "robotaxi",
+      "label": "Robotaxi mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Covers several incidents; not split into cases. The reports summarize eight separate Cybercab crashes, with none clearly the main incident.",
+   "headline": "NHTSA Reports 8 Tesla Cybercab Crashes, Including One At High Speed",
+   "headline_publisher": "YAHOO!",
+   "key": "k453",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "Barely two months after Tesla launched public rides in its purpose-built Cybercab, federal crash filings show the autonomous vehicle has already been involved in eight reported collisions.",
+   "source_summary_publisher": "YAHOO!",
+   "sources": [
+    {
+     "published": "2026-11-26T10:41:00Z",
+     "publisher": "YAHOO!",
+     "resolved": true,
+     "summary": "Barely two months after Tesla launched public rides in its purpose-built Cybercab, federal crash filings show the autonomous vehicle has already been involved in eight reported collisions.",
+     "title": "NHTSA Reports 8 Tesla Cybercab Crashes, Including One At High Speed",
+     "url": "https://autos.yahoo.com/safety-and-recalls/articles/nhtsa-reports-8-tesla-cybercab-184000857.html"
+    },
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQYXhSbkZtUWxHb1M3dUkzajFPM0YxU2lSNTl6cXA4alNCY2xPSkc3Q3lxRWVld0tIX0RiZ1ZPei13TzI3WGFRZnI4QmpUTXNvdzYzR01PUFY1VHdlZ1FvYnA0Rjh6bFF5a1ZBSE9HVDVrYVB4OEJSR1RYOG80WDZUelZqaUFyUmIzTFdVTlp4UXpjMG02T2tvb3lFenphUQ?oc=5",
+     "published": "2026-11-26T18:40:00Z",
+     "publisher": "Yahoo Autos",
+     "resolved": true,
+     "summary": "Barely two months after Tesla launched public rides in its purpose-built Cybercab, federal crash filings show the autonomous vehicle has already been involved in eight reported collisions.",
+     "title": "NHTSA Reports 8 Tesla Cybercab Crashes, Including One At High Speed",
+     "url": "https://autos.yahoo.com/safety-and-recalls/articles/nhtsa-reports-8-tesla-cybercab-184000857.html"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-26T19:39:01Z"
   }
  ],
  "next_id": 80,
- "next_key": 451,
+ "next_key": 454,
  "retired": [
   {
    "case_id": "SDI-00061",

@@ -115,17 +115,18 @@ SDI-00009,criminal_charges,careless driving; reckless driving; failure to mainta
 SDI-00009,criminal_case_stage,charged,"is charged with failure to maintain her lane, careless driving and reckless driving",https://nj1015.com/tesla-driver-makeup-autopilot-crash/
 SDI-00009,responsibility_attributed_to,driver,"Police issued the Tesla driver summonses for careless driving, reckless driving and failure to maintain a lane.",https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html
 SDI-00009,coverage_stage,initial_report,according to a statement from the department,https://www.yahoo.com/news/articles/tesla-autopilot-crashed-2-trucks-224014653.html
-SDI-00079,incident_date,2026-11,"Earlier this month, I hit a temporary barrier on the New Jersey Turnpike",https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
-SDI-00079,incident_type,collision,I hit a temporary barrier,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
+SDI-00079,incident_date,2026-11,"Earlier this month, I hit a temporary barrier",https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
+SDI-00079,incident_type,collision,I hit a temporary barrier on the New Jersey Turnpike,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
 SDI-00079,collision_with,fixed_object,I hit a temporary barrier,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
 SDI-00079,vehicle_make,Tesla,with Tesla’s Full Self-Driving (Supervised) engaged,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
 SDI-00079,location_state_region,New Jersey,on the New Jersey Turnpike,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
 SDI-00079,road_type,highway_or_freeway,on the New Jersey Turnpike,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
-SDI-00079,time_of_day,night,while driving home at night,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
+SDI-00079,time_of_day,night,driving home at night,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
 SDI-00079,system_named,full_self_driving,Tesla’s Full Self-Driving (Supervised) engaged,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
 SDI-00079,engagement_status,claimed,with Tesla’s Full Self-Driving (Supervised) engaged,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
-SDI-00079,engagement_claimed_by,driver,I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged.,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
+SDI-00079,engagement_claimed_by,driver,I hit a temporary barrier,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
 SDI-00079,driver_seat_occupied,yes,while driving home at night,https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
+SDI-00079,coverage_stage,retrospective,"Since the crash, I’ve found myself thinking less about how many times a car has driven a route",https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html
 SDI-00020,incident_date,2026-10-30,"on October 30, 2026",https://www.basenor.com/blogs/news/tesla-cybercab-hit-in-austin-what-owners-should-know
 SDI-00020,incident_type,collision,was involved in a minor collision with a party bike,https://www.basenor.com/blogs/news/tesla-cybercab-hit-in-austin-what-owners-should-know
 SDI-00020,collision_with,other,a party bike,https://www.basenor.com/blogs/news/tesla-cybercab-hit-in-austin-what-owners-should-know

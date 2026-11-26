@@ -1,7 +1,7 @@
 {
  "dataset": "Self-Driving Incidents Explorer",
  "url": "https://selfdriving.crimconsortium.com/",
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "codebook_version": "0.1",
  "license": "CC BY 4.0",
  "cases": [
@@ -1601,8 +1601,8 @@
    "source_summary": "Earlier this month, I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged. I’d used the system plenty of times, and until the impact, […]…",
    "source_summary_publisher": "AOL.com",
    "auto": {
-    "model": null,
     "location": null,
+    "model": null,
     "tags": [
      {
       "key": "fsd",
@@ -1610,10 +1610,10 @@
      }
     ]
    },
-   "narrative": "The driver reported hitting a temporary barrier on the New Jersey Turnpike at night earlier in November 2026, with Full Self-Driving (Supervised) engaged. The report says the windshield cracked and the driver walked away. It does not state what caused the collision.",
+   "narrative": "The driver said they hit a temporary barrier on the New Jersey Turnpike at night earlier in November while Full Self-Driving was engaged. They reported that the windshield cracked and that they walked away.",
    "review_status": "machine-coded, not yet reviewed",
    "coder": "OpenAI gpt-6-luna",
-   "coded_at": "2026-11-25T19:58:06Z",
+   "coded_at": "2026-11-26T19:39:21Z",
    "codebook_version": "0.1",
    "text_basis": "full_text",
    "unsupported_values_removed": 0,
@@ -1650,15 +1650,15 @@
     "civil_litigation": null,
     "regulator_involved": null,
     "responsibility_attributed_to": null,
-    "coverage_stage": null
+    "coverage_stage": "retrospective"
    },
    "evidence": {
     "incident_date": {
-     "quote": "Earlier this month, I hit a temporary barrier on the New Jersey Turnpike",
+     "quote": "Earlier this month, I hit a temporary barrier",
      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
     },
     "incident_type": {
-     "quote": "I hit a temporary barrier",
+     "quote": "I hit a temporary barrier on the New Jersey Turnpike",
      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
     },
     "collision_with": {
@@ -1678,7 +1678,7 @@
      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
     },
     "time_of_day": {
-     "quote": "while driving home at night",
+     "quote": "driving home at night",
      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
     },
     "system_named": {
@@ -1690,11 +1690,15 @@
      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
     },
     "engagement_claimed_by": {
-     "quote": "I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged.",
+     "quote": "I hit a temporary barrier",
      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
     },
     "driver_seat_occupied": {
      "quote": "while driving home at night",
+     "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
+    },
+    "coverage_stage": {
+     "quote": "Since the crash, I’ve found myself thinking less about how many times a car has driven a route",
      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html"
     }
    },
@@ -1702,7 +1706,7 @@
     {
      "claimant": "driver",
      "paraphrase": "The driver said Full Self-Driving was engaged during the crash.",
-     "quote": "I hit a temporary barrier on the New Jersey Turnpike while driving home at night with Tesla’s Full Self-Driving (Supervised) engaged.",
+     "quote": "with Tesla’s Full Self-Driving (Supervised) engaged",
      "source_url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html",
      "topic": "automation_engaged"
     }
@@ -1714,6 +1718,13 @@
      "url": "https://www.aol.com/articles/tesla-crash-limits-self-driving-171107000.html",
      "published": "2026-11-25",
      "read_by_coder": "full_text"
+    },
+    {
+     "publisher": "Mediafeed on MSN",
+     "title": "My Tesla crash and the limits of self-driving",
+     "url": "https://www.msn.com/en-us/autos/general/my-tesla-crash-and-the-limits-of-self-driving/ar-AA2ihD2R",
+     "published": "2026-11-25",
+     "read_by_coder": "summary"
     },
     {
      "publisher": "AOL.com",
