@@ -23394,10 +23394,47 @@
    ],
    "status": "excluded",
    "updated": "2026-11-26T19:39:01Z"
+  },
+  {
+   "added": "2026-11-27T19:29:22Z",
+   "auto": {
+    "location": "Italy",
+    "model": null,
+    "tags": [
+     {
+      "key": "fsd",
+      "label": "Full Self-Driving mentioned in coverage"
+     }
+    ]
+   },
+   "case_id": null,
+   "code_attempts": 1,
+   "coding": null,
+   "exclusion_reason": "Not about one identifiable incident. The report concerns regulatory approval and rollout of a driver-assistance system, not a specific incident.",
+   "headline": "Tesla FSD Supervised Hits Italy: 12th Market, Level 2",
+   "headline_publisher": "shattered.io",
+   "key": "k454",
+   "maker": "Tesla",
+   "needs_coding": false,
+   "source_summary": "Tesla assisted driving is now live in Italy, its 12th market. Here is what the Level 2 system can and cannot do, and what drivers must still do.",
+   "source_summary_publisher": "shattered.io",
+   "sources": [
+    {
+     "feed_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPd1J2Z3p2MEhkMzFhOVRTamxaSEdqanNPa0RwLXQwUmdfQ0psQXN1RkNEUUYzaWxlRE1tdy1KZUQycThVREFhaWt3YU16N0loT1k5S0phSmRxQWxxSzh6UVFfT0k3T0ZhQ3NXN3YtbFFmeElybXFpS3pTNlQtX1F5Z3hBT21iMmNiUWdPeDkxLTBVR29abDNENXlPUU5nY1lWcDhoLWZ1dw?oc=5",
+     "published": "2026-11-21T09:04:22Z",
+     "publisher": "shattered.io",
+     "resolved": true,
+     "summary": "Tesla assisted driving is now live in Italy, its 12th market. Here is what the Level 2 system can and cannot do, and what drivers must still do.",
+     "title": "Tesla FSD Supervised Hits Italy: 12th Market, Level 2",
+     "url": "https://shattered.io/tesla-assisted-driving-italy-12th-european-market-tcmv-december-spacex-unconfirmed/"
+    }
+   ],
+   "status": "excluded",
+   "updated": "2026-11-27T19:29:27Z"
   }
  ],
  "next_id": 80,
- "next_key": 454,
+ "next_key": 455,
  "retired": [
   {
    "case_id": "SDI-00061",
